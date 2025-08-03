@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Broker Lead Engine - Insurance Marketing Experts</title>
-    <meta name="description" content="Meet the team behind Broker Lead Engine. Specialized AI-powered lead generation and marketing automation for $1M-$5M insurance agencies. Brooklyn-based expertise.">
-    <meta name="keywords" content="about broker lead engine, insurance marketing experts, Samuel Ochoa SerproSEO, insurance agency marketing team">
+    <title>Broker Lead Engine - AI Lead Generation for Insurance Agencies</title>
+    <meta name="description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -345,47 +345,15 @@
             color: #1a202c;
         }
 
-        /* About Content */
-        .about-content {
+        /* Services Section */
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            margin: 3rem 0;
-            align-items: center;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 16px;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #1a202c;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        /* Expertise Section */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .expertise-card {
+        .service-card {
             background: white;
             padding: 2.5rem;
             border-radius: 16px;
@@ -397,7 +365,7 @@
             overflow: hidden;
         }
 
-        .expertise-card::before {
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -409,90 +377,55 @@
             transition: transform 0.3s;
         }
 
-        .expertise-card:hover {
+        .service-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
         }
 
-        .expertise-card:hover::before {
+        .service-card:hover::before {
             transform: scaleX(1);
         }
 
-        .expertise-icon {
+        .service-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
 
-        .expertise-card h3 {
+        .service-card h3 {
             color: #1a202c;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: #f7fafc;
+        .service-results {
+            background: #f0fff4;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+            margin: 1.5rem 0;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+        .service-results strong {
+            color: #16a571;
         }
 
-        .stat-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition-base);
-            position: relative;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        /* Mission Section */
-        .mission-section {
-            background: var(--primary);
+        .guarantee-section {
+            background: #16a571;
             color: white;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .mission-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .guarantee-banner {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
         }
 
-        .mission-content h2 {
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .mission-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-
-        /* CTA Section */
         .cta-section {
             background: #1a202c;
             color: white;
@@ -524,12 +457,7 @@
                 font-size: 2rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .expertise-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -567,7 +495,7 @@
                         <a href="marketing-automation.html">⚙️ Marketing Automation</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="homepage.html">Home</a></li>
+                <li class="nav-item"><a href="#pricing">Pricing</a></li>
                 <li class="nav-item"><a href="#testimonials">Success Stories</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
@@ -578,116 +506,90 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Meet the Team Behind <span class="hero-highlight">Broker Lead Engine</span></h1>
-            <p class="hero-subtext">Specialized insurance marketing experts helping $1M-$5M agencies generate consistent, qualified leads with AI-powered automation and proven strategies.</p>
+            <h1>Generate <span class="hero-highlight">50+ Qualified Leads Weekly</span> with AI Automation</h1>
+            <p class="hero-subtext">Advanced AI automation system designed for $1M-$5M insurance agencies. Proven methodology that generates qualified leads while you focus on closing deals.</p>
+            
+            <div style="margin-top: 2rem; position: relative; z-index: 1;">
+                <a href="#contact" class="cta-button" style="margin-right: 1rem;">Get Started Now</a>
+                <a href="#services" class="cta-button" style="background: transparent; border: 2px solid white;">Learn More</a>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section">
+    <!-- Services Section -->
+    <section class="section" id="services">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <div style="width: 300px; height: 300px; background: linear-gradient(135deg, #16a571 0%, #138a5e 100%); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                        <i class="fas fa-user-tie"></i>
+            <div class="section-header">
+                <h2>Complete Marketing Engine for Insurance Agencies</h2>
+                <p>Proven systems that generate consistent, qualified leads for your agency</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Lead Generation</h3>
+                    <p>Our MCP automation finds and qualifies 50+ insurance prospects weekly from business directories, associations, and new business filings automatically.</p>
+                    <div class="service-results">
+                        <strong>Results:</strong> 50+ qualified leads/week • 15-25% qualification rate • Automated prospecting
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>Samuel Ochoa, Founder & CEO</h3>
-                    <p><strong>Based in Brooklyn, New York</strong></p>
-                    <p>Samuel brings years of hands-on experience as an e-commerce manager and technical account manager, with deep expertise in local SEO, Google Maps optimization, Meta ads, and cold email campaigns.</p>
-                    <p>Having built and scaled multiple business offers from scratch, Samuel understands the challenges insurance agencies face in generating consistent, qualified leads. His proven frameworks have helped agencies generate significant revenue increases through systematic, data-driven marketing approaches.</p>
-                    <p>Samuel's expertise includes extensive testing with local SEO strategies, GMB optimization, cold email sequences, paid advertising campaigns, and the latest AI automation tools including MCP (Model Context Protocol) systems.</p>
+
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3>Local SEO</h3>
+                    <p>Dominate "insurance near me" searches with complete Google Business Profile optimization, local citations, and location-based content strategies.</p>
+                    <div class="service-results">
+                        <strong>Results:</strong> Top 3 local rankings • 30+ organic leads/week • 400-600% ROI
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Google PPC</h3>
+                    <p>Capture high-intent prospects searching for insurance quotes with professionally managed Google Ads campaigns and optimized landing pages.</p>
+                    <div class="service-results">
+                        <strong>Results:</strong> 25+ leads/week • 18-30% close rate • Premium keyword targeting
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Meta Ads</h3>
+                    <p>Target business owners by industry, company size, and behaviors with precision Facebook and Instagram advertising campaigns.</p>
+                    <div class="service-results">
+                        <strong>Results:</strong> 40+ leads/week • $25-65 cost per lead • 8-12% conversion rate
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3>Cold Email Campaigns</h3>
+                    <p>Personalized outreach sequences that convert prospects to sales meetings with company-specific research and proven messaging frameworks.</p>
+                    <div class="service-results">
+                        <strong>Results:</strong> 3-5% response rate • 15% meeting conversion • Professional compliance
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Marketing Automation</h3>
+                    <p>Intelligent workflows that nurture prospects from lead to client with automated follow-ups, lead scoring, and CRM integration.</p>
+                    <div class="service-results">
+                        <strong>Results:</strong> 47% larger purchases • 80% time savings • 35% higher conversion rates
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section class="section">
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Core Expertise</h2>
-                <p>Specialized knowledge and proven frameworks for insurance agency marketing</p>
-            </div>
-
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-icon">🤖</div>
-                    <h3>AI & Automation</h3>
-                    <p>Cutting-edge MCP automation systems, AI-powered lead qualification, and intelligent workflow design for maximum efficiency and results.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">📊</div>
-                    <h3>Data-Driven Strategy</h3>
-                    <p>Years of testing and optimization across multiple channels, with proven frameworks for local SEO, PPC, and lead nurturing systems.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">🏢</div>
-                    <h3>Insurance Industry Focus</h3>
-                    <p>Deep understanding of insurance broker pain points, regulations, compliance requirements, and the unique challenges of the industry.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">⚡</div>
-                    <h3>Rapid Implementation</h3>
-                    <p>Expert in MVP deployment, lean testing methodologies, and getting systems live quickly while maintaining quality and compliance.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">💰</div>
-                    <h3>ROI-Focused Approach</h3>
-                    <p>Every strategy is designed with clear ROI targets, measurable outcomes, and proven frameworks that deliver consistent results.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="expertise-icon">🎯</div>
-                    <h3>Multi-Channel Mastery</h3>
-                    <p>Integrated approach across local SEO, Google Ads, Meta advertising, cold email, and marketing automation for maximum lead generation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section stats-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Track Record</h2>
-                <p>Proven results from working with insurance agencies nationwide</p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">5+</span>
-                    <span>Years Experience</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <span>Agencies Helped</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">$2M+</span>
-                    <span>Revenue Generated</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">90%</span>
-                    <span>Client Satisfaction Rate</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="section mission-section">
-        <div class="container">
-            <div class="mission-content">
-                <h2>Our Mission</h2>
-                <p>We're committed to helping $1M-$5M insurance agencies break free from manual prospecting and inconsistent lead generation. Our mission is to provide cutting-edge AI automation and proven marketing systems that generate 50+ qualified leads weekly, allowing agency owners to focus on what they do best - closing deals and serving clients.</p>
-                <br>
-                <p>Every system we build is designed with one goal: measurable, sustainable growth for your insurance agency through data-driven marketing and intelligent automation.</p>
+            <h2>Our Service Commitment & Money-Back Guarantee</h2>
+            
+            <div class="guarantee-banner">
+                <h3>🛡️ 90-Day Money-Back Guarantee</h3>
+                <p style="margin: 1rem 0;">We're committed to helping you achieve significant lead generation improvements within 90 days. If you're not satisfied with our service and results, we'll refund your investment.</p>
             </div>
         </div>
     </section>
@@ -766,7 +668,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.expertise-card, .stat-card').forEach(el => {
+        document.querySelectorAll('.service-card').forEach(el => {
             observer.observe(el);
         });
     </script>
