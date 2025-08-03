@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Broker Lead Engine - Insurance Marketing Experts</title>
-    <meta name="description" content="Meet the team behind Broker Lead Engine. Specialized AI-powered lead generation and marketing automation for $1M-$5M insurance agencies. Brooklyn-based expertise.">
-    <meta name="keywords" content="about broker lead engine, insurance marketing experts, Samuel Ochoa SerproSEO, insurance agency marketing team">
+    <title>About SerproSEO - Insurance Marketing Experts | Brooklyn, NY</title>
+    <meta name="description" content="Meet Samuel Ochoa and the SerproSEO team. Brooklyn-based insurance marketing experts specializing in lead generation for $1M-$5M agencies. 90-day guarantee.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -47,40 +46,6 @@
             line-height: 1.6;
             color: var(--gray-700);
             background: #ffffff;
-            position: relative;
-        }
-
-        /* Loading Overlay */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
-
-        .loading-overlay.loaded {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--gray-200);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
 
         /* Header Styles */
@@ -221,49 +186,6 @@
             left: 100%;
         }
 
-        /* Urgency Banner */
-        .urgency-banner {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 12px 0;
-            position: fixed;
-            top: 80px;
-            width: 100%;
-            z-index: 999;
-            box-shadow: var(--shadow-md);
-            animation: slideDown 0.5s ease-out;
-            height: 44px;
-            display: flex;
-            align-items: center;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        .urgency-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 500;
-        }
-
-        .countdown {
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 4px;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -276,7 +198,7 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 124px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -298,20 +220,8 @@
             line-height: 1.2;
             font-weight: 800;
             letter-spacing: -0.02em;
-            animation: fadeInUp 0.8s ease-out;
             position: relative;
             z-index: 1;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .hero-highlight {
@@ -331,7 +241,6 @@
 
         .section {
             padding: 60px 0;
-            clear: both;
         }
 
         .section-header {
@@ -345,133 +254,82 @@
             color: #1a202c;
         }
 
-        /* About Content */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            margin: 3rem 0;
-            align-items: center;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 16px;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #1a202c;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        /* Expertise Section */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .expertise-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-            transition: var(--transition-base);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .expertise-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .expertise-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .expertise-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .expertise-card h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        /* Stats Section */
-        .stats-section {
+        /* Team Section */
+        .team-section {
             background: #f7fafc;
         }
 
-        .stats-grid {
+        .founder-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            margin: 3rem auto;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .founder-image {
+            text-align: center;
+        }
+
+        .founder-image .profile-placeholder {
+            width: 200px;
+            height: 200px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .founder-content h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1a202c;
+        }
+
+        .founder-title {
+            color: #16a571;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-bio {
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .expertise-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .stat-card {
+        .expertise-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition-base);
-            position: relative;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid #16a571;
         }
 
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+        .expertise-card h4 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        /* Mission Section */
         .mission-section {
-            background: var(--primary);
+            background: #16a571;
             color: white;
             text-align: center;
         }
@@ -481,34 +339,44 @@
             margin: 0 auto;
         }
 
-        .mission-content h2 {
-            color: white;
-            margin-bottom: 2rem;
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
-        .mission-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            opacity: 0.95;
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition-base);
         }
 
-        /* CTA Section */
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: #16a571;
+            margin-bottom: 1.5rem;
+        }
+
+        .value-card h4 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
         .cta-section {
             background: #1a202c;
             color: white;
             padding: 80px 0;
             text-align: center;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
         }
 
         @media (max-width: 768px) {
@@ -524,36 +392,21 @@
                 font-size: 2rem;
             }
 
-            .about-content {
+            .founder-card {
                 grid-template-columns: 1fr;
                 text-align: center;
-            }
-
-            .expertise-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        <div class="urgency-content">
-            <span>🚀 Limited Time: 50% OFF Launch Offer - Premium Insurance Marketing Solutions</span>
-            <span class="countdown" id="countdown">90:23:59:47</span>
-        </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Broker Lead Engine Logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -567,7 +420,7 @@
                         <a href="marketing-automation.html">⚙️ Marketing Automation</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="homepage.html">Home</a></li>
+                <li class="nav-item"><a href="#pricing">Pricing</a></li>
                 <li class="nav-item"><a href="#testimonials">Success Stories</a></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
@@ -579,25 +432,29 @@
     <section class="hero">
         <div class="container">
             <h1>Meet the Team Behind <span class="hero-highlight">Broker Lead Engine</span></h1>
-            <p class="hero-subtext">Specialized insurance marketing experts helping $1M-$5M agencies generate consistent, qualified leads with AI-powered automation and proven strategies.</p>
+            <p class="hero-subtext">Brooklyn-based insurance marketing experts with a proven track record of generating qualified leads for agencies nationwide.</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section">
+    <!-- Founder Section -->
+    <section class="section team-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <div style="width: 300px; height: 300px; background: linear-gradient(135deg, #16a571 0%, #138a5e 100%); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                        <i class="fas fa-user-tie"></i>
+            <div class="founder-card">
+                <div class="founder-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user"></i>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>Samuel Ochoa, Founder & CEO</h3>
-                    <p><strong>Based in Brooklyn, New York</strong></p>
-                    <p>Samuel brings years of hands-on experience as an e-commerce manager and technical account manager, with deep expertise in local SEO, Google Maps optimization, Meta ads, and cold email campaigns.</p>
-                    <p>Having built and scaled multiple business offers from scratch, Samuel understands the challenges insurance agencies face in generating consistent, qualified leads. His proven frameworks have helped agencies generate significant revenue increases through systematic, data-driven marketing approaches.</p>
-                    <p>Samuel's expertise includes extensive testing with local SEO strategies, GMB optimization, cold email sequences, paid advertising campaigns, and the latest AI automation tools including MCP (Model Context Protocol) systems.</p>
+                <div class="founder-content">
+                    <h3>Samuel Ochoa</h3>
+                    <div class="founder-title">Founder & Lead Strategist</div>
+                    <div class="founder-bio">
+                        <p>Samuel founded SerproSEO with a mission to help insurance agencies break through the noise and generate consistent, qualified leads. Based in Brooklyn, NY, he brings years of hands-on experience in digital marketing, specializing in the unique challenges facing insurance brokers.</p>
+                        
+                        <p style="margin-top: 1rem;">His expertise spans local SEO, Google Ads, Meta advertising, and advanced automation systems. Samuel's data-driven approach has helped agencies across the country achieve significant growth in their lead generation efforts.</p>
+                        
+                        <p style="margin-top: 1rem;">When he's not optimizing campaigns or developing new lead generation strategies, Samuel enjoys exploring Brooklyn's diverse neighborhoods and staying at the forefront of digital marketing innovations.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -608,73 +465,38 @@
         <div class="container">
             <div class="section-header">
                 <h2>Our Core Expertise</h2>
-                <p>Specialized knowledge and proven frameworks for insurance agency marketing</p>
+                <p>Specialized knowledge in insurance marketing and lead generation</p>
             </div>
 
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <div class="expertise-icon">🤖</div>
-                    <h3>AI & Automation</h3>
-                    <p>Cutting-edge MCP automation systems, AI-powered lead qualification, and intelligent workflow design for maximum efficiency and results.</p>
+                    <h4>🤖 AI-Powered Automation</h4>
+                    <p>Advanced systems using MCP tools to automate prospect research, qualification, and outreach. We build custom automation workflows that scale with your agency.</p>
                 </div>
 
                 <div class="expertise-card">
-                    <div class="expertise-icon">📊</div>
-                    <h3>Data-Driven Strategy</h3>
-                    <p>Years of testing and optimization across multiple channels, with proven frameworks for local SEO, PPC, and lead nurturing systems.</p>
+                    <h4>📍 Local Market Domination</h4>
+                    <p>Expert knowledge of local SEO strategies specific to insurance agencies. We help you rank for "insurance near me" and other high-intent local searches.</p>
                 </div>
 
                 <div class="expertise-card">
-                    <div class="expertise-icon">🏢</div>
-                    <h3>Insurance Industry Focus</h3>
-                    <p>Deep understanding of insurance broker pain points, regulations, compliance requirements, and the unique challenges of the industry.</p>
+                    <h4>🎯 Performance Marketing</h4>
+                    <p>Data-driven approach to Google Ads, Meta advertising, and other paid channels. Every dollar spent is tracked and optimized for maximum ROI.</p>
                 </div>
 
                 <div class="expertise-card">
-                    <div class="expertise-icon">⚡</div>
-                    <h3>Rapid Implementation</h3>
-                    <p>Expert in MVP deployment, lean testing methodologies, and getting systems live quickly while maintaining quality and compliance.</p>
+                    <h4>📧 Relationship Building</h4>
+                    <p>Strategic email marketing and nurture sequences that build trust with prospects over time. We focus on value-first communication that converts.</p>
                 </div>
 
                 <div class="expertise-card">
-                    <div class="expertise-icon">💰</div>
-                    <h3>ROI-Focused Approach</h3>
-                    <p>Every strategy is designed with clear ROI targets, measurable outcomes, and proven frameworks that deliver consistent results.</p>
+                    <h4>📊 Analytics & Optimization</h4>
+                    <p>Comprehensive tracking and reporting on all marketing activities. We use data to continuously improve campaign performance and lead quality.</p>
                 </div>
 
                 <div class="expertise-card">
-                    <div class="expertise-icon">🎯</div>
-                    <h3>Multi-Channel Mastery</h3>
-                    <p>Integrated approach across local SEO, Google Ads, Meta advertising, cold email, and marketing automation for maximum lead generation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section stats-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Track Record</h2>
-                <p>Proven results from working with insurance agencies nationwide</p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">5+</span>
-                    <span>Years Experience</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <span>Agencies Helped</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">$2M+</span>
-                    <span>Revenue Generated</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">90%</span>
-                    <span>Client Satisfaction Rate</span>
+                    <h4>🛡️ Compliance & Ethics</h4>
+                    <p>Deep understanding of insurance industry regulations and compliance requirements. All our marketing strategies adhere to industry standards.</p>
                 </div>
             </div>
         </div>
@@ -685,9 +507,57 @@
         <div class="container">
             <div class="mission-content">
                 <h2>Our Mission</h2>
-                <p>We're committed to helping $1M-$5M insurance agencies break free from manual prospecting and inconsistent lead generation. Our mission is to provide cutting-edge AI automation and proven marketing systems that generate 50+ qualified leads weekly, allowing agency owners to focus on what they do best - closing deals and serving clients.</p>
-                <br>
-                <p>Every system we build is designed with one goal: measurable, sustainable growth for your insurance agency through data-driven marketing and intelligent automation.</p>
+                <p style="font-size: 1.2rem; margin: 2rem 0; line-height: 1.7;">To empower insurance agencies with cutting-edge marketing systems that generate consistent, qualified leads while maintaining the highest standards of professionalism and compliance.</p>
+                
+                <p style="font-size: 1.1rem; opacity: 0.9;">We believe that every insurance agency deserves access to the same advanced marketing tools and strategies used by the largest firms. Our goal is to level the playing field and help agencies of all sizes compete effectively in today's digital marketplace.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Drives Us</h2>
+                <p>The values that guide everything we do</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h4>Results-Focused</h4>
+                    <p>Every strategy we implement is designed with one goal in mind: generating qualified leads that convert to customers. We measure success by your success.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h4>Data-Driven</h4>
+                    <p>We make decisions based on real data, not assumptions. Every campaign is tracked, measured, and optimized for maximum performance.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>Partnership Approach</h4>
+                    <p>We see ourselves as an extension of your team. Your success is our success, and we're committed to building long-term relationships.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h4>Innovation</h4>
+                    <p>We stay at the forefront of marketing technology and strategies, constantly testing new approaches to keep you ahead of the competition.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h4>Integrity</h4>
+                    <p>All our marketing practices are ethical, compliant, and designed to build trust with your prospects. We never compromise on quality or ethics.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">📈</div>
+                    <h4>Continuous Improvement</h4>
+                    <p>We're never satisfied with "good enough." We continuously optimize and refine our strategies to deliver better results over time.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -695,80 +565,21 @@
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="container">
-            <h2>Ready to Transform Your Insurance Agency's Lead Generation?</h2>
+            <h2>Ready to Work with Us?</h2>
             <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
-                Get your free comprehensive marketing audit and see exactly how to generate significantly more qualified leads in your market using our proven systems.
+                Let's discuss how our proven strategies can help your insurance agency generate more qualified leads and grow your business.
             </p>
             
             <div style="margin: 2rem 0;">
-                <a href="mailto:samuel@serproseo.com?subject=Comprehensive Marketing Audit for Insurance Agency" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get Your Free Audit</a>
-                <a href="tel:+1234567890" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (555) 123-4567</a>
+                <a href="mailto:sam@serproseo.com?subject=Partnership Inquiry from Insurance Agency" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Start the Conversation</a>
+                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
             </div>
 
             <p style="margin-top: 2rem; opacity: 0.9;">
-                📧 samuel@serproseo.com | 🏢 Based in Brooklyn, NY<br>
-                🛡️ <strong>90-Day Money-Back Guarantee</strong> - Satisfaction guaranteed<br>
-                💼 Serving insurance agencies nationwide
+                📧 <a href="mailto:sam@serproseo.com" style="color: #16a571; text-decoration: none;">sam@serproseo.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
+                🛡️ <strong>90-Day Money-Back Guarantee</strong> - Your success is guaranteed
             </p>
         </div>
     </section>
-
-    <script>
-        // Remove loading overlay
-        window.addEventListener('load', () => {
-            document.getElementById('loadingOverlay').classList.add('loaded');
-        });
-
-        // Countdown Timer (3 months from now)
-        function updateCountdown() {
-            const countdownEl = document.getElementById('countdown');
-            if (!countdownEl) return;
-            
-            const now = new Date();
-            const endDate = new Date(now.getTime() + (90 * 24 * 60 * 60 * 1000)); // 90 days from now
-            
-            const diff = endDate - now;
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            countdownEl.textContent = `${days}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.expertise-card, .stat-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>

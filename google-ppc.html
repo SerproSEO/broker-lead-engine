@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google PPC for Insurance Agencies | SerproSEO</title>
-    <meta name="description" content="Generate high-intent insurance leads with Google PPC campaigns. Target prospects actively searching for insurance quotes. 90-day ROI guarantee.">
-    <meta name="keywords" content="Google PPC insurance agencies, insurance Google ads, commercial insurance PPC, insurance broker Google advertising">
+    <meta name="description" content="Capture high-intent insurance prospects with expert Google Ads management. Professional PPC campaigns that generate 25+ leads weekly. 90-day guarantee.">
+    <meta name="keywords" content="Google Ads insurance agencies, PPC insurance marketing, Google AdWords insurance brokers, insurance pay per click advertising">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -14,11 +14,42 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --orange: #f6ad55;
+            --orange-dark: #ed8936;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-orange: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #2d3748;
+            color: var(--gray-700);
             background: #ffffff;
+            position: relative;
         }
 
         /* Header Styles (Same as main site) */
@@ -241,11 +272,15 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #f6ad55;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: block;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         .campaigns-section {
@@ -265,8 +300,27 @@
             margin-bottom: 1rem;
         }
 
-        .pricing-section {
+        .keyword-section {
             background: #f7fafc;
+        }
+
+        .keyword-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .keyword-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #f6ad55;
+        }
+
+        .pricing-section {
+            background: white;
             text-align: center;
         }
 
@@ -373,7 +427,9 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Broker Lead Engine Logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -387,10 +443,9 @@
                         <a href="marketing-automation.html">⚙️ Marketing Automation</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="index-complete.html#ai-automation">AI Demo</a></li>
-                <li class="nav-item"><a href="index-complete.html#pricing">Pricing</a></li>
-                <li class="nav-item"><a href="index-complete.html#guarantee">Guarantee</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a href="#testimonials">Success Stories</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
             <a href="#cta" class="cta-button">Get Free Audit</a>
         </nav>
@@ -399,14 +454,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Google PPC for Insurance Agencies</h1>
-            <p class="hero-subtext">Capture high-intent prospects actively searching for insurance quotes. Our Google Ads campaigns target ready-to-buy customers with immediate results.</p>
+            <h1>Capture High-Intent Prospects<br><span style="color: #fed7aa;">Actively Searching for Insurance</span></h1>
+            <p class="hero-subtext">Professional Google Ads management that captures prospects when they're ready to buy. Our campaigns generate 25+ qualified leads weekly with proven ROI.</p>
             
             <div class="ppc-results">
-                <h3>🎯 Google PPC Results</h3>
-                <p><strong>Insurance industry average: $45-85 cost per click</strong><br>
-                18-30% of leads convert to customers<br>
-                Highest intent traffic available</p>
+                <h3>🎯 Google PPC Performance</h3>
+                <p><strong>Immediate visibility for high-intent searches</strong><br>
+                25+ qualified leads weekly • 18-30% close rate<br>
+                Premium keyword targeting • Optimized landing pages</p>
             </div>
 
             <div style="margin-top: 2rem;">
@@ -420,26 +475,26 @@
     <section class="section stats-section">
         <div class="container">
             <div class="section-header">
-                <h2>Why Google PPC Delivers the Highest Quality Insurance Leads</h2>
-                <p>Capture prospects at the exact moment they're ready to buy insurance</p>
+                <h2>Why Google Ads are Essential for Insurance Agencies</h2>
+                <p>Capture prospects with the highest purchase intent</p>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-card">
-                    <span class="stat-number">90%</span>
-                    <span>Of people use Google to find local businesses</span>
+                    <span class="stat-number">63%</span>
+                    <span>Of people clicked paid search ads</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">18-30%</span>
-                    <span>Conversion rate from PPC leads (highest intent)</span>
+                    <span class="stat-number">65%</span>
+                    <span>Click on ads when ready to buy</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">$45-85</span>
-                    <span>Average cost per click for insurance keywords</span>
+                    <span class="stat-number">80%</span>
+                    <span>Of ad clicks lead to phone calls</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">2x</span>
-                    <span>Higher close rate vs other lead sources</span>
+                    <span class="stat-number">200%</span>
+                    <span>Average ROI from Google Ads</span>
                 </div>
             </div>
         </div>
@@ -449,8 +504,8 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Complete Google PPC Management for Insurance Agencies</h2>
-                <p>Professional campaign setup, management, and optimization</p>
+                <h2>Complete Google Ads Management</h2>
+                <p>Professional PPC campaigns designed for insurance lead generation</p>
             </div>
 
             <div class="features-grid">
@@ -458,48 +513,48 @@
                     <div class="feature-icon">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3>Keyword Research & Strategy</h3>
-                    <p>Deep keyword research targeting high-intent insurance searches including commercial insurance, business liability, and industry-specific coverage.</p>
+                    <h3>Strategic Keyword Research</h3>
+                    <p>Comprehensive research to identify high-intent keywords that insurance prospects use when ready to purchase coverage.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-ad"></i>
                     </div>
-                    <h3>Ad Copy Creation</h3>
-                    <p>Compelling ad copy that highlights your unique value proposition, includes strong calls-to-action, and differentiates from competitors.</p>
+                    <h3>Compelling Ad Copy Creation</h3>
+                    <p>Professional ad copy that highlights your unique value proposition and drives qualified prospects to take action.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Precision Audience Targeting</h3>
+                    <p>Advanced targeting options including demographics, location, device, and time-of-day to reach your ideal prospects.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-landing-page"></i>
                     </div>
-                    <h3>Landing Page Optimization</h3>
-                    <p>High-converting landing pages designed specifically for insurance leads with quote forms, trust signals, and clear value propositions.</p>
+                    <h3>Optimized Landing Pages</h3>
+                    <p>High-converting landing pages designed specifically for insurance prospects with clear calls-to-action and trust signals.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Bid Management</h3>
-                    <p>Strategic bid management to maximize ROI while maintaining top positions for your most valuable keywords and target demographics.</p>
+                    <h3>Conversion Tracking & Analytics</h3>
+                    <p>Comprehensive tracking of calls, form submissions, and quote requests with detailed reporting on campaign performance.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-target"></i>
+                        <i class="fas fa-cog"></i>
                     </div>
-                    <h3>Audience Targeting</h3>
-                    <p>Advanced audience targeting including demographics, business size, industry, and behavioral signals to reach your ideal prospects.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-analytics"></i>
-                    </div>
-                    <h3>Performance Tracking</h3>
-                    <p>Detailed performance tracking with ROI analysis, lead quality metrics, and continuous optimization for maximum results.</p>
+                    <h3>Continuous Optimization</h3>
+                    <p>Regular campaign optimization including bid adjustments, ad testing, and keyword refinement to maximize ROI.</p>
                 </div>
             </div>
         </div>
@@ -509,81 +564,163 @@
     <section class="section campaigns-section" id="campaigns">
         <div class="container">
             <div class="section-header">
-                <h2>High-Converting Google Ad Campaign Types</h2>
-                <p>Strategic campaign structure for maximum insurance lead generation</p>
+                <h2>Strategic Google Ads Campaign Types</h2>
+                <p>Targeted campaigns designed for different insurance market segments</p>
             </div>
 
             <div class="campaign-card">
-                <h3>🎯 High-Intent Search Campaigns</h3>
-                <p><strong>Target Keywords:</strong> "business insurance quote," "commercial insurance near me," "liability insurance quotes"</p>
-                <p><strong>Strategy:</strong> Target top positions for immediate visibility to ready-to-buy prospects</p>
-                <p><strong>Expected Results:</strong> 8-15% CTR, 15-25% conversion rate, $85-185 cost per lead</p>
+                <h3>🚗 Auto Insurance Campaigns</h3>
+                <p><strong>Target Audience:</strong> Drivers seeking competitive rates, new car owners, policy renewals</p>
+                <p><strong>Key Keywords:</strong> "cheap car insurance," "auto insurance quotes," "car insurance near me"</p>
+                <p><strong>Landing Page Focus:</strong> Instant quotes, competitive rates, local service</p>
+                <p><strong>Expected Results:</strong> $45-85 cost per lead, 15-25% close rate</p>
             </div>
 
             <div class="campaign-card">
-                <h3>🏢 Industry-Specific Campaigns</h3>
-                <p><strong>Target Keywords:</strong> "restaurant insurance," "construction insurance," "healthcare liability"</p>
-                <p><strong>Strategy:</strong> Industry-specific ad copy with relevant case studies and specialized coverage</p>
-                <p><strong>Expected Results:</strong> 12-20% CTR (higher relevance), 20-30% conversion rate</p>
+                <h3>🏠 Home Insurance Campaigns</h3>
+                <p><strong>Target Audience:</strong> Homeowners, new home buyers, refinancing customers</p>
+                <p><strong>Key Keywords:</strong> "homeowners insurance," "home insurance quotes," "house insurance"</p>
+                <p><strong>Landing Page Focus:</strong> Coverage options, bundling discounts, claims support</p>
+                <p><strong>Expected Results:</strong> $55-95 cost per lead, 18-28% close rate</p>
             </div>
 
             <div class="campaign-card">
-                <h3>🏆 Competitor Campaigns</h3>
-                <p><strong>Target Keywords:</strong> "[Competitor name] insurance," "better than [competitor]"</p>
-                <p><strong>Strategy:</strong> Competitive positioning with superior value propositions</p>
-                <p><strong>Expected Results:</strong> 6-10% CTR, 12-18% conversion rate, lower CPC</p>
+                <h3>🏢 Commercial Insurance Campaigns</h3>
+                <p><strong>Target Audience:</strong> Business owners, new businesses, policy reviews</p>
+                <p><strong>Key Keywords:</strong> "business insurance," "commercial insurance quotes," "liability insurance"</p>
+                <p><strong>Landing Page Focus:</strong> Industry-specific coverage, risk assessment, expert consultation</p>
+                <p><strong>Expected Results:</strong> $125-250 cost per lead, 25-40% close rate</p>
             </div>
 
             <div class="campaign-card">
-                <h3>🔄 Remarketing Campaigns</h3>
-                <p><strong>Target Audience:</strong> Website visitors who didn't convert, quote abandoners</p>
-                <p><strong>Strategy:</strong> Re-engage warm prospects with special offers and trust signals</p>
-                <p><strong>Expected Results:</strong> 15-25% CTR, 25-40% conversion rate, $25-45 CPC</p>
+                <h3>👥 Life Insurance Campaigns</h3>
+                <p><strong>Target Audience:</strong> Young families, new parents, retirement planning</p>
+                <p><strong>Key Keywords:</strong> "life insurance quotes," "term life insurance," "whole life insurance"</p>
+                <p><strong>Landing Page Focus:</strong> Family protection, coverage calculators, easy application</p>
+                <p><strong>Expected Results:</strong> $85-150 cost per lead, 12-22% close rate</p>
             </div>
 
-            <h3 style="text-align: center; margin: 3rem 0 2rem; color: #1a202c;">Google PPC Performance Benchmarks</h3>
+            <h3 style="text-align: center; margin: 3rem 0 2rem; color: #1a202c;">Google Ads Performance Benchmarks</h3>
 
             <table>
                 <thead>
                     <tr>
                         <th>Campaign Type</th>
-                        <th>Average CPC</th>
-                        <th>Click-Through Rate</th>
+                        <th>Cost Per Click</th>
                         <th>Conversion Rate</th>
                         <th>Cost Per Lead</th>
+                        <th>Close Rate</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>High-Intent Search</td>
-                        <td>$45-85</td>
+                        <td>Auto Insurance</td>
+                        <td>$8-15</td>
                         <td>8-15%</td>
+                        <td>$45-85</td>
                         <td>15-25%</td>
-                        <td>$85-185</td>
                     </tr>
                     <tr>
-                        <td>Industry-Specific</td>
-                        <td>$35-65</td>
-                        <td>12-20%</td>
-                        <td>20-30%</td>
-                        <td>$65-145</td>
+                        <td>Home Insurance</td>
+                        <td>$12-22</td>
+                        <td>6-12%</td>
+                        <td>$55-95</td>
+                        <td>18-28%</td>
                     </tr>
                     <tr>
-                        <td>Competitor</td>
+                        <td>Commercial Insurance</td>
                         <td>$25-45</td>
-                        <td>6-10%</td>
-                        <td>12-18%</td>
-                        <td>$45-95</td>
-                    </tr>
-                    <tr>
-                        <td>Remarketing</td>
-                        <td>$15-25</td>
-                        <td>15-25%</td>
+                        <td>4-8%</td>
+                        <td>$125-250</td>
                         <td>25-40%</td>
-                        <td>$25-45</td>
+                    </tr>
+                    <tr>
+                        <td>Life Insurance</td>
+                        <td>$18-35</td>
+                        <td>5-10%</td>
+                        <td>$85-150</td>
+                        <td>12-22%</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </section>
+
+    <!-- Keyword Strategy Section -->
+    <section class="section keyword-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>High-Intent Keyword Strategy</h2>
+                <p>Target the exact phrases your prospects use when ready to buy</p>
+            </div>
+
+            <div class="keyword-grid">
+                <div class="keyword-card">
+                    <h3>🎯 High-Intent Keywords</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>"insurance quotes near me"</li>
+                        <li>"cheap car insurance"</li>
+                        <li>"best homeowners insurance"</li>
+                        <li>"business insurance quotes"</li>
+                        <li>"life insurance rates"</li>
+                    </ul>
+                </div>
+
+                <div class="keyword-card">
+                    <h3>🔍 Long-Tail Keywords</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>"auto insurance for new drivers"</li>
+                        <li>"small business liability insurance"</li>
+                        <li>"term life insurance quotes online"</li>
+                        <li>"homeowners insurance after claim"</li>
+                        <li>"commercial auto insurance quotes"</li>
+                    </ul>
+                </div>
+
+                <div class="keyword-card">
+                    <h3>📍 Local Keywords</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>"car insurance [city name]"</li>
+                        <li>"insurance agent near me"</li>
+                        <li>"[city] auto insurance quotes"</li>
+                        <li>"home insurance [state]"</li>
+                        <li>"insurance broker [area]"</li>
+                    </ul>
+                </div>
+
+                <div class="keyword-card">
+                    <h3>🏪 Brand Competitor Keywords</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>"[competitor] vs alternatives"</li>
+                        <li>"better than [competitor]"</li>
+                        <li>"[competitor] reviews"</li>
+                        <li>"switch from [competitor]"</li>
+                        <li>"[competitor] rates comparison"</li>
+                    </ul>
+                </div>
+
+                <div class="keyword-card">
+                    <h3>⚡ Urgent Need Keywords</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>"insurance today"</li>
+                        <li>"immediate coverage"</li>
+                        <li>"same day insurance"</li>
+                        <li>"emergency insurance"</li>
+                        <li>"instant insurance quotes"</li>
+                    </ul>
+                </div>
+
+                <div class="keyword-card">
+                    <h3>💰 Cost-Focused Keywords</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>"affordable insurance"</li>
+                        <li>"cheap insurance rates"</li>
+                        <li>"low cost insurance"</li>
+                        <li>"budget insurance options"</li>
+                        <li>"discount insurance quotes"</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -591,31 +728,31 @@
     <section class="section pricing-section">
         <div class="container">
             <div class="section-header">
-                <h2>Google PPC Management Investment</h2>
-                <p>Professional PPC management that maximizes your ad spend ROI</p>
+                <h2>Google Ads Management Investment</h2>
+                <p>Professional PPC management that delivers qualified insurance leads</p>
             </div>
 
             <div class="pricing-card">
-                <h3>Complete PPC Management</h3>
-                <div class="price">$1,497</div>
-                <p style="color: #4a5568; margin-bottom: 2rem;">Setup fee + 15% of ad spend monthly management</p>
+                <h3>Complete Google Ads Management</h3>
+                <div class="price">$997</div>
+                <p style="color: #4a5568; margin-bottom: 2rem;">Setup fee + 20% of ad spend monthly management</p>
                 
                 <ul class="features-list">
-                    <li>Complete Google Ads account setup</li>
-                    <li>Keyword research and competitor analysis</li>
-                    <li>Campaign creation and optimization</li>
-                    <li>Professional ad copy and extensions</li>
-                    <li>Landing page optimization</li>
-                    <li>Bid management and budget optimization</li>
-                    <li>Conversion tracking and analytics setup</li>
-                    <li>Monthly performance reports</li>
-                    <li>Ongoing optimization and A/B testing</li>
-                    <li>Dedicated account manager</li>
+                    <li>Google Ads account setup and optimization</li>
+                    <li>Comprehensive keyword research and strategy</li>
+                    <li>Professional ad copy creation and testing</li>
+                    <li>Landing page optimization for conversions</li>
+                    <li>Advanced audience targeting setup</li>
+                    <li>Conversion tracking and analytics</li>
+                    <li>Negative keyword management</li>
+                    <li>Bid optimization and budget management</li>
+                    <li>Monthly performance reports and insights</li>
+                    <li>Dedicated Google Ads specialist</li>
                 </ul>
 
                 <div style="background: #fef5e7; border: 2px solid #f6ad55; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
-                    <h4 style="color: #c05621; margin-bottom: 0.5rem;">🛡️ 90-Day ROI Guarantee</h4>
-                    <p style="color: #2d3748; margin: 0; font-weight: 600;">Positive ROI within 90 days or we work for free</p>
+                    <h4 style="color: #c05621; margin-bottom: 0.5rem;">🛡️ 90-Day Money-Back Guarantee</h4>
+                    <p style="color: #2d3748; margin: 0; font-weight: 600;">We'll work toward 25+ qualified leads monthly or refund your investment</p>
                 </div>
 
                 <a href="#cta" class="cta-button" style="width: 100%; text-align: center; padding: 1.25rem; background: #f6ad55;">Get Started Now</a>
@@ -626,17 +763,17 @@
     <!-- Guarantee Section -->
     <section class="guarantee-section">
         <div class="container">
-            <h2>Our Google PPC ROI Guarantee</h2>
+            <h2>Our Google Ads Commitment</h2>
             <p style="font-size: 1.1rem; margin: 2rem auto; max-width: 600px;">
-                We guarantee your Google PPC campaigns will generate positive ROI within 90 days, or we'll continue working for free until they do. That's how confident we are in our PPC expertise.
+                We're committed to creating and optimizing Google Ads campaigns designed to generate significant qualified leads. If you're not satisfied within 90 days, we'll refund your investment.
             </p>
             <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 500px;">
-                <h3>What Positive ROI Means:</h3>
+                <h3>What Makes Our Google Ads Different:</h3>
                 <ul style="text-align: left; margin-top: 1rem;">
-                    <li>Ad spend generates more revenue than it costs</li>
-                    <li>Qualified leads that convert to paying clients</li>
-                    <li>Measurable return on your marketing investment</li>
-                    <li>Sustainable, profitable lead generation</li>
+                    <li>Insurance industry-specific keyword research</li>
+                    <li>High-converting landing page optimization</li>
+                    <li>Advanced targeting for qualified prospects</li>
+                    <li>Continuous optimization for maximum ROI</li>
                 </ul>
             </div>
         </div>
@@ -645,36 +782,21 @@
     <!-- CTA Section -->
     <section class="cta-section" id="cta">
         <div class="container">
-            <h2>Ready to Generate High-Intent Insurance Leads?</h2>
+            <h2>Ready to Capture High-Intent Insurance Prospects?</h2>
             <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Get your free Google PPC audit and see how to capture prospects actively searching for insurance in your market.
+                Get your free Google Ads audit and see how PPC can generate 25+ qualified leads weekly for your insurance agency.
             </p>
             
             <div style="margin: 2rem 0;">
-                <a href="mailto:samuel@serproseo.com?subject=Google PPC Audit for Insurance Agency" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get Your Free PPC Audit</a>
-                <a href="tel:+1234567890" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (555) 123-4567</a>
+                <a href="mailto:sam@serproseo.com?subject=Google Ads Audit for Insurance Agency" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get Your Free PPC Audit</a>
+                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
             </div>
 
             <p style="margin-top: 2rem; opacity: 0.9;">
-                📧 samuel@serproseo.com | 🏢 Based in Brooklyn, NY<br>
-                🛡️ <strong>90-Day ROI Guarantee</strong> - Positive returns or we work for free
+                📧 <a href="mailto:sam@serproseo.com" style="color: #16a571; text-decoration: none;">sam@serproseo.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
+                🛡️ <strong>90-Day Money-Back Guarantee</strong> - Satisfaction guaranteed
             </p>
         </div>
     </section>
-
-    <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
