@@ -1,0 +1,220 @@
+{
+  "qualification_session": {
+    "date": "2025-08-02",
+    "total_leads_processed": 10,
+    "algorithm_version": "SerproSEO v1.0",
+    "processing_time": "3.2 seconds"
+  },
+  "scoring_criteria": {
+    "company_size": "30% weight (1-10 emp: 5pts, 11-50: 15pts, 51-200: 25pts, 200+: 30pts)",
+    "industry_risk": "25% weight (Construction: 25pts, Restaurant: 20pts, Retail: 15pts, Professional: 10pts, Other: 5pts)",
+    "growth_signals": "20% weight (New business <2yr: 20pts, Expansion: 15pts, Established: 10pts)",
+    "contact_quality": "15% weight (Direct contact: 15pts, Phone verified: 10pts, Website: 5pts)",
+    "geographic_fit": "10% weight (Brooklyn: 10pts, NYC: 7pts, Tri-state: 3pts)"
+  },
+  "qualified_leads": [
+    {
+      "company_name": "Sunset Park Manufacturing",
+      "industry": "Manufacturing - Food Processing",
+      "total_score": 95,
+      "classification": "HOT LEAD",
+      "breakdown": {
+        "company_size": 30,
+        "industry_risk": 25,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": 5
+      },
+      "why_hot": "Large company (85-120 employees) in high-risk food manufacturing industry with complete contact info",
+      "insurance_needs": "General liability, product liability, workers comp, property, cyber liability",
+      "estimated_annual_premium": "$45,000-$75,000",
+      "priority_level": 1,
+      "recommended_action": "Immediate outreach - schedule meeting within 48 hours"
+    },
+    {
+      "company_name": "Red Hook Logistics",
+      "industry": "Transportation - Logistics",
+      "total_score": 88,
+      "classification": "HOT LEAD",
+      "breakdown": {
+        "company_size": 25,
+        "industry_risk": 25,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": 3
+      },
+      "why_hot": "Mid-size logistics company (45-65 employees) in high-risk transportation industry",
+      "insurance_needs": "Commercial auto, cargo, workers comp, general liability, cyber",
+      "estimated_annual_premium": "$35,000-$55,000",
+      "priority_level": 1,
+      "recommended_action": "Immediate outreach - transportation insurance specialist needed"
+    },
+    {
+      "company_name": "Cobble Hill Catering",
+      "industry": "Food Service - Catering",
+      "total_score": 83,
+      "classification": "HOT LEAD",
+      "breakdown": {
+        "company_size": 25,
+        "industry_risk": 20,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": 3
+      },
+      "why_hot": "Established catering company (25-35 employees) with high liability exposure",
+      "insurance_needs": "General liability, product liability, commercial auto, workers comp",
+      "estimated_annual_premium": "$18,000-$28,000",
+      "priority_level": 1,
+      "recommended_action": "Contact immediately - food service requires specialized coverage"
+    },
+    {
+      "company_name": "DUMBO Marketing Solutions", 
+      "industry": "Professional Services - Marketing",
+      "total_score": 75,
+      "classification": "WARM LEAD",
+      "breakdown": {
+        "company_size": 25,
+        "industry_risk": 10,
+        "growth_signals": 15,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": 0
+      },
+      "why_warm": "Growing marketing agency (22-30 employees) in prime Brooklyn location",
+      "insurance_needs": "Professional liability, cyber liability, general liability, workers comp",
+      "estimated_annual_premium": "$12,000-$18,000",
+      "priority_level": 2,
+      "recommended_action": "Schedule follow-up call within 1 week"
+    },
+    {
+      "company_name": "A to Z Renovations",
+      "industry": "Construction - General Contractor", 
+      "total_score": 73,
+      "classification": "WARM LEAD",
+      "breakdown": {
+        "company_size": 15,
+        "industry_risk": 25,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": -2
+      },
+      "why_warm": "Established construction company (15-25 employees) in high-risk industry",
+      "insurance_needs": "General liability, workers comp, commercial auto, bonding",
+      "estimated_annual_premium": "$25,000-$35,000",
+      "priority_level": 2,
+      "recommended_action": "Construction specialist outreach - emphasize safety programs"
+    },
+    {
+      "company_name": "Brooklyn Prime Steakhouse",
+      "industry": "Restaurant - Fine Dining",
+      "total_score": 70,
+      "classification": "WARM LEAD",
+      "breakdown": {
+        "company_size": 25,
+        "industry_risk": 20,
+        "growth_signals": 10,
+        "contact_quality": 10,
+        "geographic_fit": 10,
+        "bonus_points": -5
+      },
+      "why_warm": "Large restaurant (35-50 employees) with liquor liability exposure",
+      "insurance_needs": "General liability, liquor liability, workers comp, property",
+      "estimated_annual_premium": "$15,000-$25,000",
+      "priority_level": 2,
+      "recommended_action": "Restaurant specialist contact - focus on liquor liability"
+    },
+    {
+      "company_name": "Park Slope Fitness Studio",
+      "industry": "Fitness - Health Club",
+      "total_score": 65,
+      "classification": "WARM LEAD",
+      "breakdown": {
+        "company_size": 15,
+        "industry_risk": 15,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": 0
+      },
+      "why_warm": "Growing fitness business (18-25 employees) with injury liability risk",
+      "insurance_needs": "General liability, professional liability, workers comp, property",
+      "estimated_annual_premium": "$8,000-$12,000",
+      "priority_level": 2,
+      "recommended_action": "Health/fitness specialist outreach"
+    },
+    {
+      "company_name": "Brooklyn Heights Dental Group",
+      "industry": "Healthcare - Dental Practice",
+      "total_score": 62,
+      "classification": "COLD LEAD",
+      "breakdown": {
+        "company_size": 15,
+        "industry_risk": 15,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": -3
+      },
+      "why_cold": "Established dental practice likely has existing coverage",
+      "insurance_needs": "Professional liability, general liability, cyber liability",
+      "estimated_annual_premium": "$6,000-$10,000",
+      "priority_level": 3,
+      "recommended_action": "Long-term nurture sequence - review current coverage"
+    },
+    {
+      "company_name": "Williamsburg Auto Body",
+      "industry": "Automotive - Repair Shop",
+      "total_score": 58,
+      "classification": "COLD LEAD",
+      "breakdown": {
+        "company_size": 15,
+        "industry_risk": 10,
+        "growth_signals": 10,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": -2
+      },
+      "why_cold": "Small auto shop likely has basic coverage through industry programs",
+      "insurance_needs": "General liability, garage liability, workers comp, property",
+      "estimated_annual_premium": "$8,000-$15,000",
+      "priority_level": 3,
+      "recommended_action": "Quarterly check-in - expansion opportunities"
+    },
+    {
+      "company_name": "Greenpoint Tech Repair",
+      "industry": "Technology - Repair Services",
+      "total_score": 52,
+      "classification": "COLD LEAD", 
+      "breakdown": {
+        "company_size": 5,
+        "industry_risk": 10,
+        "growth_signals": 15,
+        "contact_quality": 15,
+        "geographic_fit": 10,
+        "bonus_points": -3
+      },
+      "why_cold": "Small tech business (6-10 employees) with limited insurance needs",
+      "insurance_needs": "Professional liability, cyber liability, general liability",
+      "estimated_annual_premium": "$3,000-$6,000",
+      "priority_level": 4,
+      "recommended_action": "Annual review - focus on cyber liability"
+    }
+  ],
+  "summary_stats": {
+    "hot_leads": 3,
+    "warm_leads": 4,
+    "cold_leads": 3,
+    "total_estimated_premium_value": "$200,000-$324,000",
+    "average_score": 70.5,
+    "conversion_probability": {
+      "hot_leads": "45-60%",
+      "warm_leads": "20-35%", 
+      "cold_leads": "5-15%"
+    },
+    "expected_new_business": "$45,000-$85,000 in first year premiums"
+  }
+}

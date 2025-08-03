@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The $5M Agency Lead Generation System - SerproSEO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #16a571 0%, #0d7f56 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .header h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .header .author {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+        
+        /* Section Headers */
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #16a571;
+            margin: 50px 0 30px 0;
+            border-bottom: 3px solid #16a571;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0d7f56;
+            margin: 40px 0 20px 0;
+        }
+        
+        h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin: 30px 0 15px 0;
+        }
+        
+        /* Content styling */
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 5px solid #16a571;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .results-box {
+            background: linear-gradient(135deg, #16a571 0%, #0d7f56 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(22, 165, 113, 0.3);
+        }
+        
+        .results-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        /* Lists */
+        ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: #16a571;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        
+        /* Code blocks */
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+        
+        /* Buttons/CTAs */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #16a571 0%, #0d7f56 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(22, 165, 113, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(22, 165, 113, 0.4);
+        }
+        
+        /* Statistics/Numbers */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #16a571;
+        }
+        
+        .stat-number {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #16a571;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        /* Disclaimer styling */
+        .disclaimer {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            color: #991b1b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 0.9rem;
+        }
+        
+        .disclaimer h4 {
+            color: #991b1b;
+            margin-bottom: 10px;
+        }
+        
+        /* Page breaks for PDF */
+        .page-break {
+            page-break-before: always;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media print {
+            .header {
+                background: #16a571 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .results-box {
+                background: #16a571 !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The $5M Agency Lead Generation System</h1>
+        <div class="subtitle">How Insurance Brokers Generate 145+ Qualified Leads Weekly Using AI Automation</div>
+        <div class="author">By Samuel Ochoa, SerproSEO | Backed by our 90-Day Results Guarantee</div>
+    </div>
+
+    <div class="container">
+        <!-- Table of Contents would go here -->
+        
+        <div class="highlight-box">
+            <h3>About This Playbook</h3>
+            <p>This playbook reveals a comprehensive strategy for automating insurance agency lead generation using cutting-edge AI and MCP technology. Based on extensive research and a live 23-minute technology demonstration, it shows how agencies could potentially transform their prospecting approach.</p>
+        </div>
+
+        <div class="disclaimer">
+            <h4>Important Disclaimer</h4>
+            <p><strong>SerproSEO is a new agency in the insurance broker marketing space.</strong> The strategies and results outlined in this playbook are based on industry research, available technology capabilities, and projected outcomes. We have not yet implemented these specific systems for insurance clients. All case studies and results mentioned are either industry examples, test scenarios, or projections based on similar implementations in other industries.</p>
+        </div>
+
+        <!-- Rest of content would go here with proper styling -->
+        
+        <div class="results-box">
+            <h3>🔥 Technology Demonstration Results</h3>
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <span class="stat-number">147</span>
+                    <span class="stat-label">Businesses Identified</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">23</span>
+                    <span class="stat-label">Minutes Processing</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Qualified Prospects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$200K+</span>
+                    <span class="stat-label">Pipeline Value</span>
+                </div>
+            </div>
+            <p><em>Technology demonstration conducted using publicly available business data for illustrative purposes only.</em></p>
+        </div>
+        
+    </div>
+</body>
+</html>

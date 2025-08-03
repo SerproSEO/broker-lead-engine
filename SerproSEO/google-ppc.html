@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google PPC for Insurance Agencies | SerproSEO</title>
+    <meta name="description" content="Generate high-intent insurance leads with Google PPC campaigns. Target prospects actively searching for insurance quotes. 90-day ROI guarantee.">
+    <meta name="keywords" content="Google PPC insurance agencies, insurance Google ads, commercial insurance PPC, insurance broker Google advertising">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #ffffff;
+        }
+
+        /* Header Styles (Same as main site) */
+        .header {
+            background: #1a202c;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-radius: 6px;
+        }
+
+        .nav-item > a:hover {
+            color: #16a571;
+            background: rgba(22, 165, 113, 0.1);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dropdown a:hover {
+            background: #f8fafc;
+            color: #16a571;
+            padding-left: 2rem;
+        }
+
+        .cta-button {
+            background: #16a571;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #138a5e;
+            transform: translateY(-2px);
+        }
+
+        /* Page Styles */
+        .hero {
+            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            padding: 60px 0;
+            clear: both;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #f6ad55;
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .stats-section {
+            background: #f7fafc;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f6ad55;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .campaigns-section {
+            background: white;
+        }
+
+        .campaign-card {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .campaign-card h3 {
+            color: #c05621;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-section {
+            background: #f7fafc;
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 400px;
+            margin: 2rem auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #f6ad55;
+            margin: 1rem 0;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #f6ad55;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .guarantee-section {
+            background: #f6ad55;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-section {
+            background: #1a202c;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .ppc-results {
+            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Broker Lead Engine Logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown">
+                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+                        <a href="local-seo.html">📍 Local SEO</a>
+                        <a href="google-ppc.html">🎯 Google PPC</a>
+                        <a href="meta-ads.html">📱 Meta Ads</a>
+                        <a href="cold-email.html">📧 Cold Email</a>
+                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="index-complete.html#ai-automation">AI Demo</a></li>
+                <li class="nav-item"><a href="index-complete.html#pricing">Pricing</a></li>
+                <li class="nav-item"><a href="index-complete.html#guarantee">Guarantee</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+            </ul>
+            <a href="#cta" class="cta-button">Get Free Audit</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Google PPC for Insurance Agencies</h1>
+            <p class="hero-subtext">Capture high-intent prospects actively searching for insurance quotes. Our Google Ads campaigns target ready-to-buy customers with immediate results.</p>
+            
+            <div class="ppc-results">
+                <h3>🎯 Google PPC Results</h3>
+                <p><strong>Insurance industry average: $45-85 cost per click</strong><br>
+                18-30% of leads convert to customers<br>
+                Highest intent traffic available</p>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <a href="#cta" class="cta-button" style="background: white; color: #f6ad55; margin-right: 1rem;">Get PPC Audit</a>
+                <a href="#campaigns" class="cta-button" style="background: transparent; border: 2px solid white;">See Campaign Types</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Google PPC Delivers the Highest Quality Insurance Leads</h2>
+                <p>Capture prospects at the exact moment they're ready to buy insurance</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">90%</span>
+                    <span>Of people use Google to find local businesses</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">18-30%</span>
+                    <span>Conversion rate from PPC leads (highest intent)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$45-85</span>
+                    <span>Average cost per click for insurance keywords</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2x</span>
+                    <span>Higher close rate vs other lead sources</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Google PPC Management for Insurance Agencies</h2>
+                <p>Professional campaign setup, management, and optimization</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Keyword Research & Strategy</h3>
+                    <p>Deep keyword research targeting high-intent insurance searches including commercial insurance, business liability, and industry-specific coverage.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>Ad Copy Creation</h3>
+                    <p>Compelling ad copy that highlights your unique value proposition, includes strong calls-to-action, and differentiates from competitors.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-landing-page"></i>
+                    </div>
+                    <h3>Landing Page Optimization</h3>
+                    <p>High-converting landing pages designed specifically for insurance leads with quote forms, trust signals, and clear value propositions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Bid Management</h3>
+                    <p>Strategic bid management to maximize ROI while maintaining top positions for your most valuable keywords and target demographics.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h3>Audience Targeting</h3>
+                    <p>Advanced audience targeting including demographics, business size, industry, and behavioral signals to reach your ideal prospects.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-analytics"></i>
+                    </div>
+                    <h3>Performance Tracking</h3>
+                    <p>Detailed performance tracking with ROI analysis, lead quality metrics, and continuous optimization for maximum results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Types Section -->
+    <section class="section campaigns-section" id="campaigns">
+        <div class="container">
+            <div class="section-header">
+                <h2>High-Converting Google Ad Campaign Types</h2>
+                <p>Strategic campaign structure for maximum insurance lead generation</p>
+            </div>
+
+            <div class="campaign-card">
+                <h3>🎯 High-Intent Search Campaigns</h3>
+                <p><strong>Target Keywords:</strong> "business insurance quote," "commercial insurance near me," "liability insurance quotes"</p>
+                <p><strong>Strategy:</strong> Target top positions for immediate visibility to ready-to-buy prospects</p>
+                <p><strong>Expected Results:</strong> 8-15% CTR, 15-25% conversion rate, $85-185 cost per lead</p>
+            </div>
+
+            <div class="campaign-card">
+                <h3>🏢 Industry-Specific Campaigns</h3>
+                <p><strong>Target Keywords:</strong> "restaurant insurance," "construction insurance," "healthcare liability"</p>
+                <p><strong>Strategy:</strong> Industry-specific ad copy with relevant case studies and specialized coverage</p>
+                <p><strong>Expected Results:</strong> 12-20% CTR (higher relevance), 20-30% conversion rate</p>
+            </div>
+
+            <div class="campaign-card">
+                <h3>🏆 Competitor Campaigns</h3>
+                <p><strong>Target Keywords:</strong> "[Competitor name] insurance," "better than [competitor]"</p>
+                <p><strong>Strategy:</strong> Competitive positioning with superior value propositions</p>
+                <p><strong>Expected Results:</strong> 6-10% CTR, 12-18% conversion rate, lower CPC</p>
+            </div>
+
+            <div class="campaign-card">
+                <h3>🔄 Remarketing Campaigns</h3>
+                <p><strong>Target Audience:</strong> Website visitors who didn't convert, quote abandoners</p>
+                <p><strong>Strategy:</strong> Re-engage warm prospects with special offers and trust signals</p>
+                <p><strong>Expected Results:</strong> 15-25% CTR, 25-40% conversion rate, $25-45 CPC</p>
+            </div>
+
+            <h3 style="text-align: center; margin: 3rem 0 2rem; color: #1a202c;">Google PPC Performance Benchmarks</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign Type</th>
+                        <th>Average CPC</th>
+                        <th>Click-Through Rate</th>
+                        <th>Conversion Rate</th>
+                        <th>Cost Per Lead</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>High-Intent Search</td>
+                        <td>$45-85</td>
+                        <td>8-15%</td>
+                        <td>15-25%</td>
+                        <td>$85-185</td>
+                    </tr>
+                    <tr>
+                        <td>Industry-Specific</td>
+                        <td>$35-65</td>
+                        <td>12-20%</td>
+                        <td>20-30%</td>
+                        <td>$65-145</td>
+                    </tr>
+                    <tr>
+                        <td>Competitor</td>
+                        <td>$25-45</td>
+                        <td>6-10%</td>
+                        <td>12-18%</td>
+                        <td>$45-95</td>
+                    </tr>
+                    <tr>
+                        <td>Remarketing</td>
+                        <td>$15-25</td>
+                        <td>15-25%</td>
+                        <td>25-40%</td>
+                        <td>$25-45</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Google PPC Management Investment</h2>
+                <p>Professional PPC management that maximizes your ad spend ROI</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Complete PPC Management</h3>
+                <div class="price">$1,497</div>
+                <p style="color: #4a5568; margin-bottom: 2rem;">Setup fee + 15% of ad spend monthly management</p>
+                
+                <ul class="features-list">
+                    <li>Complete Google Ads account setup</li>
+                    <li>Keyword research and competitor analysis</li>
+                    <li>Campaign creation and optimization</li>
+                    <li>Professional ad copy and extensions</li>
+                    <li>Landing page optimization</li>
+                    <li>Bid management and budget optimization</li>
+                    <li>Conversion tracking and analytics setup</li>
+                    <li>Monthly performance reports</li>
+                    <li>Ongoing optimization and A/B testing</li>
+                    <li>Dedicated account manager</li>
+                </ul>
+
+                <div style="background: #fef5e7; border: 2px solid #f6ad55; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
+                    <h4 style="color: #c05621; margin-bottom: 0.5rem;">🛡️ 90-Day ROI Guarantee</h4>
+                    <p style="color: #2d3748; margin: 0; font-weight: 600;">Positive ROI within 90 days or we work for free</p>
+                </div>
+
+                <a href="#cta" class="cta-button" style="width: 100%; text-align: center; padding: 1.25rem; background: #f6ad55;">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <h2>Our Google PPC ROI Guarantee</h2>
+            <p style="font-size: 1.1rem; margin: 2rem auto; max-width: 600px;">
+                We guarantee your Google PPC campaigns will generate positive ROI within 90 days, or we'll continue working for free until they do. That's how confident we are in our PPC expertise.
+            </p>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 500px;">
+                <h3>What Positive ROI Means:</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Ad spend generates more revenue than it costs</li>
+                    <li>Qualified leads that convert to paying clients</li>
+                    <li>Measurable return on your marketing investment</li>
+                    <li>Sustainable, profitable lead generation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Ready to Generate High-Intent Insurance Leads?</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Get your free Google PPC audit and see how to capture prospects actively searching for insurance in your market.
+            </p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="mailto:samuel@serproseo.com?subject=Google PPC Audit for Insurance Agency" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get Your Free PPC Audit</a>
+                <a href="tel:+1234567890" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (555) 123-4567</a>
+            </div>
+
+            <p style="margin-top: 2rem; opacity: 0.9;">
+                📧 samuel@serproseo.com | 🏢 Based in Brooklyn, NY<br>
+                🛡️ <strong>90-Day ROI Guarantee</strong> - Positive returns or we work for free
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
