@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Your FREE Google Ads Audit is Being Prepared | Broker Lead Engine</title>
+    <meta name="description" content="Thank you for requesting your free Google Ads audit. We're analyzing your campaigns and will send results within 24 hours.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thank-you-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #16a571 0%, #667eea 100%);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #16a571;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            margin: 0 auto 2rem;
+        }
+
+        .headline {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .subheadline {
+            font-size: 1.25rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+
+        .next-steps {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .next-steps h3 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+        }
+
+        .step-number {
+            background: #16a571;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: #4a5568;
+        }
+
+        .bonus-section {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .bonus-section h3 {
+            color: #c05621;
+            margin-bottom: 1rem;
+        }
+
+        .bonus-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .bonus-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+            color: #744210;
+        }
+
+        .bonus-list li::before {
+            content: "🎁";
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-section {
+            background: #1a202c;
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .cta-button {
+            background: #16a571;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #138a5e;
+            transform: translateY(-2px);
+        }
+
+        .social-proof {
+            margin: 2rem 0;
+        }
+
+        .testimonial {
+            background: #f8fafc;
+            border-left: 4px solid #16a571;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            text-align: left;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .urgency-timer {
+            background: #fed7d7;
+            border: 2px solid #e53e3e;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: #c53030;
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .thank-you-card {
+                padding: 2rem;
+            }
+            
+            .headline {
+                font-size: 2rem;
+            }
+            
+            .subheadline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <img src="logo.png" alt="Broker Lead Engine" class="logo">
+            
+            <h1 class="headline">Thank You! Your Audit is Being Prepared</h1>
+            <p class="subheadline">We're analyzing your Google Ads campaigns right now and will email your personalized audit within 24 hours.</p>
+            
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Campaign Analysis (Next 2 Hours)</h4>
+                        <p>Our team reviews your current Google Ads setup, keywords, and performance data</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Custom Audit Report (Within 24 Hours)</h4>
+                        <p>You'll receive a detailed report with specific recommendations and projected ROI improvements</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Strategy Call (Optional)</h4>
+                        <p>Schedule a 15-minute call to discuss your audit results and implementation plan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="urgency-timer">
+                ⏱️ Limited Time: Schedule your strategy call within <span class="timer" id="countdown">47:32:15</span> to lock in our current rates
+            </div>
+
+            <div class="bonus-section">
+                <h3>🎁 BONUS: Free Resources While You Wait</h3>
+                <ul class="bonus-list">
+                    <li>Insurance PPC Keyword Research Tool (normally $97)</li>
+                    <li>Landing Page Conversion Checklist</li>
+                    <li>Google Ads Optimization Template</li>
+                    <li>ROI Tracking Spreadsheet</li>
+                </ul>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <strong>Check your email - these have been sent to you automatically!</strong>
+                </p>
+            </div>
+
+            <div class="cta-section">
+                <h3>Want Even Faster Results?</h3>
+                <p>Don't wait for the audit - book a strategy call now and we'll review your campaigns live on the call</p>
+                <a href="mailto:sam@brokerleadengine.com?subject=Urgent Strategy Call Request" class="cta-button">Book Immediate Strategy Call</a>
+                <a href="tel:+13472013023" class="cta-button">Call Now: (347) 201-3023</a>
+            </div>
+
+            <div class="social-proof">
+                <div class="testimonial">
+                    "I couldn't believe how many mistakes I was making with my Google Ads. The audit saved me $1,800/month immediately, and their optimizations doubled my lead quality."
+                    <br><strong>- Jennifer Martinez, Martinez Insurance Agency</strong>
+                </div>
+                
+                <div class="testimonial">
+                    "The free audit was incredibly detailed - more thorough than what I paid $500 for elsewhere. These guys know insurance PPC inside and out."
+                    <br><strong>- David Thompson, Thompson & Associates</strong>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Questions about your audit?</strong></p>
+                <p>📧 <strong>sam@brokerleadengine.com</strong> | 📞 <strong>(347) 201-3023</strong></p>
+                <p>🏢 Based in Brooklyn, NY | Serving Insurance Brokers Nationwide</p>
+                <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8;">
+                    <strong>🛡️ Privacy Promise:</strong> We'll never share your information or spam you. 
+                    You'll only receive your audit results and valuable insurance marketing tips.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            if (!countdownEl) return;
+            
+            // Set target time (2 days from now)
+            const now = new Date();
+            const target = new Date(now.getTime() + (2 * 24 * 60 * 60 * 1000)); // 2 days from now
+            
+            const diff = target - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            countdownEl.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Track page view (you can integrate with your analytics)
+        console.log('Thank you page viewed at:', new Date());
+        
+        // Optional: Auto-redirect after a certain time
+        // setTimeout(() => {
+        //     window.location.href = 'index.html';
+        // }, 60000); // Redirect after 1 minute
+    </script>
+</body>
+</html>
