@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "broker-lead-engine": {
+      "command": "node",
+      "args": ["C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\mcp-server.js"],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "globalShortcut": {
+    "enabled": true,
+    "key": "CommandOrControl+Shift+Space"
+  }
+}
