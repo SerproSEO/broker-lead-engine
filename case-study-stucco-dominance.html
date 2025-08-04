@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: From Market Invisible to Statewide #1 in 6 Months | Broker Lead Engine</title>
+    <meta name="description" content="How we helped a Connecticut construction company achieve 247% lead increase and dominate their entire state in just 6 months. Real results, proven methodology.">
+    <meta name="keywords" content="SEO case study, lead generation results, digital marketing success story, statewide SEO dominance">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        .nav-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gray-200);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            transition: var(--transition-base);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-300);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .results-banner {
+            background: var(--gradient-primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+
+        .results-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .challenge-card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--danger);
+        }
+
+        .challenge-card h3 {
+            color: var(--danger);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .solution-card {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .solution-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .solution-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .results-section {
+            background: var(--gray-50);
+            padding: 4rem 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .result-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--success);
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--success);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-text {
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        /* Insurance Broker CTA */
+        .broker-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .broker-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .broker-cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-month {
+            background: var(--primary);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-month {
+                left: 20px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">🚀 Broker Lead Engine</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>From Market Invisible to Statewide #1</h1>
+            <p class="hero-subtitle">How we helped a Connecticut construction company achieve complete digital dominance in just 6 months</p>
+            
+            <div class="results-banner">
+                <h2>247% Lead Increase</h2>
+                <p>Real results. Proven methodology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Challenge</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--gray-600);">
+                A specialized stucco contractor in Connecticut was struggling despite having a website and local reputation.
+            </p>
+            
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3><i class="fas fa-money-bill-wave"></i> Bleeding Money on Ads</h3>
+                    <p>Google Ads were generating clicks but zero conversions. Every dollar spent was money down the drain with a website that simply didn't convert visitors into leads.</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><i class="fas fa-eye-slash"></i> Invisible Online</h3>
+                    <p>Despite being established locally, they were completely invisible in search results while 6 competitors dominated every "stucco contractor" search in Connecticut.</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><i class="fas fa-thumbs-down"></i> Low-Quality Leads</h3>
+                    <p>The few leads they did get were price shoppers and tire kickers who rarely converted to actual projects, wasting time and resources.</p>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><i class="fas fa-chart-line"></i> Stagnant Growth</h3>
+                    <p>Despite having the skills and reputation for quality work, they couldn't scale beyond their existing referral network and word-of-mouth marketing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="content-section" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="section-title">Our Solution</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--gray-600);">
+                We implemented our proven digital dominance strategy to transform them from market invisible to market leader.
+            </p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Complete SEO Overhaul</h3>
+                    <p>Strategic keyword targeting and technical optimization to capture every stucco-related search across Connecticut.</p>
+                </div>
+                
+                <div class="solution-card">
+                    <i class="fas fa-conversion"></i>
+                    <h3>Conversion Optimization</h3>
+                    <p>Redesigned their website to stop the ad spend bleeding and turn visitors into qualified leads automatically.</p>
+                </div>
+                
+                <div class="solution-card">
+                    <i class="fas fa-target"></i>
+                    <h3>Competitive Positioning</h3>
+                    <p>Strategic analysis and positioning to outrank all 6 major competitors in every Connecticut city and town.</p>
+                </div>
+                
+                <div class="solution-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Lead Qualification System</h3>
+                    <p>Automated systems to filter and qualify leads, ensuring only serious prospects reached their sales team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">6-Month Transformation Timeline</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Month 1-2: Foundation</h3>
+                        <p>Complete website audit, technical SEO fixes, and content strategy development. Identified all competitor weaknesses and market opportunities.</p>
+                    </div>
+                    <div class="timeline-month">Month 1-2</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Month 3-4: Momentum</h3>
+                        <p>Rankings began climbing. Started appearing on page 1 for key terms. Conversion optimization showing immediate improvements in lead quality.</p>
+                    </div>
+                    <div class="timeline-month">Month 3-4</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Month 5-6: Dominance</h3>
+                        <p>Achieved #1 rankings statewide. All 6 competitors outranked. Lead volume exploded while quality remained high. Market leader status established.</p>
+                    </div>
+                    <div class="timeline-month">Month 5-6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">The Results</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--gray-600);">
+                Six months later, they went from market invisible to complete digital dominance.
+            </p>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">247%</div>
+                    <div class="result-text">Increase in Qualified Leads</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">#1</div>
+                    <div class="result-text">Statewide Rankings</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">6/6</div>
+                    <div class="result-text">Competitors Outranked</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">100%</div>
+                    <div class="result-text">Market Coverage</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">Higher</div>
+                    <div class="result-text">Lead Quality</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">Significant</div>
+                    <div class="result-text">Revenue Growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Broker CTA -->
+    <section class="broker-cta">
+        <div class="container">
+            <h2>If We Can Dominate an Entire State for Construction...</h2>
+            <p>Imagine what we can do for your insurance brokerage in the digital marketplace where <strong>74% of buyers start their search online</strong>.</p>
+            <p style="margin-bottom: 3rem;">The same methodology that helped a construction company outrank 6 established competitors can help your insurance brokerage dominate your market and attract premium commercial clients.</p>
+            
+            <a href="index.html#contact" class="cta-button">
+                <i class="fas fa-rocket"></i> Transform Your Brokerage
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

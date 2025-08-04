@@ -34,7 +34,7 @@ class BrokerLeadEngine {
         // Initialize services
         this.firecrawl = new FirecrawlApp({ apiKey: process.env.FIRECRAWL_API_KEY });
         this.airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY });
-        this.stripe = stripe(process.env.STRIPE_SECRET_KEY);
+        // this.stripe = stripe(process.env.STRIPE_SECRET_KEY); // Temporarily disabled - no API key
         
         this.setupMiddleware();
         this.setupRoutes();
@@ -242,16 +242,18 @@ class BrokerLeadEngine {
     // 💰 REVENUE TRACKING
     async trackRevenue() {
         try {
-            const payments = await this.stripe.charges.list({
-                limit: 100,
-                created: {
-                    gte: Math.floor(new Date().setDate(1) / 1000) // This month
-                }
-            });
+            // Temporarily disabled - no Stripe API key
+            // const payments = await this.stripe.charges.list({
+            //     limit: 100,
+            //     created: {
+            //         gte: Math.floor(new Date().setDate(1) / 1000) // This month
+            //     }
+            // });
             
-            this.monthlyRevenue = payments.data.reduce((sum, charge) => sum + charge.amount, 0) / 100;
+            // this.monthlyRevenue = payments.data.reduce((sum, charge) => sum + charge.amount, 0) / 100;
+            this.monthlyRevenue = 0; // Temporarily set to 0
             
-            console.log(`💰 Monthly revenue: $${this.monthlyRevenue}`);
+            console.log(`💰 Monthly revenue: $${this.monthlyRevenue} (Stripe disabled)`);
             
         } catch (error) {
             console.error('Revenue tracking error:', error);

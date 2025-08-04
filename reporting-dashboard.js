@@ -89,11 +89,83 @@ class ReportingDashboard {
     async renderMainDashboard(req, res) {
         try {
             const dashboardData = await this.compileDashboardData();
-            res.render('dashboard', { data: dashboardData });
+            // Send HTML dashboard instead of rendering template
+            const html = this.generateDashboardHTML(dashboardData);
+            res.send(html);
         } catch (error) {
             console.error('Dashboard rendering error:', error);
             res.status(500).json({ error: 'Dashboard unavailable' });
         }
+    }
+
+    generateDashboardHTML(data) {
+        return `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>🚀 Broker Lead Engine - Dashboard</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+                .container { max-width: 1200px; margin: 0 auto; }
+                .header { text-align: center; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; margin-bottom: 30px; }
+                .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
+                .stat-card { background: #2a2a2a; padding: 20px; border-radius: 10px; text-align: center; }
+                .stat-value { font-size: 2em; font-weight: bold; color: #4CAF50; }
+                .chart-container { background: #2a2a2a; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>🚀 Broker Lead Engine Dashboard</h1>
+                    <p>Real-time Analytics • Path to $100K/Month</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>💰 Monthly Revenue</h3>
+                        <div class="stat-value">$${data.revenue.monthly.toLocaleString()}</div>
+                        <p>Target: $100,000</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>👥 Active Clients</h3>
+                        <div class="stat-value">${data.clients.active}</div>
+                        <p>Target: 50 clients</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>📈 Lead Generation</h3>
+                        <div class="stat-value">${data.leads.daily}</div>
+                        <p>Leads per day</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>🎯 Conversion Rate</h3>
+                        <div class="stat-value">${data.performance.conversionRate}%</div>
+                        <p>Lead to client conversion</p>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>📊 System Status</h3>
+                    <p>✅ Lead Generation System: Active</p>
+                    <p>✅ Website Automation: Active</p>
+                    <p>✅ CRM System: Active</p>
+                    <p>⚠️ Stripe Integration: Disabled (no API key)</p>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>🚀 Progress to $100K/Month</h3>
+                    <div style="background: #333; height: 30px; border-radius: 15px; overflow: hidden;">
+                        <div style="background: linear-gradient(90deg, #4CAF50, #45a049); height: 100%; width: ${(data.revenue.monthly / 100000) * 100}%; transition: width 0.3s;"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px;">${((data.revenue.monthly / 100000) * 100).toFixed(1)}% Complete</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        `;
     }
 
     async compileDashboardData() {

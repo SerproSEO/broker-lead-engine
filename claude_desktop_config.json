@@ -2,14 +2,14 @@
   "mcpServers": {
     "broker-lead-engine": {
       "command": "node",
-      "args": ["C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\mcp-server.js"],
+      "args": ["C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\mcp-server-fixed.js"],
       "env": {
         "NODE_ENV": "production"
       }
     },
     "enhanced-broker-mcp": {
       "command": "node",
-      "args": ["C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\enhanced-mcp-server.js"],
+      "args": ["C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\enhanced-mcp-server-fixed.js"],
       "env": {
         "NODE_ENV": "production",
         "FIRECRAWL_API_KEY": "fc-ff2409277e1b443eb8a51ca3a7221c5e"
@@ -20,6 +20,21 @@
       "args": ["-y", "firecrawl-mcp"],
       "env": {
         "FIRECRAWL_API_KEY": "fc-ff2409277e1b443eb8a51ca3a7221c5e"
+      }
+    },
+    "perplexity": {
+      "command": "npx",
+      "args": ["-y", "perplexity-mcp"],
+      "env": {
+        "PERPLEXITY_API_KEY": "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"
+      }
+    },
+    "dataforseo": {
+      "command": "npx",
+      "args": ["-y", "dataforseo-mcp-server"],
+      "env": {
+        "DATAFORSEO_LOGIN": "sam@serproseo.com",
+        "DATAFORSEO_PASSWORD": "Ochoacueva1."
       }
     }
   },
