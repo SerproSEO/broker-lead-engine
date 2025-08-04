@@ -4,7 +4,8 @@
       "WebFetch(domain:www.yelp.com)",
       "Bash(where claude)",
       "Bash(claude mcp:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(ls:*)"
     ],
     "deny": []
   }
