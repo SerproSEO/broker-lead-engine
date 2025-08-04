@@ -39,6 +39,7 @@
 - ✅ Clickable email (opens email client)
 - ✅ Professional contact styling
 - ✅ Consistent updates across all pages
+- ✅ **Legal disclaimer footer** (SERPRO SEO LLC + compliance notice)
 
 ## 🔄 **Next Update:**
 Future updates will be organized in **Alphatype 2**, **Alphatype 3**, etc.
