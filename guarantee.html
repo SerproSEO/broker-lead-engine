@@ -188,6 +188,130 @@
             left: 100%;
         }
 
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s linear;
+            transform-origin: 1px;
+        }
+
+        .hamburger-menu.active .hamburger-line:first-child {
+            transform: rotate(45deg);
+        }
+
+        .hamburger-menu.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active .hamburger-line:third-child {
+            transform: rotate(-45deg);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .mobile-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s;
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+
+        .mobile-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        }
+
         /* Urgency Banner */
         .urgency-banner {
             background: var(--gradient-primary);
@@ -466,9 +590,55 @@
             color: white;
         }
 
-        /* Mobile Styles */        @media (max-width: 768px) {            .nav-container {                padding: 0 1rem;            }            .logo img {                height: 120px;                max-width: 300px;            }            .header {                height: 70px;            }            .urgency-banner {                top: 70px;                padding: 8px 0;                height: 36px;            }            .urgency-content {                font-size: 0.8rem;                flex-wrap: wrap;                text-align: center;            }            .hero {                margin-top: 106px;                padding: 40px 0 60px;            }            .mobile-menu {                display: flex;                flex-direction: column;                align-items: center;                gap: 0.5rem;            }            .mobile-nav-button {                background: var(--primary);                color: white;                padding: 0.5rem 1rem;                border: none;                border-radius: 6px;                font-size: 0.8rem;                text-decoration: none;                margin: 0.2rem;            }
-.mobile-menu {                display: flex !important;            }            .container {                padding: 0 1rem;            }            .cta-button {                padding: 0.6rem 1.2rem;                font-size: 0.9rem;            }
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo img {
+                height: 120px;
+                max-width: 300px;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .urgency-banner {
+                top: 70px;
+                padding: 8px 0;
+                height: 36px;
+            }
+
+            .urgency-content {
+                font-size: 0.8rem;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .hero {
+                margin-top: 106px;
+                padding: 40px 0 60px;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
             .nav-menu {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex !important;
+            }
+
+            .cta-button {
                 display: none;
             }
 
@@ -521,8 +691,31 @@
                 <li class="nav-item"><a href="about.html">About</a></li>
             </ul>
             <a href="#cta" class="cta-button">Get Free Audit</a>
-<!-- Mobile Menu -->            <div class="mobile-menu" style="display: none;">                <a href="services.html" class="mobile-nav-button">Services</a>                <a href="ai-demo.html" class="mobile-nav-button">AI Demo</a>                <a href="pricing.html" class="mobile-nav-button">Pricing</a>                <a href="guarantee.html" class="mobile-nav-button">Guarantee</a>                <a href="about.html" class="mobile-nav-button">About</a>            </div>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="ai-demo.html" class="mobile-nav-link">AI Demo</a>
+                    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+                    <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="#cta" class="mobile-cta-button">Get Free Audit</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -752,6 +945,35 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenu = document.getElementById('close-menu');
+
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+        }
+
+        hamburgerMenu.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking outside
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                toggleMenu();
+            }
+        });
+
+        // Close menu when clicking on navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    toggleMenu();
+                }
+            });
+        });
         // Countdown Timer
         function updateCountdown() {
             const countdownEl = document.getElementById('countdown');
