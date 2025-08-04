@@ -6,6 +6,21 @@
       "env": {
         "NODE_ENV": "production"
       }
+    },
+    "enhanced-broker-mcp": {
+      "command": "node",
+      "args": ["C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\enhanced-mcp-server.js"],
+      "env": {
+        "NODE_ENV": "production",
+        "FIRECRAWL_API_KEY": "fc-ff2409277e1b443eb8a51ca3a7221c5e"
+      }
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-ff2409277e1b443eb8a51ca3a7221c5e"
+      }
     }
   },
   "globalShortcut": {
