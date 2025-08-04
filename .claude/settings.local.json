@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.yelp.com)"
+      "WebFetch(domain:www.yelp.com)",
+      "Bash(where claude)",
+      "Bash(claude mcp:*)"
     ],
     "deny": []
   }
