@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Demo - See Our Lead Generation AI in Action | Broker Lead Engine</title>
+    <meta name="description" content="Discover how our AI generates 50+ qualified insurance leads weekly. See real examples of our MCP automation system in action for insurance agencies.">
+    <meta name="keywords" content="AI lead generation demo, insurance AI automation, MCP lead generation, AI prospecting for insurance">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+            position: relative;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            background: rgba(26, 32, 44, 0.98);
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 200px;
+            width: auto;
+            max-width: 600px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-radius: 6px;
+        }
+
+        .nav-item > a:hover {
+            color: #16a571;
+            background: rgba(22, 165, 113, 0.1);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dropdown a:hover {
+            background: #f8fafc;
+            color: #16a571;
+            padding-left: 2rem;
+        }
+
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-base);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 0;
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+            animation: slideDown 0.5s ease-out;
+            height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .urgency-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+        }
+
+        .countdown {
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            margin-top: 124px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+            background-size: 40px 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-highlight {
+            color: #16a571;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 60px 0;
+            clear: both;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        /* AI Demo Content */
+        .ai-step {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            margin: 3rem 0;
+            border-left: 6px solid var(--primary);
+            position: relative;
+        }
+
+        .ai-step-number {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        .ai-step h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ai-step-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--gray-600);
+        }
+
+        .ai-example {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin: 1rem 0;
+        }
+
+        .ai-example h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-example p {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+
+        .results-box {
+            background: #f0fff4;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--primary);
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .results-box h4 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+
+        .cta-section {
+            background: #1a202c;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .ai-step {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        <div class="urgency-content">
+            <span>🚀 Limited Time: 50% OFF Launch Offer - Premium Insurance Marketing Solutions</span>
+            <span class="countdown" id="countdown">90:23:59:47</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown">
+                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+                        <a href="local-seo.html">📍 Local SEO</a>
+                        <a href="google-ppc.html">🎯 Google PPC</a>
+                        <a href="meta-ads.html">📱 Meta Ads</a>
+                        <a href="cold-email.html">📧 Cold Email</a>
+                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="ai-demo.html">AI Demo</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="guarantee.html">Guarantee</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+            </ul>
+            <a href="#cta" class="cta-button">Get Free Audit</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>See Our <span class="hero-highlight">AI Lead Generation System</span> in Action</h1>
+            <p class="hero-subtext">Watch how our MCP automation finds, qualifies, and delivers 50+ hot insurance prospects weekly - completely hands-free.</p>
+        </div>
+    </section>
+
+    <!-- AI Demo Content -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Our AI Generates Insurance Leads</h2>
+                <p>Step-by-step breakdown of our proprietary MCP (Model Context Protocol) system</p>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="ai-step">
+                <div class="ai-step-number">1</div>
+                <h3>🔍 Intelligent Prospect Discovery</h3>
+                <p class="ai-step-description">
+                    Our AI scans multiple data sources 24/7 to identify businesses that need insurance. It analyzes business directories, new business filings, permit applications, and industry databases to find companies with specific risk profiles.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>AI Search Process:</h4>
+                    <p>→ Scanning new business registrations in target zip codes...<br>
+                    → Found 47 new construction companies this week<br>
+                    → Cross-referencing with permit databases...<br>
+                    → Identified 23 companies without current GL coverage<br>
+                    → Prioritizing by revenue and employee count...</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Weekly Discovery Results</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">1,200+</span>
+                            <span>Businesses Scanned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span>Qualified Prospects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">75+</span>
+                            <span>High-Priority Leads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="ai-step">
+                <div class="ai-step-number">2</div>
+                <h3>🎯 Advanced Lead Qualification</h3>
+                <p class="ai-step-description">
+                    The AI analyzes each prospect using 50+ data points including company size, industry risk factors, growth indicators, and insurance requirements. It scores leads based on likelihood to purchase and policy value potential.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Qualification Analysis:</h4>
+                    <p>→ ABC Construction LLC - Score: 94/100<br>
+                    → Revenue: $2.3M annually | Employees: 15<br>
+                    → Risk Factors: High-value equipment, multiple job sites<br>
+                    → Current Coverage: Basic GL only (under-insured)<br>
+                    → Purchase Probability: 87% | Est. Premium: $24K</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Qualification Accuracy</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">92%</span>
+                            <span>Lead Quality Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">67%</span>
+                            <span>Contact Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">23%</span>
+                            <span>Meeting Conversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="ai-step">
+                <div class="ai-step-number">3</div>
+                <h3>📧 Personalized Outreach Generation</h3>
+                <p class="ai-step-description">
+                    For each qualified prospect, the AI creates personalized outreach messages based on their specific industry, company size, and risk profile. It crafts compelling subject lines, email content, and follow-up sequences.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Generated Email Example:</h4>
+                    <p>Subject: Construction Insurance Gap - ABC Construction<br><br>
+                    Hi [First Name],<br><br>
+                    I noticed ABC Construction has been growing rapidly with recent projects in [City]. With 15 employees and $2.3M revenue, you're likely facing increased insurance requirements from GCs.<br><br>
+                    Many construction companies your size are missing critical coverages like Cyber Liability and Professional Indemnity. A recent claim in your industry cost $180K.<br><br>
+                    I'd like to show you how to close these gaps while potentially reducing your overall premium...</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Outreach Performance</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">34%</span>
+                            <span>Open Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8.2%</span>
+                            <span>Response Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2.1%</span>
+                            <span>Meeting Booking Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="ai-step">
+                <div class="ai-step-number">4</div>
+                <h3>⚡ Automated Follow-Up Sequences</h3>
+                <p class="ai-step-description">
+                    The AI manages multi-touch follow-up campaigns, tracking prospect engagement and adjusting messaging based on behavior. It knows when to follow up, what tone to use, and when to try different channels.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Follow-Up Sequence:</h4>
+                    <p>Day 1: Initial outreach (sent)<br>
+                    Day 4: Soft follow-up with industry insight<br>
+                    Day 8: Value-focused follow-up with case study<br>
+                    Day 15: Final follow-up with limited-time offer<br>
+                    Day 22: Switch to LinkedIn outreach<br>
+                    Day 30: Phone number research and calling sequence</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Follow-Up Results</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">47%</span>
+                            <span>Response from Follow-Ups</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6.3</span>
+                            <span>Avg Touches to Response</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">89%</span>
+                            <span>Automation Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="ai-step">
+                <div class="ai-step-number">5</div>
+                <h3>📊 Real-Time Lead Delivery & Scoring</h3>
+                <p class="ai-step-description">
+                    Qualified leads are delivered to your CRM in real-time with complete prospect profiles, risk assessments, and recommended approach strategies. The AI continuously updates lead scores based on new data.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Lead Delivery Format:</h4>
+                    <p>🔥 HOT LEAD ALERT<br>
+                    Company: ABC Construction LLC<br>
+                    Contact: John Smith, Owner<br>
+                    Phone: (555) 123-4567 | Email: j.smith@abcconstruction.com<br>
+                    Lead Score: 94/100 | Est. Premium: $24,000<br>
+                    Recommended Approach: Focus on equipment coverage gaps<br>
+                    Best Contact Time: Mornings 8-10 AM<br>
+                    Notes: Responded positively to email #2, expressed interest in quote</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Overall AI Performance</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">52</span>
+                            <span>Qualified Leads/Week</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">18%</span>
+                            <span>Lead-to-Meeting Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$47K</span>
+                            <span>Avg Weekly Pipeline</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span>Automated Operation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Ready to Let AI Generate Your Leads?</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+                See how our AI can generate 50+ qualified insurance leads weekly for your agency. Get a free audit and demonstration of our MCP system.
+            </p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="mailto:sam@brokerleadengine.com?subject=AI Demo and Free Audit Request" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get AI Demo & Audit</a>
+                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
+            </div>
+
+            <p style="margin-top: 2rem; opacity: 0.9;">
+                📧 <a href="mailto:sam@brokerleadengine.com" style="color: #16a571; text-decoration: none;">sam@brokerleadengine.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
+                🛡️ <strong>90-Day Results Guarantee</strong> - 300% more leads or money back<br>
+                🤖 <strong>AI-Powered Automation</strong> - Works 24/7 to find your prospects
+            </p>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer Footer -->
+    <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+        <div class="container">
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
+                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+                All marketing services are provided in compliance with applicable laws and regulations.
+            </p>
+            <p style="opacity: 0.7; font-size: 0.8rem;">
+                © 2025 Serpro SEO LLC. All rights reserved. | Privacy Policy | Terms of Service
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            if (!countdownEl) return;
+            
+            const now = new Date();
+            // Set countdown to start from yesterday at 1am
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            yesterday.setHours(1, 0, 0, 0); // Set to 1am
+            const endDate = new Date(yesterday.getTime() + (90 * 24 * 60 * 60 * 1000)); // 90 days from yesterday 1am
+            
+            const diff = endDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            countdownEl.textContent = `${days}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
