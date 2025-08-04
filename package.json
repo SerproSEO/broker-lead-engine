@@ -12,24 +12,24 @@
     "dashboard": "node reporting-dashboard.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.5.0",
     "@mendable/firecrawl-js": "^1.7.0",
-    "puppeteer": "^22.0.0",
-    "cheerio": "^1.0.0",
-    "axios": "^1.6.7",
-    "googleapis": "^118.0.0",
+    "@modelcontextprotocol/sdk": "^0.5.0",
     "airtable": "^0.12.2",
-    "stripe": "^14.0.0",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0",
+    "dataforseo-client": "^1.0.12",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "googleapis": "^118.0.0",
+    "node-cron": "^3.0.3",
     "nodemon": "^3.0.1",
     "openai": "^4.28.0",
-    "node-cron": "^3.0.3",
-    "dataforseo-client": "^1.0.12"
+    "puppeteer": "^22.0.0",
+    "stripe": "^14.0.0"
   },
   "keywords": [
     "insurance",
-    "lead-generation", 
+    "lead-generation",
     "automation",
     "mcp",
     "claude-code",
