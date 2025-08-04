@@ -68,7 +68,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            height: 200px;
+            height: 175px;
             display: flex;
             align-items: center;
         }
@@ -89,9 +89,9 @@
         }
 
         .logo img {
-            height: 200px;
+            height: 175px;
             width: auto;
-            max-width: 600px;
+            max-width: 525px;
             object-fit: contain;
         }
 
@@ -202,7 +202,7 @@
             font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.9;
-            max-width: 600px;
+            max-width: 525px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -410,7 +410,8 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile Styles */        @media (max-width: 768px) {            .nav-container {                padding: 0 1rem;            }            .logo img {                height: 120px;                max-width: 300px;            }            .header {                height: 70px;            }            .urgency-banner {                top: 70px;                padding: 8px 0;                height: 36px;            }            .urgency-content {                font-size: 0.8rem;                flex-wrap: wrap;                text-align: center;            }            .hero {                margin-top: 106px;                padding: 40px 0 60px;            }            .mobile-menu {                display: flex;                flex-direction: column;                align-items: center;                gap: 0.5rem;            }            .mobile-nav-button {                background: var(--primary);                color: white;                padding: 0.5rem 1rem;                border: none;                border-radius: 6px;                font-size: 0.8rem;                text-decoration: none;                margin: 0.2rem;            }
+.mobile-menu {                display: flex !important;            }            .container {                padding: 0 1rem;            }            .cta-button {                padding: 0.6rem 1.2rem;                font-size: 0.9rem;            }
             .nav-menu {
                 display: none;
             }
@@ -456,6 +457,7 @@
                 <li class="nav-item"><a href="about.html">About</a></li>
             </ul>
             <a href="#cta" class="cta-button">Get Free Audit</a>
+<!-- Mobile Menu -->            <div class="mobile-menu" style="display: none;">                <a href="services.html" class="mobile-nav-button">Services</a>                <a href="ai-demo.html" class="mobile-nav-button">AI Demo</a>                <a href="pricing.html" class="mobile-nav-button">Pricing</a>                <a href="guarantee.html" class="mobile-nav-button">Guarantee</a>                <a href="about.html" class="mobile-nav-button">About</a>            </div>
         </nav>
     </header>
 
@@ -783,10 +785,10 @@
     <section class="guarantee-section">
         <div class="container">
             <h2>Our Marketing Automation Commitment</h2>
-            <p style="font-size: 1.1rem; margin: 2rem auto; max-width: 600px;">
+            <p style="font-size: 1.1rem; margin: 2rem auto; max-width: 525px;">
                 We're committed to implementing marketing automation systems designed to significantly reduce the time your team spends on manual follow-up tasks. If you're not satisfied within 90 days, we'll refund your investment.
             </p>
-            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 600px;">
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 525px;">
                 <h3>What This Means for Your Agency:</h3>
                 <ul style="text-align: left; margin-top: 1rem;">
                     <li>No more missed follow-ups or lost prospects</li>
@@ -802,7 +804,7 @@
     <section class="cta-section" id="cta">
         <div class="container">
             <h2>Ready to Automate Your Insurance Marketing?</h2>
-            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 525px; margin-left: auto; margin-right: auto;">
                 Get your free marketing automation audit and see how to eliminate manual follow-up tasks while increasing conversions.
             </p>
             

@@ -83,9 +83,9 @@
         }
 
         .logo img {
-            height: 200px;
+            height: 175px;
             width: auto;
-            max-width: 600px;
+            max-width: 525px;
             object-fit: contain;
         }
 
@@ -466,7 +466,8 @@
             color: white;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile Styles */        @media (max-width: 768px) {            .nav-container {                padding: 0 1rem;            }            .logo img {                height: 120px;                max-width: 300px;            }            .header {                height: 70px;            }            .urgency-banner {                top: 70px;                padding: 8px 0;                height: 36px;            }            .urgency-content {                font-size: 0.8rem;                flex-wrap: wrap;                text-align: center;            }            .hero {                margin-top: 106px;                padding: 40px 0 60px;            }            .mobile-menu {                display: flex;                flex-direction: column;                align-items: center;                gap: 0.5rem;            }            .mobile-nav-button {                background: var(--primary);                color: white;                padding: 0.5rem 1rem;                border: none;                border-radius: 6px;                font-size: 0.8rem;                text-decoration: none;                margin: 0.2rem;            }
+.mobile-menu {                display: flex !important;            }            .container {                padding: 0 1rem;            }            .cta-button {                padding: 0.6rem 1.2rem;                font-size: 0.9rem;            }
             .nav-menu {
                 display: none;
             }
@@ -520,6 +521,7 @@
                 <li class="nav-item"><a href="about.html">About</a></li>
             </ul>
             <a href="#cta" class="cta-button">Get Free Audit</a>
+<!-- Mobile Menu -->            <div class="mobile-menu" style="display: none;">                <a href="services.html" class="mobile-nav-button">Services</a>                <a href="ai-demo.html" class="mobile-nav-button">AI Demo</a>                <a href="pricing.html" class="mobile-nav-button">Pricing</a>                <a href="guarantee.html" class="mobile-nav-button">Guarantee</a>                <a href="about.html" class="mobile-nav-button">About</a>            </div>
         </nav>
     </header>
 
