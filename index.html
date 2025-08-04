@@ -83,6 +83,12 @@
             to { transform: rotate(360deg); }
         }
 
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         /* Header Styles */
         .header {
             background: var(--secondary);
@@ -723,6 +729,7 @@
             <p class="hero-subtext">Advanced AI automation system designed for $1M-$5M insurance agencies. Proven methodology that generates qualified leads while you focus on closing deals.</p>
             
             <div style="margin-top: 2rem; position: relative; z-index: 1;">
+                <a href="ppc-audit-landing.html" class="cta-button" style="background: #e53e3e; color: white; margin-right: 1rem; border: 2px solid #e53e3e; animation: pulse 2s infinite;">🚨 FREE Google Ads Audit</a>
                 <a href="#contact" class="cta-button" style="margin-right: 1rem;">Get Started Now</a>
                 <a href="#services" class="cta-button" style="background: transparent; border: 2px solid white;">Learn More</a>
             </div>
