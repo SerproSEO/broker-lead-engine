@@ -902,7 +902,7 @@
             if (!countdownEl) return;
             
             const now = new Date();
-            const endDate = new Date(now.getTime() + (90 * 24 * 60 * 60 * 1000)); // 90 days from now
+            // Set countdown to start from yesterday at 1am            const yesterday = new Date();            yesterday.setDate(yesterday.getDate() - 1);            yesterday.setHours(1, 0, 0, 0); // Set to 1am            const endDate = new Date(yesterday.getTime() + (90 * 24 * 60 * 60 * 1000)); // 90 days from yesterday 1am
             
             const diff = endDate - now;
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
