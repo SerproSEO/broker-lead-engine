@@ -282,7 +282,7 @@
             opacity: 0;
         }
 
-        .hamburger-menu.active .hamburger-line:third-child {
+        .hamburger-menu.active .hamburger-line:nth-child(3) {
             transform: rotate(-45deg);
         }
 
@@ -477,12 +477,13 @@
         .service-card::before {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
-            height: 80px;
+            height: 4px;
             background: var(--gradient-primary);
             transform: scaleX(0);
+            transform-origin: left;
             transition: transform 0.3s;
         }
 
@@ -598,7 +599,7 @@
             }
 
             .hero {
-                margin-top: 80px;
+                margin-top: 70px;
                 padding: 40px 0 60px;
             }
 
