@@ -1,5 +1,5 @@
 {
-  "buildTime": "2025-08-05T19:14:56.195Z",
+  "buildTime": "2025-08-05T19:27:46.915Z",
   "nodeVersion": "v24.5.0",
   "platform": "win32",
   "files": [
@@ -10,6 +10,7 @@
     "cold-email.html",
     "contact.html",
     "faq.html",
+    "favicon.ico",
     "google-ppc.html",
     "guarantee.html",
     "index.html",
@@ -29,5 +30,5 @@
     "typeform-advanced-integrations.js",
     "_redirects"
   ],
-  "totalFiles": 25
+  "totalFiles": 26
 }
