@@ -1,0 +1,123 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - navigation:
+    - link "Broker Lead Engine Logo":
+      - /url: index.html
+      - img "Broker Lead Engine Logo"
+    - link "Get Free Audit":
+      - /url: "#cta"
+    - link "Services":
+      - /url: services.html
+    - link "AI Demo":
+      - /url: ai-demo.html
+    - link "Pricing":
+      - /url: pricing.html
+    - link "Guarantee":
+      - /url: guarantee.html
+    - link "About":
+      - /url: about.html
+- heading "AI Lead Generation for Insurance Agencies" [level=1]
+- paragraph: Generate 50+ qualified insurance prospects weekly with our MCP automation system. AI finds, qualifies, and delivers hot leads 24/7 while you focus on closing deals.
+- heading "🔥 Real AI Test Results" [level=3]
+- paragraph:
+  - strong: 10 qualified leads in 23 minutes
+  - text: $200,000+ total pipeline value Brooklyn business test - August 2025
+- link "Get Started Now":
+  - /url: "#cta"
+- link "See How It Works":
+  - /url: "#how-it-works"
+- heading "Why AI Lead Generation Outperforms Manual Prospecting" [level=2]
+- paragraph: Stop wasting 24+ hours weekly on manual prospecting. Our AI automation delivers superior results with minimal time investment.
+- text: 24/7 Automated Prospecting 50+ Qualified Leads Weekly 15-25% Qualification Rate $15-25 Cost Per Lead 
+- heading "MCP Automation System" [level=3]
+- paragraph: Our Model Context Protocol connects AI to business directories, new business filings, and industry databases for comprehensive prospect discovery.
+- heading "Smart Lead Qualification" [level=3]
+- paragraph: Advanced algorithms score prospects based on company size, industry risk, growth signals, and insurance needs for highly qualified leads.
+- text: 
+- heading "Real-Time Processing" [level=3]
+- paragraph: AI processes hundreds of prospects in minutes, extracting contact information, analyzing insurance needs, and prioritizing outreach opportunities.
+- text: 
+- heading "Predictable Pipeline" [level=3]
+- paragraph: Generate consistent lead flow with automated prospecting that never sleeps, never takes breaks, and never misses an opportunity.
+- text: 
+- heading "Multi-Source Discovery" [level=3]
+- paragraph: Access Chamber of Commerce directories, business registrations, industry associations, and growth announcements automatically.
+- text: 
+- heading "90-Day Guarantee" [level=3]
+- paragraph: Generate 300% more qualified leads in 90 days or get your money back. We're that confident in our AI automation system.
+- heading "How Our AI Lead Generation System Works" [level=2]
+- paragraph: From prospect discovery to qualified lead delivery - all automated
+- text: "1"
+- heading "AI Discovery" [level=3]
+- paragraph: Our MCP system scrapes business directories, monitors new business filings, and tracks expansion announcements across your target markets 24/7.
+- text: "2"
+- heading "Data Extraction" [level=3]
+- paragraph: AI extracts comprehensive company details including size indicators, contact information, industry classification, and growth signals.
+- text: "3"
+- heading "Smart Qualification" [level=3]
+- paragraph: Advanced algorithms score each prospect based on insurance needs, company size, industry risk, and buying likelihood.
+- text: "4"
+- heading "Lead Prioritization" [level=3]
+- paragraph: Prospects are classified as HOT, WARM, or COLD leads based on qualification scores and readiness to buy insurance.
+- text: "5"
+- heading "Delivery & Integration" [level=3]
+- paragraph: Qualified leads are delivered to your CRM with complete contact information, insurance needs analysis, and recommended approach.
+- text: "6"
+- heading "Continuous Optimization" [level=3]
+- paragraph: System learns from your feedback and closing rates to continuously improve lead quality and qualification accuracy.
+- heading "AI Lead Generation Pricing" [level=2]
+- paragraph: Choose the package that fits your agency's growth goals
+- heading "AI Lead Engine Starter" [level=3]
+- text: $2,997
+- paragraph: Perfect for agencies ready to automate lead generation
+- list:
+  - listitem: ✓ MCP automation system setup
+  - listitem: ✓ 5 verified lead sources configured
+  - listitem: ✓ Lead qualification & scoring algorithms
+  - listitem: ✓ CRM integration and data delivery
+  - listitem: ✓ 30-day optimization period
+  - listitem: ✓ 50+ qualified leads monthly guarantee
+  - listitem: ✓ Email & phone support
+  - listitem: ✓ System training for your team
+- heading "🛡️ 90-Day Results Guarantee" [level=4]
+- paragraph: Generate 300% more qualified leads in 90 days or get your money back
+- link "Get Started Now":
+  - /url: "#cta"
+- heading "Our 90-Day Results Guarantee" [level=2]
+- paragraph: We're so confident in our AI lead generation system that we guarantee you'll generate 300% more qualified leads within 90 days, or we'll refund your entire investment. No questions asked.
+- heading "What This Means for You:" [level=3]
+- list:
+  - listitem: Zero risk investment in AI automation
+  - listitem: Proven system with documented results
+  - listitem: Complete confidence in our technology
+  - listitem: Full refund if you don't see 300% increase
+- heading "Ready to Automate Your Lead Generation?" [level=2]
+- paragraph: Get your free AI lead generation audit and see exactly how many qualified prospects are available in your market right now.
+- link "Get Your Free Audit":
+  - /url: mailto:sam@brokerleadengine.com?subject=AI Lead Generation Audit
+- 'link "Call: (347) 201-3023"':
+  - /url: tel:+13472013023
+- paragraph:
+  - text: 📧
+  - link "sam@brokerleadengine.com":
+    - /url: mailto:sam@brokerleadengine.com
+  - text: "| 📞"
+  - link "(347) 201-3023":
+    - /url: tel:+13472013023
+  - text: "| 🏢 Based in Brooklyn, NY 🛡️"
+  - strong: 90-Day Results Guarantee
+  - text: "- 300% more leads or money back"
+- contentinfo:
+  - paragraph:
+    - strong: "Legal Disclaimer:"
+    - text: Broker Lead Engine is a service operated by Serpro SEO LLC. Results may vary and are not guaranteed. Past performance does not guarantee future results. All marketing services are provided in compliance with applicable laws and regulations.
+  - paragraph:
+    - text: © 2025 Serpro SEO LLC. All rights reserved. |
+    - link "Privacy Policy":
+      - /url: privacy-policy.html
+    - text: "|"
+    - link "Terms of Service":
+      - /url: terms-of-service.html
+```

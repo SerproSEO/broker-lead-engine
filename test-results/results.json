@@ -1,0 +1,283 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\playwright.config.js",
+    "rootDir": "C:/Users/b/Documents/GitHub/broker-lead-engine/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "./test-results/html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "./test-results/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/b/Documents/GitHub/broker-lead-engine/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/b/Documents/GitHub/broker-lead-engine/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "navigation-test.spec.js",
+      "file": "navigation-test.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Navigation Testing Suite",
+          "file": "navigation-test.spec.js",
+          "line": 37,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete Navigation Analysis",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30121,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\tests\\navigation-test.spec.js",
+                            "column": 52,
+                            "line": 237
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m5\u001b[39m\n\n  235 |\n  236 |     // Fail test if navigation is inconsistent\n> 237 |     expect(results.summary.pagesWithIncompleteNav).toBe(0);\n      |                                                    ^\n  238 |   });\n  239 | });\n    at C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\tests\\navigation-test.spec.js:237:52"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🚀 Starting comprehensive navigation analysis...\n\n"
+                        },
+                        {
+                          "text": "📄 Testing Home (/)...\n"
+                        },
+                        {
+                          "text": "  🖥️  Analyzing desktop navigation...\n"
+                        },
+                        {
+                          "text": "  📱 Analyzing mobile navigation...\n"
+                        },
+                        {
+                          "text": "  ✅ Complete navigation\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing Services (/services.html)...\n"
+                        },
+                        {
+                          "text": "  🖥️  Analyzing desktop navigation...\n"
+                        },
+                        {
+                          "text": "  📱 Analyzing mobile navigation...\n"
+                        },
+                        {
+                          "text": "  ❌ Missing items - Desktop: [], Mobile: [Success Stories, Contact]\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing Pricing (/pricing.html)...\n"
+                        },
+                        {
+                          "text": "  🖥️  Analyzing desktop navigation...\n"
+                        },
+                        {
+                          "text": "  📱 Analyzing mobile navigation...\n"
+                        },
+                        {
+                          "text": "  ❌ Missing items - Desktop: [], Mobile: [Success Stories, Contact]\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing About (/about.html)...\n"
+                        },
+                        {
+                          "text": "  🖥️  Analyzing desktop navigation...\n"
+                        },
+                        {
+                          "text": "  📱 Analyzing mobile navigation...\n"
+                        },
+                        {
+                          "text": "  ❌ Missing items - Desktop: [], Mobile: [Success Stories, About, Contact]\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing Guarantee (/guarantee.html)...\n"
+                        },
+                        {
+                          "text": "  🖥️  Analyzing desktop navigation...\n"
+                        },
+                        {
+                          "text": "  📱 Analyzing mobile navigation...\n"
+                        },
+                        {
+                          "text": "  ❌ Missing items - Desktop: [], Mobile: [Success Stories, Contact]\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing AI Demo (/ai-demo.html)...\n"
+                        },
+                        {
+                          "text": "  🖥️  Analyzing desktop navigation...\n"
+                        },
+                        {
+                          "text": "  📱 Analyzing mobile navigation...\n"
+                        },
+                        {
+                          "text": "  ❌ Missing items - Desktop: [], Mobile: [Success Stories, Contact]\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing AI Lead Generation (/ai-lead-generation.html)...\n"
+                        },
+                        {
+                          "text": "  🚨 Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📄 Testing Contact (/contact.html)...\n"
+                        },
+                        {
+                          "text": "  🚨 Error: page.goto: Target page, context or browser has been closed\n"
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "📊 Analysis complete!\n"
+                        },
+                        {
+                          "text": "📁 Results saved to: C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\test-results\n"
+                        },
+                        {
+                          "text": "📋 Summary: 1/8 pages have complete navigation\n"
+                        },
+                        {
+                          "text": "📸 Screenshots saved for all tested pages\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-05T03:27:38.988Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\test-results\\navigation-test-Navigation-88a18-omplete-Navigation-Analysis-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\test-results\\navigation-test-Navigation-88a18-omplete-Navigation-Analysis-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\b\\Documents\\GitHub\\broker-lead-engine\\test-results\\navigation-test-Navigation-88a18-omplete-Navigation-Analysis-chromium\\error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "34f90548608a9a0a385b-58d4b6842167cc7273f3",
+              "file": "navigation-test.spec.js",
+              "line": 39,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-05T03:27:38.448Z",
+    "duration": 30886.728000000003,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

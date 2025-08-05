@@ -41,5 +41,8 @@
     "ai"
   ],
   "author": "Broker Lead Engine",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2"
+  }
 }
