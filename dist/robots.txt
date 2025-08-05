@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seal-app-he5wy.ondigitalocean.app/sitemap.xml

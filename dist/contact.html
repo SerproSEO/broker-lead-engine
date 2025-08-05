@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Broker Lead Engine | Get Your Free Insurance Marketing Audit</title>
+    <meta name="description" content="Contact Broker Lead Engine for your free insurance marketing audit. Call (347) 201-3023 or email sam@brokerleadengine.com. Brooklyn-based, serving nationwide.">
+    <meta name="keywords" content="contact insurance marketing agency, free marketing audit, insurance lead generation consultation">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            background: rgba(26, 32, 44, 0.98);
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 175px;
+            width: auto;
+            max-width: 525px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            font-weight: 500;
+            transition: var(--transition-base);
+            border-radius: 8px;
+        }
+
+        .nav-item > a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: var(--shadow-lg);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition-base);
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: var(--gray-700);
+            padding: 0.75rem 1rem;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition-base);
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background: var(--gray-50);
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-md);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-button span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 2px 0;
+            transition: var(--transition-base);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 0;
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+        }
+
+        .mobile-cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+        }
+
+        .hero-section {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: var(--gray-300);
+        }
+
+        .contact-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--gray-50);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            background: var(--gradient-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .contact-details h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--gray-800);
+        }
+
+        .contact-details p {
+            color: var(--gray-600);
+        }
+
+        .contact-details a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition-base);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(22, 165, 113, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-base);
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .guarantee-section {
+            background: var(--gray-50);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .guarantee-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu,
+            .cta-button {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown">
+                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+                        <a href="local-seo.html">📍 Local SEO</a>
+                        <a href="google-ppc.html">🎯 Google PPC</a>
+                        <a href="meta-ads.html">📱 Meta Ads</a>
+                        <a href="cold-email.html">📧 Cold Email</a>
+                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="ai-demo.html">AI Demo</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="case-study-stucco-dominance.html">Success Stories</a></li>
+                <li class="nav-item"><a href="guarantee.html">Guarantee</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            </nav>
+            <a href="ppc-audit-landing.html" class="cta-button">Free Audit</a>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-button" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="ai-demo.html" class="mobile-nav-link">AI Demo</a>
+            <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+            <a href="case-study-stucco-dominance.html" class="mobile-nav-link">Success Stories</a>
+            <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="ppc-audit-landing.html" class="mobile-cta-button">Free Audit</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Get Your FREE Insurance Marketing Audit</h1>
+                <p class="hero-subtitle">Discover exactly how to generate 50+ qualified leads weekly and dominate your local market. No obligation, no sales pitch.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2 style="margin-bottom: 2rem; font-size: 2rem; color: var(--gray-800);">Get In Touch</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Call Us Directly</h3>
+                                <p><a href="tel:+13472013023">(347) 201-3023</a></p>
+                                <p>Available 9 AM - 6 PM EST</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:sam@brokerleadengine.com">sam@brokerleadengine.com</a></p>
+                                <p>Response within 2 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Brooklyn, New York</p>
+                                <p>Serving nationwide</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 9 AM - 6 PM EST</p>
+                                <p>Saturday: 10 AM - 2 PM EST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form - Typeform Integration -->
+                    <div class="contact-form">
+                        <h2 style="margin-bottom: 2rem; font-size: 2rem; color: var(--gray-800);">Request Your Free Consultation</h2>
+                        
+                        <!-- Typeform Embed -->
+                        <div class="typeform-widget" data-tf-widget="YOUR_CONTACT_FORM_ID" data-tf-opacity="100" data-tf-iframe-props="title=Free Consultation" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:550px; border-radius: 12px; overflow: hidden;"></div>
+                        <script src="//embed.typeform.com/next/embed.js"></script>
+                        
+                        <!-- Fallback for slower connections -->
+                        <div class="typeform-fallback" style="text-align: center; margin-top: 1rem;">
+                            <a href="https://YOUR_CONTACT_TYPEFORM_URL" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500;">
+                                Form not loading? Click here to open in new window →
+                            </a>
+                        </div>
+                        
+                        <!-- Alternative Contact Methods -->
+                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-200); text-align: center;">
+                            <p style="color: var(--gray-600); margin-bottom: 1rem;">Prefer to skip the form?</p>
+                            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                                <a href="tel:+13472013023" style="background: var(--gradient-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                                    📞 Call Now
+                                </a>
+                                <a href="mailto:sam@brokerleadengine.com?subject=Free Consultation Request" style="background: transparent; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid var(--primary);">
+                                    📧 Email Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantee Section -->
+        <section class="guarantee-section">
+            <div class="guarantee-content">
+                <div class="guarantee-badge">90-Day Money-Back Guarantee</div>
+                <h2 style="margin-bottom: 1rem; color: var(--gray-800);">Risk-Free Results Promise</h2>
+                <p style="font-size: 1.1rem; color: var(--gray-600);">
+                    If you don't see a measurable increase in qualified leads within 90 days, 
+                    we'll refund every penny. No questions asked.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu.style.display === 'block') {
+                mobileMenu.style.display = 'none';
+            } else {
+                mobileMenu.style.display = 'block';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileButton = document.querySelector('.mobile-menu-button');
+            
+            if (!mobileButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Insurance Marketing Services | Broker Lead Engine</title>
+    <meta name="description" content="Transparent pricing for AI lead generation, Local SEO, Google PPC, Meta Ads, and marketing automation for insurance agencies. 90-day guarantee on all services.">
+    <meta name="keywords" content="insurance marketing pricing, lead generation cost, insurance agency marketing packages, digital marketing pricing">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+            position: relative;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            background: rgba(26, 32, 44, 0.98);
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 175px;
+            width: auto;
+            max-width: 525px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-radius: 6px;
+        }
+
+        .nav-item > a:hover {
+            color: #16a571;
+            background: rgba(22, 165, 113, 0.1);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dropdown a:hover {
+            background: #f8fafc;
+            color: #16a571;
+            padding-left: 2rem;
+        }
+
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-base);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s linear;
+            transform-origin: 1px;
+        }
+
+        .hamburger-menu.active .hamburger-line:first-child {
+            transform: rotate(45deg);
+        }
+
+        .hamburger-menu.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active .hamburger-line:third-child {
+            transform: rotate(-45deg);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .mobile-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s;
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+
+        .mobile-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 0;
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+            animation: slideDown 0.5s ease-out;
+            height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .urgency-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+        }
+
+        .countdown {
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            margin-top: 124px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+            background-size: 40px 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-highlight {
+            color: #16a571;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 60px 0;
+            clear: both;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 40px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            transform: rotate(45deg);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .service-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            color: var(--gray-500);
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            list-style: none;
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .guarantee-badge {
+            background: #f0fff4;
+            color: var(--primary);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            border: 1px solid var(--primary);
+        }
+
+        .pricing-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-base);
+            display: inline-block;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Additional Info */
+        .pricing-info {
+            background: #f8fafc;
+            padding: 3rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: #1a202c;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo img {
+                height: 120px;
+                max-width: 300px;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .urgency-banner {
+                top: 70px;
+                padding: 8px 0;
+                height: 36px;
+            }
+
+            .urgency-content {
+                font-size: 0.8rem;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .hero {
+                margin-top: 106px;
+                padding: 40px 0 60px;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex !important;
+            }
+
+            .cta-button {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.popular {
+                transform: none;
+            }
+
+            .pricing-card.popular:hover {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        <div class="urgency-content">
+            <span>🚀 Limited Time: 50% OFF Launch Offer - Premium Insurance Marketing Solutions</span>
+            <span class="countdown" id="countdown">90:23:59:47</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown">
+                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+                        <a href="local-seo.html">📍 Local SEO</a>
+                        <a href="google-ppc.html">🎯 Google PPC</a>
+                        <a href="meta-ads.html">📱 Meta Ads</a>
+                        <a href="cold-email.html">📧 Cold Email</a>
+                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="ai-demo.html">AI Demo</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="guarantee.html">Guarantee</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+            </ul>
+            <a href="#cta" class="cta-button">Get Free Audit</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="ai-demo.html" class="mobile-nav-link">AI Demo</a>
+                    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+                    <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="#cta" class="mobile-cta-button">Get Free Audit</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1><span class="hero-highlight">Transparent Pricing</span> for Insurance Marketing Services</h1>
+            <p class="hero-subtext">Choose the perfect marketing solution for your insurance agency. All packages include our 90-day guarantee and proven results.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Marketing Package</h2>
+                <p>Professional marketing services designed specifically for $1M-$5M insurance agencies</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- AI Lead Generation -->
+                <div class="pricing-card">
+                    <h3 class="service-name">🤖 AI Lead Generation</h3>
+                    <div class="price">$2,997</div>
+                    <div class="price-period">per month</div>
+                    
+                    <ul class="features-list">
+                        <li>50+ qualified leads weekly</li>
+                        <li>MCP automation system</li>
+                        <li>24/7 prospect discovery</li>
+                        <li>Advanced lead scoring</li>
+                        <li>CRM integration</li>
+                        <li>Real-time lead delivery</li>
+                        <li>Custom qualification criteria</li>
+                        <li>Detailed prospect profiles</li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        🛡️ 300% More Leads or Money Back
+                    </div>
+                    
+                    <a href="mailto:sam@brokerleadengine.com?subject=AI Lead Generation Package Inquiry" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Local SEO -->
+                <div class="pricing-card popular">
+                    <h3 class="service-name">📍 Local SEO</h3>
+                    <div class="price">$1,997</div>
+                    <div class="price-period">per month</div>
+                    
+                    <ul class="features-list">
+                        <li>Google Business Profile optimization</li>
+                        <li>Local citations & directories</li>
+                        <li>Review management system</li>
+                        <li>Location-based content</li>
+                        <li>Local keyword targeting</li>
+                        <li>Competitor analysis</li>
+                        <li>Monthly reporting</li>
+                        <li>On-page SEO optimization</li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        🛡️ Top 3 Rankings or Money Back
+                    </div>
+                    
+                    <a href="mailto:sam@brokerleadengine.com?subject=Local SEO Package Inquiry" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Google PPC -->
+                <div class="pricing-card">
+                    <h3 class="service-name">🎯 Google PPC</h3>
+                    <div class="price">$1,497</div>
+                    <div class="price-period">per month + ad spend</div>
+                    
+                    <ul class="features-list">
+                        <li>Professional campaign setup</li>
+                        <li>High-intent keyword targeting</li>
+                        <li>Custom landing pages</li>
+                        <li>Conversion tracking</li>
+                        <li>A/B testing</li>
+                        <li>Monthly optimization</li>
+                        <li>Detailed ROI reporting</li>
+                        <li>Negative keyword management</li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        🛡️ Positive ROI in 90 Days
+                    </div>
+                    
+                    <a href="mailto:sam@brokerleadengine.com?subject=Google PPC Package Inquiry" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Meta Ads -->
+                <div class="pricing-card">
+                    <h3 class="service-name">📱 Meta Ads</h3>
+                    <div class="price">$1,297</div>
+                    <div class="price-period">per month + ad spend</div>
+                    
+                    <ul class="features-list">
+                        <li>Facebook & Instagram campaigns</li>
+                        <li>Business owner targeting</li>
+                        <li>Custom audience creation</li>
+                        <li>Creative design & copy</li>
+                        <li>Lead form optimization</li>
+                        <li>Pixel setup & tracking</li>
+                        <li>Retargeting campaigns</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        🛡️ Positive ROI in 90 Days
+                    </div>
+                    
+                    <a href="mailto:sam@brokerleadengine.com?subject=Meta Ads Package Inquiry" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Cold Email -->
+                <div class="pricing-card">
+                    <h3 class="service-name">📧 Cold Email</h3>
+                    <div class="price">$997</div>
+                    <div class="price-period">per month</div>
+                    
+                    <ul class="features-list">
+                        <li>1,000 personalized emails/month</li>
+                        <li>Company research & personalization</li>
+                        <li>Email infrastructure setup</li>
+                        <li>A/B testing</li>
+                        <li>Follow-up sequences</li>
+                        <li>Deliverability optimization</li>
+                        <li>Response tracking</li>
+                        <li>Compliance management</li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        🛡️ 20+ Responses or Money Back
+                    </div>
+                    
+                    <a href="mailto:sam@brokerleadengine.com?subject=Cold Email Package Inquiry" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Marketing Automation -->
+                <div class="pricing-card">
+                    <h3 class="service-name">⚙️ Marketing Automation</h3>
+                    <div class="price">$1,497</div>
+                    <div class="price-period">per month</div>
+                    
+                    <ul class="features-list">
+                        <li>CRM integration & setup</li>
+                        <li>Lead nurturing workflows</li>
+                        <li>Email sequences</li>
+                        <li>Lead scoring system</li>
+                        <li>Task automation</li>
+                        <li>Follow-up reminders</li>
+                        <li>Performance analytics</li>
+                        <li>Team training included</li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        🛡️ 80% Time Savings Guaranteed
+                    </div>
+                    
+                    <a href="mailto:sam@brokerleadengine.com?subject=Marketing Automation Package Inquiry" class="pricing-cta">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="pricing-info">
+        <div class="container">
+            <div class="section-header">
+                <h2>Package Details & Information</h2>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🎯 Setup & Onboarding</h3>
+                    <p>All packages include complete setup, onboarding, and training. We handle everything from initial configuration to team training, ensuring you're ready to generate leads from day one.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📊 Reporting & Analytics</h3>
+                    <p>Comprehensive monthly reports showing lead quality, conversion rates, ROI, and performance metrics. Real-time dashboard access to track your marketing performance 24/7.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🛡️ 90-Day Guarantees</h3>
+                    <p>Every service comes with specific performance guarantees. If we don't deliver the promised results within 90 days, you get your money back. No questions asked.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>💰 Ad Spend Policy</h3>
+                    <p><strong>Important:</strong> For PPC and Meta Ads packages, ad spend is additional and paid directly to the platforms. We do not cover advertising costs - only management fees are included in pricing.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🔄 No Long-Term Contracts</h3>
+                    <p>Month-to-month service with no long-term commitments. You can pause or cancel anytime with 30 days notice. We earn your business every month through results.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🎯 Industry Specialization</h3>
+                    <p>All services are specifically designed for insurance agencies. We understand your industry, compliance requirements, and unique challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Lead Generation?</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Get a free comprehensive marketing audit and custom strategy recommendation for your insurance agency. See exactly which services will generate the most leads for your specific market.
+            </p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="mailto:sam@brokerleadengine.com?subject=Free Marketing Audit and Strategy Session" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get Free Audit & Strategy</a>
+                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
+            </div>
+
+            <p style="margin-top: 2rem; opacity: 0.9;">
+                📧 <a href="mailto:sam@brokerleadengine.com" style="color: #16a571; text-decoration: none;">sam@brokerleadengine.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
+                🛡️ <strong>90-Day Money-Back Guarantee</strong> on all services<br>
+                💼 Serving $1M-$5M insurance agencies nationwide
+            </p>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer Footer -->
+    <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+        <div class="container">
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
+                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+                All marketing services are provided in compliance with applicable laws and regulations.
+            </p>
+            <p style="opacity: 0.7; font-size: 0.8rem;">
+                © 2025 Serpro SEO LLC. All rights reserved. | Privacy Policy | Terms of Service
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenu = document.getElementById('close-menu');
+
+        function toggleMenu() {
+            hamburgerMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+        }
+
+        hamburgerMenu.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking outside
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                toggleMenu();
+            }
+        });
+
+        // Close menu when clicking on navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    toggleMenu();
+                }
+            });
+        });
+        // Countdown Timer
+        function updateCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            if (!countdownEl) return;
+            
+            const now = new Date();
+            // Set countdown to start from yesterday at 1am
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            yesterday.setHours(1, 0, 0, 0); // Set to 1am
+            const endDate = new Date(yesterday.getTime() + (90 * 24 * 60 * 60 * 1000)); // 90 days from yesterday 1am
+            
+            const diff = endDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            countdownEl.textContent = `${days}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

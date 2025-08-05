@@ -7,12 +7,17 @@
     "start": "node start.js",
     "dev": "nodemon index.js",
     "test": "node test-system.js",
+    "build": "node build-static.js",
+    "deploy": "npm run build && echo 'Build ready for deployment'",
     "setup": "npm install && echo '✅ Broker Lead Engine setup complete!'",
     "mcp": "node mcp-server.js",
     "dashboard": "node reporting-dashboard.js"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
-    "@mendable/firecrawl-js": "^1.7.0",
+    "@mendable/firecrawl-js": "^1.0.0",
     "@modelcontextprotocol/sdk": "^0.5.0",
     "airtable": "^0.12.2",
     "axios": "^1.6.7",
