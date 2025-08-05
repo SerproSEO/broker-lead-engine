@@ -758,6 +758,15 @@
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loader"></div>
     </div>
+
+    
+
+        
+        
+        
+
+    <!-- Hero Section -->
+
     <section class="hero">
         <div class="container">
             <h1>See Our <span class="hero-highlight">AI Lead Generation System</span> in Action</h1>
@@ -1001,23 +1010,15 @@
     <script>
         // Remove loading overlay
         window.addEventListener('load', () => {
-            document.getElementById('loadingOverlay').classList.add('loaded');
-        });
-        // Close menu when clicking outside
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                toggleMenu();
-            });
-
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
-                });
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                setTimeout(() => {
+                    loadingOverlay.classList.add('loaded');
+                }, 100);
+            }
         });
 
-        // Smooth scrolling
+        // Add smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1026,8 +1027,29 @@
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
-                });
+                }
+            });
         });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(el => {
+            observer.observe(el);
+        });
+    
+                
     
         // Mobile Menu Toggle - Clean Implementation
         (function() {
@@ -1075,7 +1097,6 @@
                 });
             });
         })();
-        });
     </script>
 </body>
 </html>
