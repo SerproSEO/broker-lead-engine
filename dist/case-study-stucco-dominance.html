@@ -55,47 +55,223 @@
             padding: 0 1rem;
         }
 
-        /* Navigation */
-        .nav-container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--gray-200);
+        /* Header Styles */
+        .header {
+            background: var(--secondary);
+            color: white;
             padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            background: rgba(26, 32, 44, 0.98);
+            height: 80px;
+            display: flex;
+            align-items: center;
         }
-
-        .nav-content {
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
         }
-
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-
-        .nav-links {
+        .logo img {
+            height: 175px;
+            width: auto;
+            max-width: 525px;
+            object-fit: contain;
+        }
+        .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 0;
+            align-items: center;
         }
-
-        .nav-links a {
+        .nav-item {
+            position: relative;
+        }
+        .nav-item > a {
+            color: white;
             text-decoration: none;
-            color: var(--gray-600);
             font-weight: 500;
-            transition: var(--transition-base);
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-radius: 6px;
         }
-
-        .nav-links a:hover {
+        .nav-item > a:hover {
+            color: #16a571;
+            background: rgba(22, 165, 113, 0.1);
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+        }
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible; 
+            transform: translateY(0);
+        }
+        .dropdown a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .dropdown a:hover {
+            background: #f8fafc;
+            color: #16a571;
+            padding-left: 2rem;
+        }
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-base);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        /* Mobile Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s linear;
+            transform-origin: 1px;
+        }
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-menu-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background: var(--secondary);
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu-overlay.active .mobile-menu-content {
+            transform: translateX(0);
+        }
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mobile-logo {
+            height: 40px;
+        }
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s;
+        }
+        .mobile-nav-link:hover {
             color: var(--primary);
+        }
+        .mobile-cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu,
+            .cta-button {
+                display: none;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
         }
 
         /* Hero Section */
@@ -324,9 +500,6 @@
                 font-size: 2rem;
             }
             
-            .nav-links {
-                display: none;
-            }
             
             .timeline::before {
                 left: 20px;
@@ -349,19 +522,61 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav-container">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">🚀 Broker Lead Engine</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Broker Lead Engine Logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown">
+                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+                        <a href="local-seo.html">📍 Local SEO</a>
+                        <a href="google-ppc.html">🎯 Google PPC</a>
+                        <a href="meta-ads.html">📱 Meta Ads</a>
+                        <a href="cold-email.html">📧 Cold Email</a>
+                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="ai-demo.html">AI Demo</a></li>
+                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a href="case-study-stucco-dominance.html">Success Stories</a></li>
+                <li class="nav-item"><a href="guarantee.html">Guarantee</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Start Generating Leads</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="ai-demo.html" class="mobile-nav-link">AI Demo</a>
+                    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+                    <a href="case-study-stucco-dominance.html" class="mobile-nav-link">Success Stories</a>
+                    <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                    <a href="#contact" class="mobile-cta-button">Start Generating Leads</a>
+                </nav>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -533,13 +748,57 @@
     </section>
 
     <script>
+        // Mobile Menu Functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenu = document.getElementById('close-menu');
+
+        function toggleMobileMenu() {
+            mobileMenuOverlay.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            mobileMenuOverlay.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        }
+
+        if (hamburgerMenu) {
+            hamburgerMenu.addEventListener('click', toggleMobileMenu);
+        }
+
+        if (closeMenu) {
+            closeMenu.addEventListener('click', closeMobileMenu);
+        }
+
+        // Close mobile menu when clicking on overlay
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    closeMobileMenu();
+                }
+            });
+        }
+
+        // Close mobile menu on mobile nav link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
