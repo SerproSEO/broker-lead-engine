@@ -909,10 +909,15 @@
         </div>
     </footer>
 
-    <script>
+        <script>
         // Remove loading overlay
         window.addEventListener('load', () => {
-            document.getElementById('loadingOverlay').classList.add('loaded');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                setTimeout(() => {
+                    loadingOverlay.classList.add('loaded');
+                }, 100);
+            }
         });
 
         // Mobile Menu Toggle
@@ -921,25 +926,35 @@
         const closeMenu = document.getElementById('close-menu');
 
         function toggleMenu() {
-            hamburgerMenu.classList.toggle('active');
-            mobileMenuOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+            if (hamburgerMenu && mobileMenuOverlay) {
+                hamburgerMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+            }
         }
 
-        hamburgerMenu.addEventListener('click', toggleMenu);
-        closeMenu.addEventListener('click', toggleMenu);
+        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
+        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
 
         // Close menu when clicking outside
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                toggleMenu();
-            }); when clicking on navigation links
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // Close menu when clicking on navigation links
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', function() {
                 if (this.getAttribute('href').startsWith('#')) {
                     toggleMenu();
-                });
-        }); scrolling
+                }
+            });
+        });
+
+        // Add smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -948,24 +963,8 @@
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
-                });
-        });
-
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
-                });
-        }, observerOptions);
-
-        document.querySelectorAll('.expertise-card, .stat-card').forEach(el => {
-            observer.observe(el);
+                }
+            });
         });
     </script>
 </body>
