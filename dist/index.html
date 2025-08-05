@@ -366,62 +366,13 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Urgency Banner */
-        .urgency-banner {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 12px 0;
-            position: fixed;
-            top: 80px;
-            width: 100%;
-            z-index: 999;
-            box-shadow: var(--shadow-md);
-            animation: slideDown 0.5s ease-out;
-            height: 44px;
-            display: flex;
-            align-items: center;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        .urgency-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 500;
-        }
-
-        .countdown {
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 4px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
         /* Hero Section */
         .hero {
             background: var(--gradient-secondary);
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 124px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -679,13 +630,7 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        <div class="urgency-content">
-            <span>🚀 Limited Time: 50% OFF Launch Offer - Premium Insurance Marketing Solutions</span>
-            <span class="countdown" id="countdown">90:23:59:47</span>
-        </div>
-    </div>
+    
 
     <!-- Header -->
     <header class="header">
@@ -875,30 +820,6 @@
         window.addEventListener('load', () => {
             document.getElementById('loadingOverlay').classList.add('loaded');
         });
-
-        // Countdown Timer (3 months from now)
-        function updateCountdown() {
-            const countdownEl = document.getElementById('countdown');
-            if (!countdownEl) return;
-            
-            const now = new Date();
-            // Set countdown to start from yesterday at 1am
-            const yesterday = new Date();
-            yesterday.setDate(yesterday.getDate() - 1);
-            yesterday.setHours(1, 0, 0, 0); // Set to 1am
-            const endDate = new Date(yesterday.getTime() + (90 * 24 * 60 * 60 * 1000)); // 90 days from yesterday 1am
-            
-            const diff = endDate - now;
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            countdownEl.textContent = `${days}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
 
         // Mobile Menu Toggle
         const hamburgerMenu = document.getElementById('hamburger-menu');

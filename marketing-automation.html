@@ -182,7 +182,7 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 124px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -614,13 +614,7 @@
 </head>
 <body>
     <!-- Header -->
-        <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        <div class="urgency-content">
-            <span>🚀 Limited Time: 50% OFF Launch Offer - Premium Insurance Marketing Solutions</span>
-            <span class="countdown" id="countdown">90:23:59:47</span>
-        </div>
-    </div>
+        
 
     <!-- Header -->
     <header class="header">
@@ -680,13 +674,7 @@
 
 </header>
 
-    <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        <div class="urgency-content">
-            <span>⚙️ Professional Marketing Automation - Scale Without More Staff</span>
-            <span class="countdown" id="countdown">23:59:47</span>
-        </div>
-    </div>
+    
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1053,26 +1041,6 @@
         window.addEventListener('load', () => {
             document.getElementById('loadingOverlay').classList.add('loaded');
         });
-
-        // Countdown Timer
-        function updateCountdown() {
-            const countdownEl = document.getElementById('countdown');
-            if (!countdownEl) return;
-            
-            const now = new Date();
-            const midnight = new Date();
-            midnight.setHours(24, 0, 0, 0);
-            
-            const diff = midnight - now;
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            countdownEl.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
 
         // Add smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
