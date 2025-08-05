@@ -117,7 +117,7 @@
         }
 
         .logo img {
-            height: 150px;
+            height: 80px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -376,7 +376,7 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 124px;
             position: relative;
             overflow: hidden;
         }
@@ -503,7 +503,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 80px;
             background: var(--gradient-primary);
             transform: scaleX(0);
             transition: transform 0.3s;
@@ -618,7 +618,7 @@
             }
 
             .logo img {
-            height: 150px;
+            height: 70px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -657,7 +657,7 @@
             }
 
             .hero {
-                margin-top: 70px;
+                margin-top: 124px;
                 padding: 40px 0 60px;
             }
 
@@ -733,14 +733,7 @@
     </style>
 </head>
 <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
-
-    
-
-        <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -791,6 +784,31 @@
             </button>
         </nav>
     </header>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="pricing.html" class="mobile-nav-link">Resources</a>
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                    <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+                </nav>
+            </div>
+        </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    
+
+        
 
     <!-- Hero Section -->
     <section class="hero">
@@ -805,7 +823,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <div style="width: 300px; height: 300px; background: linear-gradient(135deg, #16a571 0%, #138a5e 100%); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                    <div style="width: 300px; height: 80px; background: linear-gradient(135deg, #16a571 0%, #138a5e 100%); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
                         <i class="fas fa-user-tie"></i>
                     </div>
                 </div>
@@ -955,6 +973,37 @@
             }
         });
 
+        // Close menu when clicking outside
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // Close menu when clicking on navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    
         // Mobile Menu Toggle
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
@@ -985,19 +1034,6 @@
             link.addEventListener('click', function() {
                 if (this.getAttribute('href').startsWith('#')) {
                     toggleMenu();
-                }
-            });
-        });
-
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
                 }
             });
         });

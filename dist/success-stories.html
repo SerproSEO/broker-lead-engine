@@ -82,7 +82,7 @@
         }
 
         .logo img {
-            height: 150px;
+            height: 80px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -135,7 +135,7 @@
             transition: all 0.2s ease;
             z-index: 1000;
             border: 1px solid #e2e8f0;
-            max-height: 400px;
+            max-height: 80px;
             overflow-y: auto;
         }
 
@@ -190,20 +190,9 @@
         }
 
         /* Mobile Menu */
-        .mobile-menu-button {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
+        
 
-        .mobile-menu-button span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 2px 0;
-            transition: var(--transition-base);
-        }
+        
 
         .mobile-menu {
             display: none;
@@ -239,7 +228,7 @@
 
         /* Main Content */
         .main-content {
-            margin-top: 80px;
+            margin-top: 124px;
             min-height: calc(100vh - 80px);
         }
 
@@ -351,7 +340,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 80px;
             background: var(--gradient-primary);
         }
 
@@ -447,7 +436,7 @@
 
         .timeline-icon {
             width: 12px;
-            height: 12px;
+            height: 80px;
             background: var(--primary);
             border-radius: 50%;
             flex-shrink: 0;
@@ -608,7 +597,7 @@
             }
 
             .logo img {
-            height: 150px;
+            height: 70px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -654,7 +643,7 @@
         }
 
         .hero {
-                margin-top: 70px;
+                margin-top: 124px;
                 padding: 40px 0 60px;
             }
 
@@ -703,7 +692,7 @@
 
         .loader {
             width: 50px;
-            height: 50px;
+            height: 80px;
             border: 3px solid var(--gray-200);
             border-top-color: var(--primary);
             border-radius: 50%;
@@ -735,7 +724,7 @@
     </style>
 </head>
 <body>
-        <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -803,6 +792,9 @@
                 </nav>
             </div>
         </div>
+        
+        
+        
 
     <!-- Main Content -->
     <main class="main-content">
@@ -1125,6 +1117,36 @@
     <script>
         // Remove loading overlay
         
+        // Close menu when clicking outside
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // Close menu when clicking on navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Remove loading overlay
+        window.addEventListener('load', () => {
+            document.getElementById('loadingOverlay').classList.add('loaded');
+        });
+         else {
+                mobileMenu.style.display = 'block';
+            }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            );
+    
         // Mobile Menu Toggle
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
@@ -1158,27 +1180,6 @@
                 }
             });
         });
-
-        // Remove loading overlay
-        window.addEventListener('load', () => {
-            document.getElementById('loadingOverlay').classList.add('loaded');
-        });
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu.style.display === 'block') {
-                mobileMenu.style.display = 'none';
-            } else {
-                mobileMenu.style.display = 'block';
-            }
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileButton = document.querySelector('.mobile-menu-button');
-            
-            if (!mobileButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                mobileMenu.style.display = 'none';
-            });
     </script>
 </body>
 </html>

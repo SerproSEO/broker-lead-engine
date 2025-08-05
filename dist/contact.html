@@ -82,7 +82,7 @@
         }
 
         .logo img {
-            height: 150px;
+            height: 80px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -329,7 +329,7 @@
 
         /* Main Content */
         .main-content {
-            margin-top: 80px;
+            margin-top: 124px;
             min-height: calc(100vh - 80px);
         }
 
@@ -514,7 +514,7 @@
             }
 
             .logo img {
-            height: 150px;
+            height: 70px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -560,7 +560,7 @@
         }
 
         .hero {
-                margin-top: 70px;
+                margin-top: 124px;
                 padding: 40px 0 60px;
             }
 
@@ -641,7 +641,7 @@
     </style>
 </head>
 <body>
-        <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -709,6 +709,9 @@
                 </nav>
             </div>
         </div>
+        
+        
+        
 
     <!-- Main Content -->
     <main class="main-content">
@@ -778,7 +781,7 @@
                         <h2 style="margin-bottom: 2rem; font-size: 2rem; color: var(--gray-800);">Request Your Free Consultation</h2>
                         
                         <!-- Typeform Embed -->
-                        <div class="typeform-widget" data-tf-widget="YOUR_CONTACT_FORM_ID" data-tf-opacity="100" data-tf-iframe-props="title=Free Consultation" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:550px; border-radius: 12px; overflow: hidden;"></div>
+                        <div class="typeform-widget" data-tf-widget="YOUR_CONTACT_FORM_ID" data-tf-opacity="100" data-tf-iframe-props="title=Free Consultation" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height: 80px; border-radius: 12px; overflow: hidden;"></div>
                         <script src="//embed.typeform.com/next/embed.js"></script>
                         
                         <!-- Fallback for slower connections -->
@@ -821,6 +824,32 @@
     <script>
         // Remove loading overlay
         
+        // Close menu when clicking outside
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // Close menu when clicking on navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Remove loading overlay
+        window.addEventListener('load', () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.classList.add('loaded');
+            }
+        });
+    
         // Mobile Menu Toggle
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
@@ -853,14 +882,6 @@
                     toggleMenu();
                 }
             });
-        });
-
-        // Remove loading overlay
-        window.addEventListener('load', () => {
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            if (loadingOverlay) {
-                loadingOverlay.classList.add('loaded');
-            }
         });
     </script>
 </body>

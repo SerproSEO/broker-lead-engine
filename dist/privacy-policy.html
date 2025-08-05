@@ -66,7 +66,7 @@
         }
 
         .logo img {
-            height: 150px;
+            height: 80px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -93,7 +93,7 @@
 
         /* Main Content */
         .main-content {
-            margin-top: 80px;
+            margin-top: 124px;
             min-height: calc(100vh - 80px);
         }
 
@@ -203,7 +203,7 @@
             }
 
             .logo img {
-            height: 150px;
+            height: 70px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
@@ -242,7 +242,7 @@
             }
 
             .hero {
-                margin-top: 70px;
+                margin-top: 124px;
                 padding: 40px 0 60px;
             }
 
@@ -291,7 +291,7 @@
 
         .loader {
             width: 50px;
-            height: 50px;
+            height: 80px;
             border: 3px solid var(--gray-200);
             border-top-color: var(--primary);
             border-radius: 50%;
@@ -323,7 +323,7 @@
     </style>
 </head>
 <body>
-        <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -391,6 +391,9 @@
                 </nav>
             </div>
         </div>
+        
+        
+        
 
     <!-- Main Content -->
     <main class="main-content">
@@ -587,6 +590,40 @@
         </section>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js">
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenu = document.getElementById('close-menu');
+
+        function toggleMenu() {
+            if (hamburgerMenu && mobileMenuOverlay) {
+                hamburgerMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+            }
+        }
+
+        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
+        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking outside
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // Close menu when clicking on navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (this.getAttribute('href').startsWith('#')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
