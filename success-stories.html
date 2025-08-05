@@ -82,9 +82,9 @@
         }
 
         .logo img {
-            height: 60px;
+            height: 150px;
             width: auto;
-            max-width: 180px;
+            max-width: 150px;
             object-fit: contain;
         }
         .nav-menu {
@@ -591,9 +591,11 @@
             }
 
             .logo img {
-                height: 50px;
-                max-width: 150px;
-            }
+            height: 150px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+        }
 
             .header {
                 height: 70px;
@@ -689,6 +691,13 @@
         ::selection {
             background: var(--primary);
             color: white;
+        }
+    
+        /* Desktop - Hide Mobile Menu */
+        @media (min-width: 769px) {
+            .mobile-menu-overlay {
+                display: none !important;
+            }
         }
     </style>
 </head>

@@ -41,38 +41,10 @@
         }
 
         .logo img {
-            height: 60px;
+            height: 150px;
             width: auto;
-        }
-
-        .nav-button {
-            background: #16a571;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .nav-button:hover {
-            background: #138a5e;
-            transform: translateY(-2px);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            max-width: 150px;
+            object-fit: contain;
         }
 
         .hero h1 {
@@ -438,6 +410,13 @@
             
             .pricing-card.featured {
                 transform: none;
+            }
+        }
+    
+        /* Desktop - Hide Mobile Menu */
+        @media (min-width: 769px) {
+            .mobile-menu-overlay {
+                display: none !important;
             }
         }
     </style>
