@@ -50,7 +50,7 @@
             position: relative;
         }
 
-                /* Header Styles */
+                        /* Header Styles */
         .header {
             background: var(--secondary);
             color: white;
@@ -87,17 +87,7 @@
             height: 60px;
             width: auto;
             max-width: 180px;
-            object-fit: contain;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
+            object-fit: contain;}
 
         .nav-item {
             position: relative;
@@ -316,9 +306,8 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
-        }
 
-        /* Hero Section */
+                /* Hero Section */
         .hero {
             background: var(--gradient-secondary);
             color: white;
@@ -351,17 +340,6 @@
             z-index: 1;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .hero-highlight {
             color: #16a571;
         }
@@ -375,6 +353,17 @@
             margin-right: auto;
             position: relative;
             z-index: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .section {
@@ -512,45 +501,16 @@
             .nav-container {
                 padding: 0 1rem;
             }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .hamburger-menu {
-                display: flex !important;
-            }
-            
-            .header .cta-button {
-                display: none;
-            }
 
             .logo img {
-                height: 120px;
-                max-width: 300px;
+                height: 50px;
+                max-width: 150px;
             }
 
             .header {
                 height: 70px;
             }
 
-            
-
-            
-
-            .hero {
-                margin-top: 80px;
-                padding: 40px 0 60px;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .cta-button {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
             .nav-menu {
                 display: none;
             }
@@ -559,8 +519,13 @@
                 display: flex !important;
             }
 
-            .cta-button {
+            .header .cta-button {
                 display: none;
+            }
+
+            .hero {
+                margin-top: 70px;
+                padding: 40px 0 60px;
             }
 
             .hero h1 {
@@ -571,10 +536,13 @@
                 font-size: 2rem;
             }
 
-            .ai-step {
-                padding: 2rem;
+            .container {
+                padding: 0 1rem;
             }
-        }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
     </style>
 </head>
 <body>
@@ -629,8 +597,6 @@
             </button>
         </nav>
     </header>
-
-</header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -892,16 +858,14 @@
         mobileMenuOverlay.addEventListener('click', function(e) {
             if (e.target === mobileMenuOverlay) {
                 toggleMenu();
-            }
-        });
+            });
 
         // Close menu when clicking on navigation links
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', function() {
                 if (this.getAttribute('href').startsWith('#')) {
                     toggleMenu();
-                }
-            });
+                });
         });
 
         // Add smooth scrolling
@@ -913,8 +877,7 @@
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
-                }
-            });
+                });
         });
     </script>
 </body>

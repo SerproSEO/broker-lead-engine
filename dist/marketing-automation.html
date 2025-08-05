@@ -89,18 +89,10 @@
         }
 
         .logo img {
-            height: 175px;
+            height: 60px;
             width: auto;
-            max-width: 525px;
-            object-fit: contain;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-        }
+            max-width: 180px;
+            object-fit: contain;}
 
         .nav-item {
             position: relative;
@@ -141,6 +133,10 @@
         }
 
         .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
         .dropdown a {
             color: #1a202c;
@@ -176,6 +172,13 @@
         }
 
         /* Page Styles */
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         .hero {
             background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
             color: white;
@@ -553,52 +556,31 @@
             .nav-container {
                 padding: 0 1rem;
             }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .hamburger-menu {
-                display: flex !important;
-            }
-            
-            .header .cta-button {
-                display: none;
-            }
-            
+
             .logo img {
-                height: 120px;
-                max-width: 300px;
+                height: 50px;
+                max-width: 150px;
             }
-            
+
             .header {
                 height: 70px;
             }
-            
-            
-            
-            
-            
-            .hero {
-                margin-top: 80px;
-                padding: 40px 0 60px;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-            
-            .cta-button {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
-            
+
             .nav-menu {
                 display: none;
             }
-            
+
             .hamburger-menu {
-                display: flex;
+                display: flex !important;
+            }
+
+            .header .cta-button {
+                display: none;
+            }
+
+            .hero {
+                margin-top: 70px;
+                padding: 40px 0 60px;
             }
 
             .hero h1 {
@@ -609,10 +591,13 @@
                 font-size: 2rem;
             }
 
-            .workflow-steps {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .services-grid {
                 grid-template-columns: 1fr;
             }
-        }
     </style>
 </head>
 <body>
@@ -665,8 +650,6 @@
             </button>
         </nav>
     </header>
-
-</header>
 
     
 
@@ -1045,8 +1028,7 @@
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
-                }
-            });
+                });
         });
 
         // Animate on scroll
@@ -1059,8 +1041,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.animation = 'fadeInUp 0.8s ease-out';
-                }
-            });
+                });
         }, observerOptions);
 
         document.querySelectorAll('.feature-card, .workflow-card, .stat-card').forEach(el => {
@@ -1085,8 +1066,7 @@
         mobileMenuOverlay?.addEventListener('click', (e) => {
             if (e.target === mobileMenuOverlay) {
                 toggleMenu();
-            }
-        });
+            });
 
         // Close menu when clicking nav links
         document.querySelectorAll('.mobile-nav-link, .mobile-cta-button').forEach(link => {

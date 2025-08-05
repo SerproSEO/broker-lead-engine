@@ -82,18 +82,10 @@
         }
 
         .logo img {
-            height: 175px;
+            height: 60px;
             width: auto;
-            max-width: 525px;
-            object-fit: contain;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-        }
+            max-width: 180px;
+            object-fit: contain;}
 
         .nav-item {
             position: relative;
@@ -134,6 +126,10 @@
         }
 
         .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
         .dropdown a {
             color: var(--gray-700);
@@ -464,55 +460,54 @@
         }
 
         /* Responsive Design */
+        
+        /* Mobile Styles */
         @media (max-width: 768px) {
-            .nav-menu,
-            .cta-button {
-                display: none;
+            .nav-container {
+                padding: 0 1rem;
             }
-            
+
+            .logo img {
+                height: 50px;
+                max-width: 150px;
+            }
+
+            .header {
+                height: 70px;
+            }
+
             .nav-menu {
                 display: none;
             }
-            
+
             .hamburger-menu {
                 display: flex !important;
             }
-            
+
             .header .cta-button {
                 display: none;
             }
 
-            .mobile-menu-button {
-                display: flex;
+            .hero {
+                margin-top: 70px;
+                padding: 40px 0 60px;
             }
 
-            .hero-title {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
                 font-size: 2rem;
             }
 
-            .section-title {
-                font-size: 2rem;
+            .container {
+                padding: 0 1rem;
             }
 
-            .faq-categories {
+            .services-grid {
                 grid-template-columns: 1fr;
-                gap: 1rem;
             }
-
-            .category-card {
-                padding: 1.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .cta-btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -565,8 +560,6 @@
             </button>
         </nav>
     </header>
-
-</header>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -950,7 +943,6 @@
             } else {
                 mobileMenu.style.display = 'block';
             }
-        }
 
         function showCategory(categoryId) {
             // Hide all categories
@@ -978,14 +970,12 @@
                 if (q !== element) {
                     q.classList.remove('active');
                     q.querySelector('.faq-toggle').textContent = '+';
-                }
-            });
+                });
             
             allAnswers.forEach(a => {
                 if (a !== answer) {
                     a.classList.remove('active');
-                }
-            });
+                });
             
             // Toggle current FAQ
             if (element.classList.contains('active')) {
@@ -997,7 +987,6 @@
                 answer.classList.add('active');
                 toggle.textContent = '+';
             }
-        }
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
@@ -1006,8 +995,7 @@
             
             if (!mobileButton.contains(event.target) && !mobileMenu.contains(event.target)) {
                 mobileMenu.style.display = 'none';
-            }
-        });
+            });
     </script>
 </body>
 </html>

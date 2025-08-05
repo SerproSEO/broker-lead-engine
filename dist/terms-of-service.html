@@ -66,9 +66,9 @@
         }
 
         .logo img {
-            height: 175px;
+            height: 60px;
             width: auto;
-            max-width: 525px;
+            max-width: 180px;
             object-fit: contain;
         }
 
@@ -132,9 +132,8 @@
         }
 
         .section {
-            margin-bottom: 3rem;
-        
             padding: 80px 0;
+            clear: both;
         }
 
         .section-title {
@@ -209,27 +208,54 @@
         }
 
         /* Responsive */
+        
+        /* Mobile Styles */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
+            .nav-container {
+                padding: 0 1rem;
             }
-            
+
+            .logo img {
+                height: 50px;
+                max-width: 150px;
+            }
+
+            .header {
+                height: 70px;
+            }
+
             .nav-menu {
                 display: none;
             }
-            
+
             .hamburger-menu {
                 display: flex !important;
             }
-            
+
             .header .cta-button {
                 display: none;
             }
-            
+
+            .hero {
+                margin-top: 70px;
+                padding: 40px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
             .container {
                 padding: 0 1rem;
             }
-        }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
     </style>
 </head>
 <body>
@@ -282,8 +308,6 @@
             </button>
         </nav>
     </header>
-
-</header>
 
     <!-- Main Content -->
     <main class="main-content">
