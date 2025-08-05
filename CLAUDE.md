@@ -101,16 +101,27 @@ this.server = new Server(
 
 ## Business Model & Revenue Path
 
-### Pricing Structure
-- **Setup Fee**: $1,497 per client (one-time)
-- **Monthly Retainer**: $300-500 per client (recurring)
-- **Performance Bonus**: 10% of generated revenue (optional)
+### Pricing Structure (Updated from Perplexity Research)
+- **AI Lead Generation**: $2,997/month
+- **Local SEO**: $1,997/month (MOST POPULAR)
+- **Google PPC**: $1,497/month + ad spend
+- **Meta Ads**: $1,297/month + ad spend
+- **Cold Email**: $997/month
+- **Marketing Automation**: $1,497/month
+- **Target Market**: $1M-$5M insurance agencies
+- **No long-term contracts**: Month-to-month service
+- **90-Day Money-Back Guarantee**: On all services
 
-### Path to $100K/Month
-- **Month 1-3**: 10 clients = $15,000/month revenue
-- **Month 4-6**: 25 clients = $37,500/month revenue  
-- **Month 7-9**: 40 clients = $60,000/month revenue
-- **Month 10-12**: 50+ clients = $100,000+/month revenue
+### Path to $100K/Month (Based on New Pricing)
+Assuming average client takes 2-3 services at ~$1,800/month average:
+- **Month 1-3**: 10 clients = $18,000/month revenue
+- **Month 4-6**: 25 clients = $45,000/month revenue  
+- **Month 7-9**: 40 clients = $72,000/month revenue
+- **Month 10-12**: 56+ clients = $100,000+/month revenue
+
+Or with premium clients (AI Lead Gen + Local SEO + PPC = ~$6,500/month):
+- **15 premium clients = $97,500/month**
+- Much easier to manage than 50+ smaller clients
 
 ### Target Market
 **Primary**: Insurance brokers (high-value, recurring revenue, proven market)
