@@ -50,102 +50,7 @@
             position: relative;
         }
 
-                        /* Header Styles */
-        .header {
-            background: var(--secondary);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow-lg);
-            backdrop-filter: blur(10px);
-            background: rgba(26, 32, 44, 0.98);
-            height: 80px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            width: 100%;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo img {
-            height: 80px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-item > a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.3s;
-            border-radius: 6px;
-        }
-
-        .nav-item > a:hover {
-            color: #16a571;
-            background: rgba(22, 165, 113, 0.1);
-        }
-
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 280px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.2s ease;
-            z-index: 1000;
-            border: 1px solid #e2e8f0;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        /* Ensure dropdowns are hidden by default */
+                        /* Ensure dropdowns are hidden by default */
         .dropdown {
             opacity: 0;
             visibility: hidden;
@@ -210,61 +115,7 @@
             left: 100%;
         }
 
-        /* Hamburger Menu */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 30px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            z-index: 1001;
-        }
-
-        .hamburger-line {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s linear;
-            transform-origin: 1px;
-        }
-
-        .hamburger-menu.active .hamburger-line:first-child {
-            transform: rotate(45deg);
-        }
-
-        .hamburger-menu.active .hamburger-line:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active .hamburger-line:third-child {
-            transform: rotate(-45deg);
-        }
-
-        /* Mobile Menu Overlay */
-        .mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .mobile-menu-overlay.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
-        }
+        
 
         .mobile-menu-content {
             height: 100%;
@@ -544,13 +395,7 @@
             object-fit: contain;
         }
 
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
+            
 
             .hamburger-menu {
                 display: flex !important;
@@ -650,6 +495,397 @@
                 display: none !important;
             }
         }
+    
+        /* Header Styles */
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            background: rgba(26, 32, 44, 0.98);
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 175px;
+            width: auto;
+            max-width: 175px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            border-radius: 6px;
+        }
+
+        .nav-item > a:hover {
+            color: #16a571;
+            background: rgba(22, 165, 113, 0.1);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dropdown a:hover {
+            background: #f8fafc;
+            color: #16a571;
+            padding-left: 2rem;
+        }
+
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-base);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        
+        /* Hamburger Menu - Clean Implementation */
+        .hamburger-menu {
+            display: none;
+            width: 30px;
+            height: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: relative;
+            z-index: 10001;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
+        }
+
+        /* Mobile Menu Overlay - Clean Implementation */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-overlay.active {
+            left: 0;
+        }
+
+        .mobile-menu-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .mobile-logo {
+            height: 75px;
+            width: auto;
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s;
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+
+        .mobile-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+                
+        
+        /* Hamburger Menu - Clean Implementation */
+        .hamburger-menu {
+            display: none;
+            width: 30px;
+            height: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: relative;
+            z-index: 10001;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
+        }
+
+        /* Mobile Menu Overlay - Clean Implementation */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-overlay.active {
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo img {
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block !important;
+            }
+
+            .header .cta-button {
+                display: none;
+            }
+        
+        /* Desktop - Hide Mobile Menu */
+        @media (min-width: 769px) {
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+        }
+    
     </style>
 </head>
 <body>
@@ -698,9 +934,9 @@
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
     </header>
@@ -721,11 +957,6 @@
                 </nav>
             </div>
         </div>
-    
-
-        
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>See Our <span class="hero-highlight">AI Lead Generation System</span> in Action</h1>
@@ -997,38 +1228,52 @@
                 });
         });
     
-        // Mobile Menu Toggle
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenu = document.getElementById('close-menu');
+        // Mobile Menu Toggle - Clean Implementation
+        (function() {
+            const hamburger = document.getElementById('hamburger-menu');
+            const mobileMenu = document.getElementById('mobile-menu-overlay');
+            const closeBtn = document.getElementById('close-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-        function toggleMenu() {
-            if (hamburgerMenu && mobileMenuOverlay) {
-                hamburgerMenu.classList.toggle('active');
-                mobileMenuOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+            function toggleMobileMenu() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
             }
-        }
 
-        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+            function closeMobileMenu() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
 
-        // Close menu when clicking outside
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileMenuOverlay) {
-                    toggleMenu();
+            // Hamburger click
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+
+            // Close button click
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeMobileMenu);
+            }
+
+            // Click outside menu
+            document.addEventListener('click', function(e) {
+                if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && e.target !== hamburger) {
+                    closeMobileMenu();
                 }
             });
-        }
 
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
-                }
+            // Mobile nav links
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        closeMobileMenu();
+                    }
+                });
             });
+        })();
         });
     </script>
 </body>
