@@ -943,36 +943,43 @@
         });
     
         // Mobile Menu Toggle
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenu = document.getElementById('close-menu');
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenu = document.getElementById('close-menu');
 
-        function toggleMenu() {
-            if (hamburgerMenu && mobileMenuOverlay) {
-                hamburgerMenu.classList.toggle('active');
-                mobileMenuOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+            function toggleMenu() {
+                if (hamburgerMenu && mobileMenuOverlay) {
+                    hamburgerMenu.classList.toggle('active');
+                    mobileMenuOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+                }
             }
-        }
 
-        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+            if (hamburgerMenu) {
+                hamburgerMenu.addEventListener('click', toggleMenu);
+            }
+            
+            if (closeMenu) {
+                closeMenu.addEventListener('click', toggleMenu);
+            }
 
-        // Close menu when clicking outside
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileMenuOverlay) {
-                    toggleMenu();
-                }
-            });
-        }
+            // Close menu when clicking outside
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        toggleMenu();
+                    }
+                });
+            }
 
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
-                }
+            // Close menu when clicking on navigation links
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        toggleMenu();
+                    }
+                });
             });
         });
     </script>
