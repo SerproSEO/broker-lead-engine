@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Insurance Marketing Services | Broker Lead Engine</title>
-    <meta name="description" content="Transparent pricing for AI lead generation, Local SEO, Google PPC, Meta Ads, and marketing automation for insurance agencies. 90-day guarantee on all services.">
-    <meta name="keywords" content="insurance marketing pricing, lead generation cost, insurance agency marketing packages, digital marketing pricing">
+    <meta name="description" content="Transparent pricing for our insurance marketing services. Choose the perfect package for your agency with our flexible plans.">
+    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Pricing - Insurance Marketing Services | Broker Lead Engine">
-    <meta property="og:description" content="Transparent pricing for AI lead generation ($2,997/mo), Local SEO ($1,997/mo), Google PPC ($1,497/mo). 90-day guarantee on all services.">
+    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/pricing.html">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
     <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
     <meta property="og:site_name" content="Broker Lead Engine">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Insurance Marketing Pricing - Starting at $997/month">
-    <meta name="twitter:description" content="Transparent pricing for AI lead generation, SEO, PPC, and marketing automation. 90-day guarantee.">
+    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
     <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -65,6 +66,45 @@
             position: relative;
         }
 
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
                         /* Header Styles */
         .header {
             background: var(--secondary);
@@ -73,7 +113,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             box-shadow: var(--shadow-lg);
             backdrop-filter: blur(10px);
             background: rgba(26, 32, 44, 0.98);
@@ -99,16 +139,12 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 175px;
             width: auto;
-            max-width: 150px;
+            max-width: 175px;
             object-fit: contain;
         }
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+
         .nav-menu {
             display: flex;
             list-style: none;
@@ -155,18 +191,6 @@
             overflow-y: auto;
         }
 
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        /* Ensure dropdowns are hidden by default */
-        .dropdown {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-        }
-        
         .nav-item:hover .dropdown {
             opacity: 1;
             visibility: visible;
@@ -225,60 +249,74 @@
             left: 100%;
         }
 
-        /* Hamburger Menu */
+        
+        /* Hamburger Menu - Clean Implementation */
         .hamburger-menu {
             display: none;
-            flex-direction: column;
-            justify-content: space-around;
             width: 30px;
-            height: 30px;
-            background: transparent;
+            height: 24px;
+            background: none;
             border: none;
             cursor: pointer;
             padding: 0;
-            z-index: 1001;
+            position: relative;
+            z-index: 10001;
         }
 
-        .hamburger-line {
-            width: 25px;
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
             height: 3px;
-            background-color: white;
-            transition: all 0.3s linear;
-            transform-origin: 1px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
         }
 
-        .hamburger-menu.active .hamburger-line:first-child {
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
             transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
         }
 
-        .hamburger-menu.active .hamburger-line:nth-child(2) {
+        .hamburger-menu.active span:nth-child(2) {
             opacity: 0;
         }
 
-        .hamburger-menu.active .hamburger-line:third-child {
+        .hamburger-menu.active span:nth-child(3) {
             transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
         }
 
-        /* Mobile Menu Overlay */
+        /* Mobile Menu Overlay - Clean Implementation */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
         }
 
         .mobile-menu-overlay.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
+            left: 0;
         }
 
         .mobile-menu-content {
@@ -358,7 +396,7 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 124px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -427,17 +465,17 @@
             color: #1a202c;
         }
 
-        /* Pricing Cards */
-        .pricing-grid {
+        /* Services Section */
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .pricing-card {
+        .service-card {
             background: white;
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 16px;
             box-shadow: var(--shadow-lg);
             text-align: center;
@@ -447,124 +485,66 @@
             overflow: hidden;
         }
 
-        .pricing-card.popular {
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        .pricing-card.popular::before {
-            content: 'MOST POPULAR';
+        .service-card::before {
+            content: '';
             position: absolute;
-            top: 20px;
-            right: -30px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
             background: var(--gradient-primary);
-            color: white;
-            padding: 8px 40px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            transform: rotate(45deg);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
         }
 
-        .pricing-card:hover {
+        .service-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
         }
 
-        .pricing-card.popular:hover {
-            transform: scale(1.05) translateY(-8px);
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .service-name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        .price {
+        .service-icon {
             font-size: 3rem;
-            font-weight: 800;
+            margin-bottom: 1.5rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
         }
 
-        .price-period {
-            color: var(--gray-500);
-            margin-bottom: 2rem;
-        }
-
-        .features-list {
-            text-align: left;
-            margin: 2rem 0;
-        }
-
-        .features-list li {
-            list-style: none;
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .features-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .guarantee-badge {
-            background: #f0fff4;
-            color: var(--primary);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            font-weight: 600;
-            margin: 1.5rem 0;
-            border: 1px solid var(--primary);
-        }
-
-        .pricing-cta {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition-base);
-            display: inline-block;
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .pricing-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Additional Info */
-        .pricing-info {
-            background: #f8fafc;
-            padding: 3rem 0;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .info-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .info-card h3 {
-            color: var(--primary);
+        .service-card h3 {
+            color: #1a202c;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-results {
+            background: #f0fff4;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+            margin: 1.5rem 0;
+        }
+
+        .service-results strong {
+            color: #16a571;
+        }
+
+        .guarantee-section {
+            background: #16a571;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .guarantee-banner {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 525px;
         }
 
         .cta-section {
@@ -572,11 +552,6 @@
             color: white;
             padding: 80px 0;
             text-align: center;
-        }
-
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
 
         /* Smooth Scroll */
@@ -597,11 +572,10 @@
             }
 
             .logo img {
-            height: 70px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
 
             .header {
                 height: 70px;
@@ -612,7 +586,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -628,7 +602,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -636,7 +610,7 @@
             }
 
             .hero {
-                margin-top: 124px;
+                margin-top: 70px;
                 padding: 40px 0 60px;
             }
 
@@ -690,6 +664,188 @@
             border-top-color: var(--primary);
             border-radius: 50%;
             animation: spin 1s linear infinite;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition-base);
+            border: 2px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 2rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+            width: 150px;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.popular:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .service-name {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            color: var(--gray-700);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .guarantee-badge {
+            background: #f0fff4;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .pricing-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-base);
+            display: inline-block;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Pricing Info Section */
+        .pricing-info {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .pricing-card.popular {
+                transform: none;
+            }
+
+            .pricing-card.popular:hover {
+                transform: translateY(-8px);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
         }
 
         /* Smooth Scroll */
@@ -757,9 +913,9 @@
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
     </header>
@@ -780,6 +936,11 @@
                 </nav>
             </div>
         </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
     
 
         
@@ -787,6 +948,7 @@
         
 
     <!-- Hero Section -->
+
     <section class="hero">
         <div class="container">
             <h1><span class="hero-highlight">Transparent Pricing</span> for Insurance Marketing Services</h1>
@@ -1027,70 +1189,81 @@
     </footer>
 
     <script>
-        // Remove loading overlay
-        window.addEventListener('load', () => {
-            document.getElementById('loadingOverlay').classList.add('loaded');
-        });
-        // Close menu when clicking outside
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                toggleMenu();
+        // Clean JavaScript - Pricing Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove loading overlay
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                setTimeout(() => {
+                    loadingOverlay.classList.add('loaded');
+                }, 100);
             }
-        });
 
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
+            // Mobile Menu Toggle
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenu = document.getElementById('close-menu');
+
+            function toggleMenu() {
+                if (hamburgerMenu && mobileMenuOverlay) {
+                    hamburgerMenu.classList.toggle('active');
+                    mobileMenuOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
                 }
-            });
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    
-        // Mobile Menu Toggle
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenu = document.getElementById('close-menu');
-
-        function toggleMenu() {
-            if (hamburgerMenu && mobileMenuOverlay) {
-                hamburgerMenu.classList.toggle('active');
-                mobileMenuOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
             }
-        }
 
-        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+            // Event listeners
+            if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
+            if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
 
-        // Close menu when clicking outside
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileMenuOverlay) {
-                    toggleMenu();
-                }
+            // Close menu when clicking outside
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        toggleMenu();
+                    }
+                });
+            }
+
+            // Close menu when clicking on navigation links
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        toggleMenu();
+                    }
+                });
             });
-        }
 
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
-                }
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Animate pricing cards on scroll
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe pricing cards and info cards
+            document.querySelectorAll('.pricing-card, .info-card').forEach(el => {
+                observer.observe(el);
             });
         });
     </script>

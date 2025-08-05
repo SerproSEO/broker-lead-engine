@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Broker Lead Engine | Get Your Free Insurance Marketing Audit</title>
-    <meta name="description" content="Contact Broker Lead Engine for your free insurance marketing audit. Call (347) 201-3023 or email sam@brokerleadengine.com. Brooklyn-based, serving nationwide.">
-    <meta name="keywords" content="contact insurance marketing agency, free marketing audit, insurance lead generation consultation">
+    <title>Contact Us - Start Generating Insurance Leads | Broker Lead Engine</title>
+    <meta name="description" content="Ready to start generating qualified insurance leads? Contact us today for a free consultation and see how we can grow your agency.">
+    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
+    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    <meta property="og:site_name" content="Broker Lead Engine">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
+    <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -47,9 +63,49 @@
             line-height: 1.6;
             color: var(--gray-700);
             background: #ffffff;
+            position: relative;
         }
 
-        /* Header Styles */
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+                        /* Header Styles */
         .header {
             background: var(--secondary);
             color: white;
@@ -57,7 +113,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             box-shadow: var(--shadow-lg);
             backdrop-filter: blur(10px);
             background: rgba(26, 32, 44, 0.98);
@@ -73,6 +129,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
+            width: 100%;
         }
 
         .logo {
@@ -82,16 +139,12 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 175px;
             width: auto;
-            max-width: 150px;
+            max-width: 175px;
             object-fit: contain;
         }
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+
         .nav-menu {
             display: flex;
             list-style: none;
@@ -108,19 +161,18 @@
         .nav-item > a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
             padding: 1rem 1.5rem;
             display: block;
-            font-weight: 500;
-            transition: var(--transition-base);
-            border-radius: 8px;
+            transition: all 0.3s;
+            border-radius: 6px;
         }
 
         .nav-item > a:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--primary);
+            color: #16a571;
+            background: rgba(22, 165, 113, 0.1);
         }
 
-        
         .dropdown {
             position: absolute;
             top: 100%;
@@ -144,105 +196,127 @@
             visibility: visible;
             transform: translateY(0);
         }
-        /* Ensure dropdowns are hidden by default */
-        .dropdown {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-        }
-        
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
 
         .dropdown a {
-            color: var(--gray-700);
-            padding: 0.75rem 1rem;
-            display: block;
+            color: #1a202c;
             text-decoration: none;
-            transition: var(--transition-base);
-            font-size: 0.9rem;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .dropdown a:hover {
-            background: var(--gray-50);
-            color: var(--primary);
+            background: #f8fafc;
+            color: #16a571;
+            padding-left: 2rem;
         }
 
         .cta-button {
             background: var(--gradient-primary);
             color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
+            padding: 0.875rem 2rem;
+            border: none;
             border-radius: 8px;
             font-weight: 600;
+            text-decoration: none;
             transition: var(--transition-base);
-            box-shadow: var(--shadow-md);
-            border: none;
             cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            white-space: nowrap;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-xl);
         }
 
-        /* Hamburger Menu */
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        
+        /* Hamburger Menu - Clean Implementation */
         .hamburger-menu {
             display: none;
-            flex-direction: column;
-            justify-content: space-around;
             width: 30px;
-            height: 30px;
-            background: transparent;
+            height: 24px;
+            background: none;
             border: none;
             cursor: pointer;
             padding: 0;
-            z-index: 1001;
+            position: relative;
+            z-index: 10001;
         }
 
-        .hamburger-line {
-            width: 25px;
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
             height: 3px;
-            background-color: white;
-            transition: all 0.3s linear;
-            transform-origin: 1px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
         }
 
-        .hamburger-menu.active .hamburger-line:first-child {
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
             transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
         }
 
-        .hamburger-menu.active .hamburger-line:nth-child(2) {
+        .hamburger-menu.active span:nth-child(2) {
             opacity: 0;
         }
 
-        .hamburger-menu.active .hamburger-line:third-child {
+        .hamburger-menu.active span:nth-child(3) {
             transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
         }
 
-        /* Mobile Menu Overlay */
+        /* Mobile Menu Overlay - Clean Implementation */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
         }
 
         .mobile-menu-overlay.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
+            left: 0;
         }
 
         .mobile-menu-content {
@@ -284,17 +358,6 @@
             gap: 1.5rem;
         }
 
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--secondary);
-            padding: 2rem;
-            box-shadow: var(--shadow-lg);
-        }
-
         .mobile-nav-link {
             color: white;
             text-decoration: none;
@@ -327,186 +390,181 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Main Content */
-        .main-content {
-            margin-top: 124px;
-            min-height: calc(100vh - 80px);
-        }
-
-        .hero-section {
+                /* Hero Section */
+        .hero {
             background: var(--gradient-secondary);
             color: white;
-            padding: 6rem 0 4rem;
+            padding: 60px 0 80px;
             text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+            background-size: 40px 40px;
         }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: var(--gray-300);
-        }
-
-        .contact-section {
-            padding: 4rem 0;
-            background: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-
-        .contact-info {
-            background: var(--gray-50);
-            padding: 3rem;
-            border-radius: 12px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-icon {
-            background: var(--gradient-primary);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-        }
-
-        .contact-details h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--gray-800);
-        }
-
-        .contact-details p {
-            color: var(--gray-600);
-        }
-
-        .contact-details a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--gray-200);
-        }
-
-        .form-group {
+        .hero h1 {
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--gray-700);
+        .hero-highlight {
+            color: #16a571;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid var(--gray-200);
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: var(--transition-base);
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(22, 165, 113, 0.1);
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+        .section {
+            padding: 80px 0;
+            clear: both;
         }
 
-        .submit-button {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-base);
-            width: 100%;
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        .submit-button:hover {
-            transform: translateY(-2px);
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
             box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-results {
+            background: #f0fff4;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+            margin: 1.5rem 0;
+        }
+
+        .service-results strong {
+            color: #16a571;
         }
 
         .guarantee-section {
-            background: var(--gray-50);
-            padding: 3rem 0;
+            background: #16a571;
+            color: white;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .guarantee-content {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        .guarantee-banner {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 525px;
         }
 
-        .guarantee-badge {
-            background: var(--gradient-primary);
+        .cta-section {
+            background: #1a202c;
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            display: inline-block;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            padding: 80px 0;
+            text-align: center;
         }
 
-        /* Responsive Design */
-        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
         /* Mobile Styles */
         @media (max-width: 768px) {
             .nav-container {
@@ -514,11 +572,10 @@
             }
 
             .logo img {
-            height: 70px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
 
             .header {
                 height: 70px;
@@ -529,7 +586,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -545,22 +602,15 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
                 display: none;
             }
 
-            
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero {
-                margin-top: 124px;
+            .hero {
+                margin-top: 70px;
                 padding: 40px 0 60px;
             }
 
@@ -616,9 +666,285 @@
             animation: spin 1s linear infinite;
         }
 
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+            background-size: 40px 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 0.5rem;
+            color: var(--gray-800);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .contact-details p {
+            margin: 0.25rem 0;
+            color: var(--gray-600);
+        }
+
+        .contact-details a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-base);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Contact Form Styles */
+        .contact-form-fields {
+            margin-top: 1.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition-base);
+            background: #f8fafc;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--gray-400);
+        }
+
+        .submit-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-base);
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .guarantee-badge {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-base);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                margin-top: 70px;
+                padding: 60px 0;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Smooth Scroll */
@@ -686,9 +1012,9 @@
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
     </header>
@@ -709,11 +1035,19 @@
                 </nav>
             </div>
         </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    
+
         
         
         
 
-    <!-- Main Content -->
+    <!-- Hero Section -->
+
     <main class="main-content">
         <!-- Hero Section -->
         <section class="hero-section">
@@ -780,16 +1114,65 @@
                     <div class="contact-form">
                         <h2 style="margin-bottom: 2rem; font-size: 2rem; color: var(--gray-800);">Request Your Free Consultation</h2>
                         
-                        <!-- Typeform Embed -->
-                        <div class="typeform-widget" data-tf-widget="YOUR_CONTACT_FORM_ID" data-tf-opacity="100" data-tf-iframe-props="title=Free Consultation" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height: 80px; border-radius: 12px; overflow: hidden;"></div>
-                        <script src="//embed.typeform.com/next/embed.js"></script>
-                        
-                        <!-- Fallback for slower connections -->
-                        <div class="typeform-fallback" style="text-align: center; margin-top: 1rem;">
-                            <a href="https://YOUR_CONTACT_TYPEFORM_URL" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500;">
-                                Form not loading? Click here to open in new window →
-                            </a>
-                        </div>
+                        <!-- Contact Form -->
+                        <form class="contact-form-fields" action="mailto:sam@brokerleadengine.com" method="post" enctype="text/plain">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">Your Name*</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company">Company Name*</label>
+                                    <input type="text" id="company" name="company" required placeholder="ABC Insurance Agency">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address*</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@abcinsurance.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="revenue">Annual Revenue</label>
+                                    <select id="revenue" name="revenue">
+                                        <option value="">Select revenue range</option>
+                                        <option value="Under $1M">Under $1M</option>
+                                        <option value="$1M - $2.5M">$1M - $2.5M</option>
+                                        <option value="$2.5M - $5M">$2.5M - $5M</option>
+                                        <option value="$5M - $10M">$5M - $10M</option>
+                                        <option value="Over $10M">Over $10M</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="services">Services Interested In</label>
+                                    <select id="services" name="services">
+                                        <option value="">Select a service</option>
+                                        <option value="AI Lead Generation">🤖 AI Lead Generation</option>
+                                        <option value="Local SEO">📍 Local SEO</option>
+                                        <option value="Google PPC">🎯 Google PPC</option>
+                                        <option value="Meta Ads">📱 Meta Ads</option>
+                                        <option value="Cold Email">📧 Cold Email</option>
+                                        <option value="Marketing Automation">⚙️ Marketing Automation</option>
+                                        <option value="Multiple Services">🔥 Multiple Services</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="message">Tell us about your goals</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="We want to grow our commercial lines by 50% this year..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">
+                                Get Your Free Audit →
+                            </button>
+                        </form>
                         
                         <!-- Alternative Contact Methods -->
                         <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-200); text-align: center;">
@@ -822,65 +1205,68 @@
     </main>
 
     <script>
-        // Remove loading overlay
-        
-        // Close menu when clicking outside
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileMenuOverlay) {
-                    toggleMenu();
-                }
-            });
-        }
-
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Remove loading overlay
-        window.addEventListener('load', () => {
+        // Clean JavaScript - Contact Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove loading overlay
             const loadingOverlay = document.getElementById('loadingOverlay');
             if (loadingOverlay) {
-                loadingOverlay.classList.add('loaded');
+                setTimeout(() => {
+                    loadingOverlay.classList.add('loaded');
+                }, 100);
             }
-        });
-    
-        // Mobile Menu Toggle
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenu = document.getElementById('close-menu');
 
-        function toggleMenu() {
-            if (hamburgerMenu && mobileMenuOverlay) {
-                hamburgerMenu.classList.toggle('active');
-                mobileMenuOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
-            }
-        }
+            // Mobile Menu Toggle
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenu = document.getElementById('close-menu');
 
-        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
-
-        // Close menu when clicking outside
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileMenuOverlay) {
-                    toggleMenu();
+            function toggleMenu() {
+                if (hamburgerMenu && mobileMenuOverlay) {
+                    hamburgerMenu.classList.toggle('active');
+                    mobileMenuOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
                 }
+            }
+
+            // Event listeners
+            if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
+            if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking outside
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        toggleMenu();
+                    }
+                });
+            }
+
+            // Close menu when clicking on navigation links
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        toggleMenu();
+                    }
+                });
             });
-        }
 
-        // Close menu when clicking on navigation links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                if (this.getAttribute('href').startsWith('#')) {
-                    toggleMenu();
-                }
+            // Animate contact items on scroll
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe contact items
+            document.querySelectorAll('.contact-item').forEach(el => {
+                observer.observe(el);
             });
         });
     </script>

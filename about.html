@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Broker Lead Engine - Insurance Marketing Experts</title>
-    <meta name="description" content="Meet the team behind Broker Lead Engine. Specialized AI-powered lead generation and marketing automation for $1M-$5M insurance agencies. Brooklyn-based expertise.">
-    <meta name="keywords" content="about broker lead engine, insurance marketing experts, Samuel Ochoa SerproSEO, insurance agency marketing team">
+    <title>About Us - Insurance Marketing Experts | Broker Lead Engine</title>
+    <meta name="description" content="Learn about our team of insurance marketing experts and proven methodology for generating qualified leads for insurance agencies nationwide.">
+    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
+    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    <meta property="og:site_name" content="Broker Lead Engine">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
+    <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -83,6 +99,12 @@
             to { transform: rotate(360deg); }
         }
 
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
                         /* Header Styles */
         .header {
             background: var(--secondary);
@@ -91,7 +113,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             box-shadow: var(--shadow-lg);
             backdrop-filter: blur(10px);
             background: rgba(26, 32, 44, 0.98);
@@ -117,16 +139,12 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 175px;
             width: auto;
-            max-width: 150px;
+            max-width: 175px;
             object-fit: contain;
         }
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+
         .nav-menu {
             display: flex;
             list-style: none;
@@ -173,18 +191,6 @@
             overflow-y: auto;
         }
 
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        /* Ensure dropdowns are hidden by default */
-        .dropdown {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-        }
-        
         .nav-item:hover .dropdown {
             opacity: 1;
             visibility: visible;
@@ -243,60 +249,74 @@
             left: 100%;
         }
 
-        /* Hamburger Menu */
+        
+        /* Hamburger Menu - Clean Implementation */
         .hamburger-menu {
             display: none;
-            flex-direction: column;
-            justify-content: space-around;
             width: 30px;
-            height: 30px;
-            background: transparent;
+            height: 24px;
+            background: none;
             border: none;
             cursor: pointer;
             padding: 0;
-            z-index: 1001;
+            position: relative;
+            z-index: 10001;
         }
 
-        .hamburger-line {
-            width: 25px;
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
             height: 3px;
-            background-color: white;
-            transition: all 0.3s linear;
-            transform-origin: 1px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
         }
 
-        .hamburger-menu.active .hamburger-line:first-child {
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
             transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
         }
 
-        .hamburger-menu.active .hamburger-line:nth-child(2) {
+        .hamburger-menu.active span:nth-child(2) {
             opacity: 0;
         }
 
-        .hamburger-menu.active .hamburger-line:third-child {
+        .hamburger-menu.active span:nth-child(3) {
             transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
         }
 
-        /* Mobile Menu Overlay */
+        /* Mobile Menu Overlay - Clean Implementation */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
         }
 
         .mobile-menu-overlay.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
+            left: 0;
         }
 
         .mobile-menu-content {
@@ -376,7 +396,7 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 124px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -445,47 +465,15 @@
             color: #1a202c;
         }
 
-        /* About Content */
-        .about-content {
+        /* Services Section */
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            margin: 3rem 0;
-            align-items: center;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 16px;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #1a202c;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        /* Expertise Section */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .expertise-card {
+        .service-card {
             background: white;
             padding: 2.5rem;
             border-radius: 16px;
@@ -497,102 +485,68 @@
             overflow: hidden;
         }
 
-        .expertise-card::before {
+        .service-card::before {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
-            height: 80px;
+            height: 4px;
             background: var(--gradient-primary);
             transform: scaleX(0);
+            transform-origin: left;
             transition: transform 0.3s;
         }
 
-        .expertise-card:hover {
+        .service-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
         }
 
-        .expertise-card:hover::before {
+        .service-card:hover::before {
             transform: scaleX(1);
         }
 
-        .expertise-icon {
+        .service-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
 
-        .expertise-card h3 {
+        .service-card h3 {
             color: #1a202c;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: #f7fafc;
+        .service-results {
+            background: #f0fff4;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+            margin: 1.5rem 0;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+        .service-results strong {
+            color: #16a571;
         }
 
-        .stat-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition-base);
-            position: relative;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        /* Mission Section */
-        .mission-section {
-            background: var(--primary);
+        .guarantee-section {
+            background: #16a571;
             color: white;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .mission-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .guarantee-banner {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 525px;
         }
 
-        .mission-content h2 {
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .mission-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-
-        /* CTA Section */
         .cta-section {
             background: #1a202c;
             color: white;
@@ -618,11 +572,10 @@
             }
 
             .logo img {
-            height: 70px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
 
             .header {
                 height: 70px;
@@ -633,7 +586,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -649,7 +602,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -657,7 +610,7 @@
             }
 
             .hero {
-                margin-top: 124px;
+                margin-top: 70px;
                 padding: 40px 0 60px;
             }
 
@@ -778,9 +731,9 @@
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
     </header>
@@ -809,8 +762,11 @@
     
 
         
+        
+        
 
     <!-- Hero Section -->
+
     <section class="hero">
         <div class="container">
             <h1>Meet the Team Behind <span class="hero-highlight">Broker Lead Engine</span></h1>

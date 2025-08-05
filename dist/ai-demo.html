@@ -535,6 +535,13 @@
                 display: none !important;
             }
         }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
@@ -612,11 +619,17 @@
         <div class="container">
             <h1>See Our <span class="hero-highlight">AI Lead Generation System</span> in Action</h1>
             <p class="hero-subtext">Watch how our MCP automation finds, qualifies, and delivers 50+ hot insurance prospects weekly - completely hands-free.</p>
+            
+            <div style="margin-top: 2rem; position: relative; z-index: 1;">
+                <a href="mailto:sam@brokerleadengine.com?subject=AI Demo Request" class="cta-button" style="background: #e53e3e; color: white; margin-right: 1rem; border: 2px solid #e53e3e; animation: pulse 2s infinite;">🚨 Get FREE AI Demo</a>
+                <a href="tel:+13472013023" class="cta-button" style="margin-right: 1rem;">Call: (347) 201-3023</a>
+                <a href="#demo" class="cta-button" style="background: transparent; border: 2px solid white;">See How It Works</a>
+            </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section class="demo-section">
+    <section class="demo-section" id="demo">
         <div class="container">
             <div class="section-header">
                 <h2>How Our AI Generates Insurance Leads</h2>

@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>90-Day Money-Back Guarantee - Risk-Free Insurance Marketing | Broker Lead Engine</title>
-    <meta name="description" content="Risk-free insurance marketing services with 90-day guarantees. Top 3 Google rankings or money back. ROI-positive ads or money back. Results guaranteed.">
-    <meta name="keywords" content="insurance marketing guarantee, money-back guarantee, risk-free marketing, guaranteed results insurance">
+    <title>Our Guarantee - Risk-Free Insurance Marketing | Broker Lead Engine</title>
+    <meta name="description" content="90-day money-back guarantee on all insurance marketing services. We guarantee results or refund your investment.">
+    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
+    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    <meta property="og:site_name" content="Broker Lead Engine">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
+    <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -50,6 +66,45 @@
             position: relative;
         }
 
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
                         /* Header Styles */
         .header {
             background: var(--secondary);
@@ -58,7 +113,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             box-shadow: var(--shadow-lg);
             backdrop-filter: blur(10px);
             background: rgba(26, 32, 44, 0.98);
@@ -84,16 +139,12 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 175px;
             width: auto;
-            max-width: 150px;
+            max-width: 175px;
             object-fit: contain;
         }
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+
         .nav-menu {
             display: flex;
             list-style: none;
@@ -140,18 +191,6 @@
             overflow-y: auto;
         }
 
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        /* Ensure dropdowns are hidden by default */
-        .dropdown {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-        }
-        
         .nav-item:hover .dropdown {
             opacity: 1;
             visibility: visible;
@@ -210,60 +249,74 @@
             left: 100%;
         }
 
-        /* Hamburger Menu */
+        
+        /* Hamburger Menu - Clean Implementation */
         .hamburger-menu {
             display: none;
-            flex-direction: column;
-            justify-content: space-around;
             width: 30px;
-            height: 30px;
-            background: transparent;
+            height: 24px;
+            background: none;
             border: none;
             cursor: pointer;
             padding: 0;
-            z-index: 1001;
+            position: relative;
+            z-index: 10001;
         }
 
-        .hamburger-line {
-            width: 25px;
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
             height: 3px;
-            background-color: white;
-            transition: all 0.3s linear;
-            transform-origin: 1px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
         }
 
-        .hamburger-menu.active .hamburger-line:first-child {
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
             transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
         }
 
-        .hamburger-menu.active .hamburger-line:nth-child(2) {
+        .hamburger-menu.active span:nth-child(2) {
             opacity: 0;
         }
 
-        .hamburger-menu.active .hamburger-line:third-child {
+        .hamburger-menu.active span:nth-child(3) {
             transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
         }
 
-        /* Mobile Menu Overlay */
+        /* Mobile Menu Overlay - Clean Implementation */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
         }
 
         .mobile-menu-overlay.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
+            left: 0;
         }
 
         .mobile-menu-content {
@@ -343,7 +396,7 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            margin-top: 124px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -412,98 +465,74 @@
             color: #1a202c;
         }
 
-        /* Guarantee Cards */
-        .guarantee-grid {
+        /* Services Section */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin: 4rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
-        .guarantee-card {
+        .service-card {
             background: white;
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 16px;
             box-shadow: var(--shadow-lg);
             text-align: center;
             transition: var(--transition-base);
-            border: 3px solid var(--primary);
+            border: 2px solid transparent;
             position: relative;
             overflow: hidden;
         }
 
-        .guarantee-card::before {
+        .service-card::before {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
-            height: 80px;
+            height: 4px;
             background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
         }
 
-        .guarantee-card:hover {
+        .service-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
         }
 
-        .guarantee-icon {
-            font-size: 4rem;
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
 
-        .guarantee-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--secondary);
+        .service-card h3 {
+            color: #1a202c;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
-        .guarantee-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-        }
-
-        .guarantee-details {
+        .service-results {
             background: #f0fff4;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            text-align: left;
-            margin: 2rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+            margin: 1.5rem 0;
         }
 
-        .guarantee-details h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+        .service-results strong {
+            color: #16a571;
         }
 
-        .guarantee-details ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .guarantee-details li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .guarantee-details li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        /* Main Guarantee Section */
-        .main-guarantee {
-            background: var(--primary);
+        .guarantee-section {
+            background: #16a571;
             color: white;
             padding: 80px 0;
             text-align: center;
@@ -511,41 +540,11 @@
 
         .guarantee-banner {
             background: rgba(255,255,255,0.1);
-            border: 3px solid white;
-            border-radius: 16px;
-            padding: 3rem;
-            margin: 3rem auto;
-            max-width: 800px;
-        }
-
-        .guarantee-banner h3 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .guarantee-banner p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        /* Important Notes */
-        .important-notes {
-            background: #fff5f5;
-            padding: 60px 0;
-        }
-
-        .note-card {
-            background: white;
-            padding: 2.5rem;
+            border: 2px solid white;
             border-radius: 12px;
-            border-left: 6px solid var(--danger);
-            margin: 2rem 0;
-            box-shadow: var(--shadow-md);
-        }
-
-        .note-card h3 {
-            color: var(--danger);
-            margin-bottom: 1rem;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 525px;
         }
 
         .cta-section {
@@ -553,11 +552,6 @@
             color: white;
             padding: 80px 0;
             text-align: center;
-        }
-
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
 
         /* Smooth Scroll */
@@ -578,11 +572,10 @@
             }
 
             .logo img {
-            height: 70px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
 
             .header {
                 height: 70px;
@@ -593,7 +586,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -609,7 +602,7 @@
             }
 
             .hamburger-menu {
-                display: flex !important;
+                display: block !important;
             }
 
             .header .cta-button {
@@ -617,7 +610,7 @@
             }
 
             .hero {
-                margin-top: 124px;
+                margin-top: 70px;
                 padding: 40px 0 60px;
             }
 
@@ -738,9 +731,9 @@
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
     </header>
@@ -761,11 +754,19 @@
                 </nav>
             </div>
         </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
     
 
         
+        
+        
 
     <!-- Hero Section -->
+
     <section class="hero">
         <div class="container">
             <h1><span class="hero-highlight">Risk-Free</span> Insurance Marketing Services</h1>
