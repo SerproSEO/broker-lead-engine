@@ -50,7 +50,7 @@
             position: relative;
         }
 
-        /* Header Styles */
+                /* Header Styles */
         .header {
             background: var(--secondary);
             color: white;
@@ -74,6 +74,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
+            width: 100%;
         }
 
         .logo {
@@ -83,9 +84,9 @@
         }
 
         .logo img {
-            height: 175px;
+            height: 60px;
             width: auto;
-            max-width: 525px;
+            max-width: 180px;
             object-fit: contain;
         }
 
@@ -94,6 +95,8 @@
             list-style: none;
             gap: 0;
             align-items: center;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-item {
@@ -115,7 +118,6 @@
             background: rgba(22, 165, 113, 0.1);
         }
 
-        
         .dropdown {
             position: absolute;
             top: 100%;
@@ -135,6 +137,10 @@
         }
 
         .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
         .dropdown a {
             color: #1a202c;
@@ -165,6 +171,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-md);
+            white-space: nowrap;
         }
 
         .cta-button::before {
@@ -505,6 +512,18 @@
             .nav-container {
                 padding: 0 1rem;
             }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger-menu {
+                display: flex !important;
+            }
+            
+            .header .cta-button {
+                display: none;
+            }
 
             .logo img {
                 height: 120px;
@@ -561,16 +580,12 @@
 <body>
     
 
-    <!-- Header -->
-        
-
-    <!-- Header -->
+        <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
                 <img src="logo.png" alt="Broker Lead Engine Logo">
             </div>
-            
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="services.html">Services</a>
@@ -604,7 +619,7 @@
                 </li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="#contact" class="cta-button">Start Generating Leads</a>
+            <a href="contact.html" class="cta-button">Start Generating Leads</a>
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
@@ -613,24 +628,6 @@
                 <span class="hamburger-line"></span>
             </button>
         </nav>
-        
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-            <div class="mobile-menu-content">
-                <div class="mobile-menu-header">
-                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
-                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
-                </div>
-                
-                <nav class="mobile-nav">
-                    <a href="services.html" class="mobile-nav-link">Services</a>
-                    <a href="about.html" class="mobile-nav-link">About</a>
-                    <a href="pricing.html" class="mobile-nav-link">Resources</a>
-                    <a href="contact.html" class="mobile-nav-link">Contact</a>
-                    <a href="#contact" class="mobile-cta-button">Start Generating Leads</a>
-                </nav>
-            </div>
-        </div>
     </header>
 
 </header>
