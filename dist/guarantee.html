@@ -115,34 +115,33 @@
             background: rgba(22, 165, 113, 0.1);
         }
 
+        
         .dropdown {
             position: absolute;
             top: 100%;
             left: 0;
             background: white;
-            min-width: 250px;
+            min-width: 280px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             border-radius: 8px;
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             z-index: 1000;
             border: 1px solid #e2e8f0;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
         .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
 
         .dropdown a {
             color: #1a202c;
             text-decoration: none;
             padding: 1rem 1.5rem;
             display: block;
-            transition: all 0.3s;
+            transition: all 0.2s ease;
             border-bottom: 1px solid #f1f5f9;
         }
 
@@ -372,7 +371,7 @@
         }
 
         .section {
-            padding: 60px 0;
+            padding: 80px 0;
             clear: both;
         }
 
@@ -556,20 +555,12 @@
                 height: 70px;
             }
 
-            .urgency-banner {
-                top: 70px;
-                padding: 8px 0;
-                height: 36px;
-            }
+            
 
-            .urgency-content {
-                font-size: 0.8rem;
-                flex-wrap: wrap;
-                text-align: center;
-            }
+            
 
             .hero {
-                margin-top: 106px;
+                margin-top: 80px;
                 padding: 40px 0 60px;
             }
 
@@ -619,6 +610,7 @@
             <div class="logo">
                 <img src="logo.png" alt="Broker Lead Engine Logo">
             </div>
+            
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="services.html">Services</a>
@@ -631,11 +623,25 @@
                         <a href="marketing-automation.html">⚙️ Marketing Automation</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="ai-demo.html">AI Demo</a></li>
-                <li class="nav-item"><a href="pricing.html">Pricing</a></li>
-                <li class="nav-item"><a href="case-study-stucco-dominance.html">Success Stories</a></li>
-                <li class="nav-item"><a href="guarantee.html">Guarantee</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item">
+                    <a href="about.html">About</a>
+                    <div class="dropdown">
+                        <a href="about.html">🏢 About Us</a>
+                        <a href="success-stories.html">🏆 Success Stories</a>
+                        <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+                        <a href="guarantee.html">🛡️ Our Guarantee</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="pricing.html">Resources</a>
+                    <div class="dropdown">
+                        <a href="pricing.html">💰 Pricing</a>
+                        <a href="ai-demo.html">🤖 AI Demo</a>
+                        <a href="faq.html">❓ FAQ</a>
+                        <a href="privacy-policy.html">🔒 Privacy Policy</a>
+                        <a href="terms-of-service.html">📄 Terms of Service</a>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
             <a href="#contact" class="cta-button">Start Generating Leads</a>
@@ -655,13 +661,11 @@
                     <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
                     <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
                 </div>
+                
                 <nav class="mobile-nav">
                     <a href="services.html" class="mobile-nav-link">Services</a>
-                    <a href="ai-demo.html" class="mobile-nav-link">AI Demo</a>
-                    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
-                    <a href="case-study-stucco-dominance.html" class="mobile-nav-link">Success Stories</a>
-                    <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
                     <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="pricing.html" class="mobile-nav-link">Resources</a>
                     <a href="contact.html" class="mobile-nav-link">Contact</a>
                     <a href="#contact" class="mobile-cta-button">Start Generating Leads</a>
                 </nav>
