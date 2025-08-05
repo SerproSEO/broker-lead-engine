@@ -113,13 +113,10 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             box-shadow: var(--shadow-lg);
             backdrop-filter: blur(10px);
             background: rgba(26, 32, 44, 0.98);
-            height: 80px;
-            display: flex;
-            align-items: center;
             height: 80px;
             display: flex;
             align-items: center;
@@ -263,7 +260,8 @@
             border: none;
             cursor: pointer;
             padding: 0;
-            z-index: 1001;
+            z-index: 10000;
+            position: relative;
         }
 
         .hamburger-line {
@@ -275,7 +273,7 @@
         }
 
         .hamburger-menu.active .hamburger-line:first-child {
-            transform: rotate(45deg);
+            transform: rotate(45deg) translateY(8px);
         }
 
         .hamburger-menu.active .hamburger-line:nth-child(2) {
@@ -283,7 +281,7 @@
         }
 
         .hamburger-menu.active .hamburger-line:nth-child(3) {
-            transform: rotate(-45deg);
+            transform: rotate(-45deg) translateY(-8px);
         }
 
         /* Mobile Menu Overlay */
@@ -295,7 +293,7 @@
             height: 100vh;
             background: rgba(26, 32, 44, 0.95);
             backdrop-filter: blur(10px);
-            z-index: 1000;
+            z-index: 9998;
             transform: translateX(-100%);
             transition: transform 0.3s ease-in-out;
             opacity: 0;
@@ -949,6 +947,7 @@
             const closeMenu = document.getElementById('close-menu');
 
             function toggleMenu() {
+                console.log('Toggle menu called');
                 if (hamburgerMenu && mobileMenuOverlay) {
                     hamburgerMenu.classList.toggle('active');
                     mobileMenuOverlay.classList.toggle('active');
@@ -957,7 +956,14 @@
             }
 
             if (hamburgerMenu) {
-                hamburgerMenu.addEventListener('click', toggleMenu);
+                console.log('Hamburger menu found, adding listener');
+                hamburgerMenu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+            } else {
+                console.log('Hamburger menu not found');
             }
             
             if (closeMenu) {
