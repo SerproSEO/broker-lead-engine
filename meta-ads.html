@@ -94,6 +94,11 @@
             max-width: 150px;
             object-fit: contain;
         }
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
         .nav-menu {
             display: flex;
             list-style: none;
@@ -146,6 +151,18 @@
             visibility: visible;
             transform: translateY(0);
         }
+        /* Ensure dropdowns are hidden by default */
+        .dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+        
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
         .dropdown a {
             color: #1a202c;
@@ -181,6 +198,64 @@
         }
 
         /* Page Styles */
+        .hero {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            margin-top: 124px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+            background-size: 40px 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-highlight {
+            color: #16a571;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Mobile Styles */
         @media (max-width: 768px) {
             .nav-container {
@@ -188,10 +263,11 @@
             }
 
             .logo img {
-                height: 75px;
-                max-width: 75px;
-                object-fit: contain;
-            }
+            height: 150px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+        }
 
             .header {
                 height: 70px;
@@ -350,7 +426,9 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Broker Lead Engine Logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">

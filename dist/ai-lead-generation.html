@@ -57,6 +57,11 @@
             max-width: 150px;
             object-fit: contain;
         }
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
         .nav-menu {
             display: flex;
             list-style: none;
@@ -104,6 +109,18 @@
             overflow-y: auto;
         }
 
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        /* Ensure dropdowns are hidden by default */
+        .dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+        
         .nav-item:hover .dropdown {
             opacity: 1;
             visibility: visible;
@@ -361,10 +378,11 @@
             }
 
             .logo img {
-                height: 75px;
-                max-width: 75px;
-                object-fit: contain;
-            }
+            height: 150px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+        }
 
             .header {
                 height: 70px;
@@ -484,7 +502,9 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Broker Lead Engine Logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
