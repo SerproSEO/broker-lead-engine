@@ -613,9 +613,61 @@
                 padding: 0 1rem;
             }
 
-            .services-grid {
+                        .services-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -839,6 +891,10 @@
     </section>
 
     <script>
+        // Remove loading overlay
+        window.addEventListener('load', () => {
+            document.getElementById('loadingOverlay').classList.add('loaded');
+        });
         // Mobile Menu Functionality
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
