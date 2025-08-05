@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broker Lead Engine - AI Lead Generation for Insurance Agencies</title>
+    <meta name="description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
+    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    <meta property="og:site_name" content="Broker Lead Engine">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
+    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
+    <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+            position: relative;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+                        /* Hero Section */
+        .hero {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+            background-size: 40px 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-highlight {
+            color: #16a571;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            padding: 80px 0;
+            clear: both;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-results {
+            background: #f0fff4;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #16a571;
+            margin: 1.5rem 0;
+        }
+
+        .service-results strong {
+            color: #16a571;
+        }
+
+        .guarantee-section {
+            background: #16a571;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .guarantee-banner {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 525px;
+        }
+
+        .cta-section {
+            background: #1a202c;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo img {
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block !important;
+            }
+
+            .header .cta-button {
+                display: none;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block !important;
+            }
+
+            .header .cta-button {
+                display: none;
+            }
+
+            .hero {
+                margin-top: 70px;
+                padding: 40px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+                        .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+    
+        
+    
+        /* Header Styles */
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            background: rgba(26, 32, 44, 0.98);
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 175px;
+            width: auto;
+            max-width: 175px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            transition: var(--transition-base);
+            display: block;
+        }
+
+        .nav-item > a:hover {
+            color: var(--primary);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: var(--transition-base);
+            border-bottom: 1px solid #f1f5f9;
+            font-weight: 500;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a:hover {
+            background: #f8fafc;
+            color: var(--primary);
+            padding-left: 2rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-base);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Hamburger Menu - Clean Implementation */
+        .hamburger-menu {
+            display: none;
+            width: 30px;
+            height: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: relative;
+            z-index: 10001;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 50%;
+            transform-origin: center;
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: 50%;
+            transform-origin: center;
+        }
+
+        /* Mobile Menu Overlay - Clean Implementation */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 32, 44, 0.98);
+            z-index: 10000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-overlay.active {
+            left: 0;
+        }
+
+        .mobile-menu-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .mobile-logo {
+            height: 75px;
+            width: auto;
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: var(--transition-base);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--primary);
+            padding-left: 1.5rem;
+        }
+
+        .mobile-cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .mobile-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo img {
+                height: 70px;
+                max-width: 75px;
+                object-fit: contain;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block !important;
+            }
+
+            .header .cta-button {
+                display: none;
+            }
+        }
+
+        /* Desktop - Hide Mobile Menu */
+        @media (min-width: 769px) {
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Broker Lead Engine Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown">
+                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+                        <a href="local-seo.html">📍 Local SEO</a>
+                        <a href="google-ppc.html">🎯 Google PPC</a>
+                        <a href="meta-ads.html">📱 Meta Ads</a>
+                        <a href="cold-email.html">📧 Cold Email</a>
+                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html">About</a>
+                    <div class="dropdown">
+                        <a href="about.html">🏢 About Us</a>
+                        <a href="success-stories.html">🏆 Success Stories</a>
+                        <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+                        <a href="guarantee.html">🛡️ Our Guarantee</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="pricing.html">Resources</a>
+                    <div class="dropdown">
+                        <a href="pricing.html">💰 Pricing</a>
+                        <a href="ai-demo.html">🤖 AI Demo</a>
+                        <a href="faq.html">❓ FAQ</a>
+                        <a href="privacy-policy.html">🔒 Privacy Policy</a>
+                        <a href="terms-of-service.html">📄 Terms of Service</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-button">Start Generating Leads</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+        
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="pricing.html" class="mobile-nav-link">Resources</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>See Our <span class="hero-highlight">AI Lead Generation System</span> in Action</h1>
+            <p class="hero-subtext">Watch how our MCP automation finds, qualifies, and delivers 50+ hot insurance prospects weekly - completely hands-free.</p>
+        </div>
+    </section>
+
+    <!-- AI Demo Content -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Our AI Generates Insurance Leads</h2>
+                <p>Step-by-step breakdown of our proprietary MCP (Model Context Protocol) system</p>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="ai-step">
+                <div class="ai-step-number">1</div>
+                <h3>🔍 Intelligent Prospect Discovery</h3>
+                <p class="ai-step-description">
+                    Our AI scans multiple data sources 24/7 to identify businesses that need insurance. It analyzes business directories, new business filings, permit applications, and industry databases to find companies with specific risk profiles.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>AI Search Process:</h4>
+                    <p>→ Scanning new business registrations in target zip codes...<br>
+                    → Found 47 new construction companies this week<br>
+                    → Cross-referencing with permit databases...<br>
+                    → Identified 23 companies without current GL coverage<br>
+                    → Prioritizing by revenue and employee count...</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Weekly Discovery Results</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">1,200+</span>
+                            <span>Businesses Scanned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span>Qualified Prospects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">75+</span>
+                            <span>High-Priority Leads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="ai-step">
+                <div class="ai-step-number">2</div>
+                <h3>🎯 Advanced Lead Qualification</h3>
+                <p class="ai-step-description">
+                    The AI analyzes each prospect using 50+ data points including company size, industry risk factors, growth indicators, and insurance requirements. It scores leads based on likelihood to purchase and policy value potential.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Qualification Analysis:</h4>
+                    <p>→ ABC Construction LLC - Score: 94/100<br>
+                    → Revenue: $2.3M annually | Employees: 15<br>
+                    → Risk Factors: High-value equipment, multiple job sites<br>
+                    → Current Coverage: Basic GL only (under-insured)<br>
+                    → Purchase Probability: 87% | Est. Premium: $24K</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Qualification Accuracy</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">92%</span>
+                            <span>Lead Quality Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">67%</span>
+                            <span>Contact Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">23%</span>
+                            <span>Meeting Conversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="ai-step">
+                <div class="ai-step-number">3</div>
+                <h3>📧 Personalized Outreach Generation</h3>
+                <p class="ai-step-description">
+                    For each qualified prospect, the AI creates personalized outreach messages based on their specific industry, company size, and risk profile. It crafts compelling subject lines, email content, and follow-up sequences.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Generated Email Example:</h4>
+                    <p>Subject: Construction Insurance Gap - ABC Construction<br><br>
+                    Hi [First Name],<br><br>
+                    I noticed ABC Construction has been growing rapidly with recent projects in [City]. With 15 employees and $2.3M revenue, you're likely facing increased insurance requirements from GCs.<br><br>
+                    Many construction companies your size are missing critical coverages like Cyber Liability and Professional Indemnity. A recent claim in your industry cost $180K.<br><br>
+                    I'd like to show you how to close these gaps while potentially reducing your overall premium...</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Outreach Performance</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">34%</span>
+                            <span>Open Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8.2%</span>
+                            <span>Response Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2.1%</span>
+                            <span>Meeting Booking Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="ai-step">
+                <div class="ai-step-number">4</div>
+                <h3>⚡ Automated Follow-Up Sequences</h3>
+                <p class="ai-step-description">
+                    The AI manages multi-touch follow-up campaigns, tracking prospect engagement and adjusting messaging based on behavior. It knows when to follow up, what tone to use, and when to try different channels.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Follow-Up Sequence:</h4>
+                    <p>Day 1: Initial outreach (sent)<br>
+                    Day 4: Soft follow-up with industry insight<br>
+                    Day 8: Value-focused follow-up with case study<br>
+                    Day 15: Final follow-up with limited-time offer<br>
+                    Day 22: Switch to LinkedIn outreach<br>
+                    Day 30: Phone number research and calling sequence</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Follow-Up Results</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">47%</span>
+                            <span>Response from Follow-Ups</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6.3</span>
+                            <span>Avg Touches to Response</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">89%</span>
+                            <span>Automation Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="ai-step">
+                <div class="ai-step-number">5</div>
+                <h3>📊 Real-Time Lead Delivery & Scoring</h3>
+                <p class="ai-step-description">
+                    Qualified leads are delivered to your CRM in real-time with complete prospect profiles, risk assessments, and recommended approach strategies. The AI continuously updates lead scores based on new data.
+                </p>
+                
+                <div class="ai-example">
+                    <h4>Lead Delivery Format:</h4>
+                    <p>🔥 HOT LEAD ALERT<br>
+                    Company: ABC Construction LLC<br>
+                    Contact: John Smith, Owner<br>
+                    Phone: (555) 123-4567 | Email: j.smith@abcconstruction.com<br>
+                    Lead Score: 94/100 | Est. Premium: $24,000<br>
+                    Recommended Approach: Focus on equipment coverage gaps<br>
+                    Best Contact Time: Mornings 8-10 AM<br>
+                    Notes: Responded positively to email #2, expressed interest in quote</p>
+                </div>
+
+                <div class="results-box">
+                    <h4>Overall AI Performance</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">52</span>
+                            <span>Qualified Leads/Week</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">18%</span>
+                            <span>Lead-to-Meeting Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$47K</span>
+                            <span>Avg Weekly Pipeline</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span>Automated Operation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Ready to Let AI Generate Your Leads?</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+                See how our AI can generate 50+ qualified insurance leads weekly for your agency. Get a free audit and demonstration of our MCP system.
+            </p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="mailto:sam@brokerleadengine.com?subject=AI Demo and Free Audit Request" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get AI Demo & Audit</a>
+                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
+            </div>
+
+            <p style="margin-top: 2rem; opacity: 0.9;">
+                📧 <a href="mailto:sam@brokerleadengine.com" style="color: #16a571; text-decoration: none;">sam@brokerleadengine.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
+                🛡️ <strong>90-Day Results Guarantee</strong> - 300% more leads or money back<br>
+                🤖 <strong>AI-Powered Automation</strong> - Works 24/7 to find your prospects
+            </p>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer Footer -->
+    <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+        <div class="container">
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
+                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+                All marketing services are provided in compliance with applicable laws and regulations.
+            </p>
+            <p style="opacity: 0.7; font-size: 0.8rem;">
+                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Remove loading overlay
+        window.addEventListener('load', () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                setTimeout(() => {
+                    loadingOverlay.classList.add('loaded');
+                }, 100);
+            }
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(el => {
+            observer.observe(el);
+        });
+    
+                
+    
+        // Mobile Menu Toggle - Clean Implementation
+        (function() {
+            const hamburger = document.getElementById('hamburger-menu');
+            const mobileMenu = document.getElementById('mobile-menu-overlay');
+            const closeBtn = document.getElementById('close-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMobileMenu() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            }
+
+            function closeMobileMenu() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Hamburger click
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+
+            // Close button click
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeMobileMenu);
+            }
+
+            // Click outside menu
+            document.addEventListener('click', function(e) {
+                if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && e.target !== hamburger) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Mobile nav links
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        closeMobileMenu();
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
