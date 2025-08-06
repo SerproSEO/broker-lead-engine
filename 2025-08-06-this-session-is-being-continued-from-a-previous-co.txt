@@ -1,0 +1,1964 @@
+╭────────────────────────────────────────────────────────╮
+│ ✻ Welcome to Claude Code!                              │
+│                                                        │
+│   /help for help, /status for your current setup       │
+│                                                        │
+│   cwd: C:\Users\b\Documents\GitHub\broker-lead-engine  │
+╰────────────────────────────────────────────────────────╯
+● Compact summary (ctrl+r to expand)
+  ⎿  Read rv-insurance-marketing-rural-montana.html (522 lines)
+  ⎿  Read how-to-market-life-insurance-in-springfield-missouri.html (645 lines)
+  ⎿  Read mobile-home-insurance-marketing-rural-texas.html (522 lines)
+  ⎿  Read boat-insurance-marketing-lake-county-michigan.html (522 lines)
+  ⎿  Read farm-insurance-marketing-butler-county-kansas.html (519 lines)
+  ⎿  Todo list read (1 item)
+
+● I'll continue creating the next set of 5 programmatic SEO pages, targeting the next lowest competition keywords from our research. Let me create pages for:
+
+  1. Crop insurance marketing in rural Iowa (KD ~14)
+  2. Motorcycle insurance marketing in rural Alabama (KD ~16)
+  3. Commercial truck insurance leads in small Texas towns (KD ~17)
+  4. Homeowners insurance marketing in suburban Ohio counties (KD ~19)
+  5. Pet insurance marketing in rural North Carolina (KD ~20)
+  ⎿  Interrupted by user
+
+> Wait, can you please remove all fake testimonials and add the real testimonials? "Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop 
+  for website and marketing services. I’ll definitely be a repeat customer." - Brian - Southern Stone Tile  ; Support was helpful with the issues i was having with some designs, quality service, was 
+  solved in a timely manner - Jason C  Profesional and friendly customer service. Thanks again for the assistance! - Elizabeth P.
+
+● I'll update all 5 existing programmatic pages to replace the fake testimonials with the real ones you provided. Let me do this across all pages.
+
+● Update(farm-insurance-marketing-butler-county-kansas.html)
+  ⎿  Updated farm-insurance-marketing-butler-county-kansas.html with 12 additions and 2 removals                                                                                                           
+       453                </div>
+       454    
+       455                <div class="testimonial">
+       456 -                  <p>"Since partnering with Broker Lead Engine, our Butler County farm insurance sales have increased 180%. Their understanding of local agricultural needs and seasonal 
+     marketing timing has been exceptional. We're now the go-to agency for crop insurance in El Dorado and Augusta."</p>
+           - marketing timing has been exceptional. We're now the go-to agency for crop insurance in El Dorado and Augusta."</p>
+       457 -                  <p><strong>- Sarah Thompson, Thompson Insurance Agency, El Dorado, KS</strong></p>
+       456 +                  <p>"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll definitely 
+     be a repeat customer."</p>
+           + be a repeat customer."</p>
+       457 +                  <p><strong>- Brian - Southern Stone Tile</strong></p>
+       458                </div>
+       459 +  
+       460 +              <div class="testimonial">
+       461 +                  <p>"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."</p>
+       462 +                  <p><strong>- Jason C.</strong></p>
+       463 +              </div>
+       464 +  
+       465 +              <div class="testimonial">
+       466 +                  <p>"Professional and friendly customer service. Thanks again for the assistance!"</p>
+       467 +                  <p><strong>- Elizabeth P.</strong></p>
+       468 +              </div>
+       469            </div>
+       470        </section>
+       471    
+
+● Update(boat-insurance-marketing-lake-county-michigan.html)
+  ⎿  Updated boat-insurance-marketing-lake-county-michigan.html with 12 additions and 2 removals                                                                                                           
+       456                </div>
+       457    
+       458                <div class="testimonial">
+       459 -                  <p>"Broker Lead Engine transformed our marine insurance business in Lake County. Their targeted campaigns during peak boating season generated 65 new boat insurance policies 
+     in just four months. They understand the unique needs of Michigan lake communities."</p>
+           - in just four months. They understand the unique needs of Michigan lake communities."</p>
+       460 -                  <p><strong>- Mike Rodriguez, Great Lakes Insurance, Baldwin, MI</strong></p>
+       459 +                  <p>"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll definitely 
+     be a repeat customer."</p>
+           + be a repeat customer."</p>
+       460 +                  <p><strong>- Brian - Southern Stone Tile</strong></p>
+       461                </div>
+       462 +  
+       463 +              <div class="testimonial">
+       464 +                  <p>"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."</p>
+       465 +                  <p><strong>- Jason C.</strong></p>
+       466 +              </div>
+       467 +  
+       468 +              <div class="testimonial">
+       469 +                  <p>"Professional and friendly customer service. Thanks again for the assistance!"</p>
+       470 +                  <p><strong>- Elizabeth P.</strong></p>
+       471 +              </div>
+       472            </div>
+       473        </section>
+       474    
+
+● Update(mobile-home-insurance-marketing-rural-texas.html)
+  ⎿  Updated mobile-home-insurance-marketing-rural-texas.html with 12 additions and 2 removals                                                                                                             
+       456                </div>
+       457    
+       458                <div class="testimonial">
+       459 -                  <p>"Broker Lead Engine's rural mobile home marketing strategy increased our manufactured housing policies by 145% in just six months. Their understanding of rural Texas 
+     demographics and targeted approach to mobile home park partnerships has been incredible."</p>
+           - demographics and targeted approach to mobile home park partnerships has been incredible."</p>
+       460 -                  <p><strong>- Jennifer Martinez, East Texas Insurance Group, Tyler, TX</strong></p>
+       459 +                  <p>"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll definitely 
+     be a repeat customer."</p>
+           + be a repeat customer."</p>
+       460 +                  <p><strong>- Brian - Southern Stone Tile</strong></p>
+       461                </div>
+       462 +  
+       463 +              <div class="testimonial">
+       464 +                  <p>"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."</p>
+       465 +                  <p><strong>- Jason C.</strong></p>
+       466 +              </div>
+       467 +  
+       468 +              <div class="testimonial">
+       469 +                  <p>"Professional and friendly customer service. Thanks again for the assistance!"</p>
+       470 +                  <p><strong>- Elizabeth P.</strong></p>
+       471 +              </div>
+       472            </div>
+       473        </section>
+       474    
+
+● Update(how-to-market-life-insurance-in-springfield-missouri.html)
+  ⎿  Updated how-to-market-life-insurance-in-springfield-missouri.html with 24 additions                                                                                                                   
+       591            </div>
+       592        </section>
+       593    
+       594 +          <!-- Testimonials Section -->
+       595 +      <section class="section" style="background: #f5f3ff;">
+       596 +          <div class="container">
+       597 +              <h2 class="section-title">What Our Clients Say</h2>
+       598 +              
+       599 +              <div class="content-grid">
+       600 +                  <div class="strategy-card">
+       601 +                      <p style="font-style: italic; margin-bottom: 1rem;">"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop 
+     shop
+           +  for website and marketing services. I'll definitely be a repeat customer."</p>
+       602 +                      <p><strong>- Brian - Southern Stone Tile</strong></p>
+       603 +                  </div>
+       604 +  
+       605 +                  <div class="strategy-card">
+       606 +                      <p style="font-style: italic; margin-bottom: 1rem;">"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely 
+           + manner."</p>
+       607 +                      <p><strong>- Jason C.</strong></p>
+       608 +                  </div>
+       609 +  
+       610 +                  <div class="strategy-card">
+       611 +                      <p style="font-style: italic; margin-bottom: 1rem;">"Professional and friendly customer service. Thanks again for the assistance!"</p>
+       612 +                      <p><strong>- Elizabeth P.</strong></p>
+       613 +                  </div>
+       614 +              </div>
+       615 +          </div>
+       616 +      </section>
+       617 +  
+       618        <!-- Local Considerations -->
+       619        <section class="section">
+       620            <div class="container">
+
+● Update(rv-insurance-marketing-rural-montana.html)
+  ⎿  Updated rv-insurance-marketing-rural-montana.html with 12 additions and 2 removals                                                                                                                    
+       456                </div>
+       457    
+       458                <div class="testimonial">
+       459 -                  <p>"Broker Lead Engine's rural Montana RV marketing expertise helped us increase our recreational vehicle policies by 120% in one season. They understand Montana's unique 
+     outdoor culture and seasonal RV patterns perfectly."</p>
+           - outdoor culture and seasonal RV patterns perfectly."</p>
+       460 -                  <p><strong>- Tom Harrison, Big Sky Insurance, Bozeman, MT</strong></p>
+       459 +                  <p>"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll definitely 
+     be a repeat customer."</p>
+           + be a repeat customer."</p>
+       460 +                  <p><strong>- Brian - Southern Stone Tile</strong></p>
+       461                </div>
+       462 +  
+       463 +              <div class="testimonial">
+       464 +                  <p>"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."</p>
+       465 +                  <p><strong>- Jason C.</strong></p>
+       466 +              </div>
+       467 +  
+       468 +              <div class="testimonial">
+       469 +                  <p>"Professional and friendly customer service. Thanks again for the assistance!"</p>
+       470 +                  <p><strong>- Elizabeth P.</strong></p>
+       471 +              </div>
+       472            </div>
+       473        </section>
+       474    
+
+● Update Todos
+  ⎿  ☒ Replace fake testimonials with real testimonials across all 5 pages
+     ☐ Create 5 programmatic SEO pages for insurance marketing keywords
+
+● Updated all 5 existing programmatic pages with the real testimonials you provided:
+
+  1. Brian - Southern Stone Tile: "Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll
+  definitely be a repeat customer."
+  2. Jason C.: "Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."
+  3. Elizabeth P.: "Professional and friendly customer service. Thanks again for the assistance!"
+
+  All fake testimonials have been removed and replaced with these authentic client reviews across:
+  - farm-insurance-marketing-butler-county-kansas.html
+  - boat-insurance-marketing-lake-county-michigan.html
+  - mobile-home-insurance-marketing-rural-texas.html
+  - how-to-market-life-insurance-in-springfield-missouri.html
+  - rv-insurance-marketing-rural-montana.html
+
+  Should I continue creating the next batch of 5 programmatic pages with these real testimonials?
+
+> can you also fix the headers? Make them match liek the original site please
+
+● I'll update all 5 programmatic pages to use the complete header navigation from the original site. Let me check the original header first, then update all pages.
+
+● Read(index.html)
+  ⎿  Read 100 lines (ctrl+r to expand)
+
+● Let me get the header section specifically:
+
+● Read(index.html)
+  ⎿  Read 100 lines (ctrl+r to expand)
+
+● Let me search for the header HTML section:
+
+● Search(pattern: "<header", path: "index.html", output_mode: "content")
+  ⎿  Found 21 lines (ctrl+r to expand)
+
+● Let me get more of the header:
+
+● Search(pattern: "<header", path: "index.html", output_mode: "content")
+  ⎿  Found 50 lines (ctrl+r to expand)
+
+● Now let me also check for the urgency banner:
+
+● Search(pattern: "urgency-banner", path: "index.html", output_mode: "content")
+  ⎿  Found 0 lines 
+
+● Let me search for any banner above the header:
+
+● Read(index.html)
+  ⎿  Read 100 lines (ctrl+r to expand)
+
+● Perfect! Now I can see the complete header structure. I need to also get the CSS for the dropdown menus and mobile menu. Let me update all 5 programmatic pages with the proper header:
+
+● Update(farm-insurance-marketing-butler-county-kansas.html)
+  ⎿  Updated farm-insurance-marketing-butler-county-kansas.html with 259 additions and 11 removals               
+       105            }
+       106    
+       107            .logo {
+       108 -              font-size: 1.5rem;
+       109 -              font-weight: 700;
+       110 -              color: var(--primary);
+       108 +              height: 75px;
+       109 +              width: auto;
+       110            }
+       111    
+       112 +          .logo a {
+       113 +              display: block;
+       114 +          }
+       115 +  
+       116 +          .logo img {
+       117 +              height: 100%;
+       118 +              width: auto;
+       119 +          }
+       120 +  
+       121            .nav-menu {
+       122                display: flex;
+       123                list-style: none;
+       124                gap: 2rem;
+       125 +              align-items: center;
+       126            }
+       127    
+       128 -          .nav-menu a {
+       128 +          .nav-item {
+       129 +              position: relative;
+       130 +          }
+       131 +  
+       132 +          .nav-item > a {
+       133                color: white;
+       134                text-decoration: none;
+       135                font-weight: 500;
+       136                transition: color 0.3s;
+       137 +              padding: 0.75rem 0;
+       138 +              display: block;
+       139            }
+       140    
+       141 -          .nav-menu a:hover {
+       141 +          .nav-item > a:hover {
+       142                color: var(--primary);
+       143            }
+       144    
+       145 +          .dropdown {
+       146 +              position: absolute;
+       147 +              top: 100%;
+       148 +              left: 0;
+       149 +              background: white;
+       150 +              border-radius: 8px;
+       151 +              box-shadow: var(--shadow-xl);
+       152 +              padding: 1rem 0;
+       153 +              min-width: 250px;
+       154 +              opacity: 0;
+       155 +              visibility: hidden;
+       156 +              transform: translateY(-10px);
+       157 +              transition: all 0.3s;
+       158 +              z-index: 1000;
+       159 +          }
+       160 +  
+       161 +          .nav-item:hover .dropdown {
+       162 +              opacity: 1;
+       163 +              visibility: visible;
+       164 +              transform: translateY(0);
+       165 +          }
+       166 +  
+       167 +          .dropdown a {
+       168 +              display: block;
+       169 +              padding: 0.75rem 1.5rem;
+       170 +              color: var(--gray-700);
+       171 +              text-decoration: none;
+       172 +              transition: all 0.3s;
+       173 +              font-size: 0.95rem;
+       174 +          }
+       175 +  
+       176 +          .dropdown a:hover {
+       177 +              background: var(--gray-50);
+       178 +              color: var(--primary);
+       179 +          }
+       180 +  
+       181 +          /* Hamburger Menu */
+       182 +          .hamburger-menu {
+       183 +              display: none;
+       184 +              flex-direction: column;
+       185 +              background: none;
+       186 +              border: none;
+       187 +              cursor: pointer;
+       188 +              padding: 0;
+       189 +              width: 30px;
+       190 +              height: 30px;
+       191 +              justify-content: space-between;
+       192 +          }
+       193 +  
+       194 +          .hamburger-menu span {
+       195 +              display: block;
+       196 +              height: 3px;
+       197 +              width: 100%;
+       198 +              background: white;
+       199 +              border-radius: 2px;
+       200 +              transition: var(--transition-base);
+       201 +          }
+       202 +  
+       203 +          .hamburger-menu.active span:first-child {
+       204 +              transform: rotate(45deg) translate(9px, 9px);
+       205 +          }
+       206 +  
+       207 +          .hamburger-menu.active span:nth-child(2) {
+       208 +              opacity: 0;
+       209 +          }
+       210 +  
+       211 +          .hamburger-menu.active span:last-child {
+       212 +              transform: rotate(-45deg) translate(9px, -9px);
+       213 +          }
+       214 +  
+       215 +          /* Mobile Menu Overlay */
+       216 +          .mobile-menu-overlay {
+       217 +              position: fixed;
+       218 +              top: 0;
+       219 +              left: -100%;
+       220 +              width: 100%;
+       221 +              height: 100vh;
+       222 +              background: rgba(26, 32, 44, 0.98);
+       223 +              z-index: 10000;
+       224 +              transition: left 0.3s ease;
+       225 +              overflow-y: auto;
+       226 +          }
+       227 +  
+       228 +          .mobile-menu-overlay.active {
+       229 +              left: 0;
+       230 +          }
+       231 +  
+       232 +          .mobile-menu-content {
+       233 +              height: 100%;
+       234 +              display: flex;
+       235 +              flex-direction: column;
+       236 +              padding: 2rem;
+       237 +          }
+       238 +  
+       239 +          .mobile-menu-header {
+       240 +              display: flex;
+       241 +              justify-content: space-between;
+       242 +              align-items: center;
+       243 +              margin-bottom: 3rem;
+       244 +          }
+       245 +  
+       246 +          .mobile-logo {
+       247 +              height: 75px;
+       248 +              width: auto;
+       249 +          }
+       250 +  
+       251 +          .close-menu {
+       252 +              background: none;
+       253 +              border: none;
+       254 +              color: white;
+       255 +              font-size: 2rem;
+       256 +              cursor: pointer;
+       257 +              padding: 0;
+       258 +              width: 40px;
+       259 +              height: 40px;
+       260 +              display: flex;
+       261 +              align-items: center;
+       262 +              justify-content: center;
+       263 +          }
+       264 +  
+       265 +          .mobile-nav {
+       266 +              display: flex;
+       267 +              flex-direction: column;
+       268 +              gap: 1.5rem;
+       269 +          }
+       270 +  
+       271 +          .mobile-nav-link {
+       272 +              color: white;
+       273 +              text-decoration: none;
+       274 +              font-size: 1.5rem;
+       275 +              font-weight: 500;
+       276 +              padding: 1rem 0;
+       277 +              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+       278 +              transition: color 0.3s;
+       279 +          }
+       280 +  
+       281 +          .mobile-nav-link:hover {
+       282 +              color: var(--primary);
+       283 +          }
+       284 +  
+       285 +          .mobile-cta-button {
+       286 +              background: var(--gradient-primary);
+       287 +              color: white;
+       288 +              padding: 1rem 2rem;
+       289 +              border: none;
+       290 +              border-radius: 8px;
+       291 +              font-weight: 600;
+       292 +              text-decoration: none;
+       293 +              text-align: center;
+       294 +              margin-top: 2rem;
+       295 +              transition: all 0.3s;
+       296 +          }
+       297 +  
+       298 +          .mobile-cta-button:hover {
+       299 +              transform: translateY(-2px);
+       300 +              box-shadow: var(--shadow-lg);
+       301 +          }
+       302 +  
+       303            .cta-button {
+       304                background: var(--gradient-primary);
+       305                color: white;
+     ...
+       135                text-decoration: none;
+       136                font-weight: 600;
+       137                transition: var(--transition-base);
+       138 +              white-space: nowrap;
+       139            }
+       140    
+       141            .cta-button:hover {
+     ...
+       321                .nav-menu {
+       322                    display: none;
+       323                }
+       324 +  
+       325 +              .hamburger-menu {
+       326 +                  display: flex;
+       327 +              }
+       328                
+       329                .hero-stats {
+       330                    grid-template-columns: 1fr;
+     ...
+       334                    flex-direction: column;
+       335                    align-items: center;
+       336                }
+       337 +  
+       338 +              .dropdown {
+       339 +                  display: none;
+       340 +              }
+       341            }
+       342 +  
+       343 +          /* Desktop - Hide Mobile Menu */
+       344 +          @media (min-width: 769px) {
+       345 +              .mobile-menu-overlay {
+       346 +                  display: none !important;
+       347 +              }
+       348 +          }
+       349        </style>
+       350    </head>
+       351    <body>
+       352        <!-- Header -->
+       353        <header class="header">
+       354            <nav class="nav-container">
+       355 -              <div class="logo">Broker Lead Engine</div>
+       355 +              <div class="logo">
+       356 +                  <a href="index.html">
+       357 +                      <img src="logo.png" alt="Broker Lead Engine Logo">
+       358 +                  </a>
+       359 +              </div>
+       360                <ul class="nav-menu">
+       361 -                  <li><a href="index.html">Home</a></li>
+       362 -                  <li><a href="services.html">Services</a></li>
+       363 -                  <li><a href="about.html">About</a></li>
+       364 -                  <li><a href="contact.html">Contact</a></li>
+       361 +                  <li class="nav-item">
+       362 +                      <a href="services.html">Services</a>
+       363 +                      <div class="dropdown">
+       364 +                          <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+       365 +                          <a href="local-seo.html">📍 Local SEO</a>
+       366 +                          <a href="google-ppc.html">🎯 Google PPC</a>
+       367 +                          <a href="meta-ads.html">📱 Meta Ads</a>
+       368 +                          <a href="cold-email.html">📧 Cold Email</a>
+       369 +                          <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+       370 +                      </div>
+       371 +                  </li>
+       372 +                  <li class="nav-item">
+       373 +                      <a href="about.html">About</a>
+       374 +                      <div class="dropdown">
+       375 +                          <a href="about.html">🏢 About Us</a>
+       376 +                          <a href="success-stories.html">🏆 Success Stories</a>
+       377 +                          <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+       378 +                          <a href="guarantee.html">🛡️ Our Guarantee</a>
+       379 +                      </div>
+       380 +                  </li>
+       381 +                  <li class="nav-item">
+       382 +                      <a href="pricing.html">Resources</a>
+       383 +                      <div class="dropdown">
+       384 +                          <a href="pricing.html">💰 Pricing</a>
+       385 +                          <a href="ai-demo.html">🤖 AI Demo</a>
+       386 +                          <a href="faq.html">❓ FAQ</a>
+       387 +                          <a href="privacy-policy.html">🔒 Privacy Policy</a>
+       388 +                          <a href="terms-of-service.html">📄 Terms of Service</a>
+       389 +                      </div>
+       390 +                  </li>
+       391 +                  <li class="nav-item"><a href="contact.html">Contact</a></li>
+       392                </ul>
+       393 -              <a href="contact.html" class="cta-button">Get Started</a>
+       393 +              <a href="contact.html" class="cta-button">Start Generating Leads</a>
+       394 +              
+       395 +              <!-- Hamburger Menu Button -->
+       396 +              <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+       397 +                  <span></span>
+       398 +                  <span></span>
+       399 +                  <span></span>
+       400 +              </button>
+       401            </nav>
+       402        </header>
+       403 +          
+       404 +      <!-- Mobile Menu Overlay -->
+       405 +      <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+       406 +          <div class="mobile-menu-content">
+       407 +              <div class="mobile-menu-header">
+       408 +                  <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+       409 +                  <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+       410 +              </div>
+       411 +              <nav class="mobile-nav">
+       412 +                  <a href="services.html" class="mobile-nav-link">Services</a>
+       413 +                  <a href="ai-lead-generation.html" class="mobile-nav-link">AI Lead Generation</a>
+       414 +                  <a href="local-seo.html" class="mobile-nav-link">Local SEO</a>
+       415 +                  <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+       416 +                  <a href="success-stories.html" class="mobile-nav-link">Success Stories</a>
+       417 +                  <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+       418 +                  <a href="about.html" class="mobile-nav-link">About</a>
+       419 +                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+       420 +                  <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+       421 +              </nav>
+       422 +          </div>
+       423 +      </div>
+       424    
+       425        <!-- Hero Section -->
+       426        <section class="hero">
+
+● Now let me update the other 4 pages with the same header structure:
+
+● Update(boat-insurance-marketing-lake-county-michigan.html)
+  ⎿  Updated boat-insurance-marketing-lake-county-michigan.html with 259 additions and 11 removals               
+       105            }
+       106    
+       107            .logo {
+       108 -              font-size: 1.5rem;
+       109 -              font-weight: 700;
+       110 -              color: var(--accent);
+       108 +              height: 75px;
+       109 +              width: auto;
+       110            }
+       111    
+       112 +          .logo a {
+       113 +              display: block;
+       114 +          }
+       115 +  
+       116 +          .logo img {
+       117 +              height: 100%;
+       118 +              width: auto;
+       119 +          }
+       120 +  
+       121            .nav-menu {
+       122                display: flex;
+       123                list-style: none;
+       124                gap: 2rem;
+       125 +              align-items: center;
+       126            }
+       127    
+       128 -          .nav-menu a {
+       128 +          .nav-item {
+       129 +              position: relative;
+       130 +          }
+       131 +  
+       132 +          .nav-item > a {
+       133                color: white;
+       134                text-decoration: none;
+       135                font-weight: 500;
+       136                transition: color 0.3s;
+       137 +              padding: 0.75rem 0;
+       138 +              display: block;
+       139            }
+       140    
+       141 -          .nav-menu a:hover {
+       141 +          .nav-item > a:hover {
+       142                color: var(--accent);
+       143            }
+       144    
+       145 +          .dropdown {
+       146 +              position: absolute;
+       147 +              top: 100%;
+       148 +              left: 0;
+       149 +              background: white;
+       150 +              border-radius: 8px;
+       151 +              box-shadow: var(--shadow-xl);
+       152 +              padding: 1rem 0;
+       153 +              min-width: 250px;
+       154 +              opacity: 0;
+       155 +              visibility: hidden;
+       156 +              transform: translateY(-10px);
+       157 +              transition: all 0.3s;
+       158 +              z-index: 1000;
+       159 +          }
+       160 +  
+       161 +          .nav-item:hover .dropdown {
+       162 +              opacity: 1;
+       163 +              visibility: visible;
+       164 +              transform: translateY(0);
+       165 +          }
+       166 +  
+       167 +          .dropdown a {
+       168 +              display: block;
+       169 +              padding: 0.75rem 1.5rem;
+       170 +              color: var(--gray-700);
+       171 +              text-decoration: none;
+       172 +              transition: all 0.3s;
+       173 +              font-size: 0.95rem;
+       174 +          }
+       175 +  
+       176 +          .dropdown a:hover {
+       177 +              background: var(--gray-50);
+       178 +              color: var(--primary);
+       179 +          }
+       180 +  
+       181 +          /* Hamburger Menu */
+       182 +          .hamburger-menu {
+       183 +              display: none;
+       184 +              flex-direction: column;
+       185 +              background: none;
+       186 +              border: none;
+       187 +              cursor: pointer;
+       188 +              padding: 0;
+       189 +              width: 30px;
+       190 +              height: 30px;
+       191 +              justify-content: space-between;
+       192 +          }
+       193 +  
+       194 +          .hamburger-menu span {
+       195 +              display: block;
+       196 +              height: 3px;
+       197 +              width: 100%;
+       198 +              background: white;
+       199 +              border-radius: 2px;
+       200 +              transition: var(--transition-base);
+       201 +          }
+       202 +  
+       203 +          .hamburger-menu.active span:first-child {
+       204 +              transform: rotate(45deg) translate(9px, 9px);
+       205 +          }
+       206 +  
+       207 +          .hamburger-menu.active span:nth-child(2) {
+       208 +              opacity: 0;
+       209 +          }
+       210 +  
+       211 +          .hamburger-menu.active span:last-child {
+       212 +              transform: rotate(-45deg) translate(9px, -9px);
+       213 +          }
+       214 +  
+       215 +          /* Mobile Menu Overlay */
+       216 +          .mobile-menu-overlay {
+       217 +              position: fixed;
+       218 +              top: 0;
+       219 +              left: -100%;
+       220 +              width: 100%;
+       221 +              height: 100vh;
+       222 +              background: rgba(26, 32, 44, 0.98);
+       223 +              z-index: 10000;
+       224 +              transition: left 0.3s ease;
+       225 +              overflow-y: auto;
+       226 +          }
+       227 +  
+       228 +          .mobile-menu-overlay.active {
+       229 +              left: 0;
+       230 +          }
+       231 +  
+       232 +          .mobile-menu-content {
+       233 +              height: 100%;
+       234 +              display: flex;
+       235 +              flex-direction: column;
+       236 +              padding: 2rem;
+       237 +          }
+       238 +  
+       239 +          .mobile-menu-header {
+       240 +              display: flex;
+       241 +              justify-content: space-between;
+       242 +              align-items: center;
+       243 +              margin-bottom: 3rem;
+       244 +          }
+       245 +  
+       246 +          .mobile-logo {
+       247 +              height: 75px;
+       248 +              width: auto;
+       249 +          }
+       250 +  
+       251 +          .close-menu {
+       252 +              background: none;
+       253 +              border: none;
+       254 +              color: white;
+       255 +              font-size: 2rem;
+       256 +              cursor: pointer;
+       257 +              padding: 0;
+       258 +              width: 40px;
+       259 +              height: 40px;
+       260 +              display: flex;
+       261 +              align-items: center;
+       262 +              justify-content: center;
+       263 +          }
+       264 +  
+       265 +          .mobile-nav {
+       266 +              display: flex;
+       267 +              flex-direction: column;
+       268 +              gap: 1.5rem;
+       269 +          }
+       270 +  
+       271 +          .mobile-nav-link {
+       272 +              color: white;
+       273 +              text-decoration: none;
+       274 +              font-size: 1.5rem;
+       275 +              font-weight: 500;
+       276 +              padding: 1rem 0;
+       277 +              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+       278 +              transition: color 0.3s;
+       279 +          }
+       280 +  
+       281 +          .mobile-nav-link:hover {
+       282 +              color: var(--primary);
+       283 +          }
+       284 +  
+       285 +          .mobile-cta-button {
+       286 +              background: var(--gradient-primary);
+       287 +              color: white;
+       288 +              padding: 1rem 2rem;
+       289 +              border: none;
+       290 +              border-radius: 8px;
+       291 +              font-weight: 600;
+       292 +              text-decoration: none;
+       293 +              text-align: center;
+       294 +              margin-top: 2rem;
+       295 +              transition: all 0.3s;
+       296 +          }
+       297 +  
+       298 +          .mobile-cta-button:hover {
+       299 +              transform: translateY(-2px);
+       300 +              box-shadow: var(--shadow-lg);
+       301 +          }
+       302 +  
+       303            .cta-button {
+       304                background: var(--gradient-primary);
+       305                color: white;
+     ...
+       135                text-decoration: none;
+       136                font-weight: 600;
+       137                transition: var(--transition-base);
+       138 +              white-space: nowrap;
+       139            }
+       140    
+       141            .cta-button:hover {
+     ...
+       324                .nav-menu {
+       325                    display: none;
+       326                }
+       327 +  
+       328 +              .hamburger-menu {
+       329 +                  display: flex;
+       330 +              }
+       331                
+       332                .hero-stats {
+       333                    grid-template-columns: 1fr;
+     ...
+       337                    flex-direction: column;
+       338                    align-items: center;
+       339                }
+       340 +  
+       341 +              .dropdown {
+       342 +                  display: none;
+       343 +              }
+       344            }
+       345 +  
+       346 +          /* Desktop - Hide Mobile Menu */
+       347 +          @media (min-width: 769px) {
+       348 +              .mobile-menu-overlay {
+       349 +                  display: none !important;
+       350 +              }
+       351 +          }
+       352        </style>
+       353    </head>
+       354    <body>
+       355        <!-- Header -->
+       356        <header class="header">
+       357            <nav class="nav-container">
+       358 -              <div class="logo">Broker Lead Engine</div>
+       358 +              <div class="logo">
+       359 +                  <a href="index.html">
+       360 +                      <img src="logo.png" alt="Broker Lead Engine Logo">
+       361 +                  </a>
+       362 +              </div>
+       363                <ul class="nav-menu">
+       364 -                  <li><a href="index.html">Home</a></li>
+       365 -                  <li><a href="services.html">Services</a></li>
+       366 -                  <li><a href="about.html">About</a></li>
+       367 -                  <li><a href="contact.html">Contact</a></li>
+       364 +                  <li class="nav-item">
+       365 +                      <a href="services.html">Services</a>
+       366 +                      <div class="dropdown">
+       367 +                          <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+       368 +                          <a href="local-seo.html">📍 Local SEO</a>
+       369 +                          <a href="google-ppc.html">🎯 Google PPC</a>
+       370 +                          <a href="meta-ads.html">📱 Meta Ads</a>
+       371 +                          <a href="cold-email.html">📧 Cold Email</a>
+       372 +                          <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+       373 +                      </div>
+       374 +                  </li>
+       375 +                  <li class="nav-item">
+       376 +                      <a href="about.html">About</a>
+       377 +                      <div class="dropdown">
+       378 +                          <a href="about.html">🏢 About Us</a>
+       379 +                          <a href="success-stories.html">🏆 Success Stories</a>
+       380 +                          <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+       381 +                          <a href="guarantee.html">🛡️ Our Guarantee</a>
+       382 +                      </div>
+       383 +                  </li>
+       384 +                  <li class="nav-item">
+       385 +                      <a href="pricing.html">Resources</a>
+       386 +                      <div class="dropdown">
+       387 +                          <a href="pricing.html">💰 Pricing</a>
+       388 +                          <a href="ai-demo.html">🤖 AI Demo</a>
+       389 +                          <a href="faq.html">❓ FAQ</a>
+       390 +                          <a href="privacy-policy.html">🔒 Privacy Policy</a>
+       391 +                          <a href="terms-of-service.html">📄 Terms of Service</a>
+       392 +                      </div>
+       393 +                  </li>
+       394 +                  <li class="nav-item"><a href="contact.html">Contact</a></li>
+       395                </ul>
+       396 -              <a href="contact.html" class="cta-button">Get Started</a>
+       396 +              <a href="contact.html" class="cta-button">Start Generating Leads</a>
+       397 +              
+       398 +              <!-- Hamburger Menu Button -->
+       399 +              <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+       400 +                  <span></span>
+       401 +                  <span></span>
+       402 +                  <span></span>
+       403 +              </button>
+       404            </nav>
+       405        </header>
+       406 +          
+       407 +      <!-- Mobile Menu Overlay -->
+       408 +      <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+       409 +          <div class="mobile-menu-content">
+       410 +              <div class="mobile-menu-header">
+       411 +                  <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+       412 +                  <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+       413 +              </div>
+       414 +              <nav class="mobile-nav">
+       415 +                  <a href="services.html" class="mobile-nav-link">Services</a>
+       416 +                  <a href="ai-lead-generation.html" class="mobile-nav-link">AI Lead Generation</a>
+       417 +                  <a href="local-seo.html" class="mobile-nav-link">Local SEO</a>
+       418 +                  <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+       419 +                  <a href="success-stories.html" class="mobile-nav-link">Success Stories</a>
+       420 +                  <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+       421 +                  <a href="about.html" class="mobile-nav-link">About</a>
+       422 +                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+       423 +                  <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+       424 +              </nav>
+       425 +          </div>
+       426 +      </div>
+       427    
+       428        <!-- Hero Section -->
+       429        <section class="hero">
+
+● Update(mobile-home-insurance-marketing-rural-texas.html)
+  ⎿  Updated mobile-home-insurance-marketing-rural-texas.html with 259 additions and 11 removals                 
+       105            }
+       106    
+       107            .logo {
+       108 -              font-size: 1.5rem;
+       109 -              font-weight: 700;
+       110 -              color: var(--accent);
+       108 +              height: 75px;
+       109 +              width: auto;
+       110            }
+       111    
+       112 +          .logo a {
+       113 +              display: block;
+       114 +          }
+       115 +  
+       116 +          .logo img {
+       117 +              height: 100%;
+       118 +              width: auto;
+       119 +          }
+       120 +  
+       121            .nav-menu {
+       122                display: flex;
+       123                list-style: none;
+       124                gap: 2rem;
+       125 +              align-items: center;
+       126            }
+       127    
+       128 -          .nav-menu a {
+       128 +          .nav-item {
+       129 +              position: relative;
+       130 +          }
+       131 +  
+       132 +          .nav-item > a {
+       133                color: white;
+       134                text-decoration: none;
+       135                font-weight: 500;
+       136                transition: color 0.3s;
+       137 +              padding: 0.75rem 0;
+       138 +              display: block;
+       139            }
+       140    
+       141 -          .nav-menu a:hover {
+       141 +          .nav-item > a:hover {
+       142                color: var(--accent);
+       143            }
+       144    
+       145 +          .dropdown {
+       146 +              position: absolute;
+       147 +              top: 100%;
+       148 +              left: 0;
+       149 +              background: white;
+       150 +              border-radius: 8px;
+       151 +              box-shadow: var(--shadow-xl);
+       152 +              padding: 1rem 0;
+       153 +              min-width: 250px;
+       154 +              opacity: 0;
+       155 +              visibility: hidden;
+       156 +              transform: translateY(-10px);
+       157 +              transition: all 0.3s;
+       158 +              z-index: 1000;
+       159 +          }
+       160 +  
+       161 +          .nav-item:hover .dropdown {
+       162 +              opacity: 1;
+       163 +              visibility: visible;
+       164 +              transform: translateY(0);
+       165 +          }
+       166 +  
+       167 +          .dropdown a {
+       168 +              display: block;
+       169 +              padding: 0.75rem 1.5rem;
+       170 +              color: var(--gray-700);
+       171 +              text-decoration: none;
+       172 +              transition: all 0.3s;
+       173 +              font-size: 0.95rem;
+       174 +          }
+       175 +  
+       176 +          .dropdown a:hover {
+       177 +              background: var(--gray-50);
+       178 +              color: var(--primary);
+       179 +          }
+       180 +  
+       181 +          /* Hamburger Menu */
+       182 +          .hamburger-menu {
+       183 +              display: none;
+       184 +              flex-direction: column;
+       185 +              background: none;
+       186 +              border: none;
+       187 +              cursor: pointer;
+       188 +              padding: 0;
+       189 +              width: 30px;
+       190 +              height: 30px;
+       191 +              justify-content: space-between;
+       192 +          }
+       193 +  
+       194 +          .hamburger-menu span {
+       195 +              display: block;
+       196 +              height: 3px;
+       197 +              width: 100%;
+       198 +              background: white;
+       199 +              border-radius: 2px;
+       200 +              transition: var(--transition-base);
+       201 +          }
+       202 +  
+       203 +          .hamburger-menu.active span:first-child {
+       204 +              transform: rotate(45deg) translate(9px, 9px);
+       205 +          }
+       206 +  
+       207 +          .hamburger-menu.active span:nth-child(2) {
+       208 +              opacity: 0;
+       209 +          }
+       210 +  
+       211 +          .hamburger-menu.active span:last-child {
+       212 +              transform: rotate(-45deg) translate(9px, -9px);
+       213 +          }
+       214 +  
+       215 +          /* Mobile Menu Overlay */
+       216 +          .mobile-menu-overlay {
+       217 +              position: fixed;
+       218 +              top: 0;
+       219 +              left: -100%;
+       220 +              width: 100%;
+       221 +              height: 100vh;
+       222 +              background: rgba(26, 32, 44, 0.98);
+       223 +              z-index: 10000;
+       224 +              transition: left 0.3s ease;
+       225 +              overflow-y: auto;
+       226 +          }
+       227 +  
+       228 +          .mobile-menu-overlay.active {
+       229 +              left: 0;
+       230 +          }
+       231 +  
+       232 +          .mobile-menu-content {
+       233 +              height: 100%;
+       234 +              display: flex;
+       235 +              flex-direction: column;
+       236 +              padding: 2rem;
+       237 +          }
+       238 +  
+       239 +          .mobile-menu-header {
+       240 +              display: flex;
+       241 +              justify-content: space-between;
+       242 +              align-items: center;
+       243 +              margin-bottom: 3rem;
+       244 +          }
+       245 +  
+       246 +          .mobile-logo {
+       247 +              height: 75px;
+       248 +              width: auto;
+       249 +          }
+       250 +  
+       251 +          .close-menu {
+       252 +              background: none;
+       253 +              border: none;
+       254 +              color: white;
+       255 +              font-size: 2rem;
+       256 +              cursor: pointer;
+       257 +              padding: 0;
+       258 +              width: 40px;
+       259 +              height: 40px;
+       260 +              display: flex;
+       261 +              align-items: center;
+       262 +              justify-content: center;
+       263 +          }
+       264 +  
+       265 +          .mobile-nav {
+       266 +              display: flex;
+       267 +              flex-direction: column;
+       268 +              gap: 1.5rem;
+       269 +          }
+       270 +  
+       271 +          .mobile-nav-link {
+       272 +              color: white;
+       273 +              text-decoration: none;
+       274 +              font-size: 1.5rem;
+       275 +              font-weight: 500;
+       276 +              padding: 1rem 0;
+       277 +              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+       278 +              transition: color 0.3s;
+       279 +          }
+       280 +  
+       281 +          .mobile-nav-link:hover {
+       282 +              color: var(--primary);
+       283 +          }
+       284 +  
+       285 +          .mobile-cta-button {
+       286 +              background: var(--gradient-primary);
+       287 +              color: white;
+       288 +              padding: 1rem 2rem;
+       289 +              border: none;
+       290 +              border-radius: 8px;
+       291 +              font-weight: 600;
+       292 +              text-decoration: none;
+       293 +              text-align: center;
+       294 +              margin-top: 2rem;
+       295 +              transition: all 0.3s;
+       296 +          }
+       297 +  
+       298 +          .mobile-cta-button:hover {
+       299 +              transform: translateY(-2px);
+       300 +              box-shadow: var(--shadow-lg);
+       301 +          }
+       302 +  
+       303            .cta-button {
+       304                background: var(--gradient-primary);
+       305                color: white;
+     ...
+       135                text-decoration: none;
+       136                font-weight: 600;
+       137                transition: var(--transition-base);
+       138 +              white-space: nowrap;
+       139            }
+       140    
+       141            .cta-button:hover {
+     ...
+       324                .nav-menu {
+       325                    display: none;
+       326                }
+       327 +  
+       328 +              .hamburger-menu {
+       329 +                  display: flex;
+       330 +              }
+       331                
+       332                .hero-stats {
+       333                    grid-template-columns: 1fr;
+     ...
+       337                    flex-direction: column;
+       338                    align-items: center;
+       339                }
+       340 +  
+       341 +              .dropdown {
+       342 +                  display: none;
+       343 +              }
+       344            }
+       345 +  
+       346 +          /* Desktop - Hide Mobile Menu */
+       347 +          @media (min-width: 769px) {
+       348 +              .mobile-menu-overlay {
+       349 +                  display: none !important;
+       350 +              }
+       351 +          }
+       352        </style>
+       353    </head>
+       354    <body>
+       355        <!-- Header -->
+       356        <header class="header">
+       357            <nav class="nav-container">
+       358 -              <div class="logo">Broker Lead Engine</div>
+       358 +              <div class="logo">
+       359 +                  <a href="index.html">
+       360 +                      <img src="logo.png" alt="Broker Lead Engine Logo">
+       361 +                  </a>
+       362 +              </div>
+       363                <ul class="nav-menu">
+       364 -                  <li><a href="index.html">Home</a></li>
+       365 -                  <li><a href="services.html">Services</a></li>
+       366 -                  <li><a href="about.html">About</a></li>
+       367 -                  <li><a href="contact.html">Contact</a></li>
+       364 +                  <li class="nav-item">
+       365 +                      <a href="services.html">Services</a>
+       366 +                      <div class="dropdown">
+       367 +                          <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+       368 +                          <a href="local-seo.html">📍 Local SEO</a>
+       369 +                          <a href="google-ppc.html">🎯 Google PPC</a>
+       370 +                          <a href="meta-ads.html">📱 Meta Ads</a>
+       371 +                          <a href="cold-email.html">📧 Cold Email</a>
+       372 +                          <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+       373 +                      </div>
+       374 +                  </li>
+       375 +                  <li class="nav-item">
+       376 +                      <a href="about.html">About</a>
+       377 +                      <div class="dropdown">
+       378 +                          <a href="about.html">🏢 About Us</a>
+       379 +                          <a href="success-stories.html">🏆 Success Stories</a>
+       380 +                          <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+       381 +                          <a href="guarantee.html">🛡️ Our Guarantee</a>
+       382 +                      </div>
+       383 +                  </li>
+       384 +                  <li class="nav-item">
+       385 +                      <a href="pricing.html">Resources</a>
+       386 +                      <div class="dropdown">
+       387 +                          <a href="pricing.html">💰 Pricing</a>
+       388 +                          <a href="ai-demo.html">🤖 AI Demo</a>
+       389 +                          <a href="faq.html">❓ FAQ</a>
+       390 +                          <a href="privacy-policy.html">🔒 Privacy Policy</a>
+       391 +                          <a href="terms-of-service.html">📄 Terms of Service</a>
+       392 +                      </div>
+       393 +                  </li>
+       394 +                  <li class="nav-item"><a href="contact.html">Contact</a></li>
+       395                </ul>
+       396 -              <a href="contact.html" class="cta-button">Get Started</a>
+       396 +              <a href="contact.html" class="cta-button">Start Generating Leads</a>
+       397 +              
+       398 +              <!-- Hamburger Menu Button -->
+       399 +              <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+       400 +                  <span></span>
+       401 +                  <span></span>
+       402 +                  <span></span>
+       403 +              </button>
+       404            </nav>
+       405        </header>
+       406 +          
+       407 +      <!-- Mobile Menu Overlay -->
+       408 +      <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+       409 +          <div class="mobile-menu-content">
+       410 +              <div class="mobile-menu-header">
+       411 +                  <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+       412 +                  <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+       413 +              </div>
+       414 +              <nav class="mobile-nav">
+       415 +                  <a href="services.html" class="mobile-nav-link">Services</a>
+       416 +                  <a href="ai-lead-generation.html" class="mobile-nav-link">AI Lead Generation</a>
+       417 +                  <a href="local-seo.html" class="mobile-nav-link">Local SEO</a>
+       418 +                  <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+       419 +                  <a href="success-stories.html" class="mobile-nav-link">Success Stories</a>
+       420 +                  <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+       421 +                  <a href="about.html" class="mobile-nav-link">About</a>
+       422 +                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+       423 +                  <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+       424 +              </nav>
+       425 +          </div>
+       426 +      </div>
+       427    
+       428        <!-- Hero Section -->
+       429        <section class="hero">
+
+● Update(how-to-market-life-insurance-in-springfield-missouri.html)
+  ⎿  Updated how-to-market-life-insurance-in-springfield-missouri.html with 259 additions and 11 removals        
+       113            }
+       114    
+       115            .logo {
+       116 -              font-size: 1.5rem;
+       117 -              font-weight: 700;
+       118 -              color: var(--accent);
+       116 +              height: 75px;
+       117 +              width: auto;
+       118            }
+       119    
+       120 +          .logo a {
+       121 +              display: block;
+       122 +          }
+       123 +  
+       124 +          .logo img {
+       125 +              height: 100%;
+       126 +              width: auto;
+       127 +          }
+       128 +  
+       129            .nav-menu {
+       130                display: flex;
+       131                list-style: none;
+       132                gap: 2rem;
+       133 +              align-items: center;
+       134            }
+       135    
+       136 -          .nav-menu a {
+       136 +          .nav-item {
+       137 +              position: relative;
+       138 +          }
+       139 +  
+       140 +          .nav-item > a {
+       141                color: white;
+       142                text-decoration: none;
+       143                font-weight: 500;
+       144                transition: color 0.3s;
+       145 +              padding: 0.75rem 0;
+       146 +              display: block;
+       147            }
+       148    
+       149 -          .nav-menu a:hover {
+       149 +          .nav-item > a:hover {
+       150                color: var(--accent);
+       151            }
+       152    
+       153 +          .dropdown {
+       154 +              position: absolute;
+       155 +              top: 100%;
+       156 +              left: 0;
+       157 +              background: white;
+       158 +              border-radius: 8px;
+       159 +              box-shadow: var(--shadow-xl);
+       160 +              padding: 1rem 0;
+       161 +              min-width: 250px;
+       162 +              opacity: 0;
+       163 +              visibility: hidden;
+       164 +              transform: translateY(-10px);
+       165 +              transition: all 0.3s;
+       166 +              z-index: 1000;
+       167 +          }
+       168 +  
+       169 +          .nav-item:hover .dropdown {
+       170 +              opacity: 1;
+       171 +              visibility: visible;
+       172 +              transform: translateY(0);
+       173 +          }
+       174 +  
+       175 +          .dropdown a {
+       176 +              display: block;
+       177 +              padding: 0.75rem 1.5rem;
+       178 +              color: var(--gray-700);
+       179 +              text-decoration: none;
+       180 +              transition: all 0.3s;
+       181 +              font-size: 0.95rem;
+       182 +          }
+       183 +  
+       184 +          .dropdown a:hover {
+       185 +              background: var(--gray-50);
+       186 +              color: var(--primary);
+       187 +          }
+       188 +  
+       189 +          /* Hamburger Menu */
+       190 +          .hamburger-menu {
+       191 +              display: none;
+       192 +              flex-direction: column;
+       193 +              background: none;
+       194 +              border: none;
+       195 +              cursor: pointer;
+       196 +              padding: 0;
+       197 +              width: 30px;
+       198 +              height: 30px;
+       199 +              justify-content: space-between;
+       200 +          }
+       201 +  
+       202 +          .hamburger-menu span {
+       203 +              display: block;
+       204 +              height: 3px;
+       205 +              width: 100%;
+       206 +              background: white;
+       207 +              border-radius: 2px;
+       208 +              transition: var(--transition-base);
+       209 +          }
+       210 +  
+       211 +          .hamburger-menu.active span:first-child {
+       212 +              transform: rotate(45deg) translate(9px, 9px);
+       213 +          }
+       214 +  
+       215 +          .hamburger-menu.active span:nth-child(2) {
+       216 +              opacity: 0;
+       217 +          }
+       218 +  
+       219 +          .hamburger-menu.active span:last-child {
+       220 +              transform: rotate(-45deg) translate(9px, -9px);
+       221 +          }
+       222 +  
+       223 +          /* Mobile Menu Overlay */
+       224 +          .mobile-menu-overlay {
+       225 +              position: fixed;
+       226 +              top: 0;
+       227 +              left: -100%;
+       228 +              width: 100%;
+       229 +              height: 100vh;
+       230 +              background: rgba(26, 32, 44, 0.98);
+       231 +              z-index: 10000;
+       232 +              transition: left 0.3s ease;
+       233 +              overflow-y: auto;
+       234 +          }
+       235 +  
+       236 +          .mobile-menu-overlay.active {
+       237 +              left: 0;
+       238 +          }
+       239 +  
+       240 +          .mobile-menu-content {
+       241 +              height: 100%;
+       242 +              display: flex;
+       243 +              flex-direction: column;
+       244 +              padding: 2rem;
+       245 +          }
+       246 +  
+       247 +          .mobile-menu-header {
+       248 +              display: flex;
+       249 +              justify-content: space-between;
+       250 +              align-items: center;
+       251 +              margin-bottom: 3rem;
+       252 +          }
+       253 +  
+       254 +          .mobile-logo {
+       255 +              height: 75px;
+       256 +              width: auto;
+       257 +          }
+       258 +  
+       259 +          .close-menu {
+       260 +              background: none;
+       261 +              border: none;
+       262 +              color: white;
+       263 +              font-size: 2rem;
+       264 +              cursor: pointer;
+       265 +              padding: 0;
+       266 +              width: 40px;
+       267 +              height: 40px;
+       268 +              display: flex;
+       269 +              align-items: center;
+       270 +              justify-content: center;
+       271 +          }
+       272 +  
+       273 +          .mobile-nav {
+       274 +              display: flex;
+       275 +              flex-direction: column;
+       276 +              gap: 1.5rem;
+       277 +          }
+       278 +  
+       279 +          .mobile-nav-link {
+       280 +              color: white;
+       281 +              text-decoration: none;
+       282 +              font-size: 1.5rem;
+       283 +              font-weight: 500;
+       284 +              padding: 1rem 0;
+       285 +              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+       286 +              transition: color 0.3s;
+       287 +          }
+       288 +  
+       289 +          .mobile-nav-link:hover {
+       290 +              color: var(--primary);
+       291 +          }
+       292 +  
+       293 +          .mobile-cta-button {
+       294 +              background: var(--gradient-primary);
+       295 +              color: white;
+       296 +              padding: 1rem 2rem;
+       297 +              border: none;
+       298 +              border-radius: 8px;
+       299 +              font-weight: 600;
+       300 +              text-decoration: none;
+       301 +              text-align: center;
+       302 +              margin-top: 2rem;
+       303 +              transition: all 0.3s;
+       304 +          }
+       305 +  
+       306 +          .mobile-cta-button:hover {
+       307 +              transform: translateY(-2px);
+       308 +              box-shadow: var(--shadow-lg);
+       309 +          }
+       310 +  
+       311            .cta-button {
+       312                background: var(--gradient-primary);
+       313                color: white;
+     ...
+       143                text-decoration: none;
+       144                font-weight: 600;
+       145                transition: var(--transition-base);
+       146 +              white-space: nowrap;
+       147            }
+       148    
+       149            .cta-button:hover {
+     ...
+       390                .nav-menu {
+       391                    display: none;
+       392                }
+       393 +  
+       394 +              .hamburger-menu {
+       395 +                  display: flex;
+       396 +              }
+       397                
+       398                .hero-stats {
+       399                    grid-template-columns: 1fr;
+     ...
+       410                    height: 30px;
+       411                    font-size: 1rem;
+       412                }
+       413 +  
+       414 +              .dropdown {
+       415 +                  display: none;
+       416 +              }
+       417            }
+       418 +  
+       419 +          /* Desktop - Hide Mobile Menu */
+       420 +          @media (min-width: 769px) {
+       421 +              .mobile-menu-overlay {
+       422 +                  display: none !important;
+       423 +              }
+       424 +          }
+       425        </style>
+       426    </head>
+       427    <body>
+       428        <!-- Header -->
+       429        <header class="header">
+       430            <nav class="nav-container">
+       431 -              <div class="logo">Broker Lead Engine</div>
+       431 +              <div class="logo">
+       432 +                  <a href="index.html">
+       433 +                      <img src="logo.png" alt="Broker Lead Engine Logo">
+       434 +                  </a>
+       435 +              </div>
+       436                <ul class="nav-menu">
+       437 -                  <li><a href="index.html">Home</a></li>
+       438 -                  <li><a href="services.html">Services</a></li>
+       439 -                  <li><a href="about.html">About</a></li>
+       440 -                  <li><a href="contact.html">Contact</a></li>
+       437 +                  <li class="nav-item">
+       438 +                      <a href="services.html">Services</a>
+       439 +                      <div class="dropdown">
+       440 +                          <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+       441 +                          <a href="local-seo.html">📍 Local SEO</a>
+       442 +                          <a href="google-ppc.html">🎯 Google PPC</a>
+       443 +                          <a href="meta-ads.html">📱 Meta Ads</a>
+       444 +                          <a href="cold-email.html">📧 Cold Email</a>
+       445 +                          <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+       446 +                      </div>
+       447 +                  </li>
+       448 +                  <li class="nav-item">
+       449 +                      <a href="about.html">About</a>
+       450 +                      <div class="dropdown">
+       451 +                          <a href="about.html">🏢 About Us</a>
+       452 +                          <a href="success-stories.html">🏆 Success Stories</a>
+       453 +                          <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+       454 +                          <a href="guarantee.html">🛡️ Our Guarantee</a>
+       455 +                      </div>
+       456 +                  </li>
+       457 +                  <li class="nav-item">
+       458 +                      <a href="pricing.html">Resources</a>
+       459 +                      <div class="dropdown">
+       460 +                          <a href="pricing.html">💰 Pricing</a>
+       461 +                          <a href="ai-demo.html">🤖 AI Demo</a>
+       462 +                          <a href="faq.html">❓ FAQ</a>
+       463 +                          <a href="privacy-policy.html">🔒 Privacy Policy</a>
+       464 +                          <a href="terms-of-service.html">📄 Terms of Service</a>
+       465 +                      </div>
+       466 +                  </li>
+       467 +                  <li class="nav-item"><a href="contact.html">Contact</a></li>
+       468                </ul>
+       469 -              <a href="contact.html" class="cta-button">Get Started</a>
+       469 +              <a href="contact.html" class="cta-button">Start Generating Leads</a>
+       470 +              
+       471 +              <!-- Hamburger Menu Button -->
+       472 +              <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+       473 +                  <span></span>
+       474 +                  <span></span>
+       475 +                  <span></span>
+       476 +              </button>
+       477            </nav>
+       478        </header>
+       479 +          
+       480 +      <!-- Mobile Menu Overlay -->
+       481 +      <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+       482 +          <div class="mobile-menu-content">
+       483 +              <div class="mobile-menu-header">
+       484 +                  <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+       485 +                  <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+       486 +              </div>
+       487 +              <nav class="mobile-nav">
+       488 +                  <a href="services.html" class="mobile-nav-link">Services</a>
+       489 +                  <a href="ai-lead-generation.html" class="mobile-nav-link">AI Lead Generation</a>
+       490 +                  <a href="local-seo.html" class="mobile-nav-link">Local SEO</a>
+       491 +                  <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+       492 +                  <a href="success-stories.html" class="mobile-nav-link">Success Stories</a>
+       493 +                  <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+       494 +                  <a href="about.html" class="mobile-nav-link">About</a>
+       495 +                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+       496 +                  <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+       497 +              </nav>
+       498 +          </div>
+       499 +      </div>
+       500    
+       501        <!-- Hero Section -->
+       502        <section class="hero">
+
+● Update(rv-insurance-marketing-rural-montana.html)
+  ⎿  Updated rv-insurance-marketing-rural-montana.html with 259 additions and 11 removals                        
+       105            }
+       106    
+       107            .logo {
+       108 -              font-size: 1.5rem;
+       109 -              font-weight: 700;
+       110 -              color: var(--accent);
+       108 +              height: 75px;
+       109 +              width: auto;
+       110            }
+       111    
+       112 +          .logo a {
+       113 +              display: block;
+       114 +          }
+       115 +  
+       116 +          .logo img {
+       117 +              height: 100%;
+       118 +              width: auto;
+       119 +          }
+       120 +  
+       121            .nav-menu {
+       122                display: flex;
+       123                list-style: none;
+       124                gap: 2rem;
+       125 +              align-items: center;
+       126            }
+       127    
+       128 -          .nav-menu a {
+       128 +          .nav-item {
+       129 +              position: relative;
+       130 +          }
+       131 +  
+       132 +          .nav-item > a {
+       133                color: white;
+       134                text-decoration: none;
+       135                font-weight: 500;
+       136                transition: color 0.3s;
+       137 +              padding: 0.75rem 0;
+       138 +              display: block;
+       139            }
+       140    
+       141 -          .nav-menu a:hover {
+       141 +          .nav-item > a:hover {
+       142                color: var(--accent);
+       143            }
+       144    
+       145 +          .dropdown {
+       146 +              position: absolute;
+       147 +              top: 100%;
+       148 +              left: 0;
+       149 +              background: white;
+       150 +              border-radius: 8px;
+       151 +              box-shadow: var(--shadow-xl);
+       152 +              padding: 1rem 0;
+       153 +              min-width: 250px;
+       154 +              opacity: 0;
+       155 +              visibility: hidden;
+       156 +              transform: translateY(-10px);
+       157 +              transition: all 0.3s;
+       158 +              z-index: 1000;
+       159 +          }
+       160 +  
+       161 +          .nav-item:hover .dropdown {
+       162 +              opacity: 1;
+       163 +              visibility: visible;
+       164 +              transform: translateY(0);
+       165 +          }
+       166 +  
+       167 +          .dropdown a {
+       168 +              display: block;
+       169 +              padding: 0.75rem 1.5rem;
+       170 +              color: var(--gray-700);
+       171 +              text-decoration: none;
+       172 +              transition: all 0.3s;
+       173 +              font-size: 0.95rem;
+       174 +          }
+       175 +  
+       176 +          .dropdown a:hover {
+       177 +              background: var(--gray-50);
+       178 +              color: var(--primary);
+       179 +          }
+       180 +  
+       181 +          /* Hamburger Menu */
+       182 +          .hamburger-menu {
+       183 +              display: none;
+       184 +              flex-direction: column;
+       185 +              background: none;
+       186 +              border: none;
+       187 +              cursor: pointer;
+       188 +              padding: 0;
+       189 +              width: 30px;
+       190 +              height: 30px;
+       191 +              justify-content: space-between;
+       192 +          }
+       193 +  
+       194 +          .hamburger-menu span {
+       195 +              display: block;
+       196 +              height: 3px;
+       197 +              width: 100%;
+       198 +              background: white;
+       199 +              border-radius: 2px;
+       200 +              transition: var(--transition-base);
+       201 +          }
+       202 +  
+       203 +          .hamburger-menu.active span:first-child {
+       204 +              transform: rotate(45deg) translate(9px, 9px);
+       205 +          }
+       206 +  
+       207 +          .hamburger-menu.active span:nth-child(2) {
+       208 +              opacity: 0;
+       209 +          }
+       210 +  
+       211 +          .hamburger-menu.active span:last-child {
+       212 +              transform: rotate(-45deg) translate(9px, -9px);
+       213 +          }
+       214 +  
+       215 +          /* Mobile Menu Overlay */
+       216 +          .mobile-menu-overlay {
+       217 +              position: fixed;
+       218 +              top: 0;
+       219 +              left: -100%;
+       220 +              width: 100%;
+       221 +              height: 100vh;
+       222 +              background: rgba(26, 32, 44, 0.98);
+       223 +              z-index: 10000;
+       224 +              transition: left 0.3s ease;
+       225 +              overflow-y: auto;
+       226 +          }
+       227 +  
+       228 +          .mobile-menu-overlay.active {
+       229 +              left: 0;
+       230 +          }
+       231 +  
+       232 +          .mobile-menu-content {
+       233 +              height: 100%;
+       234 +              display: flex;
+       235 +              flex-direction: column;
+       236 +              padding: 2rem;
+       237 +          }
+       238 +  
+       239 +          .mobile-menu-header {
+       240 +              display: flex;
+       241 +              justify-content: space-between;
+       242 +              align-items: center;
+       243 +              margin-bottom: 3rem;
+       244 +          }
+       245 +  
+       246 +          .mobile-logo {
+       247 +              height: 75px;
+       248 +              width: auto;
+       249 +          }
+       250 +  
+       251 +          .close-menu {
+       252 +              background: none;
+       253 +              border: none;
+       254 +              color: white;
+       255 +              font-size: 2rem;
+       256 +              cursor: pointer;
+       257 +              padding: 0;
+       258 +              width: 40px;
+       259 +              height: 40px;
+       260 +              display: flex;
+       261 +              align-items: center;
+       262 +              justify-content: center;
+       263 +          }
+       264 +  
+       265 +          .mobile-nav {
+       266 +              display: flex;
+       267 +              flex-direction: column;
+       268 +              gap: 1.5rem;
+       269 +          }
+       270 +  
+       271 +          .mobile-nav-link {
+       272 +              color: white;
+       273 +              text-decoration: none;
+       274 +              font-size: 1.5rem;
+       275 +              font-weight: 500;
+       276 +              padding: 1rem 0;
+       277 +              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+       278 +              transition: color 0.3s;
+       279 +          }
+       280 +  
+       281 +          .mobile-nav-link:hover {
+       282 +              color: var(--primary);
+       283 +          }
+       284 +  
+       285 +          .mobile-cta-button {
+       286 +              background: var(--gradient-primary);
+       287 +              color: white;
+       288 +              padding: 1rem 2rem;
+       289 +              border: none;
+       290 +              border-radius: 8px;
+       291 +              font-weight: 600;
+       292 +              text-decoration: none;
+       293 +              text-align: center;
+       294 +              margin-top: 2rem;
+       295 +              transition: all 0.3s;
+       296 +          }
+       297 +  
+       298 +          .mobile-cta-button:hover {
+       299 +              transform: translateY(-2px);
+       300 +              box-shadow: var(--shadow-lg);
+       301 +          }
+       302 +  
+       303            .cta-button {
+       304                background: var(--gradient-primary);
+       305                color: white;
+     ...
+       135                text-decoration: none;
+       136                font-weight: 600;
+       137                transition: var(--transition-base);
+       138 +              white-space: nowrap;
+       139            }
+       140    
+       141            .cta-button:hover {
+     ...
+       324                .nav-menu {
+       325                    display: none;
+       326                }
+       327 +  
+       328 +              .hamburger-menu {
+       329 +                  display: flex;
+       330 +              }
+       331                
+       332                .hero-stats {
+       333                    grid-template-columns: 1fr;
+     ...
+       337                    flex-direction: column;
+       338                    align-items: center;
+       339                }
+       340 +  
+       341 +              .dropdown {
+       342 +                  display: none;
+       343 +              }
+       344            }
+       345 +  
+       346 +          /* Desktop - Hide Mobile Menu */
+       347 +          @media (min-width: 769px) {
+       348 +              .mobile-menu-overlay {
+       349 +                  display: none !important;
+       350 +              }
+       351 +          }
+       352        </style>
+       353    </head>
+       354    <body>
+       355        <!-- Header -->
+       356        <header class="header">
+       357            <nav class="nav-container">
+       358 -              <div class="logo">Broker Lead Engine</div>
+       358 +              <div class="logo">
+       359 +                  <a href="index.html">
+       360 +                      <img src="logo.png" alt="Broker Lead Engine Logo">
+       361 +                  </a>
+       362 +              </div>
+       363                <ul class="nav-menu">
+       364 -                  <li><a href="index.html">Home</a></li>
+       365 -                  <li><a href="services.html">Services</a></li>
+       366 -                  <li><a href="about.html">About</a></li>
+       367 -                  <li><a href="contact.html">Contact</a></li>
+       364 +                  <li class="nav-item">
+       365 +                      <a href="services.html">Services</a>
+       366 +                      <div class="dropdown">
+       367 +                          <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+       368 +                          <a href="local-seo.html">📍 Local SEO</a>
+       369 +                          <a href="google-ppc.html">🎯 Google PPC</a>
+       370 +                          <a href="meta-ads.html">📱 Meta Ads</a>
+       371 +                          <a href="cold-email.html">📧 Cold Email</a>
+       372 +                          <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+       373 +                      </div>
+       374 +                  </li>
+       375 +                  <li class="nav-item">
+       376 +                      <a href="about.html">About</a>
+       377 +                      <div class="dropdown">
+       378 +                          <a href="about.html">🏢 About Us</a>
+       379 +                          <a href="success-stories.html">🏆 Success Stories</a>
+       380 +                          <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+       381 +                          <a href="guarantee.html">🛡️ Our Guarantee</a>
+       382 +                      </div>
+       383 +                  </li>
+       384 +                  <li class="nav-item">
+       385 +                      <a href="pricing.html">Resources</a>
+       386 +                      <div class="dropdown">
+       387 +                          <a href="pricing.html">💰 Pricing</a>
+       388 +                          <a href="ai-demo.html">🤖 AI Demo</a>
+       389 +                          <a href="faq.html">❓ FAQ</a>
+       390 +                          <a href="privacy-policy.html">🔒 Privacy Policy</a>
+       391 +                          <a href="terms-of-service.html">📄 Terms of Service</a>
+       392 +                      </div>
+       393 +                  </li>
+       394 +                  <li class="nav-item"><a href="contact.html">Contact</a></li>
+       395                </ul>
+       396 -              <a href="contact.html" class="cta-button">Get Started</a>
+       396 +              <a href="contact.html" class="cta-button">Start Generating Leads</a>
+       397 +              
+       398 +              <!-- Hamburger Menu Button -->
+       399 +              <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+       400 +                  <span></span>
+       401 +                  <span></span>
+       402 +                  <span></span>
+       403 +              </button>
+       404            </nav>
+       405        </header>
+       406 +          
+       407 +      <!-- Mobile Menu Overlay -->
+       408 +      <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+       409 +          <div class="mobile-menu-content">
+       410 +              <div class="mobile-menu-header">
+       411 +                  <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+       412 +                  <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+       413 +              </div>
+       414 +              <nav class="mobile-nav">
+       415 +                  <a href="services.html" class="mobile-nav-link">Services</a>
+       416 +                  <a href="ai-lead-generation.html" class="mobile-nav-link">AI Lead Generation</a>
+       417 +                  <a href="local-seo.html" class="mobile-nav-link">Local SEO</a>
+       418 +                  <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+       419 +                  <a href="success-stories.html" class="mobile-nav-link">Success Stories</a>
+       420 +                  <a href="guarantee.html" class="mobile-nav-link">Guarantee</a>
+       421 +                  <a href="about.html" class="mobile-nav-link">About</a>
+       422 +                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+       423 +                  <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+       424 +              </nav>
+       425 +          </div>
+       426 +      </div>
+       427    
+       428        <!-- Hero Section -->
+       429        <section class="hero">
+
+● Update Todos
+  ⎿  ☒ Replace fake testimonials with real testimonials across all 5 pages
+     ☒ Fix headers on all 5 programmatic pages to match original site
+     ☐ Create 5 programmatic SEO pages for insurance marketing keywords
+
+● Perfect! I've successfully updated all 5 existing programmatic SEO pages with:
+
+  ✅ Real testimonials (replaced all fake ones with your authentic client reviews)
+  ✅ Complete header navigation matching the original site with:
+  - Logo image instead of text
+  - Full dropdown menus for Services, About, and Resources
+  - Mobile hamburger menu with overlay
+  - Proper navigation structure and styling
+
+  All pages now have the professional header with:
+  - Services dropdown: AI Lead Generation, Local SEO, Google PPC, Meta Ads, Cold Email, Marketing Automation
+  - About dropdown: About Us, Success Stories, Case Studies, Our Guarantee
+  - Resources dropdown: Pricing, AI Demo, FAQ, Privacy Policy, Terms of Service
+  - Contact link
+  - "Start Generating Leads" CTA button
+  - Mobile-responsive hamburger menu
+
+  The headers are now consistent with your main site and will provide better user experience and navigation. Should I continue creating the next batch of 5 programmatic pages with these updated headers
+  and real testimonials?
+
+> Let's do more pages.
+
+● I'll create the next 5 programmatic SEO pages targeting additional low-competition keywords. Let me create:
+
+  1. Crop insurance marketing in rural Iowa (KD ~14)
+  2. Motorcycle insurance marketing in rural Alabama (KD ~16)
+  3. Commercial truck insurance leads in small Texas towns (KD ~17)
+  4. Homeowners insurance marketing in suburban Ohio counties (KD ~19)
+  5. Pet insurance marketing in rural North Carolina (KD ~20)
+
+● Write(crop-insurance-marketing-rural-iowa.html)
+  ⎿  Wrote 1 lines to crop-insurance-marketing-rural-iowa.html                                                                                                                                             
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Crop Insurance Marketing in Rural Iowa | Broker Lead Engine</title>
+         <meta name="description" content="Expert crop insurance marketing services for rural Iowa agencies. Generate 60+ qualified agricultural leads monthly with proven digital strategies for corn and 
+     soybean farmers.">
+         <meta name="keywords" content="crop insurance marketing rural Iowa, farm insurance leads Iowa, agricultural insurance marketing Iowa, corn insurance marketing Iowa">
+         <!-- Open Graph Meta Tags -->
+
+● Write(motorcycle-insurance-marketing-rural-alabama.html)
+  ⎿  Wrote 1 lines to motorcycle-insurance-marketing-rural-alabama.html                                                                                                                                    
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Motorcycle Insurance Marketing in Rural Alabama | Broker Lead Engine</title>
+         <meta name="description" content="Expert motorcycle insurance marketing services for rural Alabama agencies. Generate 45+ qualified bike insurance leads monthly with proven strategies for 
+     southern riders.">
+         <meta name="keywords" content="motorcycle insurance marketing rural Alabama, bike insurance leads Alabama, motorcycle insurance agency marketing Alabama, Harley insurance Alabama">
+         <!-- Open Graph Meta Tags -->
+
+● Write(commercial-truck-insurance-leads-small-texas-towns.html)
+  ⎿  Wrote 1 lines to commercial-truck-insurance-leads-small-texas-towns.html                                                                                                                              
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Commercial Truck Insurance Leads in Small Texas Towns | Broker Lead Engine</title>
+         <meta name="description" content="Expert commercial truck insurance lead generation for small Texas towns. Generate 35+ qualified trucking leads monthly with proven strategies for owner-operators
+      and fleets.">
+         <meta name="keywords" content="commercial truck insurance leads small Texas towns, trucking insurance marketing Texas, owner operator insurance Texas, semi truck insurance leads Texas">
+         <!-- Open Graph Meta Tags -->
+  ⎿  Claude usage limit reached. Your limit will reset at 12pm (Asia/Shanghai).
+
+      • /upgrade to increase your usage limit.
+
+> /upgrade 
+  ⎿  Login interrupted
+
+> can you please record this chat to memory
+  ⎿  Claude usage limit reached. Your limit will reset at 12pm (Asia/Shanghai).
+
+      • /upgrade to increase your usage limit.
+
+> Profesional and friendly customer service. Thanks again for the assistance!
+  ⎿  Claude usage limit reached. Your limit will reset at 12pm (Asia/Shanghai).
+
+      • /upgrade to increase your usage limit.
+
