@@ -11,7 +11,9 @@
       "Bash(timeout:*)",
       "Bash(npm search:*)",
       "Bash(npx:*)",
-      "Bash(env DATAFORSEO_LOGIN=sam@serproseo.com DATAFORSEO_PASSWORD=Ochoacueva1. npx -y dataforseo-mcp-server)"
+      "Bash(env DATAFORSEO_LOGIN=sam@serproseo.com DATAFORSEO_PASSWORD=Ochoacueva1. npx -y dataforseo-mcp-server)",
+      "Bash(rm:*)",
+      "Bash(powershell:*)"
     ],
     "deny": []
   }

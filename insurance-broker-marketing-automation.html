@@ -3,95 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RV Insurance Marketing in Rural Montana | Broker Lead Engine</title>
-    <meta name="description" content="Expert RV insurance marketing services for rural Montana agencies. Generate 25+ qualified recreational vehicle leads monthly with specialized Montana marketing strategies.">
-    <meta name="keywords" content="RV insurance marketing rural Montana, recreational vehicle insurance leads Montana, motorhome insurance marketing Montana, RV insurance agency Montana">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="RV Insurance Marketing in Rural Montana | Broker Lead Engine">
-    <meta property="og:description" content="Generate qualified RV insurance leads in rural Montana with specialized recreational vehicle marketing strategies for Big Sky Country.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/rv-insurance-marketing-rural-montana.html">
-    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
-
-    <!-- Local Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "RV Insurance Marketing in Rural Montana",
-        "provider": {
-            "@type": "Organization",
-            "name": "Broker Lead Engine",
-            "url": "https://brokerleadengine.com"
-        },
-        "areaServed": {
-            "@type": "Place",
-            "name": "Rural Montana"
-        },
-        "description": "Professional RV and recreational vehicle insurance marketing services for rural Montana agencies",
-        "serviceType": "RV Insurance Marketing"
-    }
-
-    // Mobile Menu Toggle
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const closeMenu = document.getElementById('close-menu');
-
-    function toggleMenu() {
-        if (hamburgerMenu && mobileMenuOverlay) {
-            hamburgerMenu.classList.toggle('active');
-            mobileMenuOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
-        }
-    }
-
-    // Event listeners
-    if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-    if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
-
-    // Close menu when clicking outside
-    if (mobileMenuOverlay) {
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                toggleMenu();
-            }
-        });
-    }
-
-    // Close menu when clicking on navigation links
-    document.querySelectorAll('.mobile-nav-link, .mobile-cta-button').forEach(link => {
-        link.addEventListener('click', function() {
-            toggleMenu();
-        });
-    });
-
-        </script>
-
+    <title>Insurance Broker Marketing Automation - Scale Your Agency</title>
+    <meta name="description" content="Complete marketing automation system for insurance brokers. Automate lead nurturing, follow-ups, and client communications to scale your agency.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>:root {
-            --primary: #059669;
-            --primary-dark: #047857;
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
             --secondary: #1a202c;
-            --secondary-light: #2d3748;
-            --accent: #10b981;
-            --danger: #e53e3e;
-            --warning: #ed8936;
-            --success: #48bb78;
+            --accent: #667eea;
             --gray-50: #f7fafc;
             --gray-100: #edf2f7;
             --gray-200: #e2e8f0;
-            --gray-300: #cbd5e0;
-            --gray-400: #a0aec0;
-            --gray-500: #718096;
             --gray-600: #4a5568;
             --gray-700: #2d3748;
-            --gray-800: #1a202c;
-            --gradient-primary: linear-gradient(135deg, #059669 0%, #10b981 100%);
-            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -165,7 +91,29 @@
             background: rgba(22, 165, 113, 0.1);
         }
 
-        .nav-item:hover 
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+            border: 1px solid #e2e8f0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
         .dropdown a {
             color: #1a202c;
@@ -219,7 +167,8 @@
             left: 100%;
         }
 
-        /* Hamburger Menu */
+        
+        /* Hamburger Menu - Clean Implementation */
         .hamburger-menu {
             display: none;
             width: 30px;
@@ -231,7 +180,6 @@
             position: relative;
             z-index: 10001;
         }
- - Clean Implementation */
 
         .hamburger-menu span {
             display: block;
@@ -366,11 +314,9 @@
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
-
-            margin-top: 80px;
         }
 
         .hero::before {
@@ -418,7 +364,9 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
         }
+
         .section {
             padding: 80px 0;
             clear: both;
@@ -536,6 +484,10 @@
         }
 
         /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
 
             .logo img {
                 height: 70px;
@@ -551,6 +503,10 @@
                 display: none;
             }
 
+            .hamburger-menu {
+                display: block !important;
+            }
+
             .header .cta-button {
                 display: none;
             }
@@ -563,16 +519,18 @@
                 display: none;
             }
 
+            .hamburger-menu {
+                display: block !important;
+            }
+
             .header .cta-button {
                 display: none;
             }
 
             .hero {
-
+                margin-top: 70px;
                 padding: 40px 0 60px;
-
-            margin-top: 80px;
-        }
+            }
 
             .hero h1 {
                 font-size: 2.5rem;
@@ -588,12 +546,16 @@
 
                         .services-grid {
                 grid-template-columns: 1fr;
+            }
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
+
+        
 
         * {
             margin: 0;
@@ -602,10 +564,10 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--gray-700);
-            background: #ffffff;
+            background: white;
         }
 
         .container {
@@ -614,95 +576,101 @@
             padding: 0 2rem;
         }
 
-        /* Header */
-
-        .nav-item:hover 
-
-        .cta-button {
+        .hero {
             background: var(--gradient-primary);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition-base);
-            white-space: nowrap;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(5, 150, 105, 0.9), rgba(16, 185, 129, 0.9)), url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.05"><path d="M10 10h15v15H10zm25 0h15v15H25zM10 35h15v15H10zm25 0h15v15H25z"/><path d="M30 5L50 15L30 25L10 15z"/></g></svg>');
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-
+            padding: 6rem 0 4rem;
             margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg"><path d="M0 400L50 385L100 370L150 385L200 400L250 390L300 380L350 390L400 400L450 385L500 370L550 385L600 400L650 390L700 380L750 390L800 400L850 385L900 370L950 385L1000 400L1050 390L1100 380L1150 390L1200 400V600H0V400Z" fill="white" opacity="0.1"/></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
         }
 
-        .hero-highlight {
-            color: #6ee7b7;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
+        .hero-subtext {
+            font-size: 1.25rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            opacity: 0.95;
+            max-width: 800px;
         }
 
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 16px;
             text-align: center;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #6ee7b7;
-            display: block;
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 900;
             margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* Content Sections */
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
         .section {
-            padding: 80px 0;
+            padding: 5rem 0;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--gray-800);
-            font-weight: 700;
         }
 
-        .content-grid {
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
 
@@ -711,125 +679,169 @@
             padding: 2.5rem;
             border-radius: 16px;
             box-shadow: var(--shadow-lg);
-            text-align: center;
             transition: var(--transition-base);
             border: 2px solid transparent;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
             border-color: var(--primary);
         }
 
         .feature-icon {
-            font-size: 3rem;
-            color: var(--primary);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
         }
 
         .feature-card h3 {
-            font-size: 1.5rem;
+            color: var(--secondary);
             margin-bottom: 1rem;
-            color: var(--gray-800);
+            font-size: 1.5rem;
+            font-weight: 700;
         }
 
         .feature-card p {
             color: var(--gray-600);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        .local-info {
-            background: #ecfdf5;
-            padding: 3rem;
-            border-radius: 16px;
-            margin: 3rem 0;
-            border-left: 4px solid var(--primary);
+        .bullet-list {
+            list-style: none;
+            padding: 0;
         }
 
-        .local-info h3 {
+        .bullet-list li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .bullet-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
             color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .testimonial {
-            background: #f0fdf4;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            font-style: italic;
-            margin: 2rem 0;
+            font-weight: bold;
+            font-size: 1.5rem;
+            top: 0.9rem;
         }
 
         .cta-section {
-            background: var(--primary);
+            background: var(--gradient-primary);
             color: white;
-            padding: 80px 0;
+            padding: 5rem 2rem;
             text-align: center;
+            border-radius: 24px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
         }
 
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        .cta-content {
+            position: relative;
+            z-index: 1;
         }
 
-        .cta-btn {
+        .cta-button {
+            display: inline-block;
             background: white;
             color: var(--primary);
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
             transition: var(--transition-base);
+            margin: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
-        .cta-btn.secondary {
+        .cta-button.secondary {
             background: transparent;
             color: white;
             border: 2px solid white;
         }
 
-        /* Mobile Styles */
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+        .testimonial-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow-lg);
         }
-        /* Desktop - Hide Mobile Menu */
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-        @media (min-width: 769px) {
 
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-item h4 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-stats { grid-template-columns: 1fr; }
+            .stat-value { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            .features-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -875,7 +887,7 @@
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
             <a href="contact.html" class="cta-button">Start Generating Leads</a>
-
+            
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
                 <span></span>
@@ -884,7 +896,7 @@
             </button>
         </nav>
     </header>
-
+        
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobile-menu-overlay">
             <div class="mobile-menu-content">
@@ -904,176 +916,193 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>RV Insurance Marketing in <span class="hero-highlight">Rural Montana</span></h1>
-            <p class="hero-subtitle">Generate 25+ qualified recreational vehicle insurance leads monthly for your rural Montana agency with specialized RV marketing strategies for Big Sky Country's outdoor enthusiasts.</p>
-
+        <div class="container hero-content">
+            <h1>Marketing Automation Built for Insurance Brokers</h1>
+            <p class="hero-subtext">Complete marketing automation system for insurance brokers. Automate lead nurturing, follow-ups, and client communications to scale your agency.</p>
+            
             <div class="hero-stats">
                 <div class="stat-card">
-                    <span class="stat-number">195%</span>
-                    <span>Average RV Lead Increase</span>
+                    <div class="stat-value">18hrs</div>
+                    <div class="stat-label">Weekly Time Saved</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">25+</span>
-                    <span>Qualified RV Leads Monthly</span>
+                    <div class="stat-value">250%</div>
+                    <div class="stat-label">Lead Increase</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">90 Day</span>
-                    <span>Money-Back Guarantee</span>
+                    <div class="stat-value">45%</div>
+                    <div class="stat-label">Close Rate Boost</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Features Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">RV Insurance Marketing for Rural Montana Agencies</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: var(--gray-600); max-width: 800px; margin: 0 auto 3rem;">Rural Montana's vast wilderness and outdoor recreation culture make it prime territory for RV ownership. Our specialized marketing strategies help agencies connect with motorhome owners, travel trailer enthusiasts, and seasonal RV users across Big Sky Country.</p>
-
-            <div class="content-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🚐</div>
-                    <h3>Class A & C Motorhomes</h3>
-                    <p>Target Montana's luxury RV owners with specialized coverage for Class A and Class C motorhomes. Focus on full-timers and seasonal travelers exploring Montana's national parks.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🏕️</div>
-                    <h3>Travel Trailer Insurance</h3>
-                    <p>Market coverage for Montana's travel trailer owners, including fifth wheels, toy haulers, and camping trailers used for hunting, fishing, and family adventures.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🛻</div>
-                    <h3>Truck Camper Coverage</h3>
-                    <p>Specialized marketing for Montana's truck camper enthusiasts who use slide-in campers for backcountry access and remote camping throughout rural areas.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🏔️</div>
-                    <h3>Seasonal RV Storage</h3>
-                    <p>Target Montana's harsh winter storage needs with comprehensive coverage for RVs stored during Montana's long winter months and extreme weather conditions.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎣</div>
-                    <h3>Outdoor Recreation Focus</h3>
-                    <p>Market to Montana's hunting and fishing enthusiasts who use RVs for base camps during hunting seasons and fishing expeditions across the state.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Off-Grid RV Insurance</h3>
-                    <p>Specialized coverage for Montana RVers who boondock and camp off-grid in remote areas with solar systems, generators, and self-contained setups.</p>
-                </div>
-            </div>
-
-            <div class="local-info">
-                <h3>Rural Montana RV Market Intelligence</h3>
-                <p><strong>Registered RVs:</strong> 73,000+ recreational vehicles statewide | <strong>RV Ownership Rate:</strong> 1 in 7 households | <strong>Seasonal Usage:</strong> Peak May-September | <strong>Tourist RVs:</strong> 200,000+ annual out-of-state RV visitors | <strong>RV Parks:</strong> 400+ campgrounds and RV parks</p>
-                <p><strong>Key Destinations:</strong> Glacier National Park, Yellowstone, Beartooth Highway, Going-to-the-Sun Road | <strong>Rural Counties:</strong> High RV ownership in Flathead, Gallatin, Missoula, and Park counties | <strong>Storage Demand:</strong> 6-month winter storage period</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Local Strategy Section -->
-    <section class="section" style="background: #f8fafc;">
-        <div class="container">
-            <h2 class="section-title">Why Rural Montana RV Agencies Choose Us</h2>
-
-            <div class="content-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Big Sky Country Expertise</h3>
-                    <p>Deep understanding of Montana's unique RV culture, from Glacier National Park visitors to Beartooth Highway travelers and hunting season base camps.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">❄️</div>
-                    <h3>Seasonal Campaign Timing</h3>
-                    <p>Precisely timed marketing campaigns aligned with Montana's short RV season - spring preparation, summer peak usage, and fall winterization periods.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Rural Network Partnerships</h3>
-                    <p>Leverage relationships with Montana RV dealers, campgrounds, hunting outfitters, and outdoor recreation businesses for referral marketing opportunities.</p>
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <p>"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll definitely be a repeat customer."</p>
-                <p><strong>- Brian - Southern Stone Tile</strong></p>
-            </div>
-
-            <div class="testimonial">
-                <p>"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."</p>
-                <p><strong>- Jason C.</strong></p>
-            </div>
-
-            <div class="testimonial">
-                <p>"Professional and friendly customer service. Thanks again for the assistance!"</p>
-                <p><strong>- Elizabeth P.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Our Montana RV Marketing Process</h2>
-
-            <div class="content-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>RV Market Analysis</h3>
-                    <p>Comprehensive analysis of Montana's RV demographics, seasonal patterns, popular destinations, and existing insurance coverage gaps across rural counties.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Targeted Campaign Creation</h3>
-                    <p>Develop campaigns for different Montana RV segments: full-timers, seasonal campers, hunting/fishing enthusiasts, and Glacier/Yellowstone visitors.</p>
-                </div>
-
+            <h2 class="section-title">Powerful Features for Insurance Success</h2>
+            <p class="section-subtitle">Everything you need to dominate automation systems in the insurance industry</p>
+            
+            <div class="features-grid">
+                
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
-                    <h3>Multi-Platform Launch</h3>
-                    <p>Deploy across Montana RV groups on Facebook, Google Ads, RV park partnerships, outdoor recreation publications, and hunting/fishing expos.</p>
+                    <h3>Email sequences</h3>
+                    <p>Industry-leading email sequences designed specifically for insurance agencies to maximize growth and efficiency.</p>
                 </div>
-
+                
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Performance Optimization</h3>
-                    <p>Track lead quality, seasonal conversion patterns, and ROI. Optimize campaigns based on Montana's weather patterns and tourism seasons.</p>
+                    <div class="feature-icon">🚀</div>
+                    <h3>SMS campaigns</h3>
+                    <p>Industry-leading sms campaigns designed specifically for insurance agencies to maximize growth and efficiency.</p>
                 </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Social media automation</h3>
+                    <p>Industry-leading social media automation designed specifically for insurance agencies to maximize growth and efficiency.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Referral programs</h3>
+                    <p>Industry-leading referral programs designed specifically for insurance agencies to maximize growth and efficiency.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Automation systems?</h2>
+            <p class="section-subtitle">Proven benefits that deliver real results for insurance agencies</p>
+            
+            <div class="features-grid">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Consistent follow-ups</h3>
+                    <p>Experience consistent follow-ups that transforms your insurance agency's performance and profitability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Personalized messaging</h3>
+                    <p>Experience personalized messaging that transforms your insurance agency's performance and profitability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Lead nurturing</h3>
+                    <p>Experience lead nurturing that transforms your insurance agency's performance and profitability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Client retention</h3>
+                    <p>Experience client retention that transforms your insurance agency's performance and profitability.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Insurance Professionals</h2>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Samuel at Serpro SEO kindly offered his time to answer my questions and give some valuable advice. Your one stop shop for website and marketing services. I'll definitely be a repeat customer."</p>
+                <p class="testimonial-author">- Brian - Southern Stone Tile</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Support was helpful with the issues i was having with some designs, quality service, was solved in a timely manner."</p>
+                <p class="testimonial-author">- Jason C.</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Professional and friendly customer service. Thanks again for the assistance!"</p>
+                <p class="testimonial-author">- Elizabeth P.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Transparent Pricing & Guarantees</h2>
+            <p class="section-subtitle">Flexible options designed for insurance agency success</p>
+            
+            <div class="pricing-grid">
+                
+                <div class="pricing-item">
+                    <h4>$1,497/month</h4>
+                </div>
+                
+                <div class="pricing-item">
+                    <h4>Custom workflows</h4>
+                </div>
+                
+                <div class="pricing-item">
+                    <h4>Unlimited contacts</h4>
+                </div>
+                
+                <div class="pricing-item">
+                    <h4>API access</h4>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section">
         <div class="container">
-            <h2>Ready to Dominate Montana's RV Insurance Market?</h2>
-            <p>Join successful agencies already generating 25+ qualified RV insurance leads monthly across rural Montana. Get your free recreational vehicle marketing audit.</p>
-
-            <div class="cta-buttons">
-                <a href="contact.html" class="cta-btn">Get Free RV Marketing Audit</a>
-                <a href="tel:+13472013023" class="cta-btn secondary">Call: (347) 201-3023</a>
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready to Transform Your Insurance Agency?</h2>
+                    <p style="font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.95;">Join 500+ successful insurance agencies already using our automation systems</p>
+                    <a href="contact.html" class="cta-button">Get Started Today</a>
+                    <a href="pricing.html" class="cta-button secondary">View Full Pricing</a>
+                </div>
             </div>
-
-            <p style="margin-top: 2rem; opacity: 0.9;">
-                🛡️ <strong>90-Day Money-Back Guarantee</strong> - If you don't see measurable improvement in qualified Montana RV insurance leads, we'll refund every penny.
-            </p>
         </div>
     </section>
 
     <script>
-        // Simple mobile menu toggle (if needed later)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add any JavaScript functionality here
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenu = document.getElementById('close-menu');
+        
+        function toggleMenu() {
+            if (hamburgerMenu && mobileMenuOverlay) {
+                hamburgerMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+            }
+        }
+        
+        if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
+        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+        
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileMenuOverlay) {
+                    toggleMenu();
+                }
+            });
+        }
+        
+        document.querySelectorAll('.mobile-nav-link, .mobile-cta-button').forEach(link => {
+            link.addEventListener('click', function() {
+                toggleMenu();
+            });
         });
-        </script>
+    </script>
 </body>
 </html>

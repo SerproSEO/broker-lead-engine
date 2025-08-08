@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete AI Lead Generation Playbook for Insurance Brokers (2025)</title>
+    <meta name="description" content="Transform your insurance agency with AI. Get 50-150 qualified leads monthly using Google AI, chatbots, and automation. Free comprehensive playbook for insurance brokers.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --accent: #667eea;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--gray-700);
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8rem 0 6rem;
+            margin-top: 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: white;
+            color: var(--primary);
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-lg);
+            margin: 1rem 0.5rem;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition-base);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin: 1rem 0.5rem;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition-base);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            background: var(--gradient-primary);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .feature-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+            color: var(--gray-700);
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* What's Inside Section */
+        .whats-inside {
+            padding: 6rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .content-list {
+            list-style: none;
+        }
+
+        .content-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .content-list li::before {
+            content: "📋";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .content-list li:last-child {
+            border-bottom: none;
+        }
+
+        .playbook-preview {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 2px dashed var(--primary);
+            text-align: center;
+        }
+
+        .preview-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .preview-pages {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 6rem 0;
+            background: var(--secondary);
+            color: white;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .result-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 2rem 0 2rem 4rem;
+            border-left: 3px solid var(--primary);
+        }
+
+        .timeline-item::before {
+            content: attr(data-day);
+            position: absolute;
+            left: -2rem;
+            top: 2rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .timeline-description {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-list {
+            list-style: none;
+        }
+
+        .timeline-list li {
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 6rem 0;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .urgency-banner {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Form Section */
+        .lead-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            max-width: 500px;
+            margin: 3rem auto;
+        }
+
+        .form-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition-base);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(22, 165, 113, 0.1);
+        }
+
+        .submit-button {
+            width: 100%;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.25rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .trust-signals {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+            
+            .cta-primary,
+            .cta-secondary {
+                display: block;
+                text-align: center;
+                margin: 1rem auto;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Insurance Agency with AI</h1>
+                <p class="hero-subtitle">Generate 50-150 qualified leads monthly using Google AI, chatbots, and automation</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">600%</span>
+                        <span class="stat-label">Average ROI in 90 days</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Reduction in cost per lead</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">AI tools & strategies</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <a href="#download" class="cta-primary">
+                        📥 Download Free Playbook
+                    </a>
+                    <a href="#preview" class="cta-secondary">
+                        👀 Preview Contents
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Insurance Brokers Love This Playbook</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Quick Start Guide</h3>
+                    <p class="feature-description">Get results in just 30 minutes with our step-by-step implementation guide.</p>
+                    <ul class="feature-list">
+                        <li>Enable Google AI features instantly</li>
+                        <li>Set up basic AI chatbots</li>
+                        <li>Create high-converting content</li>
+                        <li>Track performance immediately</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Budget-Friendly Options</h3>
+                    <p class="feature-description">AI solutions for every budget, from $20/month startups to enterprise agencies.</p>
+                    <ul class="feature-list">
+                        <li>Starter package: $200/month</li>
+                        <li>Growth package: $500/month</li>
+                        <li>Scale package: $1,200/month</li>
+                        <li>Clear ROI projections included</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Insurance-Specific</h3>
+                    <p class="feature-description">Tailored specifically for insurance brokers with industry-specific AI strategies.</p>
+                    <ul class="feature-list">
+                        <li>YMYL content compliance</li>
+                        <li>Insurance keyword optimization</li>
+                        <li>Regulatory-compliant automation</li>
+                        <li>Industry benchmarks & metrics</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Proven Results</h3>
+                    <p class="feature-description">Based on real data from insurance agencies successfully using AI lead generation.</p>
+                    <ul class="feature-list">
+                        <li>156% increase in qualified leads</li>
+                        <li>43% reduction in cost per lead</li>
+                        <li>$18K monthly revenue increase</li>
+                        <li>520% ROI in 90 days</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">Complete AI Stack</h3>
+                    <p class="feature-description">Everything you need: Google Ads AI, chatbots, content generation, and analytics.</p>
+                    <ul class="feature-list">
+                        <li>Google Ads optimization</li>
+                        <li>AI chatbot setup</li>
+                        <li>Content creation tools</li>
+                        <li>Performance tracking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3 class="feature-title">90-Day Implementation</h3>
+                    <p class="feature-description">Week-by-week action plan with clear milestones and success metrics.</p>
+                    <ul class="feature-list">
+                        <li>Days 1-30: Foundation setup</li>
+                        <li>Days 31-60: Growth optimization</li>
+                        <li>Days 61-90: Scale & analyze</li>
+                        <li>Troubleshooting guide included</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="whats-inside" id="preview">
+        <div class="container">
+            <h2 class="section-title">What's Inside the Playbook</h2>
+            
+            <div class="content-grid">
+                <div>
+                    <ul class="content-list">
+                        <li>Quick Start Guide (30 Minutes to Results)</li>
+                        <li>Complete AI Tools Arsenal (50+ Tools Reviewed)</li>
+                        <li>Google Ads AI Optimization Guide</li>
+                        <li>AI-Powered Landing Page Templates</li>
+                        <li>Chatbot Setup & Lead Qualification System</li>
+                        <li>AI Content Strategy for Insurance SEO</li>
+                        <li>Analytics & Performance Tracking</li>
+                        <li>Budget Planning & ROI Projections</li>
+                        <li>90-Day Implementation Timeline</li>
+                        <li>Troubleshooting Guide & Support Resources</li>
+                    </ul>
+                </div>
+                
+                <div class="playbook-preview">
+                    <h3 class="preview-title">Complete Playbook</h3>
+                    <div class="preview-pages">85</div>
+                    <p>Pages of actionable AI strategies, tools, and implementation guides specifically for insurance brokers</p>
+                    <div style="margin-top: 2rem;">
+                        <strong>✅ Step-by-step instructions</strong><br>
+                        <strong>✅ Real case studies & results</strong><br>
+                        <strong>✅ Budget-friendly options</strong><br>
+                        <strong>✅ Compliance guidelines</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Expected Results from Following This Playbook</h2>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <span class="result-number">25-40%</span>
+                    <span class="result-label">Improvement in Google Ads Performance</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-number">50-150</span>
+                    <span class="result-label">Qualified Leads Monthly</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-number">200-600%</span>
+                    <span class="result-label">ROI Within 90 Days</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-number">60-80%</span>
+                    <span class="result-label">Time Savings Through Automation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">Your 90-Day AI Transformation</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item" data-day="Day 1">
+                    <h3 class="timeline-title">Foundation Setup</h3>
+                    <p class="timeline-description">Get started immediately with Google's native AI features:</p>
+                    <ul class="timeline-list">
+                        <li>Enable Google Ads AI features</li>
+                        <li>Set up Smart Bidding campaigns</li>
+                        <li>Create ChatGPT Plus account</li>
+                        <li>Install Google Analytics 4</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item" data-day="Week 2">
+                    <h3 class="timeline-title">Landing Page Optimization</h3>
+                    <p class="timeline-description">Create high-converting pages with AI assistance:</p>
+                    <ul class="timeline-list">
+                        <li>Implement AI-generated headlines</li>
+                        <li>Set up mobile-optimized forms</li>
+                        <li>Create A/B testing framework</li>
+                        <li>Install conversion tracking</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item" data-day="Month 2">
+                    <h3 class="timeline-title">Advanced AI Implementation</h3>
+                    <p class="timeline-description">Scale your lead generation with advanced tools:</p>
+                    <ul class="timeline-list">
+                        <li>Launch AI chatbot for lead qualification</li>
+                        <li>Implement content creation workflows</li>
+                        <li>Set up automated email sequences</li>
+                        <li>Begin competitor analysis</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item" data-day="Month 3">
+                    <h3 class="timeline-title">Optimization & Scale</h3>
+                    <p class="timeline-description">Fine-tune and scale your AI-powered lead machine:</p>
+                    <ul class="timeline-list">
+                        <li>Analyze 60-day performance data</li>
+                        <li>Optimize underperforming campaigns</li>
+                        <li>Scale successful strategies</li>
+                        <li>Plan next quarter expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="download">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Insurance Agency?</h2>
+            <p class="cta-subtitle">Download the complete AI Lead Generation Playbook and start generating more leads today</p>
+            
+            <div class="urgency-banner">
+                🔥 Limited Time: Free download includes bonus implementation checklist and tool comparison guide
+            </div>
+
+            <div class="lead-form">
+                <h3 class="form-title">Get Your Free Playbook Now</h3>
+                
+                <form action="/contact.html" method="get">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="agency-type">Agency Type</label>
+                        <select id="agency-type" name="agency-type">
+                            <option value="">Select your agency type</option>
+                            <option value="independent">Independent Agency</option>
+                            <option value="captive">Captive Agency</option>
+                            <option value="regional">Regional Brokerage</option>
+                            <option value="national">National Agency</option>
+                            <option value="startup">New/Startup Agency</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        📥 Download Free Playbook Now
+                    </button>
+                </form>
+                
+                <div class="trust-signals">
+                    🔒 Your information is secure and will never be shared<br>
+                    📧 Instant download link sent to your email<br>
+                    ⭐ Join 500+ insurance brokers already using AI
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="/ai-lead-generation.html" class="cta-secondary">
+                    🤖 See Our Complete AI System
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Form enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const submitButton = document.querySelector('.submit-button');
+            
+            form.addEventListener('submit', function(e) {
+                submitButton.innerHTML = '⏳ Sending Playbook...';
+                submitButton.disabled = true;
+                
+                // Add the playbook request parameter
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'request';
+                hiddenInput.value = 'AI Lead Generation Playbook Download';
+                form.appendChild(hiddenInput);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
