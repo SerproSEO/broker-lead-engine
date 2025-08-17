@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Insurance Marketing Questions | Broker Lead Engine</title>
     <meta name="description" content="Get answers to common questions about our insurance marketing services, lead generation process, and agency partnerships.">
-    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
+    <meta name="keywords" content="insurance marketing FAQ, lead generation questions, commercial insurance brokerage marketing help">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
-    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta property="og:title" content="FAQ - Broker Lead Engine">
+    <meta property="og:description" content="Common questions about insurance marketing services and lead generation.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/faq.html">
     <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
     <meta property="og:site_name" content="Broker Lead Engine">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
-    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
+    <meta name="twitter:title" content="FAQ - Broker Lead Engine">
+    <meta name="twitter:description" content="Get answers about our insurance marketing services.">
     <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -99,13 +99,7 @@
             to { transform: rotate(360deg); }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-                        /* Header Styles */
+        /* Header Styles */
         .header {
             background: var(--secondary);
             color: white;
@@ -249,8 +243,7 @@
             left: 100%;
         }
 
-        
-        /* Hamburger Menu - Clean Implementation */
+        /* Hamburger Menu */
         .hamburger-menu {
             display: none;
             width: 30px;
@@ -302,7 +295,7 @@
             transform-origin: center;
         }
 
-        /* Mobile Menu Overlay - Clean Implementation */
+        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -390,7 +383,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-                /* Hero Section */
+        /* Hero Section */
         .hero {
             background: var(--gradient-secondary);
             color: white;
@@ -412,6 +405,12 @@
             background-size: 40px 40px;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
@@ -421,10 +420,6 @@
             animation: fadeInUp 0.8s ease-out;
             position: relative;
             z-index: 1;
-        }
-
-        .hero-highlight {
-            color: #16a571;
         }
 
         .hero-subtext {
@@ -449,384 +444,91 @@
             }
         }
 
-        .section {
-            padding: 80px 0;
-            clear: both;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a202c;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-            transition: var(--transition-base);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-results {
-            background: #f0fff4;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #16a571;
-            margin: 1.5rem 0;
-        }
-
-        .service-results strong {
-            color: #16a571;
-        }
-
-        .guarantee-section {
-            background: #16a571;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .guarantee-banner {
-            background: rgba(255,255,255,0.1);
-            border: 2px solid white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 525px;
-        }
-
-        .cta-section {
-            background: #1a202c;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .logo img {
-                height: 70px;
-                max-width: 75px;
-                object-fit: contain;
-            }
-
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            .hero {
-                margin-top: 70px;
-                padding: 40px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-                        .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Loading Overlay */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
-
-        .loading-overlay.loaded {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--gray-200);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-    
-        /* FAQ Page Specific Styles */
-        .hero-section {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
-            background-size: 40px 40px;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
+        /* FAQ Section */
         .faq-section {
-            padding: 100px 0;
+            padding: 80px 0;
             background: #f8fafc;
         }
 
+        /* FAQ Categories */
         .faq-categories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
         .category-card {
             background: white;
             padding: 2rem;
-            border-radius: 16px;
+            border-radius: 12px;
             box-shadow: var(--shadow-md);
-            text-align: center;
             cursor: pointer;
             transition: var(--transition-base);
-            border: 2px solid transparent;
+            text-align: center;
         }
 
         .category-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
         .category-card.active {
-            border-color: var(--primary);
-            background: #f0fff4;
-        }
-
-        .category-icon {
-            width: 80px;
-            height: 80px;
-            background: #f8fafc;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: var(--primary);
-            transition: var(--transition-base);
-        }
-
-        .category-card.active .category-icon {
             background: var(--primary);
             color: white;
         }
 
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
         .category-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--gray-800);
+            font-size: 1.25rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .category-count {
-            color: var(--gray-600);
             font-size: 0.9rem;
+            opacity: 0.8;
         }
 
+        /* FAQ Items */
         .faq-list {
             max-width: 900px;
             margin: 0 auto;
         }
 
         .faq-category {
-            display: block;
+            display: none;
         }
 
         .faq-item {
             background: white;
             border-radius: 12px;
-            box-shadow: var(--shadow-md);
             margin-bottom: 1rem;
-            overflow: hidden;
+            box-shadow: var(--shadow-sm);
             transition: var(--transition-base);
         }
 
         .faq-item:hover {
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
 
         .faq-question {
-            padding: 1.5rem 2rem;
+            padding: 1.5rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
             color: var(--gray-800);
-            background: white;
-            transition: var(--transition-base);
-        }
-
-        .faq-question:hover {
-            background: #f8fafc;
         }
 
         .faq-toggle {
             font-size: 1.5rem;
             color: var(--primary);
-            font-weight: 300;
             transition: transform 0.3s;
         }
 
@@ -835,25 +537,29 @@
         }
 
         .faq-answer {
-            padding: 0 2rem 1.5rem;
-            color: var(--gray-700);
-            line-height: 1.7;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            transition: max-height 0.3s ease;
         }
 
         .faq-item.active .faq-answer {
             max-height: 1000px;
-            padding: 0 2rem 2rem;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
         }
 
         .faq-answer p {
             margin-bottom: 1rem;
+            color: var(--gray-600);
+            line-height: 1.8;
         }
 
         .faq-answer ul {
-            margin: 1rem 0 1rem 2rem;
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            color: var(--gray-600);
         }
 
         .faq-answer li {
@@ -865,92 +571,54 @@
             font-weight: 600;
         }
 
+        /* CTA Section */
         .cta-section {
             background: var(--gradient-secondary);
             color: white;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .cta-title {
+        .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
-        .cta-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-btn {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition-base);
-            white-space: nowrap;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cta-btn.secondary {
-            background: transparent;
-            border: 2px solid white;
-        }
-
-        /* Mobile Styles */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .nav-menu {
+                display: none;
+            }
+
+            .cta-button:not(.mobile-cta-button) {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            .logo img {
+                height: 70px;
+                max-width: 140px;
+            }
+
+            .hero {
+                margin-top: 70px;
+                padding: 40px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtext {
+                font-size: 1rem;
             }
 
             .faq-categories {
                 grid-template-columns: 1fr;
-            }
-
-            .faq-question {
-                padding: 1rem 1.5rem;
-                font-size: 0.95rem;
-            }
-
-            .faq-answer {
-                padding: 0 1.5rem 1rem;
-            }
-
-            .faq-item.active .faq-answer {
-                padding: 0 1.5rem 1.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Desktop - Hide Mobile Menu */
-        @media (min-width: 769px) {
-            .mobile-menu-overlay {
-                display: none !important;
             }
         }
     </style>
@@ -1008,84 +676,77 @@
         </nav>
     </header>
         
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-            <div class="mobile-menu-content">
-                <div class="mobile-menu-header">
-                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
-                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
-                </div>
-                <nav class="mobile-nav">
-                    <a href="services.html" class="mobile-nav-link">Services</a>
-                    <a href="about.html" class="mobile-nav-link">About</a>
-                    <a href="pricing.html" class="mobile-nav-link">Resources</a>
-                    <a href="contact.html" class="mobile-nav-link">Contact</a>
-                    <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
-                </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
             </div>
+            <nav class="mobile-nav">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="pricing.html" class="mobile-nav-link">Resources</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+            </nav>
         </div>
+    </div>
+
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loader"></div>
     </div>
 
-    
-
-        
-        
-        
-
     <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p class="hero-subtext">Get instant answers about our insurance marketing services, pricing, and 90-day guarantee.</p>
+        </div>
+    </section>
 
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Frequently Asked Questions</h1>
-                <p class="hero-subtitle">Get instant answers about our insurance marketing services, pricing, and 90-day guarantee.</p>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <div class="container">
-                <!-- FAQ Categories -->
-                <div class="faq-categories">
-                    <div class="category-card active" onclick="showCategory('getting-started')">
-                        <div class="category-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="category-title">Getting Started</div>
-                        <div class="category-count">6 questions</div>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <div class="category-card active" onclick="showCategory('getting-started')">
+                    <div class="category-icon">
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    
-                    <div class="category-card" onclick="showCategory('pricing')">
-                        <div class="category-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <div class="category-title">Pricing & Billing</div>
-                        <div class="category-count">5 questions</div>
-                    </div>
-                    
-                    <div class="category-card" onclick="showCategory('results')">
-                        <div class="category-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="category-title">Results & Timeline</div>
-                        <div class="category-count">7 questions</div>
-                    </div>
+                    <div class="category-title">Getting Started</div>
+                    <div class="category-count">6 questions</div>
                 </div>
+                
+                <div class="category-card" onclick="showCategory('pricing')">
+                    <div class="category-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="category-title">Pricing & Billing</div>
+                    <div class="category-count">5 questions</div>
+                </div>
+                
+                <div class="category-card" onclick="showCategory('results')">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="category-title">Results & Timeline</div>
+                    <div class="category-count">7 questions</div>
+                </div>
+            </div>
 
-                <!-- FAQ Lists -->
-                <div class="faq-list">
-                    <!-- Getting Started -->
-                    <div id="getting-started" class="faq-category" style="display: block;">
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How quickly can you start generating leads for my insurance agency?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
+            <!-- FAQ Lists -->
+            <div class="faq-list">
+                <!-- Getting Started -->
+                <div id="getting-started" class="faq-category" style="display: block;">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How quickly can you start generating leads for my commercial insurance brokerage?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
                                 <p>We can have your lead generation campaigns running within <span class="highlight">7-14 days</span> of signing up. Here's our typical timeline:</p>
                                 <ul>
                                     <li>Days 1-3: Account setup, competitor research, and campaign strategy</li>
@@ -1095,14 +756,16 @@
                                 <p>Most clients see their first qualified leads within the first 2 weeks, with full momentum typically reached by week 3-4.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>Do you work with insurance agencies of all sizes?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>We specialize in working with <span class="highlight">$1M - $5M+ annual revenue</span> insurance agencies and brokerages. This includes:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do you work with commercial insurance brokers of all sizes?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>We specialize in working with <span class="highlight">$1M - $5M+ annual revenue</span> commercial insurance brokers and brokerages. This includes:</p>
                                 <ul>
                                     <li>Independent insurance agents (5-25 employees)</li>
                                     <li>Regional insurance brokerages</li>
@@ -1112,41 +775,47 @@
                                 <p>If you're generating less than $1M annually, our services may be too advanced for your current needs. We recommend reaching that milestone first, then contacting us for explosive growth.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>What makes you different from other marketing agencies?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What makes you different from other marketing agencies?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
                                 <p>Three key differentiators set us apart:</p>
                                 <ul>
-                                    <li><strong>Insurance-Only Focus:</strong> We only work with insurance agencies, so we know your industry inside and out</li>
+                                    <li><strong>Insurance-Only Focus:</strong> We only work with commercial insurance brokers, so we know your industry inside and out</li>
                                     <li><strong>90-Day ROI Guarantee:</strong> If you don't see measurable results in 90 days, we refund every penny</li>
                                     <li><strong>MCP Automation Technology:</strong> Our proprietary AI system automates 80% of lead generation tasks</li>
                                 </ul>
                                 <p>Most agencies waste $20K+ per year on generic marketing that doesn't understand insurance. We eliminate that waste and focus on what actually converts prospects.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>Do I need to sign a long-term contract?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do I need to sign a long-term contract?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
                                 <p><span class="highlight">No long-term contracts required.</span> We operate on a month-to-month basis because we believe in earning your business every single month through results.</p>
                                 <p>You can pause or cancel anytime with 30 days notice. However, we recommend giving any marketing program at least 90 days to show full results - which is why we offer our 90-day guarantee.</p>
                                 <p>Most clients stay with us for years because the results speak for themselves.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>What information do you need to get started?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What information do you need to get started?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
                                 <p>To begin your campaign, we'll need:</p>
                                 <ul>
                                     <li>Current marketing materials and website access</li>
@@ -1158,13 +827,15 @@
                                 <p>We handle all the technical setup, campaign creation, and optimization. You just need to focus on closing the leads we generate.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>Can you work with my existing marketing efforts?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can you work with my existing marketing efforts?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
                                 <p>Absolutely. We integrate seamlessly with your existing marketing stack including:</p>
                                 <ul>
                                     <li>Your current CRM system (AgencyZoom, Applied Epic, etc.)</li>
@@ -1176,15 +847,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Pricing & Billing -->
-                    <div id="pricing" class="faq-category" style="display: none;">
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How much do your services cost?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
+                <!-- Pricing & Billing -->
+                <div id="pricing" class="faq-category">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How much do your services cost?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
                                 <p>Our pricing depends on which services you need:</p>
                                 <ul>
                                     <li><strong>AI Lead Generation:</strong> $2,997/month</li>
@@ -1197,220 +870,252 @@
                                 <p>Most clients combine 2-3 services for maximum impact. We'll recommend the best combination based on your goals and budget.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>Are there any setup fees or hidden costs?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p><span class="highlight">No setup fees, no hidden costs.</span> Our pricing is completely transparent:</p>
-                                <ul>
-                                    <li>Monthly service fees as listed above</li>
-                                    <li>Ad spend goes directly to platforms (Google, Meta) - we don't mark it up</li>
-                                    <li>All reporting, optimization, and account management included</li>
-                                    <li>No contracts, cancellation fees, or surprise charges</li>
-                                </ul>
-                                <p>What you see is what you pay. Period.</p>
-                            </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Is there a setup fee?</span>
+                            <span class="faq-toggle">+</span>
                         </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>What's your 90-day money-back guarantee?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>If you don't see <span class="highlight">measurable improvement in qualified leads</span> within 90 days, we'll refund every penny you've paid.</p>
-                                <p>Measurable improvement means:</p>
-                                <ul>
-                                    <li>Increased volume of qualified insurance prospects</li>
-                                    <li>Improved lead quality and conversion rates</li>
-                                    <li>Positive ROI on marketing investment</li>
-                                    <li>Clear progress toward your growth goals</li>
-                                </ul>
-                                <p>We track everything with detailed reporting so you can see exactly what's working.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How do you handle ad spend for PPC campaigns?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Ad spend is separate from our management fees and paid directly to the advertising platforms:</p>
-                                <ul>
-                                    <li>You maintain control of your ad accounts</li>
-                                    <li>Ad spend goes directly from your credit card to Google/Meta</li>
-                                    <li>We don't mark up ad spend or take commissions</li>
-                                    <li>Typical ad spend ranges from $2,000-$10,000/month depending on market size</li>
-                                </ul>
-                                <p>This keeps everything transparent and ensures your budget goes toward actual advertising, not agency markups.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>Do you offer payment plans or financing?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>We accept several payment options:</p>
-                                <ul>
-                                    <li>Monthly billing (most common)</li>
-                                    <li>Quarterly payments (5% discount)</li>
-                                    <li>Annual payments (10% discount)</li>
-                                    <li>Credit card, ACH, or wire transfer</li>
-                                </ul>
-                                <p>For larger agencies, we can discuss custom payment arrangements. Our goal is to make investment in growth as easy as possible.</p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p><span class="highlight">No setup fees whatsoever.</span> We believe in proving our value through results, not upfront charges.</p>
+                                <p>All onboarding, strategy development, and initial campaign setup is included in your monthly service fee. You only pay the monthly retainer starting from day one.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Results & Timeline -->
-                    <div id="results" class="faq-category" style="display: none;">
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How many leads can I expect to generate monthly?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Lead volume depends on your market size and service selection, but here are typical ranges:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What about advertising spend?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>For Google PPC and Meta Ads services, advertising spend is paid directly to the platforms (Google/Facebook) and is separate from our management fees.</p>
+                                <p>Recommended ad spend budgets:</p>
                                 <ul>
-                                    <li><strong>AI Lead Generation:</strong> 150-300 qualified leads/month</li>
-                                    <li><strong>Local SEO:</strong> 50-100 organic leads/month</li>
-                                    <li><strong>Google PPC:</strong> 75-200 high-intent leads/month</li>
-                                    <li><strong>Meta Ads:</strong> 100-250 targeted prospects/month</li>
-                                    <li><strong>Cold Email:</strong> 25-75 warm responses/month</li>
+                                    <li><strong>Starter:</strong> $2,000-3,000/month</li>
+                                    <li><strong>Growth:</strong> $3,000-5,000/month</li>
+                                    <li><strong>Scale:</strong> $5,000-10,000+/month</li>
                                 </ul>
-                                <p>Most clients combining multiple services see <span class="highlight">300-500+ qualified leads monthly</span> within 90 days.</p>
+                                <p>We'll help you determine the right budget based on your market, competition, and growth goals.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>What's the typical timeline to see results?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Results timeline varies by service:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How does your 90-day guarantee work?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If we don't deliver the specific results promised within 90 days, we refund 100% of your management fees. Here's how it works:</p>
                                 <ul>
-                                    <li><strong>Weeks 1-2:</strong> Campaign setup, first leads begin flowing</li>
-                                    <li><strong>Weeks 3-4:</strong> Lead volume increases, initial optimization</li>
-                                    <li><strong>Weeks 5-8:</strong> Full momentum, consistent lead flow</li>
-                                    <li><strong>Weeks 9-12:</strong> Peak performance, maximum ROI</li>
+                                    <li>We set clear, measurable goals at the start</li>
+                                    <li>Track performance with transparent reporting</li>
+                                    <li>If goals aren't met by day 90, full refund issued</li>
+                                    <li>No questions asked, no fine print</li>
                                 </ul>
-                                <p>Local SEO takes longer (3-6 months), while PPC and AI lead gen show results within 2-4 weeks.</p>
+                                <p>Note: Ad spend paid to platforms is not refundable as it goes directly to Google/Facebook.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How do you ensure lead quality?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Quality is our top priority. We use multiple filtering methods:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can I change or cancel services?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, you have complete flexibility:</p>
                                 <ul>
-                                    <li><strong>AI Scoring System:</strong> 100-point qualification algorithm</li>
-                                    <li><strong>Industry Targeting:</strong> Focus on businesses that need insurance</li>
-                                    <li><strong>Geographic Filters:</strong> Only prospects in your service areas</li>
-                                    <li><strong>Intent Signals:</strong> Target people actively searching for insurance</li>
-                                    <li><strong>Exclusion Lists:</strong> Remove existing clients and poor-fit prospects</li>
+                                    <li><strong>Add services:</strong> Anytime with immediate activation</li>
+                                    <li><strong>Change services:</strong> Switch between services with 30 days notice</li>
+                                    <li><strong>Cancel services:</strong> Cancel anytime with 30 days notice</li>
+                                    <li><strong>Pause services:</strong> Temporarily pause for up to 3 months</li>
                                 </ul>
-                                <p>We'd rather send you 50 qualified leads than 200 tire-kickers.</p>
+                                <p>We want you to have the services that work best for your agency's current needs.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>What kind of ROI should I expect?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Our clients typically see <span class="highlight">3:1 to 8:1 ROI</span> within 90 days. Here's what that looks like:</p>
+                <!-- Results & Timeline -->
+                <div id="results" class="faq-category">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How many leads can I expect per month?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Lead volume varies by service and market, but here are typical results:</p>
                                 <ul>
-                                    <li><strong>Investment:</strong> $3,000-$5,000/month in services</li>
-                                    <li><strong>New Policies:</strong> 15-30 additional policies monthly</li>
-                                    <li><strong>Additional Revenue:</strong> $15,000-$50,000/month</li>
-                                    <li><strong>Annual Impact:</strong> $180,000-$600,000 revenue increase</li>
+                                    <li><strong>AI Lead Generation:</strong> 200+ qualified leads/month</li>
+                                    <li><strong>Local SEO:</strong> 120+ organic leads/month (after 3 months)</li>
+                                    <li><strong>Google PPC:</strong> 100+ high-intent leads/month</li>
+                                    <li><strong>Meta Ads:</strong> 160+ targeted leads/month</li>
+                                    <li><strong>Cold Email:</strong> 20+ qualified responses/month</li>
                                 </ul>
-                                <p>Conservative estimate: Every $1 invested returns $3-5 in new business within the first year.</p>
+                                <p>Combined services typically generate <span class="highlight">300-500+ leads monthly</span> once fully optimized.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How do you track and report results?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Complete transparency with detailed monthly reports including:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>When will I see my first results?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Results timeline by service:</p>
                                 <ul>
-                                    <li>Lead volume and quality metrics</li>
-                                    <li>Campaign performance and optimization notes</li>
-                                    <li>Cost per lead and ROI calculations</li>
-                                    <li>Competitive analysis and market insights</li>
-                                    <li>Next month's strategy and recommendations</li>
+                                    <li><strong>AI Lead Generation:</strong> First leads within 7-14 days</li>
+                                    <li><strong>Google PPC:</strong> Immediate leads (within 24-48 hours)</li>
+                                    <li><strong>Meta Ads:</strong> First leads within 3-5 days</li>
+                                    <li><strong>Cold Email:</strong> First responses within 7-10 days</li>
+                                    <li><strong>Local SEO:</strong> Initial improvements in 30 days, significant results by month 3</li>
                                 </ul>
-                                <p>Plus real-time dashboard access to see performance 24/7.</p>
+                                <p>Most clients see meaningful revenue impact within the first 30-45 days.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>What happens if I'm not happy with the results?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>First, we'll work together to identify and fix any issues. Our success depends on your success.</p>
-                                <p>If after 90 days you're still not seeing the results we promised:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What's the quality of leads you generate?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>We focus on quality over quantity with:</p>
                                 <ul>
-                                    <li>Complete refund of all fees paid</li>
-                                    <li>No questions asked, no hassle</li>
-                                    <li>You keep all leads generated and assets created</li>
-                                    <li>We'll even provide recommendations for next steps</li>
+                                    <li><strong>Verified contact information:</strong> All leads have accurate phone/email</li>
+                                    <li><strong>Industry targeting:</strong> Only businesses that need insurance</li>
+                                    <li><strong>Budget qualification:</strong> Prospects who can afford your services</li>
+                                    <li><strong>Decision maker access:</strong> Direct contact with owners/executives</li>
                                 </ul>
-                                <p>We're confident in our process, but we stand behind our promise completely.</p>
+                                <p>Our AI scoring system rates each lead 1-100, so you can prioritize the hottest prospects first. Average client close rate: <span class="highlight">18-34%</span>.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleFAQ(this)">
-                                <span>How much of my time will this require?</span>
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Minimal time commitment from you:</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How do you track and report results?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Complete transparency with:</p>
                                 <ul>
-                                    <li><strong>Initial Setup:</strong> 2-3 hours for onboarding and strategy</li>
-                                    <li><strong>Weekly Check-ins:</strong> 15-30 minutes (optional)</li>
-                                    <li><strong>Monthly Reviews:</strong> 1 hour strategy call</li>
-                                    <li><strong>Lead Follow-up:</strong> Your existing sales process</li>
+                                    <li><strong>Real-time dashboard:</strong> 24/7 access to all metrics</li>
+                                    <li><strong>Weekly reports:</strong> Lead volume, quality scores, and conversion data</li>
+                                    <li><strong>Monthly reviews:</strong> Strategy sessions with performance analysis</li>
+                                    <li><strong>ROI tracking:</strong> Revenue attribution for every lead source</li>
                                 </ul>
-                                <p>We handle 80% of the work so you can focus on what you do best - closing deals and serving clients.</p>
+                                <p>You'll always know exactly what's working and where every dollar is going.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What if I'm already working with another agency?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>No problem. We can:</p>
+                                <ul>
+                                    <li>Work alongside your current agency (complementary services)</li>
+                                    <li>Take over completely with smooth transition</li>
+                                    <li>Start with one service to prove our value</li>
+                                </ul>
+                                <p>Many clients test us with one service while keeping their current agency, then gradually transition everything to us as they see results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do you provide training for my team?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, we provide comprehensive training including:</p>
+                                <ul>
+                                    <li><strong>Lead handling best practices:</strong> Scripts and follow-up sequences</li>
+                                    <li><strong>CRM optimization:</strong> Workflow setup and automation</li>
+                                    <li><strong>Conversion training:</strong> Closing techniques for digital leads</li>
+                                    <li><strong>Dashboard training:</strong> Understanding and using analytics</li>
+                                </ul>
+                                <p>Plus ongoing support through Slack, email, and monthly strategy calls.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What markets and insurance types do you support?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>We support all insurance types and markets:</p>
+                                <ul>
+                                    <li><strong>Commercial lines:</strong> General liability, workers comp, commercial auto, etc.</li>
+                                    <li><strong>Smaller commercial accounts:</strong> Auto, home, life, health</li>
+                                    <li><strong>Specialty lines:</strong> Cyber, E&O, D&O, marine, aviation</li>
+                                    <li><strong>Geographic coverage:</strong> All 50 states</li>
+                                </ul>
+                                <p>Our system adapts to your specific licenses, carriers, and target markets.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2 class="cta-title">Still Have Questions?</h2>
-                <p class="cta-subtitle">Get personalized answers and see how we can help your insurance agency grow</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="cta-btn">Schedule Free Consultation</a>
-                    <a href="ppc-audit-landing.html" class="cta-btn secondary">Get Free Marketing Audit</a>
-                </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Still Have Questions?</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Get personalized answers and discover how we can help your specific commercial insurance brokerage grow.
+            </p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="contact.html" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Schedule Free Consultation</a>
+                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
             </div>
-        </section>
-    </main>
 
-    
+            <p style="margin-top: 2rem; opacity: 0.9;">
+                📧 <a href="mailto:sam@brokerleadengine.com" style="color: #16a571; text-decoration: none;">sam@brokerleadengine.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a><br>
+                🛡️ <strong>90-Day Money-Back Guarantee</strong> - Risk-free growth for your agency
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+        <div class="container">
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
+                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+                All marketing services are provided in compliance with applicable laws and regulations.
+            </p>
+            <p style="opacity: 0.7; font-size: 0.8rem;">
+                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
 
     <script>
         // Clean JavaScript - Page Loading and Menu
@@ -1437,75 +1142,54 @@
             }
 
             // Event listeners
-            if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-            if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+            if (hamburgerMenu) {
+                hamburgerMenu.addEventListener('click', toggleMenu);
+            }
 
-            // Close menu when clicking outside
-            if (mobileMenuOverlay) {
-                mobileMenuOverlay.addEventListener('click', function(e) {
-                    if (e.target === mobileMenuOverlay) {
+            if (closeMenu) {
+                closeMenu.addEventListener('click', toggleMenu);
+            }
+
+            // Close menu when clicking on mobile nav links
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
                         toggleMenu();
                     }
                 });
-            }
+            });
 
-            // Close menu when clicking on navigation links
-            document.querySelectorAll('.mobile-nav-link, .mobile-cta-button').forEach(link => {
-                link.addEventListener('click', function() {
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
                     toggleMenu();
-                });
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Animate elements on scroll (if elements exist)
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '0';
-                        entry.target.style.transform = 'translateY(30px)';
-                        setTimeout(() => {
-                            entry.target.style.transition = 'all 0.6s ease-out';
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }, 100);
-                    }
-                });
-            }, observerOptions);
-
-            // Observe animated elements if they exist
-            document.querySelectorAll('.stat-card, .feature-card, .service-card, .pricing-card, .workflow-card, .integration-card, .sequence-card, .targeting-card, .campaign-card').forEach(el => {
-                observer.observe(el);
+                }
             });
         });
 
-        // FAQ Functionality
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items in the same category
+            const category = faqItem.parentElement;
+            category.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle the clicked item
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Category Switch Function
         function showCategory(categoryId) {
             // Hide all categories
             document.querySelectorAll('.faq-category').forEach(cat => {
                 cat.style.display = 'none';
-            });
-            
-            // Remove active class from all category cards
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.remove('active');
             });
             
             // Show selected category
@@ -1514,24 +1198,11 @@
                 selectedCategory.style.display = 'block';
             }
             
-            // Add active class to clicked category card
-            event.target.closest('.category-card').classList.add('active');
-        }
-
-        function toggleFAQ(questionElement) {
-            const faqItem = questionElement.closest('.faq-item');
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all FAQ items in the current category
-            const currentCategory = faqItem.closest('.faq-category');
-            currentCategory.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
+            // Update active category card
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.classList.remove('active');
             });
-            
-            // Toggle the clicked item (if it wasn't already active)
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
+            event.currentTarget.classList.add('active');
         }
     </script>
 </body>

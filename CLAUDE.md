@@ -1,7 +1,7 @@
 # CLAUDE.md - Broker Lead Engine Project Memory
 
 ## Project Overview
-This is the Broker Lead Engine - a $100K/month automation system for insurance broker lead generation. The system automates client onboarding, competitor research, website generation, and advertising campaigns.
+This is the Broker Lead Engine - a $100K/month automation system for commercial insurance broker lead generation. The system specializes in B2B lead generation for cyber insurance, professional liability, and general commercial lines. It automates client onboarding, competitor research, website generation, and advertising campaigns.
 
 ## Vision & Goals
 - **Your Vision**: Build a marketing agency to $100K per month within 1 year using MCP automation
@@ -9,14 +9,24 @@ This is the Broker Lead Engine - a $100K/month automation system for insurance b
 - **My Role**: Be "a 1 person company" handling all lead gen, website publishing, editing, and operations
 - **Key Requirement**: The "most optimal MCPs" with high impact for scaling the business
 
-## Current Status (2025-08-05)
+## Current Status (2025-08-10)
 - Fixed MCP server compatibility issues with the latest MCP SDK
 - All MCP servers are now properly configured and functional
-- Project is running from: `C:\Users\b\Documents\GitHub\broker-lead-engine`
+- Project is running from: `C:\Users\b\Documents\GitHub\broker-lead-engine21`
 - System is ready for client acquisition and scaling
 - **Navigation Fixed**: Copied working header from index.html to all 17 pages (excluding landing pages)
 - **White Bar Issue Resolved**: Fixed hero section margins (124px) across all pages to eliminate white gap
 - **Site Deployment**: Successfully building and deploying to DigitalOcean at https://seal-app-he5wy.ondigitalocean.app/
+- **Claude Opus Setup**: Created `claude-opus.bat` batch file in `C:\Users\b\` and added to PATH for easy Opus model access
+
+## Important Site Maintenance Rules (2025-08-10)
+**CRITICAL**: When fixing site issues:
+1. **ONLY fix ONE page at a time** - Never batch update multiple pages
+2. **User handles all front-end testing** - Don't test, just implement fixes
+3. **Wait for specific issues to be reported** before making changes
+4. **Total pages in site**: 67 HTML pages (excluding index.html)
+   - 55 main pages in root directory
+   - 12 blog pages in /blog folder
 
 ## MCP Servers Configuration
 
@@ -82,6 +92,7 @@ this.server = new Server(
 - Test enhanced server: `node enhanced-mcp-server-fixed.js`
 - Test DataForSEO: `env DATAFORSEO_LOGIN=sam@serproseo.com DATAFORSEO_PASSWORD=Ochoacueva1. npx -y dataforseo-mcp-server`
 - Start automation engine: `npm start`
+- **Use Claude Opus**: `claude-opus` (batch file in C:\Users\b\ and added to PATH)
 
 ## Troubleshooting
 
@@ -175,12 +186,16 @@ Or with premium clients (AI Lead Gen + Local SEO + PPC = ~$6,500/month):
 - Much easier to manage than 50+ smaller clients
 
 ### Target Market
-**Primary**: Insurance brokers (high-value, recurring revenue, proven market)
-**Secondary**: 
-- Construction Companies (50-500 employees)
-- Manufacturing Businesses ($5M+ annual revenue)
-- Healthcare Practices (multiple locations)
-- Professional Services (law firms, accounting, etc.)
+**Primary**: Commercial Insurance Brokers
+- Focus: Cyber insurance, professional liability (E&O), general commercial lines
+- Sweet spot: $1M-$20M revenue agencies with 5-50 employees
+- Commission rates: 15-20% for specialty lines (vs 10-15% general)
+
+**Target Insurance Lines** (in priority order):
+1. **Cyber Insurance** - 24.5% CAGR, 80% of SMEs uninsured
+2. **Professional Liability/E&O** - High margins, complex sales
+3. **Workers Compensation** - Regulated but profitable
+4. **General Commercial/BOP** - Broad market opportunity
 
 ## System Components
 
@@ -226,6 +241,17 @@ When you say **"update memory"** or **"update your memory"**, I will:
 2. Update any changed requirements or system modifications  
 3. Record new insights, problems solved, or lessons learned
 4. Maintain complete continuity across all terminal sessions
+
+## Session History (2025-08-10)
+
+### Claude Opus Configuration Session
+**Problem**: User wanted to use Claude Opus model for everything instead of default model
+**Solution**: 
+1. Created `claude-opus.bat` batch file with content: `@echo off` and `claude --model opus %*`
+2. Moved batch file to `C:\Users\b\claude-opus.bat` for global access
+3. Added `C:\Users\b` to system PATH using `setx PATH "%PATH%;C:\Users\b"`
+4. User can now use `claude-opus` command from any directory to launch Claude with Opus model
+**Note**: New terminal session required after PATH modification for changes to take effect
 
 ## Git Repository
 - Running directly from the GitHub repository folder

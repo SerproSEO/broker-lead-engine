@@ -3,15 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Lead Generation for Insurance Agencies | SerproSEO</title>
-    <meta name="description" content="Generate 50+ qualified insurance leads weekly with AI automation. Our MCP system finds, qualifies, and delivers hot prospects 24/7. 90-day guarantee.">
-    <meta name="keywords" content="AI lead generation insurance, insurance agency automation, MCP lead generation, automated insurance prospecting">
+    <title>AI Lead Generation for Commercial insurance brokers | Broker Lead Engine</title>
+    <meta name="description" content="Generate 50+ qualified B2B commercial prospects weekly with our MCP automation system. AI finds, qualifies, and delivers hot leads 24/7 while you focus on closing deals.">
+    <meta name="keywords" content="AI lead generation, insurance automation, MCP system, qualified commercial insurance leads, automated prospecting">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Lead Generation for Commercial insurance brokers - Broker Lead Engine">
+    <meta property="og:description" content="Generate 50+ qualified B2B commercial prospects weekly with our MCP automation system.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/ai-lead-generation.html">
+    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    <meta property="og:site_name" content="Broker Lead Engine">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Lead Generation for Commercial insurance brokers">
+    <meta name="twitter:description" content="Generate 50+ qualified B2B commercial prospects weekly with AI automation.">
+    <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary: #16a571;
+            --primary-dark: #138a5e;
+            --secondary: #1a202c;
+            --secondary-light: #2d3748;
+            --accent: #667eea;
+            --danger: #e53e3e;
+            --warning: #ed8936;
+            --success: #48bb78;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+            position: relative;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         /* Header Styles */
@@ -158,8 +243,7 @@
             left: 100%;
         }
 
-        
-        /* Hamburger Menu - Clean Implementation */
+        /* Hamburger Menu */
         .hamburger-menu {
             display: none;
             width: 30px;
@@ -211,7 +295,7 @@
             transform-origin: center;
         }
 
-        /* Mobile Menu Overlay - Clean Implementation */
+        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -299,17 +383,15 @@
             box-shadow: var(--shadow-lg);
         }
 
-                /* Hero Section */
+        /* Hero Section */
         .hero {
             background: var(--gradient-secondary);
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
-        
-            margin-top: 80px;
         }
 
         .hero::before {
@@ -323,6 +405,12 @@
             background-size: 40px 40px;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
@@ -332,10 +420,6 @@
             animation: fadeInUp 0.8s ease-out;
             position: relative;
             z-index: 1;
-        }
-
-        .hero-highlight {
-            color: #16a571;
         }
 
         .hero-subtext {
@@ -349,6 +433,22 @@
             z-index: 1;
         }
 
+        .demo-results {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 500px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .demo-results h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -360,9 +460,9 @@
             }
         }
 
+        /* Section Styles */
         .section {
             padding: 80px 0;
-            clear: both;
         }
 
         .section-header {
@@ -373,619 +473,343 @@
         .section-header h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #1a202c;
+            color: var(--secondary);
+            font-weight: 800;
         }
 
-        /* Services Section */
-        .services-grid {
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin-bottom: 4rem;
         }
 
-        .service-card {
+        .stat-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            border-radius: 12px;
             text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: var(--transition-base);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
+        .stat-card:hover {
+            transform: translateY(-5px);
             box-shadow: var(--shadow-xl);
         }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-results {
-            background: #f0fff4;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #16a571;
-            margin: 1.5rem 0;
-        }
-
-        .service-results strong {
-            color: #16a571;
-        }
-
-        .guarantee-section {
-            background: #16a571;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .guarantee-banner {
-            background: rgba(255,255,255,0.1);
-            border: 2px solid white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 525px;
-        }
-
-        .cta-section {
-            background: #1a202c;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .logo img {
-                height: 70px;
-                max-width: 75px;
-                object-fit: contain;
-            }
-
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            .hero {
-                
-                padding: 40px 0 60px;
-            
-            margin-top: 80px;
-        }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-                        .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        
-
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: #ffffff;
-        }
-
-        /* Header Styles (Same as main site) */
-        
-
-        
-
-        
-
-        .logo img {
-            height: 80px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-        
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-item > a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 1rem 1.5rem;
+        .stat-number {
             display: block;
-            transition: all 0.3s;
-            border-radius: 6px;
-        }
-
-        .nav-item > a:hover {
-            color: #16a571;
-            background: rgba(22, 165, 113, 0.1);
-        }
-
-        
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 280px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.2s ease;
-            z-index: 1000;
-            border: 1px solid #e2e8f0;
-            max-height: 80px;
-            overflow-y: auto;
-        }
-
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        /* Ensure dropdowns are hidden by default */
-        .dropdown {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-        }
-        
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown a {
-            color: #1a202c;
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .dropdown a:hover {
-            background: #f8fafc;
-            color: #16a571;
-            padding-left: 2rem;
-        }
-
-        
-
-        .cta-button:hover {
-            background: #138a5e;
-            transform: translateY(-2px);
-        }
-
-        /* Page Styles */
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
-            color: white;
-            padding: 60px 0 80px;
-            text-align: center;
-            
-            position: relative;
-            overflow: hidden;
-        
-            margin-top: 80px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-
-        .hero-subtext {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 525px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .demo-results {
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 525px;
-        }
-
-        .section {
-            padding: 80px 0;
-            clear: both;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a202c;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
         }
 
+        /* Features Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
         }
 
         .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            background: var(--gray-50);
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleY(1);
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            border-color: #16a571;
+            box-shadow: var(--shadow-lg);
         }
 
         .feature-icon {
-            background: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
-            color: white;
-            width: 70px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
         }
 
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* How It Works Section */
         .how-it-works {
-            background: #f7fafc;
+            background: var(--gray-50);
         }
 
         .steps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
         .step-card {
             background: white;
             padding: 2rem;
             border-radius: 12px;
+            position: relative;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
 
         .step-number {
-            background: #16a571;
-            color: white;
             width: 50px;
-            height: 80px;
+            height: 50px;
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
             margin: 0 auto 1.5rem;
         }
 
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .step-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
         .pricing-section {
             background: white;
-            text-align: center;
         }
 
         .pricing-card {
+            max-width: 600px;
+            margin: 0 auto;
             background: white;
-            border: 2px solid #e2e8f0;
+            padding: 3rem;
             border-radius: 16px;
-            padding: 2rem;
-            max-width: 400px;
-            margin: 2rem auto;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            border: 2px solid var(--gray-200);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
         }
 
         .price {
             font-size: 3rem;
-            font-weight: 700;
-            color: #16a571;
-            margin: 1rem 0;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price::before {
+            content: '$';
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+
+        .price::after {
+            content: '/month';
+            font-size: 1rem;
+            color: var(--gray-500);
+            font-weight: normal;
         }
 
         .features-list {
             list-style: none;
+            padding: 0;
             margin: 2rem 0;
             text-align: left;
         }
 
         .features-list li {
-            padding: 0.5rem 0;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-100);
             position: relative;
             padding-left: 2rem;
         }
 
         .features-list li::before {
-            content: "✓";
-            color: #16a571;
-            font-weight: bold;
+            content: '✓';
             position: absolute;
             left: 0;
+            color: var(--primary);
+            font-weight: bold;
         }
 
+        /* Guarantee Section */
         .guarantee-section {
-            background: #16a571;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .cta-section {
-            background: #1a202c;
+            background: var(--gradient-secondary);
             color: white;
             padding: 80px 0;
             text-align: center;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+        .guarantee-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
         }
 
-        .stat-card {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 12px;
+        .guarantee-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .guarantee-section li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .guarantee-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .stat-number {
+        .cta-section h2 {
             font-size: 2.5rem;
-            font-weight: 700;
-            color: #16a571;
-            display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
         }
 
-        /* Mobile Styles */
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-section .form-group {
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-section input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            
+            .nav-menu {
+                display: none;
+            }
+
+            .cta-button:not(.mobile-cta-button) {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
 
             .logo img {
-            height: 70px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-        }
-
-            
-
-            
-
-            .hamburger-menu {
-                display: flex !important;
+                height: 70px;
+                max-width: 140px;
             }
-
-            .header 
-
-            
-
-            
-
-            .hamburger-menu {
-                display: flex !important;
-            }
-
-            .header 
 
             .hero {
-                
+                margin-top: 70px;
                 padding: 40px 0 60px;
-            
-            margin-top: 80px;
-        }
-
-            .hero h1 {
-                font-size: 2.5rem;
             }
 
-            .section-header h2 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .container {
-                padding: 0 1rem;
+            .hero-subtext {
+                font-size: 1rem;
             }
 
-                        .services-grid {
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .features-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
 
-        /* Loading Overlay */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
+            .pricing-card {
+                padding: 2rem;
+            }
 
-        .loading-overlay.loaded {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 80px;
-            border: 3px solid var(--gray-200);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-    
-        /* Desktop - Hide Mobile Menu */
-        @media (min-width: 769px) {
-            .mobile-menu-overlay {
-                display: none !important;
+            .price {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -1037,28 +861,33 @@
         </nav>
     </header>
         
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-            <div class="mobile-menu-content">
-                <div class="mobile-menu-header">
-                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
-                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
-                </div>
-                <nav class="mobile-nav">
-                    <a href="services.html" class="mobile-nav-link">Services</a>
-                    <a href="about.html" class="mobile-nav-link">About</a>
-                    <a href="pricing.html" class="mobile-nav-link">Resources</a>
-                    <a href="contact.html" class="mobile-nav-link">Contact</a>
-                    <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
-                </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
             </div>
+            <nav class="mobile-nav">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="pricing.html" class="mobile-nav-link">Resources</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+            </nav>
         </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>AI Lead Generation for Insurance Agencies</h1>
-            <p class="hero-subtext">Generate 50+ qualified insurance prospects weekly with our MCP automation system. AI finds, qualifies, and delivers hot leads 24/7 while you focus on closing deals.</p>
+            <h1>AI Lead Generation for Commercial insurance brokers</h1>
+            <p class="hero-subtext">Generate 50+ qualified B2B commercial prospects weekly with our MCP automation system. AI finds, qualifies, and delivers hot leads 24/7 while you focus on closing deals.</p>
             
             <div class="demo-results">
                 <h3>🔥 Real AI Test Results</h3>
@@ -1067,7 +896,7 @@
                 Brooklyn business test - August 2025</p>
             </div>
 
-            <div style="margin-top: 2rem;">
+            <div style="margin-top: 2rem; position: relative; z-index: 1;">
                 <a href="#cta" class="cta-button" style="background: white; color: #16a571; margin-right: 1rem;">Get Started Now</a>
                 <a href="#how-it-works" class="cta-button" style="background: transparent; border: 2px solid white;">See How It Works</a>
             </div>
@@ -1083,19 +912,19 @@
             </div>
 
             <div class="stats-grid">
-                <div class="stat-card" style="background: white; color: #1a202c; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="stat-card">
                     <span class="stat-number">24/7</span>
                     <span>Automated Prospecting</span>
                 </div>
-                <div class="stat-card" style="background: white; color: #1a202c; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="stat-card">
                     <span class="stat-number">50+</span>
                     <span>Qualified Leads Weekly</span>
                 </div>
-                <div class="stat-card" style="background: white; color: #1a202c; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="stat-card">
                     <span class="stat-number">15-25%</span>
                     <span>Qualification Rate</span>
                 </div>
-                <div class="stat-card" style="background: white; color: #1a202c; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="stat-card">
                     <span class="stat-number">$15-25</span>
                     <span>Cost Per Lead</span>
                 </div>
@@ -1112,7 +941,7 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-target"></i>
+                        <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Smart Lead Qualification</h3>
                     <p>Advanced algorithms score prospects based on company size, industry risk, growth signals, and insurance needs for highly qualified leads.</p>
@@ -1211,7 +1040,7 @@
 
             <div class="pricing-card">
                 <h3>AI Lead Engine Starter</h3>
-                <div class="price">$2,997</div>
+                <div class="price">2,997</div>
                 <p style="color: #4a5568; margin-bottom: 2rem;">Perfect for agencies ready to automate lead generation</p>
                 
                 <ul class="features-list">
@@ -1257,33 +1086,34 @@
     <!-- CTA Section -->
     <section class="cta-section" id="cta">
         <div class="container">
-            <h2>Ready to Automate Your Lead Generation?</h2>
-            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 525px; margin-left: auto; margin-right: auto;">
-                Get your free AI lead generation audit and see exactly how many qualified prospects are available in your market right now.
-            </p>
+            <h2>Start Generating AI-Powered Leads Today</h2>
+            <p>Join 50+ commercial insurance brokers using AI to generate qualified leads on autopilot</p>
             
-            <div style="margin: 2rem 0;">
-                <a href="mailto:sam@brokerleadengine.com?subject=AI Lead Generation Audit" class="cta-button" style="background: #16a571; margin: 0 0.5rem;">Get Your Free Audit</a>
-                <a href="tel:+13472013023" class="cta-button" style="background: transparent; border: 2px solid white; margin: 0 0.5rem;">Call: (347) 201-3023</a>
+            <div class="form-group">
+                <input type="email" placeholder="Enter your email address" id="email-input">
+                <input type="tel" placeholder="Enter your phone number" id="phone-input">
+                <button class="cta-button" style="width: 100%; padding: 1rem; font-size: 1.125rem;">Get Started with AI Lead Generation</button>
             </div>
-
-            <p style="margin-top: 2rem; opacity: 0.9;">
-                📧 <a href="mailto:sam@brokerleadengine.com" style="color: #16a571; text-decoration: none;">sam@brokerleadengine.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
-                🛡️ <strong>90-Day Results Guarantee</strong> - 300% more leads or money back
+            
+            <p style="font-size: 0.9rem; opacity: 0.9;">
+                Or call us directly: <a href="tel:+13472013023" style="color: white; font-weight: bold;">(347) 201-3023</a>
             </p>
         </div>
     </section>
 
-<!-- Legal Disclaimer Footer -->
+    <!-- Footer -->
     <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
         <div class="container">
-            <p style="margin-bottom: 1rem; opacity: 0.9;">                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC.                 Results may vary and are not guaranteed. Past performance does not guarantee future results.                 All marketing services are provided in compliance with applicable laws and regulations.
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
+                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+                All marketing services are provided in compliance with applicable laws and regulations.
             </p>
-            <p style="opacity: 0.7; font-size: 0.8rem;">                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+            <p style="opacity: 0.7; font-size: 0.8rem;">
+                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
             </p>
         </div>
     </footer>
-    
 
     <script>
         // Clean JavaScript - Page Loading and Menu
@@ -1296,40 +1126,59 @@
                 }, 100);
             }
 
-            
-    // Mobile Menu Toggle
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const closeMenu = document.getElementById('close-menu');
-    
-    function toggleMenu() {
-        if (hamburgerMenu && mobileMenuOverlay) {
-            hamburgerMenu.classList.toggle('active');
-            mobileMenuOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
-        }
-    }
-    
-    // Event listeners
-    if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-    if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking outside
-    if (mobileMenuOverlay) {
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                toggleMenu();
-            }
-        });
-    }
-    
-    // Close menu when clicking on navigation links
-    document.querySelectorAll('.mobile-nav-link, .mobile-cta-button').forEach(link => {
-        link.addEventListener('click', function() {
-            toggleMenu();
-        });
-    });
+            // Mobile Menu Toggle
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenu = document.getElementById('close-menu');
 
+            function toggleMenu() {
+                if (hamburgerMenu && mobileMenuOverlay) {
+                    hamburgerMenu.classList.toggle('active');
+                    mobileMenuOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+                }
+            }
+
+            // Event listeners
+            if (hamburgerMenu) {
+                hamburgerMenu.addEventListener('click', toggleMenu);
+            }
+
+            if (closeMenu) {
+                closeMenu.addEventListener('click', toggleMenu);
+            }
+
+            // Close menu when clicking on mobile nav links
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google PPC Advertising for Insurance | Broker Lead Engine</title>
-    <meta name="description" content="Generate immediate insurance leads with our proven Google Ads campaigns. Professional PPC management for insurance agencies.">
-    <meta name="keywords" content="insurance agency lead generation, insurance broker marketing automation, AI lead generation insurance, commercial insurance leads">
+    <meta name="description" content="Generate immediate commercial B2B leads with proven Google Ads campaigns. Professional PPC management with positive ROI guarantee.">
+    <meta name="keywords" content="Google PPC insurance, insurance Google Ads, PPC management insurance, insurance lead generation PPC">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
-    <meta property="og:description" content="Advanced AI automation system designed for $1M-$5M insurance agencies. Generate 50+ qualified leads weekly with proven methodology.">
+    <meta property="og:title" content="Google PPC for Commercial insurance brokers | Broker Lead Engine">
+    <meta property="og:description" content="Immediate commercial B2B leads with Google Ads. Professional PPC management with ROI guarantee.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/">
+    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/google-ppc.html">
     <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
     <meta property="og:site_name" content="Broker Lead Engine">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Broker Lead Engine - AI Lead Generation for Insurance Agencies">
-    <meta name="twitter:description" content="Generate 50+ qualified insurance leads weekly with AI automation. Proven system for $1M-$5M agencies.">
+    <meta name="twitter:title" content="Google PPC for Commercial insurance brokers">
+    <meta name="twitter:description" content="Capture high-intent insurance prospects with Google Ads.">
     <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -50,6 +50,53 @@
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: #ffffff;
+            position: relative;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         /* Header Styles */
@@ -196,8 +243,7 @@
             left: 100%;
         }
 
-        
-        /* Hamburger Menu - Clean Implementation */
+        /* Hamburger Menu */
         .hamburger-menu {
             display: none;
             width: 30px;
@@ -249,7 +295,7 @@
             transform-origin: center;
         }
 
-        /* Mobile Menu Overlay - Clean Implementation */
+        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -337,17 +383,15 @@
             box-shadow: var(--shadow-lg);
         }
 
-                /* Hero Section */
+        /* Hero Section */
         .hero {
             background: var(--gradient-secondary);
             color: white;
             padding: 60px 0 80px;
             text-align: center;
-            
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
-        
-            margin-top: 80px;
         }
 
         .hero::before {
@@ -359,227 +403,6 @@
             bottom: 0;
             background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
             background-size: 40px 40px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            animation: fadeInUp 0.8s ease-out;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-highlight {
-            color: #16a571;
-        }
-
-        .hero-subtext {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section {
-            padding: 80px 0;
-            clear: both;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a202c;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-            transition: var(--transition-base);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-results {
-            background: #f0fff4;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #16a571;
-            margin: 1.5rem 0;
-        }
-
-        .service-results strong {
-            color: #16a571;
-        }
-
-        .guarantee-section {
-            background: #16a571;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .guarantee-banner {
-            background: rgba(255,255,255,0.1);
-            border: 2px solid white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 525px;
-        }
-
-        .cta-section {
-            background: #1a202c;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .logo img {
-                height: 70px;
-                max-width: 75px;
-                object-fit: contain;
-            }
-
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            .header {
-                height: 70px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            .hero {
-                
-                padding: 40px 0 60px;
-            
-            margin-top: 80px;
-        }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-                        .services-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         .container {
@@ -588,344 +411,6 @@
             padding: 0 2rem;
         }
 
-        
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--gray-700);
-            background: #ffffff;
-            position: relative;
-        }
-
-        /* Loading Overlay */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
-
-        .loading-overlay.loaded {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--gray-200);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-                        /* Header Styles */
-        
-
-        
-
-        
-
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 175px;
-            width: auto;
-            max-width: 175px;
-            object-fit: contain;
-        }
-
-        
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-item > a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.3s;
-            border-radius: 6px;
-        }
-
-        .nav-item > a:hover {
-            color: #16a571;
-            background: rgba(22, 165, 113, 0.1);
-        }
-
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 280px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.2s ease;
-            z-index: 1000;
-            border: 1px solid #e2e8f0;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown a {
-            color: #1a202c;
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .dropdown a:hover {
-            background: #f8fafc;
-            color: #16a571;
-            padding-left: 2rem;
-        }
-
-        .cta-button {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 0.875rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition-base);
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            white-space: nowrap;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        
-        /* Hamburger Menu - Clean Implementation */
-        .hamburger-menu {
-            display: none;
-            width: 30px;
-            height: 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            position: relative;
-            z-index: 10001;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background: white;
-            position: absolute;
-            left: 0;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger-menu span:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .hamburger-menu span:nth-child(3) {
-            bottom: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 50%;
-            transform-origin: center;
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg);
-            bottom: 50%;
-            transform-origin: center;
-        }
-
-        /* Mobile Menu Overlay - Clean Implementation */
-        .mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: rgba(26, 32, 44, 0.98);
-            z-index: 10000;
-            transition: left 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .mobile-menu-overlay.active {
-            left: 0;
-        }
-
-        .mobile-menu-content {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 2rem;
-        }
-
-        .mobile-menu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-        }
-
-        .mobile-logo {
-            height: 75px;
-            width: auto;
-        }
-
-        .close-menu {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mobile-nav {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .mobile-nav-link {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 500;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: color 0.3s;
-        }
-
-        .mobile-nav-link:hover {
-            color: var(--primary);
-        }
-
-        .mobile-cta-button {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            margin-top: 2rem;
-            transition: all 0.3s;
-        }
-
-        .mobile-cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-                /* Hero Section */
-        .hero {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 60px 0 80px;
-            text-align: center;
-            
-            position: relative;
-            overflow: hidden;
-        
-            margin-top: 80px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
-            background-size: 40px 40px;
-        }
-
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
@@ -935,10 +420,6 @@
             animation: fadeInUp 0.8s ease-out;
             position: relative;
             z-index: 1;
-        }
-
-        .hero-highlight {
-            color: #16a571;
         }
 
         .hero-subtext {
@@ -963,31 +444,6 @@
             }
         }
 
-        .section {
-            padding: 80px 0;
-            clear: both;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a202c;
-            font-weight: 700;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--gray-600);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* PPC Results Highlight */
         .ppc-results {
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.3);
@@ -999,7 +455,7 @@
         }
 
         .ppc-results h3 {
-            color: #f6ad55;
+            color: var(--warning);
             font-size: 1.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
@@ -1008,6 +464,30 @@
         .ppc-results p {
             font-size: 1.1rem;
             line-height: 1.6;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Stats Section */
@@ -1041,7 +521,7 @@
             display: block;
             font-size: 3rem;
             font-weight: 800;
-            color: #f6ad55;
+            color: var(--warning);
             margin-bottom: 0.5rem;
         }
 
@@ -1051,7 +531,7 @@
             font-weight: 500;
         }
 
-        /* Features Section */
+        /* Features Grid */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1078,7 +558,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            background: linear-gradient(135deg, var(--warning) 0%, #f6ad55 100%);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s;
@@ -1096,19 +576,19 @@
         .feature-icon {
             width: 80px;
             height: 80px;
-            background: #fef5e7;
+            background: #fff5f5;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
             font-size: 2rem;
-            color: #f6ad55;
+            color: var(--warning);
             transition: var(--transition-base);
         }
 
         .feature-card:hover .feature-icon {
-            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            background: linear-gradient(135deg, var(--warning) 0%, #f6ad55 100%);
             color: white;
             transform: scale(1.1);
         }
@@ -1125,7 +605,7 @@
             line-height: 1.7;
         }
 
-        /* Campaigns Section */
+        /* Campaign Section */
         .campaigns-section {
             background: #f8fafc;
             padding: 80px 0;
@@ -1133,22 +613,22 @@
 
         .campaign-card {
             background: white;
+            padding: 2.5rem;
             border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
             box-shadow: var(--shadow-md);
-            border-left: 4px solid #f6ad55;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--warning);
             transition: var(--transition-base);
         }
 
         .campaign-card:hover {
-            transform: translateY(-2px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
 
         .campaign-card h3 {
             color: var(--gray-800);
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -1159,45 +639,8 @@
             line-height: 1.6;
         }
 
-        .campaign-card strong {
+        .campaign-card p strong {
             color: var(--gray-800);
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            overflow: hidden;
-            margin: 2rem 0;
-        }
-
-        thead {
-            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
-            color: white;
-        }
-
-        th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        th {
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        tbody tr:hover {
-            background: #fef5e7;
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
         }
 
         /* Pricing Section */
@@ -1226,7 +669,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+            background: linear-gradient(135deg, var(--warning) 0%, #f6ad55 100%);
         }
 
         .pricing-card h3 {
@@ -1238,7 +681,7 @@
 
         .price {
             font-size: 3rem;
-            color: #f6ad55;
+            color: var(--warning);
             font-weight: 800;
             margin-bottom: 0.5rem;
         }
@@ -1262,7 +705,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #f6ad55;
+            color: var(--warning);
             font-weight: bold;
         }
 
@@ -1270,219 +713,78 @@
             border-bottom: none;
         }
 
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
-            text-align: center;
-            transition: var(--transition-base);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-results {
-            background: #f0fff4;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #16a571;
-            margin: 1.5rem 0;
-        }
-
-        .service-results strong {
-            color: #16a571;
-        }
-
+        /* Guarantee Section */
         .guarantee-section {
-            background: #16a571;
+            background: var(--warning);
             color: white;
             padding: 80px 0;
             text-align: center;
         }
 
-        .guarantee-banner {
-            background: rgba(255,255,255,0.1);
-            border: 2px solid white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 525px;
+        .guarantee-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
 
+        /* CTA Section */
         .cta-section {
-            background: #1a202c;
+            background: var(--gradient-secondary);
             color: white;
             padding: 80px 0;
             text-align: center;
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
 
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Mobile Styles */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            
+            .nav-menu {
+                display: none;
+            }
+
+            .cta-button:not(.mobile-cta-button) {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
 
             .logo img {
                 height: 70px;
-                max-width: 75px;
-                object-fit: contain;
-            }
-
-            
-
-            
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
-            }
-
-            
-
-            
-
-            .hamburger-menu {
-                display: block !important;
-            }
-
-            .header .cta-button {
-                display: none;
+                max-width: 140px;
             }
 
             .hero {
-                
+                margin-top: 70px;
                 padding: 40px 0 60px;
-            
-            margin-top: 80px;
-        }
-
-            .hero h1 {
-                font-size: 2.5rem;
             }
 
-            .section-header h2 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .container {
-                padding: 0 1rem;
+            .hero-subtext {
+                font-size: 1rem;
             }
 
-                        .services-grid {
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .features-grid {
                 grid-template-columns: 1fr;
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Loading Overlay */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
-
-        .loading-overlay.loaded {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--gray-200);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-    
-        /* Desktop - Hide Mobile Menu */
-        @media (min-width: 769px) {
-            .mobile-menu-overlay {
-                display: none !important;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -1534,29 +836,33 @@
         </nav>
     </header>
         
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-            <div class="mobile-menu-content">
-                <div class="mobile-menu-header">
-                    <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
-                    <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
-                </div>
-                <nav class="mobile-nav">
-                    <a href="services.html" class="mobile-nav-link">Services</a>
-                    <a href="about.html" class="mobile-nav-link">About</a>
-                    <a href="pricing.html" class="mobile-nav-link">Resources</a>
-                    <a href="contact.html" class="mobile-nav-link">Contact</a>
-                    <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
-                </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+                <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
             </div>
+            <nav class="mobile-nav">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="pricing.html" class="mobile-nav-link">Resources</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+            </nav>
         </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
 
     <!-- Hero Section -->
-
     <section class="hero">
         <div class="container">
-            <h1>Google PPC for Insurance Agencies</h1>
-            <p class="hero-subtext">Capture high-intent prospects actively searching for insurance quotes. Our Google Ads campaigns target ready-to-buy customers with immediate results.</p>
+            <h1>Google PPC for Commercial insurance brokers</h1>
+            <p class="hero-subtext">Capture high-intent prospects actively searching for commercial insurance quotes. Our Google Ads campaigns target ready-to-buy customers with immediate results.</p>
             
             <div class="ppc-results">
                 <h3>🎯 Google PPC Results</h3>
@@ -1566,7 +872,7 @@
             </div>
 
             <div style="margin-top: 2rem;">
-                <a href="#cta" class="cta-button" style="background: white; color: #f6ad55; margin-right: 1rem;">Get PPC Audit</a>
+                <a href="#cta" class="cta-button" style="background: white; color: var(--warning); margin-right: 1rem;">Get PPC Audit</a>
                 <a href="#campaigns" class="cta-button" style="background: transparent; border: 2px solid white;">See Campaign Types</a>
             </div>
         </div>
@@ -1576,7 +882,7 @@
     <section class="section stats-section">
         <div class="container">
             <div class="section-header">
-                <h2>Why Google PPC Delivers the Highest Quality Insurance Leads</h2>
+                <h2>Why Google PPC Delivers the Highest Quality Commercial B2B leads</h2>
                 <p>Capture prospects at the exact moment they're ready to buy insurance</p>
             </div>
 
@@ -1605,7 +911,7 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Complete Google PPC Management for Insurance Agencies</h2>
+                <h2>Complete Google PPC Management for Commercial insurance brokers</h2>
                 <p>Professional campaign setup, management, and optimization</p>
             </div>
 
@@ -1628,10 +934,10 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-landing-page"></i>
+                        <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>Landing Page Optimization</h3>
-                    <p>High-converting landing pages designed specifically for insurance leads with quote forms, trust signals, and clear value propositions.</p>
+                    <p>High-converting landing pages designed specifically for commercial B2B leads with quote forms, trust signals, and clear value propositions.</p>
                 </div>
 
                 <div class="feature-card">
@@ -1644,7 +950,7 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-target"></i>
+                        <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Audience Targeting</h3>
                     <p>Advanced audience targeting including demographics, business size, industry, and behavioral signals to reach your ideal prospects.</p>
@@ -1671,7 +977,7 @@
 
             <div class="campaign-card">
                 <h3>🎯 High-Intent Search Campaigns</h3>
-                <p><strong>Target Keywords:</strong> "business insurance quote," "commercial insurance near me," "liability insurance quotes"</p>
+                <p><strong>Target Keywords:</strong> "business insurance quote," "commercial insurance near me," "liability commercial insurance quotes"</p>
                 <p><strong>Strategy:</strong> Target top positions for immediate visibility to ready-to-buy prospects</p>
                 <p><strong>Expected Results:</strong> 8-15% CTR, 15-25% conversion rate, $85-185 cost per lead</p>
             </div>
@@ -1696,50 +1002,6 @@
                 <p><strong>Strategy:</strong> Re-engage warm prospects with special offers and trust signals</p>
                 <p><strong>Expected Results:</strong> 15-25% CTR, 25-40% conversion rate, $25-45 CPC</p>
             </div>
-
-            <h3 style="text-align: center; margin: 3rem 0 2rem; color: #1a202c;">Google PPC Performance Benchmarks</h3>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Campaign Type</th>
-                        <th>Average CPC</th>
-                        <th>Click-Through Rate</th>
-                        <th>Conversion Rate</th>
-                        <th>Cost Per Lead</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>High-Intent Search</td>
-                        <td>$45-85</td>
-                        <td>8-15%</td>
-                        <td>15-25%</td>
-                        <td>$85-185</td>
-                    </tr>
-                    <tr>
-                        <td>Industry-Specific</td>
-                        <td>$35-65</td>
-                        <td>12-20%</td>
-                        <td>20-30%</td>
-                        <td>$65-145</td>
-                    </tr>
-                    <tr>
-                        <td>Competitor</td>
-                        <td>$25-45</td>
-                        <td>6-10%</td>
-                        <td>12-18%</td>
-                        <td>$45-95</td>
-                    </tr>
-                    <tr>
-                        <td>Remarketing</td>
-                        <td>$15-25</td>
-                        <td>15-25%</td>
-                        <td>25-40%</td>
-                        <td>$25-45</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </section>
 
@@ -1748,33 +1010,32 @@
         <div class="container">
             <div class="section-header">
                 <h2>Google PPC Management Investment</h2>
-                <p>Professional PPC management that maximizes your ad spend ROI</p>
+                <p>Professional PPC management that delivers positive ROI</p>
             </div>
 
             <div class="pricing-card">
                 <h3>Complete PPC Management</h3>
                 <div class="price">$1,497</div>
-                <p style="color: #4a5568; margin-bottom: 2rem;">Setup fee + 15% of ad spend monthly management</p>
+                <p style="color: var(--gray-600); margin-bottom: 2rem;">Per month + ad spend budget</p>
                 
                 <ul class="features-list">
-                    <li>Complete Google Ads account setup</li>
-                    <li>Keyword research and competitor analysis</li>
-                    <li>Campaign creation and optimization</li>
-                    <li>Professional ad copy and extensions</li>
+                    <li>Complete campaign setup and structure</li>
+                    <li>Keyword research and selection</li>
+                    <li>Ad copy creation and testing</li>
                     <li>Landing page optimization</li>
-                    <li>Bid management and budget optimization</li>
-                    <li>Conversion tracking and analytics setup</li>
-                    <li>Monthly performance reports</li>
-                    <li>Ongoing optimization and A/B testing</li>
+                    <li>Bid management and optimization</li>
+                    <li>Audience targeting and refinement</li>
+                    <li>Weekly performance reporting</li>
+                    <li>Conversion tracking setup</li>
                     <li>Dedicated account manager</li>
                 </ul>
 
-                <div style="background: #fef5e7; border: 2px solid #f6ad55; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
-                    <h4 style="color: #c05621; margin-bottom: 0.5rem;">🛡️ 90-Day ROI Guarantee</h4>
-                    <p style="color: #2d3748; margin: 0; font-weight: 600;">Positive ROI within 90 days or we work for free</p>
+                <div style="background: #fff5f5; border: 2px solid var(--warning); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
+                    <h4 style="color: var(--warning); margin-bottom: 0.5rem;">🛡️ 90-Day ROI Guarantee</h4>
+                    <p style="color: var(--gray-700); margin: 0; font-weight: 600;">Positive ROI within 90 days or management fees refunded</p>
                 </div>
 
-                <a href="#cta" class="cta-button" style="width: 100%; text-align: center; padding: 1.25rem; background: #f6ad55;">Get Started Now</a>
+                <a href="#cta" class="cta-button" style="width: 100%; text-align: center; padding: 1.25rem; background: linear-gradient(135deg, var(--warning) 0%, #f6ad55 100%);">Get Started Now</a>
             </div>
         </div>
     </section>
@@ -1782,18 +1043,15 @@
     <!-- Guarantee Section -->
     <section class="guarantee-section">
         <div class="container">
-            <h2>Our Google PPC ROI Guarantee</h2>
-            <p style="font-size: 1.1rem; margin: 2rem auto; max-width: 525px;">
-                We guarantee your Google PPC campaigns will generate positive ROI within 90 days, or we'll continue working for free until they do. That's how confident we are in our PPC expertise.
+            <h2>Our Google PPC Performance Guarantee</h2>
+            <p style="font-size: 1.1rem; margin: 2rem auto; max-width: 600px;">
+                We guarantee positive ROI from your Google Ads campaigns within 90 days. If your campaigns don't generate more revenue than they cost, we'll refund your management fees.
             </p>
-            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 525px;">
-                <h3>What Positive ROI Means:</h3>
-                <ul style="text-align: left; margin-top: 1rem;">
-                    <li>Ad spend generates more revenue than it costs</li>
-                    <li>Qualified leads that convert to paying clients</li>
-                    <li>Measurable return on your marketing investment</li>
-                    <li>Sustainable, profitable lead generation</li>
-                </ul>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 600px;">
+                <h3>Important Note:</h3>
+                <p style="margin-top: 1rem; font-weight: 600;">
+                    Ad spend budget is paid directly to Google and is separate from management fees. We recommend a minimum $2,000/month ad spend for competitive insurance keywords.
+                </p>
             </div>
         </div>
     </section>
@@ -1801,9 +1059,9 @@
     <!-- CTA Section -->
     <section class="cta-section" id="cta">
         <div class="container">
-            <h2>Ready to Generate High-Intent Insurance Leads?</h2>
-            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 525px; margin-left: auto; margin-right: auto;">
-                Get your free Google PPC audit and see how to capture prospects actively searching for insurance in your market.
+            <h2>Ready to Generate Immediate Commercial B2B leads?</h2>
+            <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Get your free PPC audit and see exactly how much you could be saving on cost-per-lead while increasing quality.
             </p>
             
             <div style="margin: 2rem 0;">
@@ -1813,21 +1071,24 @@
 
             <p style="margin-top: 2rem; opacity: 0.9;">
                 📧 <a href="mailto:sam@brokerleadengine.com" style="color: #16a571; text-decoration: none;">sam@brokerleadengine.com</a> | 📞 <a href="tel:+13472013023" style="color: #16a571; text-decoration: none;">(347) 201-3023</a> | 🏢 Based in Brooklyn, NY<br>
-                🛡️ <strong>90-Day ROI Guarantee</strong> - Positive returns or we work for free
+                🛡️ <strong>90-Day ROI Guarantee</strong> - Positive ROI or management fees refunded
             </p>
         </div>
     </section>
 
-<!-- Legal Disclaimer Footer -->
+    <!-- Footer -->
     <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
         <div class="container">
-            <p style="margin-bottom: 1rem; opacity: 0.9;">                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC.                 Results may vary and are not guaranteed. Past performance does not guarantee future results.                 All marketing services are provided in compliance with applicable laws and regulations.
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
+                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+                All marketing services are provided in compliance with applicable laws and regulations.
             </p>
-            <p style="opacity: 0.7; font-size: 0.8rem;">                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+            <p style="opacity: 0.7; font-size: 0.8rem;">
+                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
             </p>
         </div>
     </footer>
-    
 
     <script>
         // Clean JavaScript - Page Loading and Menu
@@ -1840,40 +1101,59 @@
                 }, 100);
             }
 
-            
-    // Mobile Menu Toggle
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const closeMenu = document.getElementById('close-menu');
-    
-    function toggleMenu() {
-        if (hamburgerMenu && mobileMenuOverlay) {
-            hamburgerMenu.classList.toggle('active');
-            mobileMenuOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
-        }
-    }
-    
-    // Event listeners
-    if (hamburgerMenu) hamburgerMenu.addEventListener('click', toggleMenu);
-    if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking outside
-    if (mobileMenuOverlay) {
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                toggleMenu();
-            }
-        });
-    }
-    
-    // Close menu when clicking on navigation links
-    document.querySelectorAll('.mobile-nav-link, .mobile-cta-button').forEach(link => {
-        link.addEventListener('click', function() {
-            toggleMenu();
-        });
-    });
+            // Mobile Menu Toggle
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenu = document.getElementById('close-menu');
 
+            function toggleMenu() {
+                if (hamburgerMenu && mobileMenuOverlay) {
+                    hamburgerMenu.classList.toggle('active');
+                    mobileMenuOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+                }
+            }
+
+            // Event listeners
+            if (hamburgerMenu) {
+                hamburgerMenu.addEventListener('click', toggleMenu);
+            }
+
+            if (closeMenu) {
+                closeMenu.addEventListener('click', toggleMenu);
+            }
+
+            // Close menu when clicking on mobile nav links
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
