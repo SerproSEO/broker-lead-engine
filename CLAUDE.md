@@ -371,6 +371,79 @@ When you say **"update memory"** or **"update your memory"**, I will:
 3. Record new insights, problems solved, or lessons learned
 4. Maintain complete continuity across all terminal sessions
 
+## Session History (2025-08-21)
+
+### StoryBrand Website Rewrite Project (Paused)
+**Status**: Started but paused for guarantee clarification
+**Goal**: Rewrite entire website using Donald Miller's StoryBrand framework
+**Key Requirements**:
+- Update text on EXISTING pages only (no new pages)
+- Remove ALL legally binding guarantees (no money-back, no 12-month promises)
+- Only guarantee: "More business within 90 days" (needs refinement)
+- Make copy short, concise, high-converting
+- Focus on making the broker the hero, not us
+- Use SEO keywords from DataForSEO research
+
+**StoryBrand Framework Applied**:
+1. Hero = Insurance broker seeking growth
+2. Problem = Losing money, feast-or-famine, losing to online giants
+3. Guide = Broker Lead Engine (with empathy and authority)
+4. Plan = Simple 3-step process
+5. Call to Action = Clear primary and transitional CTAs
+6. Success = Predictable leads, revenue growth, work-life balance
+7. Failure = Continue struggling, lose market share, burn out
+
+**Files Created**:
+- `index-storybrand.html` - Complete homepage rewrite (template ready)
+- `StoryBrand-Insurance-Framework.md` - Full framework documentation
+
+**Next Steps When Resumed**:
+1. Clarify exact guarantee wording
+2. Update index.html with approved copy
+3. Rewrite services, pricing, contact pages
+4. Update all other pages with consistent messaging
+5. Remove any money-back or binding guarantees
+
+## Recent StoryBrand Website Rewrite (2025-08-21)
+
+### Pages Updated with StoryBrand Framework
+Successfully rewrote 3 core pages using Donald Miller's StoryBrand framework:
+
+1. **index.html (Homepage)**
+   - Hero: "Stop Losing $47,000/Month to Bad Marketing" - addresses problem directly
+   - Services reframed as solutions to specific pain points
+   - Added mobile dropdown menu for Services navigation
+   - Changed guarantee to "More Business Within 90 Days" (non-binding per user request)
+
+2. **services.html**
+   - Hero: "Your Competition Is Stealing Your Best Prospects" - creates urgency
+   - Reframed stats to show cost of inaction ($47K lost monthly)
+   - Services presented as 3-step journey: Capture, Convert, Compound
+   - Guide positioning with empathy: "We Get It" section
+   - Added mobile dropdown for Services menu
+
+3. **pricing.html**
+   - Hero: "Stop Paying for Leads. Start Owning a System" - clear value proposition
+   - Simplified pricing from complex "franchise prototype" to clear tiers
+   - Packages: Market Domination ($4,997), Lead Generation ($2,997), Local SEO ($1,997), Email ($1,497), Quick Start ($997)
+   - Focus on transformation journey
+   - Clear recommendations based on agency stage
+
+### StoryBrand Implementation Details
+All pages now follow the 7-element framework:
+- **Customer as Hero**: Insurance brokers struggling with lead generation
+- **Problem**: External (need leads), Internal (frustration/stress), Philosophical (unfair competition)
+- **Guide**: Broker Lead Engine with empathy ("We Get It") and authority (200+ agencies)
+- **Plan**: Simple 3-step process across all pages
+- **Call to Action**: Direct (Schedule Call) and Transitional (Free Audit)
+- **Failure**: Competition stealing prospects, losing $47K/month
+- **Success**: Market domination, predictable growth, time freedom
+
+### Blog Content
+User opened: `c:\Users\b\Documents\GitHub\broker-lead-engine21\blog\insurance-brokers-guide-competing-online-giants.html`
+- One of the comprehensive blog articles created earlier
+- Part of content marketing strategy for SEO
+
 ## Session History (2025-08-10)
 
 ### Claude Opus Configuration Session
@@ -552,3 +625,6 @@ When you say **"update memory"** or **"update your memory"**, I will:
 
 Last updated: 2025-08-05
 - add to memory
+- memory
+- memory
+- Save this to your memory please.
