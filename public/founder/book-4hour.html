@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 4-Hour Workweek - Book Summary by Samuel Ochoa</title>
+    <meta name="description" content="Escape 9-5, Live Anywhere, and Join the New Rich - Why this book matters for entrepreneurs.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .hero {
+            margin-top: 80px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .book-header {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .book-cover {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .book-info h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        
+        .book-info .author {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .book-info .tagline {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .amazon-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        
+        .amazon-btn:hover {
+            background: #e88800;
+        }
+        
+        .content-section {
+            padding: 80px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .summary-box {
+            background: #f7f8fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .summary-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .summary-box p {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .key-concepts {
+            margin-bottom: 60px;
+        }
+        
+        .key-concepts h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .concept {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .concept h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .concept p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .application-box {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .application-box h4 {
+            font-size: 18px;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .application-box p {
+            color: #558b2f;
+            font-size: 16px;
+        }
+        
+        .quotes-section {
+            background: #f7f8fa;
+            padding: 60px 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .quotes-section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .quote {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .quote::before {
+            content: """;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 48px;
+            color: #667eea;
+            opacity: 0.3;
+        }
+        
+        .quote p {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .takeaways {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .takeaways h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .takeaway-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaway-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 18px;
+            color: #555;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .takeaway-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .takeaway-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 600;
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .book-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .book-info h1 {
+                font-size: 32px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Samuel Ochoa</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="silver-bullets.html">Silver Bullets</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="book-header">
+                <div class="book-cover">
+                    <div style="width: 100%; height: 400px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">
+                        Book Cover
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h1>The 4-Hour Workweek</h1>
+                    <p class="author">by Tim Ferriss</p>
+                    <p class="tagline">Escape 9-5, Live Anywhere, and Join the New Rich</p>
+                    <a href="https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357" target="_blank" class="amazon-btn">Get it on Amazon →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="summary-box">
+                <h2>Why This Book Changed Everything</h2>
+                <p>This book showed me that freedom is possible. Ferriss provides the tactical blueprint for automating income and designing your ideal lifestyle. After implementing his strategies, I cut my work hours by 80% while doubling revenue.</p>
+            </div>
+
+            <div class="key-concepts">
+                <h2>Key Concepts That Matter</h2>
+                
+                
+                <div class="concept">
+                    <h3>1. Definition: What Do You Really Want?</h3>
+                    <p>Most people don't want to be millionaires—they want the lifestyle they think millions will buy. Define your ideal lifestyle first, then reverse-engineer the income needed.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>I calculated I needed $10K/month for my ideal life, not millions. This clarity made the path much simpler and faster.</p>
+                    </div>
+                </div>
+                
+                <div class="concept">
+                    <h3>2. Elimination: The 80/20 Principle</h3>
+                    <p>80% of results come from 20% of efforts. Identify and focus on the vital few, eliminate or delegate the rest.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>I identified that 20% of clients generated 80% of revenue. Fired the bottom 80%, doubled prices for the top 20%. Less work, more money.</p>
+                    </div>
+                </div>
+                
+                <div class="concept">
+                    <h3>3. Automation: Income Autopilot</h3>
+                    <p>Build systems that generate income without your daily involvement. Use virtual assistants, automation tools, and systemization.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>Built automated lead generation and email sequences. Now generate 50+ leads weekly with zero manual work.</p>
+                    </div>
+                </div>
+                
+                <div class="concept">
+                    <h3>4. Liberation: Remote Work Revolution</h3>
+                    <p>Prove you're more productive remotely, then negotiate location independence. Or build a business that's remote by design.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>Built entire business to be location-independent from day one. Can run everything from a laptop anywhere with wifi.</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="quotes-section">
+                <h2>Quotes That Stick</h2>
+                
+                
+                <div class="quote">
+                    <p>"What we fear doing most is usually what we most need to do."</p>
+                </div>
+                
+                <div class="quote">
+                    <p>"Focus on being productive instead of busy."</p>
+                </div>
+                
+                <div class="quote">
+                    <p>"Someday is a disease that will take your dreams to the grave with you."</p>
+                </div>
+                
+                <div class="quote">
+                    <p>"The question you should be asking isn't "What do I want?" but "What would excite me?""</p>
+                </div>
+                
+            </div>
+
+            <div class="takeaways">
+                <h2>My Top 10 Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>Define your ideal lifestyle first, then build a business to fund it</li><li>Eliminate before you delegate, delegate before you automate</li><li>Parkinson's Law: Work expands to fill the time given—set aggressive deadlines</li><li>Batch similar tasks and check email only twice daily</li><li>Create products that sell themselves while you sleep</li><li>Mini-retirements beat saving everything for traditional retirement</li><li>Fear-setting is more important than goal-setting</li><li>Being busy is a form of laziness—lazy thinking and indiscriminate action</li><li>Most things are not urgent and not important</li><li>Perfect is the enemy of done—launch at 80% and iterate</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Knowledge + Action = Results</p>
+            <div class="cta-buttons">
+                <a href="https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357" target="_blank" class="btn">Get the Book</a>
+                <a href="contact.html" class="btn">Work With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="silver-bullets.html">Silver Bullets</a>
+                <a href="books.html">Books</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 Samuel Ochoa. Building the future, one system at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>

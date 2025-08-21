@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cold Email Marketing for Insurance | Broker Lead Engine</title>
+ <meta name="description" content="Professional cold email campaigns that convert prospects into insurance clients. Automated outreach that gets results.">
+ <meta name="keywords" content="cold email insurance, email marketing insurance, B2B email outreach, insurance lead generation email">
+ 
+ <!-- Open Graph Meta Tags -->
+ <meta property="og:title" content="Cold Email Marketing | Broker Lead Engine">
+ <meta property="og:description" content="Direct access to decision-makers' inboxes. Professional cold email campaigns with 25-35% open rates.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/cold-email.html">
+ <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+ <meta property="og:site_name" content="Broker Lead Engine">
+ <meta property="og:locale" content="en_US">
+ 
+ <!-- Twitter Card Meta Tags -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Cold Email Marketing | Broker Lead Engine">
+ <meta name="twitter:description" content="Professional cold email campaigns for commercial insurance brokers. 3-5% conversion to qualified meetings.">
+ <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ <style>
+ :root {
+ --primary: #16a571;
+ --primary-dark: #138a5e;
+ --secondary: #1a202c;
+ --secondary-light: #2d3748;
+ --accent: #667eea;
+ --danger: #e53e3e;
+ --danger-light: #fc8181;
+ --danger-lighter: #fed7d7;
+ --danger-lightest: #fbb6ce;
+ --warning: #ed8936;
+ --success: #48bb78;
+ --gray-50: #f7fafc;
+ --gray-100: #edf2f7;
+ --gray-200: #e2e8f0;
+ --gray-300: #cbd5e0;
+ --gray-400: #a0aec0;
+ --gray-500: #718096;
+ --gray-600: #4a5568;
+ --gray-700: #2d3748;
+ --gray-800: #1a202c;
+ --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+ --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+ --gradient-danger: linear-gradient(135deg, #e53e3e 0%, #fc8181 100%);
+ --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+ --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+ --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+ --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+ line-height: 1.6;
+ color: var(--gray-700);
+ background: #ffffff;
+ position: relative;
+ }
+
+ /* Loading Overlay */
+ .loading-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: white;
+ z-index: 9999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: opacity 0.5s;
+ }
+
+ .loading-overlay.loaded {
+ opacity: 0;
+ pointer-events: none;
+ }
+
+ .loader {
+ width: 50px;
+ height: 50px;
+ border: 3px solid var(--gray-200);
+ border-top-color: var(--primary);
+ border-radius: 50%;
+ animation: spin 1s linear infinite;
+ }
+
+ @keyframes spin {
+ to { transform: rotate(360deg); }
+ }
+
+ /* Header Styles */
+ .header {
+ background: var(--secondary);
+ color: white;
+ padding: 1rem 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 9999;
+ box-shadow: var(--shadow-lg);
+ backdrop-filter: blur(10px);
+ background: rgba(26, 32, 44, 0.98);
+ height: 80px;
+ display: flex;
+ align-items: center;
+ }
+
+ .nav-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+ width: 100%;
+ }
+
+ .logo {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+
+ .logo img {
+ height: 175px;
+ width: auto;
+ max-width: 175px;
+ object-fit: contain;
+ }
+
+ .nav-menu {
+ display: flex;
+ list-style: none;
+ gap: 0;
+ align-items: center;
+ margin: 0;
+ padding: 0;
+ }
+
+ .nav-item {
+ position: relative;
+ }
+
+ .nav-item > a {
+ color: white;
+ text-decoration: none;
+ font-weight: 500;
+ padding: 1rem 1.5rem;
+ display: block;
+ transition: all 0.3s;
+ border-radius: 6px;
+ }
+
+ .nav-item > a:hover {
+ color: #16a571;
+ background: rgba(22, 165, 113, 0.1);
+ }
+
+ .dropdown {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ background: white;
+ min-width: 280px;
+ box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+ border-radius: 8px;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(-10px);
+ transition: all 0.2s ease;
+ z-index: 1000;
+ border: 1px solid #e2e8f0;
+ max-height: 400px;
+ overflow-y: auto;
+ }
+
+ .nav-item:hover .dropdown {
+ opacity: 1;
+ visibility: visible;
+ transform: translateY(0);
+ }
+
+ .dropdown a {
+ color: #1a202c;
+ text-decoration: none;
+ padding: 1rem 1.5rem;
+ display: block;
+ transition: all 0.2s ease;
+ border-bottom: 1px solid #f1f5f9;
+ }
+
+ .dropdown a:hover {
+ background: #f8fafc;
+ color: #16a571;
+ padding-left: 2rem;
+ }
+
+ .cta-button {
+ background: var(--gradient-primary);
+ color: white;
+ padding: 0.875rem 2rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ transition: var(--transition-base);
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ overflow: hidden;
+ box-shadow: var(--shadow-md);
+ white-space: nowrap;
+ }
+
+ .cta-button::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: rgba(255, 255, 255, 0.2);
+ transition: left 0.5s;
+ }
+
+ .cta-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-xl);
+ }
+
+ .cta-button:hover::before {
+ left: 100%;
+ }
+
+ /* Hamburger Menu */
+ .hamburger-menu {
+ display: none;
+ width: 30px;
+ height: 24px;
+ background: none;
+ border: none;
+ cursor: pointer;
+ padding: 0;
+ position: relative;
+ z-index: 10001;
+ }
+
+ .hamburger-menu span {
+ display: block;
+ width: 100%;
+ height: 3px;
+ background: white;
+ position: absolute;
+ left: 0;
+ transition: all 0.3s ease;
+ }
+
+ .hamburger-menu span:nth-child(1) {
+ top: 0;
+ }
+
+ .hamburger-menu span:nth-child(2) {
+ top: 50%;
+ transform: translateY(-50%);
+ }
+
+ .hamburger-menu span:nth-child(3) {
+ bottom: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(1) {
+ transform: rotate(45deg);
+ top: 50%;
+ transform-origin: center;
+ }
+
+ .hamburger-menu.active span:nth-child(2) {
+ opacity: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(3) {
+ transform: rotate(-45deg);
+ bottom: 50%;
+ transform-origin: center;
+ }
+
+ /* Mobile Menu Overlay */
+ .mobile-menu-overlay {
+ position: fixed;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100vh;
+ background: rgba(26, 32, 44, 0.98);
+ z-index: 10000;
+ transition: left 0.3s ease;
+ overflow-y: auto;
+ }
+
+ .mobile-menu-overlay.active {
+ left: 0;
+ }
+
+ .mobile-menu-content {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ padding: 2rem;
+ }
+
+ .mobile-menu-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 3rem;
+ }
+
+ .mobile-logo {
+ height: 75px;
+ width: auto;
+ }
+
+ .close-menu {
+ background: none;
+ border: none;
+ color: white;
+ font-size: 2rem;
+ cursor: pointer;
+ padding: 0;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .mobile-nav {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ }
+
+ .mobile-nav-link {
+ color: white;
+ text-decoration: none;
+ font-size: 1.5rem;
+ font-weight: 500;
+ padding: 1rem 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ transition: color 0.3s;
+ }
+
+ .mobile-nav-link:hover {
+ color: var(--primary);
+ }
+
+ .mobile-cta-button {
+ background: var(--gradient-primary);
+ color: white;
+ padding: 1rem 2rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ text-align: center;
+ margin-top: 2rem;
+ transition: all 0.3s;
+ }
+
+ .mobile-cta-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ /* Hero Section */
+ .hero {
+ background: var(--gradient-secondary);
+ color: white;
+ padding: 60px 0 80px;
+ text-align: center;
+ margin-top: 80px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+ background-size: 40px 40px;
+ }
+
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ }
+
+ .hero h1 {
+ font-size: 3.5rem;
+ margin-bottom: 1.5rem;
+ line-height: 1.2;
+ font-weight: 800;
+ letter-spacing: -0.02em;
+ animation: fadeInUp 0.8s ease-out;
+ position: relative;
+ z-index: 1;
+ }
+
+ .hero-subtitle {
+ font-size: 1.25rem;
+ margin-bottom: 2rem;
+ opacity: 0.9;
+ max-width: 700px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ z-index: 1;
+ }
+
+ @keyframes fadeInUp {
+ from {
+ opacity: 0;
+ transform: translateY(30px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+ }
+
+ .email-results {
+ background: rgba(255, 255, 255, 0.1);
+ border: 2px solid rgba(255, 255, 255, 0.3);
+ border-radius: 12px;
+ padding: 2rem;
+ margin: 2rem auto;
+ max-width: 600px;
+ backdrop-filter: blur(10px);
+ position: relative;
+ z-index: 1;
+ }
+
+ .email-results h3 {
+ color: var(--danger-lightest);
+ font-size: 1.5rem;
+ margin-bottom: 1rem;
+ font-weight: 700;
+ }
+
+ .email-results p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ }
+
+ /* Content Sections */
+ .content-section {
+ padding: 100px 0;
+ }
+
+ .content-section.gray-bg {
+ background: var(--gray-50);
+ }
+
+ .section-title {
+ font-size: 2.5rem;
+ text-align: center;
+ margin-bottom: 1rem;
+ color: var(--gray-800);
+ font-weight: 700;
+ }
+
+ .section-subtitle {
+ font-size: 1.2rem;
+ color: var(--gray-600);
+ text-align: center;
+ max-width: 600px;
+ margin: 0 auto 3rem;
+ }
+
+ /* Stats Grid */
+ .stats-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+
+ .stat-card {
+ text-align: center;
+ padding: 2rem;
+ background: white;
+ border-radius: 12px;
+ box-shadow: var(--shadow-md);
+ transition: var(--transition-base);
+ }
+
+ .stat-card:hover {
+ transform: translateY(-4px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .stat-number {
+ display: block;
+ font-size: 3rem;
+ font-weight: 800;
+ color: var(--danger);
+ margin-bottom: 0.5rem;
+ }
+
+ .stat-text {
+ font-size: 1rem;
+ color: var(--gray-600);
+ font-weight: 500;
+ }
+
+ /* Features Grid */
+ .features-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+
+ .feature-card {
+ background: white;
+ padding: 2.5rem;
+ border-radius: 12px;
+ box-shadow: var(--shadow-md);
+ text-align: center;
+ transition: var(--transition-base);
+ border: 2px solid transparent;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .feature-card::before {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: var(--gradient-danger);
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.3s;
+ }
+
+ .feature-card:hover {
+ transform: translateY(-8px);
+ box-shadow: var(--shadow-xl);
+ }
+
+ .feature-card:hover::before {
+ transform: scaleX(1);
+ }
+
+ .feature-icon {
+ width: 80px;
+ height: 80px;
+ background: var(--danger-lighter);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto 1.5rem;
+ font-size: 2rem;
+ color: var(--danger);
+ transition: var(--transition-base);
+ }
+
+ .feature-card:hover .feature-icon {
+ background: var(--gradient-danger);
+ color: white;
+ transform: scale(1.1);
+ }
+
+ .feature-card h3 {
+ color: var(--gray-800);
+ margin-bottom: 1rem;
+ font-size: 1.3rem;
+ font-weight: 600;
+ }
+
+ .feature-card p {
+ color: var(--gray-600);
+ line-height: 1.7;
+ }
+
+ /* Sequence Cards */
+ .sequence-card {
+ background: white;
+ border-radius: 12px;
+ padding: 2rem;
+ margin-bottom: 1.5rem;
+ box-shadow: var(--shadow-md);
+ border-left: 4px solid var(--danger);
+ transition: var(--transition-base);
+ }
+
+ .sequence-card:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .sequence-card h3 {
+ color: var(--gray-800);
+ font-size: 1.4rem;
+ margin-bottom: 1rem;
+ font-weight: 600;
+ }
+
+ .sequence-card p {
+ color: var(--gray-600);
+ margin-bottom: 0.75rem;
+ line-height: 1.6;
+ }
+
+ .sequence-card strong {
+ color: var(--gray-800);
+ }
+
+ /* Email Example */
+ .email-example {
+ background: var(--gray-50);
+ border: 1px solid var(--gray-200);
+ border-radius: 8px;
+ padding: 1.5rem;
+ margin: 1.5rem 0;
+ font-family: 'Courier New', monospace;
+ font-size: 0.9rem;
+ line-height: 1.6;
+ color: var(--gray-700);
+ }
+
+ /* Compliance Section */
+ .compliance-section {
+ background: var(--danger-lighter);
+ border: 2px solid var(--danger);
+ border-radius: 12px;
+ padding: 2rem;
+ margin: 2rem 0;
+ }
+
+ .compliance-section h3 {
+ color: #742a2a;
+ margin-bottom: 1rem;
+ font-size: 1.4rem;
+ }
+
+ .compliance-section p {
+ color: var(--gray-700);
+ margin-bottom: 1rem;
+ }
+
+ .compliance-section ul {
+ list-style: none;
+ padding: 0;
+ margin-top: 1rem;
+ }
+
+ .compliance-section li {
+ padding: 0.5rem 0;
+ color: var(--gray-700);
+ position: relative;
+ padding-left: 1.5rem;
+ }
+
+ .compliance-section li::before {
+ content: '✓';
+ position: absolute;
+ left: 0;
+ color: var(--danger);
+ font-weight: bold;
+ }
+
+ /* Pricing Card */
+ .pricing-card {
+ background: white;
+ border: 2px solid var(--gray-200);
+ border-radius: 16px;
+ padding: 3rem;
+ max-width: 600px;
+ margin: 0 auto;
+ box-shadow: var(--shadow-lg);
+ position: relative;
+ overflow: hidden;
+ text-align: center;
+ }
+
+ .pricing-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: var(--gradient-danger);
+ }
+
+ .pricing-card h3 {
+ color: var(--gray-800);
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ font-weight: 700;
+ }
+
+ .price {
+ font-size: 3rem;
+ color: var(--danger);
+ font-weight: 800;
+ margin-bottom: 0.5rem;
+ }
+
+ .price-subtitle {
+ color: var(--gray-600);
+ margin-bottom: 2rem;
+ }
+
+ .features-list {
+ list-style: none;
+ padding: 0;
+ margin: 2rem 0;
+ text-align: left;
+ }
+
+ .features-list li {
+ padding: 0.75rem 0;
+ border-bottom: 1px solid var(--gray-100);
+ color: var(--gray-700);
+ position: relative;
+ padding-left: 2rem;
+ }
+
+ .features-list li::before {
+ content: '✓';
+ position: absolute;
+ left: 0;
+ color: var(--danger);
+ font-weight: bold;
+ }
+
+ .features-list li:last-child {
+ border-bottom: none;
+ }
+
+ .guarantee-box {
+ background: var(--danger-lighter);
+ border: 2px solid var(--danger);
+ border-radius: 12px;
+ padding: 1.5rem;
+ margin: 2rem 0;
+ text-align: center;
+ }
+
+ .guarantee-box h4 {
+ color: #742a2a;
+ margin-bottom: 0.5rem;
+ }
+
+ .guarantee-box p {
+ color: var(--gray-700);
+ margin: 0;
+ font-weight: 600;
+ }
+
+ /* CTA Section */
+ .cta-section {
+ background: var(--primary);
+ color: white;
+ padding: 100px 0;
+ text-align: center;
+ }
+
+ .cta-section h2 {
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
+ font-weight: 700;
+ }
+
+ .cta-section p {
+ font-size: 1.2rem;
+ line-height: 1.6;
+ margin-bottom: 1rem;
+ max-width: 800px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+
+ .cta-section .cta-button {
+ background: white;
+ color: var(--primary);
+ font-size: 1.1rem;
+ padding: 1.25rem 2.5rem;
+ margin-top: 1rem;
+ }
+
+ .cta-section .cta-button:hover {
+ background: var(--gray-100);
+ }
+
+ .cta-section .cta-button i {
+ margin-right: 0.5rem;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+ .nav-menu {
+ display: none;
+ }
+
+ .cta-button:not(.mobile-cta-button) {
+ display: none;
+ }
+
+ .hamburger-menu {
+ display: block;
+ }
+
+ .logo img {
+ height: 70px;
+ max-width: 140px;
+ }
+
+ .hero {
+ margin-top: 70px;
+ padding: 40px 0 60px;
+ }
+
+ .hero h1 {
+ font-size: 2rem;
+ }
+
+ .hero-subtitle {
+ font-size: 1rem;
+ }
+
+ .section-title {
+ font-size: 1.75rem;
+ }
+
+ .features-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .stats-grid {
+ grid-template-columns: repeat(2, 1fr);
+ }
+
+ .cta-section h2 {
+ font-size: 2rem;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- Header -->
+ <header class="header">
+ <nav class="nav-container">
+ <div class="logo">
+ <a href="index.html">
+ <img src="logo.png" alt="Broker Lead Engine Logo">
+ </a>
+ </div>
+ <ul class="nav-menu">
+ <li class="nav-item">
+ <a href="services.html">Services</a>
+ <div class="dropdown">
+ <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+ <a href="local-seo.html">📍 Local SEO</a>
+ <a href="google-ppc.html">🎯 Google PPC</a>
+ <a href="meta-ads.html">📱 Meta Ads</a>
+ <a href="cold-email.html">📧 Cold Email</a>
+ <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a href="about.html">About</a>
+ <div class="dropdown">
+ <a href="about.html">🏢 About Us</a>
+ <a href="success-stories.html">🏆 Success Stories</a>
+ <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+ <a href="guarantee.html">🛡️ Our Guarantee</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a href="pricing.html">Resources</a>
+ <div class="dropdown">
+ <a href="pricing.html">💰 Pricing</a>
+ <a href="ai-demo.html">🤖 AI Demo</a>
+ <a href="faq.html">❓ FAQ</a>
+ <a href="privacy-policy.html">🔒 Privacy Policy</a>
+ <a href="terms-of-service.html">📄 Terms of Service</a>
+ </div>
+ </li>
+ <li class="nav-item"><a href="contact.html">Contact</a></li>
+ </ul>
+ <a href="contact.html" class="cta-button">Start Generating Leads</a>
+ 
+ <!-- Hamburger Menu Button -->
+ <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+ <span></span>
+ <span></span>
+ <span></span>
+ </button>
+ </nav>
+ </header>
+ 
+ <!-- Mobile Menu Overlay -->
+ <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+ <div class="mobile-menu-content">
+ <div class="mobile-menu-header">
+ <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+ <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+ </div>
+ <nav class="mobile-nav">
+ <a href="services.html" class="mobile-nav-link">Services</a>
+ <a href="about.html" class="mobile-nav-link">About</a>
+ <a href="pricing.html" class="mobile-nav-link">Resources</a>
+ <a href="contact.html" class="mobile-nav-link">Contact</a>
+ <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+ </nav>
+ </div>
+ </div>
+
+ <!-- Loading Overlay -->
+ <div class="loading-overlay" id="loadingOverlay">
+ <div class="loader"></div>
+ </div>
+
+ <!-- Hero Section -->
+ <section class="hero">
+ <div class="container">
+ <h1>Direct Access to<br><span style="color: #fbb6ce;">Decision-Makers' Inboxes</span></h1>
+ <p class="hero-subtitle">Reach business owners directly with personalized, compliant email campaigns. Our proven sequences convert 3-5% of prospects into qualified sales meetings.</p>
+ 
+ <div class="email-results">
+ <h3>📧 Cold Email Performance</h3>
+ <p><strong>Industry-beating results</strong><br>
+ 25-35% open rates • 3-7% click rates<br>
+ 1-3% reply rates • 15% reply-to-meeting conversion</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Stats Section -->
+ <section class="content-section gray-bg">
+ <div class="container">
+ <h2 class="section-title">Why Cold Email Works for Insurance Lead Generation</h2>
+ <p class="section-subtitle">Direct, personalized outreach to decision-makers at scale</p>
+
+ <div class="stats-grid">
+ <div class="stat-card">
+ <span class="stat-number">25-35%</span>
+ <span class="stat-text">Open rates (vs 18% industry average)</span>
+ </div>
+ <div class="stat-card">
+ <span class="stat-number">3-7%</span>
+ <span class="stat-text">Click rates (vs 2% industry average)</span>
+ </div>
+ <div class="stat-card">
+ <span class="stat-number">1-3%</span>
+ <span class="stat-text">Reply rates from cold prospects</span>
+ </div>
+ <div class="stat-card">
+ <span class="stat-number">15%</span>
+ <span class="stat-text">Reply to meeting conversion rate</span>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Features Section -->
+ <section class="content-section">
+ <div class="container">
+ <h2 class="section-title">Complete Cold Email Campaign Management</h2>
+ <p class="section-subtitle">Professional email sequences that generate qualified insurance leads</p>
+
+ <div class="features-grid">
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-search"></i>
+ </div>
+ <h3>Prospect Research & List Building</h3>
+ <p>Deep research to identify decision-makers at target companies with verified email addresses and company-specific personalization data.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-edit"></i>
+ </div>
+ <h3>Personalized Email Sequences</h3>
+ <p>Multi-touch email sequences with company-specific research, industry expertise, and personalized value propositions that convert.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-server"></i>
+ </div>
+ <h3>Infrastructure Setup</h3>
+ <p>Professional email infrastructure with multiple domains, IP warming, and deliverability optimization to ensure inbox placement.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-chart-line"></i>
+ </div>
+ <h3>A/B Testing & Optimization</h3>
+ <p>Continuous testing of subject lines, email copy, call-to-actions, and send times to maximize open rates and responses.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-shield-alt"></i>
+ </div>
+ <h3>Compliance Management</h3>
+ <p>Full CAN-SPAM compliance with proper opt-out mechanisms, sender identification, and legal requirement adherence.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-analytics"></i>
+ </div>
+ <h3>Performance Tracking</h3>
+ <p>Detailed analytics on open rates, click rates, reply rates, and meeting conversions with actionable optimization insights.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Email Sequences Section -->
+ <section class="content-section gray-bg">
+ <div class="container">
+ <h2 class="section-title">Proven Cold Email Sequences for Commercial insurance brokers</h2>
+ <p class="section-subtitle">Strategic 5-email sequences that convert prospects to meetings</p>
+
+ <div class="sequence-card">
+ <h3>📧 Email #1: The Hook (Day 1)</h3>
+ <p><strong>Subject:</strong> How a $3M Brooklyn agency generates 145+ leads weekly</p>
+ <p><strong>Strategy:</strong> Lead with specific results and create curiosity</p>
+ <p><strong>Goal:</strong> Establish credibility and introduce value proposition</p>
+ </div>
+
+ <div class="email-example">
+ <strong>Sample Email #1:</strong><br><br>
+ Hi [First Name],<br><br>
+ I just helped a $3M insurance agency in Brooklyn implement an AI automation system that's generating 145+ qualified leads every week.<br><br>
+ The results? $200K+ in new premium pipeline... in just 23 minutes of setup.<br><br>
+ Most agencies are still manually calling business directories while smart brokers are using AI to scrape, qualify, and prioritize leads automatically.<br><br>
+ Want to see how they're doing it?<br><br>
+ Best,<br>
+ Samuel Ochoa<br>
+ Broker Lead Engine
+ </div>
+
+ <div class="sequence-card">
+ <h3>📧 Email #2: Social Proof (Day 3)</h3>
+ <p><strong>Subject:</strong> [First Name], 89 new policies from AI automation</p>
+ <p><strong>Strategy:</strong> Share detailed case study with specific numbers</p>
+ <p><strong>Goal:</strong> Build trust through proven results</p>
+ </div>
+
+ <div class="sequence-card">
+ <h3>📧 Email #3: FOMO + Urgency (Day 5)</h3>
+ <p><strong>Subject:</strong> Your competitors are already using this</p>
+ <p><strong>Strategy:</strong> Create fear of missing out on competitive advantage</p>
+ <p><strong>Goal:</strong> Drive immediate action</p>
+ </div>
+
+ <div class="sequence-card">
+ <h3>📧 Email #4: Problem Agitation (Day 7)</h3>
+ <p><strong>Subject:</strong> The hidden cost of manual prospecting</p>
+ <p><strong>Strategy:</strong> Highlight pain points and opportunity costs</p>
+ <p><strong>Goal:</strong> Create urgency to solve the problem</p>
+ </div>
+
+ <div class="sequence-card">
+ <h3>📧 Email #5: Final Call to Action (Day 10)</h3>
+ <p><strong>Subject:</strong> Last call: $5M Agency Lead Generation System</p>
+ <p><strong>Strategy:</strong> Final push with clear next steps</p>
+ <p><strong>Goal:</strong> Convert to meeting or consultation</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Compliance Section -->
+ <section class="content-section">
+ <div class="container">
+ <div class="compliance-section">
+ <h3>⚠️ CAN-SPAM Compliance & Best Practices</h3>
+ <p>All our cold email campaigns are fully compliant with federal regulations:</p>
+ <ul>
+ <li><strong>Clear Sender Identification:</strong> All emails include proper from/reply-to information</li>
+ <li><strong>Truthful Subject Lines:</strong> Subject lines accurately reflect email content</li>
+ <li><strong>Physical Address:</strong> Every email includes your business address</li>
+ <li><strong>Easy Unsubscribe:</strong> One-click unsubscribe in every email</li>
+ <li><strong>Opt-out Honor:</strong> Remove requests processed within 10 business days</li>
+ <li><strong>No Deceptive Practices:</strong> Honest, straightforward communication</li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <!-- Pricing Section -->
+ <section class="content-section gray-bg">
+ <div class="container">
+ <h2 class="section-title">Cold Email Campaign Investment</h2>
+ <p class="section-subtitle">Professional email campaigns that generate qualified meetings</p>
+
+ <div class="pricing-card">
+ <h3>Complete Cold Email System</h3>
+ <div class="price">$997</div>
+ <p class="price-subtitle">Per month</p>
+ 
+ <ul class="features-list">
+ <li>Email infrastructure setup (domains, IPs, warming)</li>
+ <li>Prospect research and list building</li>
+ <li>Personalized email sequence creation</li>
+ <li>CAN-SPAM compliance setup</li>
+ <li>A/B testing and optimization</li>
+ <li>Deliverability monitoring and management</li>
+ <li>Response handling and appointment setting</li>
+ <li>Monthly performance reports</li>
+ <li>Ongoing sequence optimization</li>
+ <li>Dedicated email specialist</li>
+ </ul>
+
+ <div class="guarantee-box">
+ <h4>🛡️ 90-Day Money-Back Guarantee</h4>
+ <p>We'll work toward 20+ qualified responses monthly or refund</p>
+ </div>
+
+ <a href="contact.html" class="cta-button" style="width: 100%; text-align: center; padding: 1.25rem; background: var(--danger);">Get Started Now</a>
+ </div>
+ </div>
+ </section>
+
+ <!-- CTA Section -->
+ <section class="cta-section">
+ <div class="container">
+ <h2>Ready to Generate Leads with Cold Email?</h2>
+ <p>Get your free cold email audit and see how to reach decision-makers directly in their inbox with personalized, compliant campaigns.</p>
+ <p style="margin-bottom: 3rem;">Join commercial insurance brokers generating 20+ qualified responses monthly through strategic email outreach.</p>
+ 
+ <a href="contact.html" class="cta-button">
+ <i class="fas fa-envelope"></i> Start Cold Email Campaigns
+ </a>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+ <div class="container">
+ <p style="margin-bottom: 1rem; opacity: 0.9;">
+ <strong> 
+ Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+ All marketing services are provided in compliance with applicable laws and regulations.
+ </p>
+ <p style="opacity: 0.7; font-size: 0.8rem;">
+ © 2025 Broker Lead Engine LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+ </p>
+ </div>
+ </footer>
+
+ <script>
+ // Clean JavaScript - Page Loading and Menu
+ document.addEventListener('DOMContentLoaded', function() {
+ // Remove loading overlay immediately
+ const loadingOverlay = document.getElementById('loadingOverlay');
+ if (loadingOverlay) {
+ setTimeout(() => {
+ loadingOverlay.classList.add('loaded');
+ }, 100);
+ }
+
+ // Mobile Menu Toggle
+ const hamburgerMenu = document.getElementById('hamburger-menu');
+ const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+ const closeMenu = document.getElementById('close-menu');
+
+ function toggleMenu() {
+ if (hamburgerMenu && mobileMenuOverlay) {
+ hamburgerMenu.classList.toggle('active');
+ mobileMenuOverlay.classList.toggle('active');
+ document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+ }
+ }
+
+ // Event listeners
+ if (hamburgerMenu) {
+ hamburgerMenu.addEventListener('click', toggleMenu);
+ }
+
+ if (closeMenu) {
+ closeMenu.addEventListener('click', toggleMenu);
+ }
+
+ // Close menu when clicking on mobile nav links
+ const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+ mobileNavLinks.forEach(link => {
+ link.addEventListener('click', () => {
+ if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+ toggleMenu();
+ }
+ });
+ });
+
+ // Close menu on escape key
+ document.addEventListener('keydown', (e) => {
+ if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+ toggleMenu();
+ }
+ });
+ });
+ </script>
+</body>
+</html>

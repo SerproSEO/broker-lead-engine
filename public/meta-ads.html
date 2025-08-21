@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Facebook & Meta Ads for Insurance | Broker Lead Engine</title>
+ <meta name="description" content="Reach potential insurance clients on Facebook and Instagram with targeted advertising campaigns designed for commercial insurance brokers.">
+ <meta name="keywords" content="Facebook ads insurance, Meta ads insurance, social media marketing insurance, Instagram ads insurance">
+ 
+ <!-- Open Graph Meta Tags -->
+ <meta property="og:title" content="Meta Ads for Insurance | Broker Lead Engine">
+ <meta property="og:description" content="Target 2.9 billion users with surgical precision. Professional Facebook & Instagram advertising for commercial insurance brokers.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/meta-ads.html">
+ <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+ <meta property="og:site_name" content="Broker Lead Engine">
+ <meta property="og:locale" content="en_US">
+ 
+ <!-- Twitter Card Meta Tags -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Meta Ads for Insurance | Broker Lead Engine">
+ <meta name="twitter:description" content="Professional Facebook & Instagram advertising for commercial insurance brokers. $25-65 average cost per lead.">
+ <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ <style>
+ :root {
+ --primary: #16a571;
+ --primary-dark: #138a5e;
+ --secondary: #1a202c;
+ --secondary-light: #2d3748;
+ --accent: #667eea;
+ --danger: #e53e3e;
+ --warning: #ed8936;
+ --success: #48bb78;
+ --meta-blue: #4c51bf;
+ --meta-purple: #a5b4fc;
+ --gray-50: #f7fafc;
+ --gray-100: #edf2f7;
+ --gray-200: #e2e8f0;
+ --gray-300: #cbd5e0;
+ --gray-400: #a0aec0;
+ --gray-500: #718096;
+ --gray-600: #4a5568;
+ --gray-700: #2d3748;
+ --gray-800: #1a202c;
+ --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+ --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+ --gradient-meta: linear-gradient(135deg, #4c51bf 0%, #667eea 100%);
+ --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+ --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+ --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+ --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+ line-height: 1.6;
+ color: var(--gray-700);
+ background: #ffffff;
+ position: relative;
+ }
+
+ /* Loading Overlay */
+ .loading-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: white;
+ z-index: 9999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: opacity 0.5s;
+ }
+
+ .loading-overlay.loaded {
+ opacity: 0;
+ pointer-events: none;
+ }
+
+ .loader {
+ width: 50px;
+ height: 50px;
+ border: 3px solid var(--gray-200);
+ border-top-color: var(--primary);
+ border-radius: 50%;
+ animation: spin 1s linear infinite;
+ }
+
+ @keyframes spin {
+ to { transform: rotate(360deg); }
+ }
+
+ /* Header Styles */
+ .header {
+ background: var(--secondary);
+ color: white;
+ padding: 1rem 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 9999;
+ box-shadow: var(--shadow-lg);
+ backdrop-filter: blur(10px);
+ background: rgba(26, 32, 44, 0.98);
+ height: 80px;
+ display: flex;
+ align-items: center;
+ }
+
+ .nav-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+ width: 100%;
+ }
+
+ .logo {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+
+ .logo img {
+ height: 175px;
+ width: auto;
+ max-width: 175px;
+ object-fit: contain;
+ }
+
+ .nav-menu {
+ display: flex;
+ list-style: none;
+ gap: 0;
+ align-items: center;
+ margin: 0;
+ padding: 0;
+ }
+
+ .nav-item {
+ position: relative;
+ }
+
+ .nav-item > a {
+ color: white;
+ text-decoration: none;
+ font-weight: 500;
+ padding: 1rem 1.5rem;
+ display: block;
+ transition: all 0.3s;
+ border-radius: 6px;
+ }
+
+ .nav-item > a:hover {
+ color: #16a571;
+ background: rgba(22, 165, 113, 0.1);
+ }
+
+ .dropdown {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ background: white;
+ min-width: 280px;
+ box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+ border-radius: 8px;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(-10px);
+ transition: all 0.2s ease;
+ z-index: 1000;
+ border: 1px solid #e2e8f0;
+ max-height: 400px;
+ overflow-y: auto;
+ }
+
+ .nav-item:hover .dropdown {
+ opacity: 1;
+ visibility: visible;
+ transform: translateY(0);
+ }
+
+ .dropdown a {
+ color: #1a202c;
+ text-decoration: none;
+ padding: 1rem 1.5rem;
+ display: block;
+ transition: all 0.2s ease;
+ border-bottom: 1px solid #f1f5f9;
+ }
+
+ .dropdown a:hover {
+ background: #f8fafc;
+ color: #16a571;
+ padding-left: 2rem;
+ }
+
+ .cta-button {
+ background: var(--gradient-primary);
+ color: white;
+ padding: 0.875rem 2rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ transition: var(--transition-base);
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ overflow: hidden;
+ box-shadow: var(--shadow-md);
+ white-space: nowrap;
+ }
+
+ .cta-button::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: rgba(255, 255, 255, 0.2);
+ transition: left 0.5s;
+ }
+
+ .cta-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-xl);
+ }
+
+ .cta-button:hover::before {
+ left: 100%;
+ }
+
+ /* Hamburger Menu */
+ .hamburger-menu {
+ display: none;
+ width: 30px;
+ height: 24px;
+ background: none;
+ border: none;
+ cursor: pointer;
+ padding: 0;
+ position: relative;
+ z-index: 10001;
+ }
+
+ .hamburger-menu span {
+ display: block;
+ width: 100%;
+ height: 3px;
+ background: white;
+ position: absolute;
+ left: 0;
+ transition: all 0.3s ease;
+ }
+
+ .hamburger-menu span:nth-child(1) {
+ top: 0;
+ }
+
+ .hamburger-menu span:nth-child(2) {
+ top: 50%;
+ transform: translateY(-50%);
+ }
+
+ .hamburger-menu span:nth-child(3) {
+ bottom: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(1) {
+ transform: rotate(45deg);
+ top: 50%;
+ transform-origin: center;
+ }
+
+ .hamburger-menu.active span:nth-child(2) {
+ opacity: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(3) {
+ transform: rotate(-45deg);
+ bottom: 50%;
+ transform-origin: center;
+ }
+
+ /* Mobile Menu Overlay */
+ .mobile-menu-overlay {
+ position: fixed;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100vh;
+ background: rgba(26, 32, 44, 0.98);
+ z-index: 10000;
+ transition: left 0.3s ease;
+ overflow-y: auto;
+ }
+
+ .mobile-menu-overlay.active {
+ left: 0;
+ }
+
+ .mobile-menu-content {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ padding: 2rem;
+ }
+
+ .mobile-menu-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 3rem;
+ }
+
+ .mobile-logo {
+ height: 75px;
+ width: auto;
+ }
+
+ .close-menu {
+ background: none;
+ border: none;
+ color: white;
+ font-size: 2rem;
+ cursor: pointer;
+ padding: 0;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .mobile-nav {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ }
+
+ .mobile-nav-link {
+ color: white;
+ text-decoration: none;
+ font-size: 1.5rem;
+ font-weight: 500;
+ padding: 1rem 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ transition: color 0.3s;
+ }
+
+ .mobile-nav-link:hover {
+ color: var(--primary);
+ }
+
+ .mobile-cta-button {
+ background: var(--gradient-primary);
+ color: white;
+ padding: 1rem 2rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ text-align: center;
+ margin-top: 2rem;
+ transition: all 0.3s;
+ }
+
+ .mobile-cta-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ /* Hero Section */
+ .hero {
+ background: var(--gradient-secondary);
+ color: white;
+ padding: 60px 0 80px;
+ text-align: center;
+ margin-top: 80px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+ background-size: 40px 40px;
+ }
+
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ }
+
+ .hero h1 {
+ font-size: 3.5rem;
+ margin-bottom: 1.5rem;
+ line-height: 1.2;
+ font-weight: 800;
+ letter-spacing: -0.02em;
+ animation: fadeInUp 0.8s ease-out;
+ position: relative;
+ z-index: 1;
+ }
+
+ .hero-subtitle {
+ font-size: 1.25rem;
+ margin-bottom: 2rem;
+ opacity: 0.9;
+ max-width: 700px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ z-index: 1;
+ }
+
+ @keyframes fadeInUp {
+ from {
+ opacity: 0;
+ transform: translateY(30px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+ }
+
+ .meta-results {
+ background: rgba(255, 255, 255, 0.1);
+ border: 2px solid rgba(255, 255, 255, 0.3);
+ border-radius: 12px;
+ padding: 2rem;
+ margin: 2rem auto;
+ max-width: 600px;
+ backdrop-filter: blur(10px);
+ position: relative;
+ z-index: 1;
+ }
+
+ .meta-results h3 {
+ color: var(--meta-purple);
+ font-size: 1.5rem;
+ margin-bottom: 1rem;
+ font-weight: 700;
+ }
+
+ .meta-results p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ }
+
+ /* Content Sections */
+ .content-section {
+ padding: 100px 0;
+ }
+
+ .content-section.gray-bg {
+ background: var(--gray-50);
+ }
+
+ .section-title {
+ font-size: 2.5rem;
+ text-align: center;
+ margin-bottom: 1rem;
+ color: var(--gray-800);
+ font-weight: 700;
+ }
+
+ .section-subtitle {
+ font-size: 1.2rem;
+ color: var(--gray-600);
+ text-align: center;
+ max-width: 600px;
+ margin: 0 auto 3rem;
+ }
+
+ /* Stats Grid */
+ .stats-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+
+ .stat-card {
+ text-align: center;
+ padding: 2rem;
+ background: white;
+ border-radius: 12px;
+ box-shadow: var(--shadow-md);
+ transition: var(--transition-base);
+ }
+
+ .stat-card:hover {
+ transform: translateY(-4px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .stat-number {
+ display: block;
+ font-size: 3rem;
+ font-weight: 800;
+ color: var(--meta-blue);
+ margin-bottom: 0.5rem;
+ }
+
+ .stat-text {
+ font-size: 1rem;
+ color: var(--gray-600);
+ font-weight: 500;
+ }
+
+ /* Features Grid */
+ .features-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+
+ .feature-card {
+ background: white;
+ padding: 2.5rem;
+ border-radius: 12px;
+ box-shadow: var(--shadow-md);
+ text-align: center;
+ transition: var(--transition-base);
+ border: 2px solid transparent;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .feature-card::before {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: var(--gradient-meta);
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.3s;
+ }
+
+ .feature-card:hover {
+ transform: translateY(-8px);
+ box-shadow: var(--shadow-xl);
+ }
+
+ .feature-card:hover::before {
+ transform: scaleX(1);
+ }
+
+ .feature-icon {
+ width: 80px;
+ height: 80px;
+ background: var(--gray-100);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto 1.5rem;
+ font-size: 2rem;
+ color: var(--meta-blue);
+ transition: var(--transition-base);
+ }
+
+ .feature-card:hover .feature-icon {
+ background: var(--gradient-meta);
+ color: white;
+ transform: scale(1.1);
+ }
+
+ .feature-card h3 {
+ color: var(--gray-800);
+ margin-bottom: 1rem;
+ font-size: 1.3rem;
+ font-weight: 600;
+ }
+
+ .feature-card p {
+ color: var(--gray-600);
+ line-height: 1.7;
+ }
+
+ /* Targeting Cards */
+ .targeting-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+
+ .targeting-card {
+ background: white;
+ border-radius: 12px;
+ padding: 2rem;
+ box-shadow: var(--shadow-md);
+ border-left: 4px solid var(--meta-blue);
+ transition: var(--transition-base);
+ }
+
+ .targeting-card:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .targeting-card h3 {
+ color: var(--gray-800);
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+ font-weight: 600;
+ }
+
+ .targeting-card ul {
+ list-style: none;
+ padding: 0;
+ }
+
+ .targeting-card li {
+ padding: 0.5rem 0;
+ color: var(--gray-600);
+ position: relative;
+ padding-left: 1.5rem;
+ }
+
+ .targeting-card li::before {
+ content: '•';
+ position: absolute;
+ left: 0;
+ color: var(--meta-blue);
+ font-weight: bold;
+ }
+
+ /* Campaign Cards */
+ .campaign-card {
+ background: white;
+ border-radius: 12px;
+ padding: 2rem;
+ margin-bottom: 1.5rem;
+ box-shadow: var(--shadow-md);
+ border-left: 4px solid var(--meta-blue);
+ transition: var(--transition-base);
+ }
+
+ .campaign-card:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .campaign-card h3 {
+ color: var(--gray-800);
+ font-size: 1.4rem;
+ margin-bottom: 1rem;
+ font-weight: 600;
+ }
+
+ .campaign-card p {
+ color: var(--gray-600);
+ margin-bottom: 0.75rem;
+ line-height: 1.6;
+ }
+
+ .campaign-card strong {
+ color: var(--gray-800);
+ }
+
+ /* Pricing Card */
+ .pricing-card {
+ background: white;
+ border: 2px solid var(--gray-200);
+ border-radius: 16px;
+ padding: 3rem;
+ max-width: 600px;
+ margin: 0 auto;
+ box-shadow: var(--shadow-lg);
+ position: relative;
+ overflow: hidden;
+ text-align: center;
+ }
+
+ .pricing-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: var(--gradient-meta);
+ }
+
+ .pricing-card h3 {
+ color: var(--gray-800);
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ font-weight: 700;
+ }
+
+ .price {
+ font-size: 3rem;
+ color: var(--meta-blue);
+ font-weight: 800;
+ margin-bottom: 0.5rem;
+ }
+
+ .price-subtitle {
+ color: var(--gray-600);
+ margin-bottom: 2rem;
+ }
+
+ .features-list {
+ list-style: none;
+ padding: 0;
+ margin: 2rem 0;
+ text-align: left;
+ }
+
+ .features-list li {
+ padding: 0.75rem 0;
+ border-bottom: 1px solid var(--gray-100);
+ color: var(--gray-700);
+ position: relative;
+ padding-left: 2rem;
+ }
+
+ .features-list li::before {
+ content: '✓';
+ position: absolute;
+ left: 0;
+ color: var(--meta-blue);
+ font-weight: bold;
+ }
+
+ .features-list li:last-child {
+ border-bottom: none;
+ }
+
+ .guarantee-box {
+ background: var(--gray-100);
+ border: 2px solid var(--meta-blue);
+ border-radius: 12px;
+ padding: 1.5rem;
+ margin: 2rem 0;
+ text-align: center;
+ }
+
+ .guarantee-box h4 {
+ color: var(--gray-800);
+ margin-bottom: 0.5rem;
+ }
+
+ .guarantee-box p {
+ color: var(--gray-700);
+ margin: 0;
+ font-weight: 600;
+ }
+
+ /* CTA Section */
+ .cta-section {
+ background: var(--primary);
+ color: white;
+ padding: 100px 0;
+ text-align: center;
+ }
+
+ .cta-section h2 {
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
+ font-weight: 700;
+ }
+
+ .cta-section p {
+ font-size: 1.2rem;
+ line-height: 1.6;
+ margin-bottom: 1rem;
+ max-width: 800px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+
+ .cta-section .cta-button {
+ background: white;
+ color: var(--primary);
+ font-size: 1.1rem;
+ padding: 1.25rem 2.5rem;
+ margin-top: 1rem;
+ }
+
+ .cta-section .cta-button:hover {
+ background: var(--gray-100);
+ }
+
+ .cta-section .cta-button i {
+ margin-right: 0.5rem;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+ .nav-menu {
+ display: none;
+ }
+
+ .cta-button:not(.mobile-cta-button) {
+ display: none;
+ }
+
+ .hamburger-menu {
+ display: block;
+ }
+
+ .logo img {
+ height: 70px;
+ max-width: 140px;
+ }
+
+ .hero {
+ margin-top: 70px;
+ padding: 40px 0 60px;
+ }
+
+ .hero h1 {
+ font-size: 2rem;
+ }
+
+ .hero-subtitle {
+ font-size: 1rem;
+ }
+
+ .section-title {
+ font-size: 1.75rem;
+ }
+
+ .features-grid,
+ .targeting-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .stats-grid {
+ grid-template-columns: repeat(2, 1fr);
+ }
+
+ .cta-section h2 {
+ font-size: 2rem;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- Header -->
+ <header class="header">
+ <nav class="nav-container">
+ <div class="logo">
+ <a href="index.html">
+ <img src="logo.png" alt="Broker Lead Engine Logo">
+ </a>
+ </div>
+ <ul class="nav-menu">
+ <li class="nav-item">
+ <a href="services.html">Services</a>
+ <div class="dropdown">
+ <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+ <a href="local-seo.html">📍 Local SEO</a>
+ <a href="google-ppc.html">🎯 Google PPC</a>
+ <a href="meta-ads.html">📱 Meta Ads</a>
+ <a href="cold-email.html">📧 Cold Email</a>
+ <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a href="about.html">About</a>
+ <div class="dropdown">
+ <a href="about.html">🏢 About Us</a>
+ <a href="success-stories.html">🏆 Success Stories</a>
+ <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+ <a href="guarantee.html">🛡️ Our Guarantee</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a href="pricing.html">Resources</a>
+ <div class="dropdown">
+ <a href="pricing.html">💰 Pricing</a>
+ <a href="ai-demo.html">🤖 AI Demo</a>
+ <a href="faq.html">❓ FAQ</a>
+ <a href="privacy-policy.html">🔒 Privacy Policy</a>
+ <a href="terms-of-service.html">📄 Terms of Service</a>
+ </div>
+ </li>
+ <li class="nav-item"><a href="contact.html">Contact</a></li>
+ </ul>
+ <a href="contact.html" class="cta-button">Start Generating Leads</a>
+ 
+ <!-- Hamburger Menu Button -->
+ <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+ <span></span>
+ <span></span>
+ <span></span>
+ </button>
+ </nav>
+ </header>
+ 
+ <!-- Mobile Menu Overlay -->
+ <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+ <div class="mobile-menu-content">
+ <div class="mobile-menu-header">
+ <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+ <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+ </div>
+ <nav class="mobile-nav">
+ <a href="services.html" class="mobile-nav-link">Services</a>
+ <a href="about.html" class="mobile-nav-link">About</a>
+ <a href="pricing.html" class="mobile-nav-link">Resources</a>
+ <a href="contact.html" class="mobile-nav-link">Contact</a>
+ <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+ </nav>
+ </div>
+ </div>
+
+ <!-- Loading Overlay -->
+ <div class="loading-overlay" id="loadingOverlay">
+ <div class="loader"></div>
+ </div>
+
+ <!-- Hero Section -->
+ <section class="hero">
+ <div class="container">
+ <h1>Target 2.9 Billion Users with<br><span style="color: #a5b4fc;">Surgical Precision</span></h1>
+ <p class="hero-subtitle">Reach business owners by industry, company size, and behaviors with advanced Meta advertising. Our campaigns deliver qualified leads at $25-65 per prospect.</p>
+ 
+ <div class="meta-results">
+ <h3>📱 Meta Ads Performance</h3>
+ <p><strong>2.9 billion monthly active users on Facebook</strong><br>
+ Target by industry, company size, job title<br>
+ $25-65 average cost per lead</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Stats Section -->
+ <section class="content-section gray-bg">
+ <div class="container">
+ <h2 class="section-title">Why Meta Ads Are Perfect for Insurance Marketing</h2>
+ <p class="section-subtitle">Unmatched targeting precision for reaching business decision-makers</p>
+
+ <div class="stats-grid">
+ <div class="stat-card">
+ <span class="stat-number">2.9B</span>
+ <span class="stat-text">Monthly active Facebook users</span>
+ </div>
+ <div class="stat-card">
+ <span class="stat-number">1.4B</span>
+ <span class="stat-text">Daily Instagram users</span>
+ </div>
+ <div class="stat-card">
+ <span class="stat-number">$25-65</span>
+ <span class="stat-text">Average cost per insurance lead</span>
+ </div>
+ <div class="stat-card">
+ <span class="stat-number">8-12%</span>
+ <span class="stat-text">Lead to customer conversion rate</span>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Features Section -->
+ <section class="content-section">
+ <div class="container">
+ <h2 class="section-title">Complete Meta Advertising Solutions</h2>
+ <p class="section-subtitle">Professional Facebook & Instagram campaign management</p>
+
+ <div class="features-grid">
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-bullseye"></i>
+ </div>
+ <h3>Precision Audience Targeting</h3>
+ <p>Target business owners by industry, company size, job title, interests, and behaviors with Meta's advanced targeting capabilities.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-image"></i>
+ </div>
+ <h3>Creative Development</h3>
+ <p>Professional ad creative including images, videos, and carousel ads designed to capture attention and drive insurance leads.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-funnel-dollar"></i>
+ </div>
+ <h3>Lead Generation Campaigns</h3>
+ <p>Optimized lead generation campaigns with built-in forms to capture prospect information directly within Facebook and Instagram.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-redo"></i>
+ </div>
+ <h3>Retargeting Campaigns</h3>
+ <p>Advanced retargeting to re-engage website visitors, email subscribers, and prospects who showed interest but didn't convert.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-users"></i>
+ </div>
+ <h3>Lookalike Audiences</h3>
+ <p>Create lookalike audiences based on your best customers to find similar prospects with high conversion potential.</p>
+ </div>
+
+ <div class="feature-card">
+ <div class="feature-icon">
+ <i class="fas fa-chart-bar"></i>
+ </div>
+ <h3>Performance Optimization</h3>
+ <p>Continuous campaign optimization based on performance data, A/B testing, and conversion tracking for maximum ROI.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Targeting Section -->
+ <section class="content-section gray-bg">
+ <div class="container">
+ <h2 class="section-title">Advanced Targeting Options for Commercial insurance brokers</h2>
+ <p class="section-subtitle">Reach the exact decision-makers who need your insurance services</p>
+
+ <div class="targeting-grid">
+ <div class="targeting-card">
+ <h3>📊 Demographics</h3>
+ <ul>
+ <li>Age: 25-65 years</li>
+ <li>Income: Top 10-25%</li>
+ <li>Education: College+</li>
+ <li>Job Title: Owner, CEO, CFO</li>
+ </ul>
+ </div>
+
+ <div class="targeting-card">
+ <h3>🏢 Business Interests</h3>
+ <ul>
+ <li>Small business ownership</li>
+ <li>Entrepreneurship</li>
+ <li>Business insurance</li>
+ <li>Risk management</li>
+ </ul>
+ </div>
+
+ <div class="targeting-card">
+ <h3>🎯 Behaviors</h3>
+ <ul>
+ <li>Recently started business</li>
+ <li>Business traveler</li>
+ <li>Technology early adopter</li>
+ <li>Frequent online shopper</li>
+ </ul>
+ </div>
+
+ <div class="targeting-card">
+ <h3>🏭 Industry Targeting</h3>
+ <ul>
+ <li>Construction & Contractors</li>
+ <li>Healthcare & Medical</li>
+ <li>Restaurants & Food Service</li>
+ <li>Professional Services</li>
+ </ul>
+ </div>
+
+ <div class="targeting-card">
+ <h3>📍 Geographic</h3>
+ <ul>
+ <li>City/Metro targeting</li>
+ <li>Radius targeting</li>
+ <li>State-wide campaigns</li>
+ <li>Multi-market expansion</li>
+ </ul>
+ </div>
+
+ <div class="targeting-card">
+ <h3>🔄 Custom Audiences</h3>
+ <ul>
+ <li>Website visitors</li>
+ <li>Email subscribers</li>
+ <li>Past customers</li>
+ <li>Lookalike audiences</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Campaign Types Section -->
+ <section class="content-section">
+ <div class="container">
+ <h2 class="section-title">Proven Meta Ad Campaign Types</h2>
+ <p class="section-subtitle">Strategic campaign structure for maximum insurance lead generation</p>
+
+ <div class="campaign-card">
+ <h3>🆕 New Business Owner Campaigns</h3>
+ <p><strong>Target Audience:</strong> Recently started a business (past 6 months), 25-55 years old</p>
+ <p><strong>Hook:</strong> "New Business? Here's How to Protect It"</p>
+ <p><strong>Lead Magnet:</strong> "New Business Insurance Checklist"</p>
+ <p><strong>Expected Results:</strong> $25-45 cost per lead, 12-18% lead quality</p>
+ </div>
+
+ <div class="campaign-card">
+ <h3>🏢 Commercial Property Campaigns</h3>
+ <p><strong>Target Audience:</strong> Commercial real estate interests + business owners</p>
+ <p><strong>Hook:</strong> "Is Your Commercial Property Properly Insured?"</p>
+ <p><strong>Lead Magnet:</strong> "Property Insurance Gap Analysis"</p>
+ <p><strong>Expected Results:</strong> $35-65 cost per lead, 15-22% lead quality</p>
+ </div>
+
+ <div class="campaign-card">
+ <h3>🔨 Industry-Specific Campaigns</h3>
+ <p><strong>Target Audience:</strong> Construction business owners with 5+ employees</p>
+ <p><strong>Hook:</strong> "Construction Insurance That Actually Covers You"</p>
+ <p><strong>Lead Magnet:</strong> "Contractor's Insurance Guide"</p>
+ <p><strong>Expected Results:</strong> $30-55 cost per lead, 18-25% lead quality</p>
+ </div>
+
+ <div class="campaign-card">
+ <h3>🔄 Retargeting Campaigns</h3>
+ <p><strong>Target Audience:</strong> Website visitors, email subscribers, video viewers</p>
+ <p><strong>Hook:</strong> "Still Shopping for Insurance? Get Your Free Quote"</p>
+ <p><strong>Offer:</strong> Exclusive discount or priority consultation</p>
+ <p><strong>Expected Results:</strong> $15-35 cost per lead, 25-40% lead quality</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Pricing Section -->
+ <section class="content-section gray-bg">
+ <div class="container">
+ <h2 class="section-title">Meta Ads Management Investment</h2>
+ <p class="section-subtitle">Professional Facebook & Instagram advertising that delivers results</p>
+
+ <div class="pricing-card">
+ <h3>Complete Meta Ads Management</h3>
+ <div class="price">$1,297</div>
+ <p class="price-subtitle">Per month + ad spend</p>
+ 
+ <ul class="features-list">
+ <li>Facebook & Instagram Business Manager setup</li>
+ <li>Audience research and targeting strategy</li>
+ <li>Professional creative development</li>
+ <li>Lead generation campaign creation</li>
+ <li>Retargeting and lookalike audience setup</li>
+ <li>Landing page optimization</li>
+ <li>Conversion tracking and pixel setup</li>
+ <li>A/B testing and optimization</li>
+ <li>Monthly performance reports</li>
+ <li>Dedicated account manager</li>
+ </ul>
+
+ <div class="guarantee-box">
+ <h4>🛡️ 90-Day Money-Back Guarantee</h4>
+ <p>We'll work toward 40+ qualified leads monthly or refund</p>
+ </div>
+
+ <a href="contact.html" class="cta-button" style="width: 100%; text-align: center; padding: 1.25rem; background: var(--meta-blue);">Get Started Now</a>
+ </div>
+ </div>
+ </section>
+
+ <!-- CTA Section -->
+ <section class="cta-section">
+ <div class="container">
+ <h2>Ready to Target Business Owners on Social Media?</h2>
+ <p>Get your free Meta advertising audit and see how to reach decision-makers on Facebook and Instagram in your market.</p>
+ <p style="margin-bottom: 3rem;">Join commercial insurance brokers generating 40+ qualified leads monthly through targeted social media advertising.</p>
+ 
+ <a href="contact.html" class="cta-button">
+ <i class="fas fa-rocket"></i> Start Meta Advertising
+ </a>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+ <div class="container">
+ <p style="margin-bottom: 1rem; opacity: 0.9;">
+ <strong> 
+ Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+ All marketing services are provided in compliance with applicable laws and regulations.
+ </p>
+ <p style="opacity: 0.7; font-size: 0.8rem;">
+ © 2025 Broker Lead Engine LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+ </p>
+ </div>
+ </footer>
+
+ <script>
+ // Clean JavaScript - Page Loading and Menu
+ document.addEventListener('DOMContentLoaded', function() {
+ // Remove loading overlay immediately
+ const loadingOverlay = document.getElementById('loadingOverlay');
+ if (loadingOverlay) {
+ setTimeout(() => {
+ loadingOverlay.classList.add('loaded');
+ }, 100);
+ }
+
+ // Mobile Menu Toggle
+ const hamburgerMenu = document.getElementById('hamburger-menu');
+ const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+ const closeMenu = document.getElementById('close-menu');
+
+ function toggleMenu() {
+ if (hamburgerMenu && mobileMenuOverlay) {
+ hamburgerMenu.classList.toggle('active');
+ mobileMenuOverlay.classList.toggle('active');
+ document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+ }
+ }
+
+ // Event listeners
+ if (hamburgerMenu) {
+ hamburgerMenu.addEventListener('click', toggleMenu);
+ }
+
+ if (closeMenu) {
+ closeMenu.addEventListener('click', toggleMenu);
+ }
+
+ // Close menu when clicking on mobile nav links
+ const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+ mobileNavLinks.forEach(link => {
+ link.addEventListener('click', () => {
+ if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+ toggleMenu();
+ }
+ });
+ });
+
+ // Close menu on escape key
+ document.addEventListener('keydown', (e) => {
+ if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+ toggleMenu();
+ }
+ });
+ });
+ </script>
+</body>
+</html>
