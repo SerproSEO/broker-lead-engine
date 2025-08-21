@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Samuel Ochoa - The Journey of an Unlikely Entrepreneur</title>
+    <meta name="description" content="From 10-year-old immigrant to tech entrepreneur. The story of Samuel Ochoa's journey through business, AI, and the American Dream.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .hero {
+            margin-top: 80px;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .story-section {
+            padding: 80px 0;
+        }
+        
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .story-content h2 {
+            font-size: 36px;
+            margin: 40px 0 20px;
+            color: #333;
+        }
+        
+        .story-content p {
+            margin-bottom: 25px;
+        }
+        
+        .highlight-box {
+            background: #f7f8fa;
+            padding: 30px;
+            border-left: 4px solid #667eea;
+            margin: 40px 0;
+            border-radius: 5px;
+        }
+        
+        .highlight-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .sarcasm-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 20px;
+            color: #555;
+        }
+        
+        .timeline {
+            margin: 60px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-year {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            min-width: 100px;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding-bottom: 20px;
+            border-left: 2px solid #e0e0e0;
+            padding-left: 30px;
+        }
+        
+        .timeline-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .timeline-content p {
+            color: #666;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .value-card p {
+            color: #666;
+        }
+        
+        .cta-section {
+            background: #f7f8fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 600;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero .subtitle {
+                font-size: 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .timeline-content {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Samuel Ochoa</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="silver-bullets.html">Silver Bullets</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>The Unlikely Journey</h1>
+            <p class="subtitle">From a 10-year-old immigrant with big dreams to a tech entrepreneur who believes AI will save us all (spoiler: it will)</p>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>The Beginning</h2>
+                <p>I came to America when I was 10 years old. While other kids were mastering Fortnite, I was mastering English and figuring out how this whole "American Dream" thing worked. Turns out, it involves a lot of hustle, coffee, and believing in yourself when nobody else does.</p>
+                
+                <p>As a DACA recipient, I learned early that nothing is guaranteed except what you build yourself. So I decided to build... everything.</p>
+
+                <div class="sarcasm-box">
+                    "Fun fact: I graduated business school with straight A's. This has been absolutely crucial to my success, right up there with knowing how to tie my shoes and remembering to breathe. My clients are constantly asking to see my GPA before signing contracts." 
+                    <br><br>
+                    <small>— Said no successful entrepreneur ever</small>
+                </div>
+
+                <h2>The Real Education</h2>
+                <p>While my perfect GPA was collecting dust, I was getting my real education in the trenches of digital marketing. Over the past decade, I've learned that success isn't about grades—it's about solving real problems for real people.</p>
+                
+                <p>I discovered my superpower: making businesses visible online and turning that visibility into cold, hard revenue. Turns out, helping businesses make money is a pretty good way to make money. Who knew?</p>
+
+                <div class="highlight-box">
+                    <h3>The AI Revelation</h3>
+                    <p>For over a decade, I've believed that AI will lift humanity into unprecedented prosperity. Not in some sci-fi dystopian way, but in a "let's automate the boring stuff so humans can be more human" way. Every line of code I write, every system I build, is a step toward that future.</p>
+                </div>
+
+                <h2>The Journey So Far</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2007</div>
+                        <div class="timeline-content">
+                            <h3>New Beginning</h3>
+                            <p>Arrived in America at age 10. Learned English, adapted to a new culture, and started dreaming big.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-content">
+                            <h3>The Hustle Begins</h3>
+                            <p>Started learning digital marketing. Realized that the internet is basically a money printer if you know which buttons to push.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h3>Business School</h3>
+                            <p>Got those straight A's everyone cares so much about. Also learned that most business theory is just common sense with fancy names.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3>Family Business Transformation</h3>
+                            <p>Built the family dress store's online presence from scratch. Proved that even a traditional retail business can dominate online with the right strategy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>Serpro SEO Launch</h3>
+                            <p>Founded Serpro SEO to help local businesses dominate their markets. Ranked a Massachusetts contractor #1 in their niche. They're still thanking me.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            <h3>The Vision Expands</h3>
+                            <p>Building AI-powered marketing systems that run themselves. Working toward that $10M exit and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>What Drives Me</h2>
+                <p>At 28, I work from home, focused on three things: building wealth, creating systems that work without me, and preparing for the AI revolution that's already here.</p>
+                
+                <p>My mission is simple: Use technology and marketing to help small businesses thrive. Build generational wealth. Then use that wealth to lift others up. Rinse and repeat until we've all made it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Ambition</h3>
+                    <p>Not satisfied with good enough. Always pushing for extraordinary.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>Resourcefulness</h3>
+                    <p>Started with nothing. Building everything. There's always a way.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h3>Privacy</h3>
+                    <p>Success doesn't need to be loud. Results speak for themselves.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>Independence</h3>
+                    <p>Financial freedom isn't just about money—it's about options.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤖</div>
+                    <h3>Innovation</h3>
+                    <p>AI and automation aren't the future—they're the present.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Discipline</h3>
+                    <p>Success is just good habits compounded over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build Something Amazing?</h2>
+            <p>Whether you need marketing that actually works or just want to talk about how AI will change everything, let's connect.</p>
+            <a href="contact.html" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="silver-bullets.html">Silver Bullets</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 Samuel Ochoa. Building the future, one system at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero to One - Book Summary by Samuel Ochoa</title>
+    <meta name="description" content="Notes on Startups, or How to Build the Future - Why this book matters for entrepreneurs.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .hero {
+            margin-top: 80px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .book-header {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .book-cover {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .book-info h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        
+        .book-info .author {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .book-info .tagline {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .amazon-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        
+        .amazon-btn:hover {
+            background: #e88800;
+        }
+        
+        .content-section {
+            padding: 80px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .summary-box {
+            background: #f7f8fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .summary-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .summary-box p {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .key-concepts {
+            margin-bottom: 60px;
+        }
+        
+        .key-concepts h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .concept {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .concept h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .concept p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .application-box {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .application-box h4 {
+            font-size: 18px;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .application-box p {
+            color: #558b2f;
+            font-size: 16px;
+        }
+        
+        .quotes-section {
+            background: #f7f8fa;
+            padding: 60px 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .quotes-section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .quote {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .quote::before {
+            content: """;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 48px;
+            color: #667eea;
+            opacity: 0.3;
+        }
+        
+        .quote p {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .takeaways {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .takeaways h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .takeaway-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaway-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 18px;
+            color: #555;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .takeaway-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .takeaway-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 600;
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .book-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .book-info h1 {
+                font-size: 32px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Samuel Ochoa</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="silver-bullets.html">Silver Bullets</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="book-header">
+                <div class="book-cover">
+                    <div style="width: 100%; height: 400px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">
+                        Book Cover
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h1>Zero to One</h1>
+                    <p class="author">by Peter Thiel</p>
+                    <p class="tagline">Notes on Startups, or How to Build the Future</p>
+                    <a href="https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296" target="_blank" class="amazon-btn">Get it on Amazon →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="summary-box">
+                <h2>Why This Book Changed Everything</h2>
+                <p>This book taught me to stop competing and start creating monopolies. Instead of fighting for scraps in crowded markets, I now build businesses that dominate tiny niches.</p>
+            </div>
+
+            <div class="key-concepts">
+                <h2>Key Concepts That Matter</h2>
+                
+                
+                <div class="concept">
+                    <h3>1. Competition is for Losers</h3>
+                    <p>Competitive markets destroy profits. Build monopolies by being so good at something specific that no one can compete.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>Instead of "marketing agency," I built "insurance broker lead generation systems." Specific monopoly beats general competition.</p>
+                    </div>
+                </div>
+                
+                <div class="concept">
+                    <h3>2. The Power Law</h3>
+                    <p>One market/product/distribution channel will produce outsized returns. Everything else is noise. Find your power law and focus everything there.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>Discovered insurance brokers were my power law market. Dropped everything else. Revenue increased 500%.</p>
+                    </div>
+                </div>
+                
+                <div class="concept">
+                    <h3>3. Start Small, Monopolize, Then Expand</h3>
+                    <p>Dominate a small market completely before expanding. Amazon started with just books. Facebook started with just Harvard.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>Started with cyber insurance brokers in Massachusetts. Dominated. Then expanded to other insurance types and states.</p>
+                    </div>
+                </div>
+                
+                <div class="concept">
+                    <h3>4. Secrets: What Important Truth Do Few People Agree With You On?</h3>
+                    <p>Great businesses are built on secrets—things you believe that others don't. These contrarian truths create monopoly opportunities.</p>
+                    
+                    <div class="application-box">
+                        <h4>How I Apply This:</h4>
+                        <p>My secret: AI + automation can replace 80% of marketing agency work. Built business on this before others believed it.</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="quotes-section">
+                <h2>Quotes That Stick</h2>
+                
+                
+                <div class="quote">
+                    <p>"Competition is for losers."</p>
+                </div>
+                
+                <div class="quote">
+                    <p>"All failed companies are the same: they failed to escape competition."</p>
+                </div>
+                
+                <div class="quote">
+                    <p>"Brilliant thinking is rare, but courage is in even shorter supply."</p>
+                </div>
+                
+                <div class="quote">
+                    <p>"The most contrarian thing of all is not to oppose the crowd but to think for yourself."</p>
+                </div>
+                
+            </div>
+
+            <div class="takeaways">
+                <h2>My Top 10 Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>Build monopolies, not competitive businesses</li><li>10x improvement is easier to sell than 10% improvement</li><li>Start with a tiny market you can dominate</li><li>Distribution is as important as product</li><li>Sales matters—even great products don't sell themselves</li><li>First mover advantage is a myth—last mover advantage is real</li><li>Definite optimism beats indefinite optimism</li><li>Secrets exist—look where others aren't looking</li><li>Focus on one thing and do it better than anyone</li><li>The best businesses are boring monopolies printing money</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Knowledge + Action = Results</p>
+            <div class="cta-buttons">
+                <a href="https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296" target="_blank" class="btn">Get the Book</a>
+                <a href="contact.html" class="btn">Work With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="silver-bullets.html">Silver Bullets</a>
+                <a href="books.html">Books</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 Samuel Ochoa. Building the future, one system at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>

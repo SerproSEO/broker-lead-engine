@@ -1,938 +1,938 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Start Generating Insurance Leads | Broker Lead Engine</title>
-    <meta name="description" content="Ready to start generating qualified insurance leads? Contact us today for a free consultation and see how we can grow your agency.">
-    <meta name="keywords" content="contact commercial insurance marketing, insurance lead generation consultation, free marketing audit">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Contact Us - Broker Lead Engine">
-    <meta property="og:description" content="Get your free consultation and start generating qualified insurance leads.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/contact.html">
-    <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
-    <meta property="og:site_name" content="Broker Lead Engine">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us - Broker Lead Engine">
-    <meta name="twitter:description" content="Get your free consultation today.">
-    <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #16a571;
-            --primary-dark: #138a5e;
-            --secondary: #1a202c;
-            --secondary-light: #2d3748;
-            --accent: #667eea;
-            --danger: #e53e3e;
-            --warning: #ed8936;
-            --success: #48bb78;
-            --gray-50: #f7fafc;
-            --gray-100: #edf2f7;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e0;
-            --gray-400: #a0aec0;
-            --gray-500: #718096;
-            --gray-600: #4a5568;
-            --gray-700: #2d3748;
-            --gray-800: #1a202c;
-            --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
-            --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--gray-700);
-            background: #ffffff;
-            position: relative;
-        }
-
-        /* Loading Overlay */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
-
-        .loading-overlay.loaded {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--gray-200);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Header Styles */
-        .header {
-            background: var(--secondary);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 9999;
-            box-shadow: var(--shadow-lg);
-            backdrop-filter: blur(10px);
-            background: rgba(26, 32, 44, 0.98);
-            height: 80px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            width: 100%;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo img {
-            height: 175px;
-            width: auto;
-            max-width: 175px;
-            object-fit: contain;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-item > a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.3s;
-            border-radius: 6px;
-        }
-
-        .nav-item > a:hover {
-            color: #16a571;
-            background: rgba(22, 165, 113, 0.1);
-        }
-
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 280px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.2s ease;
-            z-index: 1000;
-            border: 1px solid #e2e8f0;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown a {
-            color: #1a202c;
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .dropdown a:hover {
-            background: #f8fafc;
-            color: #16a571;
-            padding-left: 2rem;
-        }
-
-        .cta-button {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 0.875rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition-base);
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            white-space: nowrap;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* Hamburger Menu */
-        .hamburger-menu {
-            display: none;
-            width: 30px;
-            height: 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            position: relative;
-            z-index: 10001;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background: white;
-            position: absolute;
-            left: 0;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger-menu span:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .hamburger-menu span:nth-child(3) {
-            bottom: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 50%;
-            transform-origin: center;
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg);
-            bottom: 50%;
-            transform-origin: center;
-        }
-
-        /* Mobile Menu Overlay */
-        .mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: rgba(26, 32, 44, 0.98);
-            z-index: 10000;
-            transition: left 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .mobile-menu-overlay.active {
-            left: 0;
-        }
-
-        .mobile-menu-content {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 2rem;
-        }
-
-        .mobile-menu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-        }
-
-        .mobile-logo {
-            height: 75px;
-            width: auto;
-        }
-
-        .close-menu {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mobile-nav {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .mobile-nav-link {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 500;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: color 0.3s;
-        }
-
-        .mobile-nav-link:hover {
-            color: var(--primary);
-        }
-
-        .mobile-cta-button {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            margin-top: 2rem;
-            transition: all 0.3s;
-        }
-
-        .mobile-cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 60px 0 80px;
-            text-align: center;
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
-            background-size: 40px 40px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            animation: fadeInUp 0.8s ease-out;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-highlight {
-            color: #16a571;
-        }
-
-        .hero-subtext {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-
-        /* Contact Info */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 1.5rem;
-            align-items: flex-start;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-base);
-            border: 1px solid #e2e8f0;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .contact-details h3 {
-            margin-bottom: 0.5rem;
-            color: var(--gray-800);
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .contact-details p {
-            margin: 0.25rem 0;
-            color: var(--gray-600);
-        }
-
-        .contact-details a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition-base);
-        }
-
-        .contact-details a:hover {
-            color: var(--primary-dark);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid #e2e8f0;
-        }
-
-        .contact-form h2 {
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            color: var(--gray-800);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--gray-700);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 0.75rem;
-            border: 1px solid var(--gray-300);
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: var(--transition-base);
-            background: white;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(22, 165, 113, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-button {
-            width: 100%;
-            padding: 1rem;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-base);
-            margin-top: 1.5rem;
-        }
-
-        .submit-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Response Time */
-        .response-time {
-            background: #f0fff4;
-            border: 2px solid var(--primary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .response-time h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .cta-button:not(.mobile-cta-button) {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: block;
-            }
-
-            .logo img {
-                height: 70px;
-                max-width: 140px;
-            }
-
-            .hero {
-                margin-top: 70px;
-                padding: 40px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-subtext {
-                font-size: 1rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us - Start Generating Insurance Leads | Broker Lead Engine</title>
+ <meta name="description" content="Ready to start generating qualified insurance leads? Contact us today for a free consultation and see how we can grow your agency.">
+ <meta name="keywords" content="contact commercial insurance marketing, insurance lead generation consultation, free marketing audit">
+ 
+ <!-- Open Graph Meta Tags -->
+ <meta property="og:title" content="Contact Us - Broker Lead Engine">
+ <meta property="og:description" content="Get your free consultation and start generating qualified insurance leads.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://seal-app-he5wy.ondigitalocean.app/contact.html">
+ <meta property="og:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+ <meta property="og:site_name" content="Broker Lead Engine">
+ <meta property="og:locale" content="en_US">
+ 
+ <!-- Twitter Card Meta Tags -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Contact Us - Broker Lead Engine">
+ <meta name="twitter:description" content="Get your free consultation today.">
+ <meta name="twitter:image" content="https://seal-app-he5wy.ondigitalocean.app/logo.png">
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ <style>
+ :root {
+ --primary: #16a571;
+ --primary-dark: #138a5e;
+ --secondary: #1a202c;
+ --secondary-light: #2d3748;
+ --accent: #667eea;
+ --danger: #e53e3e;
+ --warning: #ed8936;
+ --success: #48bb78;
+ --gray-50: #f7fafc;
+ --gray-100: #edf2f7;
+ --gray-200: #e2e8f0;
+ --gray-300: #cbd5e0;
+ --gray-400: #a0aec0;
+ --gray-500: #718096;
+ --gray-600: #4a5568;
+ --gray-700: #2d3748;
+ --gray-800: #1a202c;
+ --gradient-primary: linear-gradient(135deg, #16a571 0%, #138a5e 100%);
+ --gradient-secondary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+ --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+ --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+ --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+ --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+ line-height: 1.6;
+ color: var(--gray-700);
+ background: #ffffff;
+ position: relative;
+ }
+
+ /* Loading Overlay */
+ .loading-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: white;
+ z-index: 9999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: opacity 0.5s;
+ }
+
+ .loading-overlay.loaded {
+ opacity: 0;
+ pointer-events: none;
+ }
+
+ .loader {
+ width: 50px;
+ height: 50px;
+ border: 3px solid var(--gray-200);
+ border-top-color: var(--primary);
+ border-radius: 50%;
+ animation: spin 1s linear infinite;
+ }
+
+ @keyframes spin {
+ to { transform: rotate(360deg); }
+ }
+
+ /* Header Styles */
+ .header {
+ background: var(--secondary);
+ color: white;
+ padding: 1rem 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 9999;
+ box-shadow: var(--shadow-lg);
+ backdrop-filter: blur(10px);
+ background: rgba(26, 32, 44, 0.98);
+ height: 80px;
+ display: flex;
+ align-items: center;
+ }
+
+ .nav-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+ width: 100%;
+ }
+
+ .logo {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+
+ .logo img {
+ height: 175px;
+ width: auto;
+ max-width: 175px;
+ object-fit: contain;
+ }
+
+ .nav-menu {
+ display: flex;
+ list-style: none;
+ gap: 0;
+ align-items: center;
+ margin: 0;
+ padding: 0;
+ }
+
+ .nav-item {
+ position: relative;
+ }
+
+ .nav-item > a {
+ color: white;
+ text-decoration: none;
+ font-weight: 500;
+ padding: 1rem 1.5rem;
+ display: block;
+ transition: all 0.3s;
+ border-radius: 6px;
+ }
+
+ .nav-item > a:hover {
+ color: #16a571;
+ background: rgba(22, 165, 113, 0.1);
+ }
+
+ .dropdown {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ background: white;
+ min-width: 280px;
+ box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+ border-radius: 8px;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(-10px);
+ transition: all 0.2s ease;
+ z-index: 1000;
+ border: 1px solid #e2e8f0;
+ max-height: 400px;
+ overflow-y: auto;
+ }
+
+ .nav-item:hover .dropdown {
+ opacity: 1;
+ visibility: visible;
+ transform: translateY(0);
+ }
+
+ .dropdown a {
+ color: #1a202c;
+ text-decoration: none;
+ padding: 1rem 1.5rem;
+ display: block;
+ transition: all 0.2s ease;
+ border-bottom: 1px solid #f1f5f9;
+ }
+
+ .dropdown a:hover {
+ background: #f8fafc;
+ color: #16a571;
+ padding-left: 2rem;
+ }
+
+ .cta-button {
+ background: var(--gradient-primary);
+ color: white;
+ padding: 0.875rem 2rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ transition: var(--transition-base);
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ overflow: hidden;
+ box-shadow: var(--shadow-md);
+ white-space: nowrap;
+ }
+
+ .cta-button::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: rgba(255, 255, 255, 0.2);
+ transition: left 0.5s;
+ }
+
+ .cta-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-xl);
+ }
+
+ .cta-button:hover::before {
+ left: 100%;
+ }
+
+ /* Hamburger Menu */
+ .hamburger-menu {
+ display: none;
+ width: 30px;
+ height: 24px;
+ background: none;
+ border: none;
+ cursor: pointer;
+ padding: 0;
+ position: relative;
+ z-index: 10001;
+ }
+
+ .hamburger-menu span {
+ display: block;
+ width: 100%;
+ height: 3px;
+ background: white;
+ position: absolute;
+ left: 0;
+ transition: all 0.3s ease;
+ }
+
+ .hamburger-menu span:nth-child(1) {
+ top: 0;
+ }
+
+ .hamburger-menu span:nth-child(2) {
+ top: 50%;
+ transform: translateY(-50%);
+ }
+
+ .hamburger-menu span:nth-child(3) {
+ bottom: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(1) {
+ transform: rotate(45deg);
+ top: 50%;
+ transform-origin: center;
+ }
+
+ .hamburger-menu.active span:nth-child(2) {
+ opacity: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(3) {
+ transform: rotate(-45deg);
+ bottom: 50%;
+ transform-origin: center;
+ }
+
+ /* Mobile Menu Overlay */
+ .mobile-menu-overlay {
+ position: fixed;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100vh;
+ background: rgba(26, 32, 44, 0.98);
+ z-index: 10000;
+ transition: left 0.3s ease;
+ overflow-y: auto;
+ }
+
+ .mobile-menu-overlay.active {
+ left: 0;
+ }
+
+ .mobile-menu-content {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ padding: 2rem;
+ }
+
+ .mobile-menu-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 3rem;
+ }
+
+ .mobile-logo {
+ height: 75px;
+ width: auto;
+ }
+
+ .close-menu {
+ background: none;
+ border: none;
+ color: white;
+ font-size: 2rem;
+ cursor: pointer;
+ padding: 0;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .mobile-nav {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ }
+
+ .mobile-nav-link {
+ color: white;
+ text-decoration: none;
+ font-size: 1.5rem;
+ font-weight: 500;
+ padding: 1rem 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ transition: color 0.3s;
+ }
+
+ .mobile-nav-link:hover {
+ color: var(--primary);
+ }
+
+ .mobile-cta-button {
+ background: var(--gradient-primary);
+ color: white;
+ padding: 1rem 2rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ text-align: center;
+ margin-top: 2rem;
+ transition: all 0.3s;
+ }
+
+ .mobile-cta-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ /* Hero Section */
+ .hero {
+ background: var(--gradient-secondary);
+ color: white;
+ padding: 60px 0 80px;
+ text-align: center;
+ margin-top: 80px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="20 0 40 20 20 40 0 20"/></g></svg>');
+ background-size: 40px 40px;
+ }
+
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ }
+
+ .hero h1 {
+ font-size: 3.5rem;
+ margin-bottom: 1.5rem;
+ line-height: 1.2;
+ font-weight: 800;
+ letter-spacing: -0.02em;
+ animation: fadeInUp 0.8s ease-out;
+ position: relative;
+ z-index: 1;
+ }
+
+ .hero-highlight {
+ color: #16a571;
+ }
+
+ .hero-subtext {
+ font-size: 1.25rem;
+ margin-bottom: 2rem;
+ opacity: 0.9;
+ max-width: 700px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ z-index: 1;
+ }
+
+ @keyframes fadeInUp {
+ from {
+ opacity: 0;
+ transform: translateY(30px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+ }
+
+ /* Contact Section */
+ .contact-section {
+ padding: 80px 0;
+ background: #f8fafc;
+ }
+
+ .contact-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ margin-top: 3rem;
+ }
+
+ /* Contact Info */
+ .contact-info {
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
+ }
+
+ .contact-item {
+ display: flex;
+ gap: 1.5rem;
+ align-items: flex-start;
+ background: white;
+ padding: 1.5rem;
+ border-radius: 12px;
+ box-shadow: var(--shadow-md);
+ transition: var(--transition-base);
+ border: 1px solid #e2e8f0;
+ }
+
+ .contact-item:hover {
+ transform: translateY(-4px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .contact-icon {
+ width: 50px;
+ height: 50px;
+ background: var(--gradient-primary);
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ font-size: 1.25rem;
+ flex-shrink: 0;
+ }
+
+ .contact-details h3 {
+ margin-bottom: 0.5rem;
+ color: var(--gray-800);
+ font-size: 1.1rem;
+ font-weight: 600;
+ }
+
+ .contact-details p {
+ margin: 0.25rem 0;
+ color: var(--gray-600);
+ }
+
+ .contact-details a {
+ color: var(--primary);
+ text-decoration: none;
+ font-weight: 600;
+ transition: var(--transition-base);
+ }
+
+ .contact-details a:hover {
+ color: var(--primary-dark);
+ }
+
+ /* Contact Form */
+ .contact-form {
+ background: white;
+ padding: 2.5rem;
+ border-radius: 16px;
+ box-shadow: var(--shadow-lg);
+ border: 1px solid #e2e8f0;
+ }
+
+ .contact-form h2 {
+ margin-bottom: 2rem;
+ font-size: 2rem;
+ color: var(--gray-800);
+ }
+
+ .form-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 1.5rem;
+ }
+
+ .form-group {
+ display: flex;
+ flex-direction: column;
+ }
+
+ .form-group.full-width {
+ grid-column: 1 / -1;
+ }
+
+ .form-group label {
+ margin-bottom: 0.5rem;
+ font-weight: 600;
+ color: var(--gray-700);
+ }
+
+ .form-group input,
+ .form-group select,
+ .form-group textarea {
+ padding: 0.75rem;
+ border: 1px solid var(--gray-300);
+ border-radius: 8px;
+ font-size: 1rem;
+ transition: var(--transition-base);
+ background: white;
+ }
+
+ .form-group input:focus,
+ .form-group select:focus,
+ .form-group textarea:focus {
+ outline: none;
+ border-color: var(--primary);
+ box-shadow: 0 0 0 3px rgba(22, 165, 113, 0.1);
+ }
+
+ .form-group textarea {
+ resize: vertical;
+ min-height: 120px;
+ }
+
+ .submit-button {
+ width: 100%;
+ padding: 1rem;
+ background: var(--gradient-primary);
+ color: white;
+ border: none;
+ border-radius: 8px;
+ font-size: 1.125rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: var(--transition-base);
+ margin-top: 1.5rem;
+ }
+
+ .submit-button:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ /* Response Time */
+ .response-time {
+ background: #f0fff4;
+ border: 2px solid var(--primary);
+ border-radius: 12px;
+ padding: 1.5rem;
+ text-align: center;
+ margin-top: 3rem;
+ }
+
+ .response-time h3 {
+ color: var(--primary);
+ margin-bottom: 0.5rem;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+ .nav-menu {
+ display: none;
+ }
+
+ .cta-button:not(.mobile-cta-button) {
+ display: none;
+ }
+
+ .hamburger-menu {
+ display: block;
+ }
+
+ .logo img {
+ height: 70px;
+ max-width: 140px;
+ }
+
+ .hero {
+ margin-top: 70px;
+ padding: 40px 0 60px;
+ }
+
+ .hero h1 {
+ font-size: 2rem;
+ }
+
+ .hero-subtext {
+ font-size: 1rem;
+ }
+
+ .contact-grid {
+ grid-template-columns: 1fr;
+ gap: 3rem;
+ }
+
+ .form-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="Broker Lead Engine Logo">
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="services.html">Services</a>
-                    <div class="dropdown">
-                        <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
-                        <a href="local-seo.html">📍 Local SEO</a>
-                        <a href="google-ppc.html">🎯 Google PPC</a>
-                        <a href="meta-ads.html">📱 Meta Ads</a>
-                        <a href="cold-email.html">📧 Cold Email</a>
-                        <a href="marketing-automation.html">⚙️ Marketing Automation</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html">About</a>
-                    <div class="dropdown">
-                        <a href="about.html">🏢 About Us</a>
-                        <a href="success-stories.html">🏆 Success Stories</a>
-                        <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
-                        <a href="guarantee.html">🛡️ Our Guarantee</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="pricing.html">Resources</a>
-                    <div class="dropdown">
-                        <a href="pricing.html">💰 Pricing</a>
-                        <a href="ai-demo.html">🤖 AI Demo</a>
-                        <a href="faq.html">❓ FAQ</a>
-                        <a href="privacy-policy.html">🔒 Privacy Policy</a>
-                        <a href="terms-of-service.html">📄 Terms of Service</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="cta-button">Start Generating Leads</a>
-            
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-        
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-content">
-            <div class="mobile-menu-header">
-                <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
-                <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
-            </div>
-            <nav class="mobile-nav">
-                <a href="services.html" class="mobile-nav-link">Services</a>
-                <a href="about.html" class="mobile-nav-link">About</a>
-                <a href="pricing.html" class="mobile-nav-link">Resources</a>
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
-                <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
-            </nav>
-        </div>
-    </div>
+ <!-- Header -->
+ <header class="header">
+ <nav class="nav-container">
+ <div class="logo">
+ <a href="index.html">
+ <img src="logo.png" alt="Broker Lead Engine Logo">
+ </a>
+ </div>
+ <ul class="nav-menu">
+ <li class="nav-item">
+ <a href="services.html">Services</a>
+ <div class="dropdown">
+ <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+ <a href="local-seo.html">📍 Local SEO</a>
+ <a href="google-ppc.html">🎯 Google PPC</a>
+ <a href="meta-ads.html">📱 Meta Ads</a>
+ <a href="cold-email.html">📧 Cold Email</a>
+ <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a href="about.html">About</a>
+ <div class="dropdown">
+ <a href="about.html">🏢 About Us</a>
+ <a href="success-stories.html">🏆 Success Stories</a>
+ <a href="case-study-stucco-dominance.html">📈 Case Studies</a>
+ <a href="guarantee.html">🛡️ Our Guarantee</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a href="pricing.html">Resources</a>
+ <div class="dropdown">
+ <a href="pricing.html">💰 Pricing</a>
+ <a href="ai-demo.html">🤖 AI Demo</a>
+ <a href="faq.html">❓ FAQ</a>
+ <a href="privacy-policy.html">🔒 Privacy Policy</a>
+ <a href="terms-of-service.html">📄 Terms of Service</a>
+ </div>
+ </li>
+ <li class="nav-item"><a href="contact.html">Contact</a></li>
+ </ul>
+ <a href="contact.html" class="cta-button">Start Generating Leads</a>
+ 
+ <!-- Hamburger Menu Button -->
+ <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+ <span></span>
+ <span></span>
+ <span></span>
+ </button>
+ </nav>
+ </header>
+ 
+ <!-- Mobile Menu Overlay -->
+ <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+ <div class="mobile-menu-content">
+ <div class="mobile-menu-header">
+ <img src="logo.png" alt="Broker Lead Engine" class="mobile-logo">
+ <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+ </div>
+ <nav class="mobile-nav">
+ <a href="services.html" class="mobile-nav-link">Services</a>
+ <a href="about.html" class="mobile-nav-link">About</a>
+ <a href="pricing.html" class="mobile-nav-link">Resources</a>
+ <a href="contact.html" class="mobile-nav-link">Contact</a>
+ <a href="contact.html" class="mobile-cta-button">Start Generating Leads</a>
+ </nav>
+ </div>
+ </div>
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
-    </div>
+ <!-- Loading Overlay -->
+ <div class="loading-overlay" id="loadingOverlay">
+ <div class="loader"></div>
+ </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Let's <span class="hero-highlight">Transform Your Lead Generation</span></h1>
-            <p class="hero-subtext">Get your free consultation and discover how we can generate 50+ qualified insurance leads weekly for your agency.</p>
-            
-            <div style="margin-top: 2rem; position: relative; z-index: 1;">
-                <a href="tel:+13472013023" class="cta-button" style="margin-right: 1rem;">Call Now: (347) 201-3023</a>
-                <a href="mailto:sam@brokerleadengine.com" class="cta-button" style="background: transparent; border: 2px solid white;">Email Us</a>
-            </div>
-        </div>
-    </section>
+ <!-- Hero Section -->
+ <section class="hero">
+ <div class="container">
+ <h1>Let's <span class="hero-highlight">Transform Your Lead Generation</span></h1>
+ <p class="hero-subtext">Get your free consultation and discover how we can generate 50+ qualified insurance leads weekly for your agency.</p>
+ 
+ <div style="margin-top: 2rem; position: relative; z-index: 1;">
+ <a href="tel:+13472013023" class="cta-button" style="margin-right: 1rem;">Call Now: (347) 201-3023</a>
+ <a href="mailto:sam@brokerleadengine.com" class="cta-button" style="background: transparent; border: 2px solid white;">Email Us</a>
+ </div>
+ </div>
+ </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Information -->
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Call Us Directly</h3>
-                            <p><a href="tel:+13472013023">(347) 201-3023</a></p>
-                            <p>Available 9 AM - 6 PM EST</p>
-                        </div>
-                    </div>
+ <!-- Contact Section -->
+ <section class="contact-section">
+ <div class="container">
+ <div class="contact-grid">
+ <!-- Contact Information -->
+ <div class="contact-info">
+ <h2>Get In Touch</h2>
+ 
+ <div class="contact-item">
+ <div class="contact-icon">
+ <i class="fas fa-phone"></i>
+ </div>
+ <div class="contact-details">
+ <h3>Call Us Directly</h3>
+ <p><a href="tel:+13472013023">(347) 201-3023</a></p>
+ <p>Available 9 AM - 6 PM EST</p>
+ </div>
+ </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email Us</h3>
-                            <p><a href="mailto:sam@brokerleadengine.com">sam@brokerleadengine.com</a></p>
-                            <p>Response within 2 hours</p>
-                        </div>
-                    </div>
+ <div class="contact-item">
+ <div class="contact-icon">
+ <i class="fas fa-envelope"></i>
+ </div>
+ <div class="contact-details">
+ <h3>Email Us</h3>
+ <p><a href="mailto:sam@brokerleadengine.com">sam@brokerleadengine.com</a></p>
+ <p>Response within 2 hours</p>
+ </div>
+ </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Brooklyn, New York</p>
-                            <p>Serving nationwide</p>
-                        </div>
-                    </div>
+ <div class="contact-item">
+ <div class="contact-icon">
+ <i class="fas fa-map-marker-alt"></i>
+ </div>
+ <div class="contact-details">
+ <h3>Location</h3>
+ <p>Brooklyn, New York</p>
+ <p>Serving nationwide</p>
+ </div>
+ </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Business Hours</h3>
-                            <p>Monday - Friday: 9 AM - 6 PM EST</p>
-                            <p>Saturday: 10 AM - 2 PM EST</p>
-                        </div>
-                    </div>
-                </div>
+ <div class="contact-item">
+ <div class="contact-icon">
+ <i class="fas fa-clock"></i>
+ </div>
+ <div class="contact-details">
+ <h3>Business Hours</h3>
+ <p>Monday - Friday: 9 AM - 6 PM EST</p>
+ <p>Saturday: 10 AM - 2 PM EST</p>
+ </div>
+ </div>
+ </div>
 
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h2>Request Your Free Consultation</h2>
-                    
-                    <form action="mailto:sam@brokerleadengine.com" method="post" enctype="text/plain">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="name">Your Name*</label>
-                                <input type="text" id="name" name="name" required placeholder="John Smith">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company">Company Name*</label>
-                                <input type="text" id="company" name="company" required placeholder="ABC Commercial insurance brokerage">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address*</label>
-                                <input type="email" id="email" name="email" required placeholder="john@abcinsurance.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number*</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
-                            </div>
-                            
-                            <div class="form-group full-width">
-                                <label for="revenue">Annual Revenue</label>
-                                <select id="revenue" name="revenue">
-                                    <option value="">Select Revenue Range</option>
-                                    <option value="under-1m">Under $1M</option>
-                                    <option value="1m-2m">$1M - $2M</option>
-                                    <option value="2m-5m">$2M - $5M</option>
-                                    <option value="5m-10m">$5M - $10M</option>
-                                    <option value="over-10m">Over $10M</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group full-width">
-                                <label for="services">Services Interested In</label>
-                                <select id="services" name="services">
-                                    <option value="">Select Service</option>
-                                    <option value="ai-lead-generation">AI Lead Generation</option>
-                                    <option value="local-seo">Local SEO</option>
-                                    <option value="google-ppc">Google PPC</option>
-                                    <option value="meta-ads">Meta Ads</option>
-                                    <option value="cold-email">Cold Email</option>
-                                    <option value="marketing-automation">Marketing Automation</option>
-                                    <option value="multiple">Multiple Services</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group full-width">
-                                <label for="message">Tell Us About Your Goals</label>
-                                <textarea id="message" name="message" placeholder="What are your lead generation goals? What challenges are you facing?"></textarea>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="submit-button">Get Your Free Consultation</button>
-                    </form>
-                </div>
-            </div>
+ <!-- Contact Form -->
+ <div class="contact-form">
+ <h2>Request Your Free Consultation</h2>
+ 
+ <form action="mailto:sam@brokerleadengine.com" method="post" enctype="text/plain">
+ <div class="form-grid">
+ <div class="form-group">
+ <label for="name">Your Name*</label>
+ <input type="text" id="name" name="name" required placeholder="John Smith">
+ </div>
+ 
+ <div class="form-group">
+ <label for="company">Company Name*</label>
+ <input type="text" id="company" name="company" required placeholder="ABC Commercial insurance brokerage">
+ </div>
+ 
+ <div class="form-group">
+ <label for="email">Email Address*</label>
+ <input type="email" id="email" name="email" required placeholder="john@abcinsurance.com">
+ </div>
+ 
+ <div class="form-group">
+ <label for="phone">Phone Number*</label>
+ <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+ </div>
+ 
+ <div class="form-group full-width">
+ <label for="revenue">Annual Revenue</label>
+ <select id="revenue" name="revenue">
+ <option value="">Select Revenue Range</option>
+ <option value="under-1m">Under $1M</option>
+ <option value="1m-2m">$1M - $2M</option>
+ <option value="2m-5m">$2M - $5M</option>
+ <option value="5m-10m">$5M - $10M</option>
+ <option value="over-10m">Over $10M</option>
+ </select>
+ </div>
+ 
+ <div class="form-group full-width">
+ <label for="services">Services Interested In</label>
+ <select id="services" name="services">
+ <option value="">Select Service</option>
+ <option value="ai-lead-generation">AI Lead Generation</option>
+ <option value="local-seo">Local SEO</option>
+ <option value="google-ppc">Google PPC</option>
+ <option value="meta-ads">Meta Ads</option>
+ <option value="cold-email">Cold Email</option>
+ <option value="marketing-automation">Marketing Automation</option>
+ <option value="multiple">Multiple Services</option>
+ </select>
+ </div>
+ 
+ <div class="form-group full-width">
+ <label for="message">Tell Us About Your Goals</label>
+ <textarea id="message" name="message" placeholder="What are your lead generation goals? What challenges are you facing?"></textarea>
+ </div>
+ </div>
+ 
+ <button type="submit" class="submit-button">Get Your Free Consultation</button>
+ </form>
+ </div>
+ </div>
 
-            <div class="response-time">
-                <h3>🚀 Fast Response Guaranteed</h3>
-                <p>We respond to all inquiries within 2 business hours. Urgent? Call us directly at (347) 201-3023.</p>
-            </div>
-        </div>
-    </section>
+ <div class="response-time">
+ <h3>🚀 Fast Response Guaranteed</h3>
+ <p>We respond to all inquiries within 2 business hours. Urgent? Call us directly at (347) 201-3023.</p>
+ </div>
+ </div>
+ </section>
 
-    <!-- Footer -->
-    <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
-        <div class="container">
-            <p style="margin-bottom: 1rem; opacity: 0.9;">
-                <strong>Legal Disclaimer:</strong> Broker Lead Engine is a service operated by Serpro SEO LLC. 
-                Results may vary and are not guaranteed. Past performance does not guarantee future results. 
-                All marketing services are provided in compliance with applicable laws and regulations.
-            </p>
-            <p style="opacity: 0.7; font-size: 0.8rem;">
-                © 2025 Serpro SEO LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
-            </p>
-        </div>
-    </footer>
+ <!-- Footer -->
+ <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; font-size: 0.875rem;">
+ <div class="container">
+ <p style="margin-bottom: 1rem; opacity: 0.9;">
+ <strong> 
+ Results may vary and are not guaranteed. Past performance does not guarantee future results. 
+ All marketing services are provided in compliance with applicable laws and regulations.
+ </p>
+ <p style="opacity: 0.7; font-size: 0.8rem;">
+ © 2025 Broker Lead Engine LLC. All rights reserved. | <a href="privacy-policy.html" style="color: #16a571; text-decoration: none;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: #16a571; text-decoration: none;">Terms of Service</a>
+ </p>
+ </div>
+ </footer>
 
-    <script>
-        // Clean JavaScript - Page Loading and Menu
-        document.addEventListener('DOMContentLoaded', function() {
-            // Remove loading overlay immediately
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            if (loadingOverlay) {
-                setTimeout(() => {
-                    loadingOverlay.classList.add('loaded');
-                }, 100);
-            }
+ <script>
+ // Clean JavaScript - Page Loading and Menu
+ document.addEventListener('DOMContentLoaded', function() {
+ // Remove loading overlay immediately
+ const loadingOverlay = document.getElementById('loadingOverlay');
+ if (loadingOverlay) {
+ setTimeout(() => {
+ loadingOverlay.classList.add('loaded');
+ }, 100);
+ }
 
-            // Mobile Menu Toggle
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-            const closeMenu = document.getElementById('close-menu');
+ // Mobile Menu Toggle
+ const hamburgerMenu = document.getElementById('hamburger-menu');
+ const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+ const closeMenu = document.getElementById('close-menu');
 
-            function toggleMenu() {
-                if (hamburgerMenu && mobileMenuOverlay) {
-                    hamburgerMenu.classList.toggle('active');
-                    mobileMenuOverlay.classList.toggle('active');
-                    document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
-                }
-            }
+ function toggleMenu() {
+ if (hamburgerMenu && mobileMenuOverlay) {
+ hamburgerMenu.classList.toggle('active');
+ mobileMenuOverlay.classList.toggle('active');
+ document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+ }
+ }
 
-            // Event listeners
-            if (hamburgerMenu) {
-                hamburgerMenu.addEventListener('click', toggleMenu);
-            }
+ // Event listeners
+ if (hamburgerMenu) {
+ hamburgerMenu.addEventListener('click', toggleMenu);
+ }
 
-            if (closeMenu) {
-                closeMenu.addEventListener('click', toggleMenu);
-            }
+ if (closeMenu) {
+ closeMenu.addEventListener('click', toggleMenu);
+ }
 
-            // Close menu when clicking on mobile nav links
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
-                        toggleMenu();
-                    }
-                });
-            });
+ // Close menu when clicking on mobile nav links
+ const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+ mobileNavLinks.forEach(link => {
+ link.addEventListener('click', () => {
+ if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+ toggleMenu();
+ }
+ });
+ });
 
-            // Close menu on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-        });
-    </script>
+ // Close menu on escape key
+ document.addEventListener('keydown', (e) => {
+ if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+ toggleMenu();
+ }
+ });
+ });
+ </script>
 </body>
 </html>
