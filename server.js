@@ -25,7 +25,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Catch all route - try to serve HTML file
+// Catch all route - try to serve HTML file with CLEAN URLs (no .html extension)
+// Example: /pricing instead of /pricing.html
 app.get('*', (req, res) => {
     let filePath = req.path;
     
@@ -34,7 +35,7 @@ app.get('*', (req, res) => {
         filePath = filePath.substring(1);
     }
     
-    // If request has .html, redirect to clean URL
+    // CLEAN URL FEATURE: If someone visits /page.html, redirect to /page
     if (filePath.endsWith('.html')) {
         const cleanUrl = '/' + filePath.slice(0, -5);
         return res.redirect(301, cleanUrl);
@@ -61,4 +62,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Broker Lead Engine server running on port ${PORT}`);
     console.log(`Visit http://localhost:${PORT} to view the site`);
+    console.log(`Clean URLs enabled - no .html extensions needed`);
 });
