@@ -7,7 +7,7 @@
     "start": "node start.js",
     "dev": "nodemon index.js",
     "test": "node test-system.js",
-    "build": "node build-static.js",
+    "build": "node build.js",
     "deploy": "npm run build && echo 'Build ready for deployment'",
     "setup": "npm install && echo '✅ Broker Lead Engine setup complete!'",
     "mcp": "node mcp-server.js",
