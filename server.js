@@ -34,18 +34,27 @@ app.get('*', (req, res) => {
         filePath = filePath.substring(1);
     }
     
-    // Add .html if not present
-    if (!filePath.endsWith('.html') && !filePath.includes('.')) {
-        filePath += '.html';
+    // If request has .html, redirect to clean URL
+    if (filePath.endsWith('.html')) {
+        const cleanUrl = '/' + filePath.slice(0, -5);
+        return res.redirect(301, cleanUrl);
     }
     
-    const fullPath = path.join(__dirname, filePath);
+    // Try to find HTML file
+    let fullPath = path.join(__dirname, filePath + '.html');
     
+    // Check if file exists
     if (fs.existsSync(fullPath)) {
         res.sendFile(fullPath);
     } else {
-        // 404 - redirect to home
-        res.redirect('/');
+        // Check if it's a directory with index.html
+        fullPath = path.join(__dirname, filePath, 'index.html');
+        if (fs.existsSync(fullPath)) {
+            res.sendFile(fullPath);
+        } else {
+            // 404 - redirect to home
+            res.redirect('/');
+        }
     }
 });
 
