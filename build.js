@@ -1,10 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
+console.log('Starting build process...');
+console.log('Current directory:', __dirname);
+
 // Create public directory
 const publicDir = path.join(__dirname, 'public');
 if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
+    console.log('Created public directory');
 }
 
 // Copy all HTML files to public directory
