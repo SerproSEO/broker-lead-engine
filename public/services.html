@@ -383,6 +383,36 @@
  box-shadow: var(--shadow-lg);
  }
 
+ /* Mobile Dropdown Styles */
+ .mobile-dropdown {
+ display: none;
+ padding-left: 1.5rem;
+ margin-top: 0.5rem;
+ }
+
+ .mobile-dropdown.show {
+ display: block;
+ }
+
+ .mobile-dropdown a {
+ color: rgba(255, 255, 255, 0.8);
+ text-decoration: none;
+ padding: 0.75rem 1rem;
+ display: block;
+ font-size: 1.1rem;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+ }
+
+ .mobile-dropdown a:hover {
+ color: var(--primary);
+ background: rgba(22, 165, 113, 0.1);
+ }
+
+ .mobile-dropdown-toggle.active span {
+ transform: rotate(180deg);
+ display: inline-block;
+ }
+
  /* Hero Section */
  .hero {
  background: var(--gradient-secondary);
@@ -755,7 +785,19 @@
  <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
  </div>
  <nav class="mobile-nav">
- <a href="services.html" class="mobile-nav-link">Services</a>
+ <div class="mobile-nav-item">
+ <a href="services.html" class="mobile-nav-link mobile-dropdown-toggle" onclick="event.preventDefault(); toggleMobileDropdown('mobile-services-dropdown')">
+ Services <span style="float: right;">▼</span>
+ </a>
+ <div id="mobile-services-dropdown" class="mobile-dropdown">
+ <a href="ai-lead-generation.html">🤖 AI Lead Generation</a>
+ <a href="local-seo.html">📍 Local SEO</a>
+ <a href="google-ppc.html">🎯 Google PPC</a>
+ <a href="meta-ads.html">📱 Meta Ads</a>
+ <a href="cold-email.html">📧 Cold Email</a>
+ <a href="marketing-automation.html">⚙️ Marketing Automation</a>
+ </div>
+ </div>
  <a href="about.html" class="mobile-nav-link">About</a>
  <a href="pricing.html" class="mobile-nav-link">Resources</a>
  <a href="contact.html" class="mobile-nav-link">Contact</a>
@@ -772,8 +814,8 @@
  <!-- Hero Section -->
  <section class="hero">
  <div class="container">
- <h1>The Complete Marketing Engine for <span class="hero-highlight">Commercial Insurance Brokers</span></h1>
- <p class="hero-subtext">Proven B2B systems for cyber, professional liability, and general commercial lines. Generate qualified business leads with our specialized commercial insurance marketing suite.</p>
+ <h1>You're Ready to Scale <span class="hero-highlight">Beyond Referrals</span></h1>
+ <p class="hero-subtext">You've built a solid book of business through relationships and expertise. Now multiply that success with systems that work as hard as you do - bringing qualified prospects directly to you.</p>
  
  <div style="margin-top: 2rem; position: relative; z-index: 1;">
  <a href="#services" class="cta-button" style="margin-right: 1rem;">Explore Services</a>
@@ -786,26 +828,26 @@
  <section class="section stats-section">
  <div class="container">
  <div class="section-header">
- <h2>Performance Metrics from Client Agencies</h2>
- <p>Data-driven results from insurance agencies using our proven systems</p>
+ <h2>The Opportunity Waiting for You</h2>
+ <p>Transform your expertise into automated systems that generate consistent growth</p>
  </div>
 
  <div class="stats-grid">
  <div class="stat-card">
- <span class="stat-number">300%</span>
- <span>Average lead increase within 90 days</span>
+ <span class="stat-number">50+</span>
+ <span>Qualified leads you could be getting weekly</span>
  </div>
  <div class="stat-card">
- <span class="stat-number">145+</span>
- <span>Qualified leads per week (multi-channel)</span>
+ <span class="stat-number">74%</span>
+ <span>Of buyers want to work with experts like you</span>
  </div>
  <div class="stat-card">
- <span class="stat-number">518%</span>
- <span>ROI achieved by client agencies</span>
+ <span class="stat-number">18hrs</span>
+ <span>Weekly time you'll reclaim for high-value activities</span>
  </div>
  <div class="stat-card">
- <span class="stat-number">23min</span>
- <span>Time to generate 10 qualified leads with AI</span>
+ <span class="stat-number">3x</span>
+ <span>Revenue growth when you systematize your success</span>
  </div>
  </div>
  </div>
@@ -815,17 +857,17 @@
  <section class="section" id="services">
  <div class="container">
  <div class="section-header">
- <h2>Our Complete Service Portfolio</h2>
- <p>Integrated digital marketing solutions designed specifically for insurance agencies</p>
+ <h2>Your 3-Step Path to Market Domination</h2>
+ <p>A proven system that transforms struggling agencies into market leaders</p>
  </div>
 
  <div class="services-grid">
  <div class="service-card">
  <div class="service-icon">🤖</div>
- <h3>AI Lead Generation</h3>
- <p>Our MCP automation finds and qualifies 50+ insurance prospects weekly from business directories, associations, and new business filings automatically.</p>
+ <h3>Step 1: Capture (AI Lead Generation)</h3>
+ <p>Your expertise attracts the right clients. Our AI ensures they find you first - identifying and qualifying businesses that need exactly what you offer, delivering 50+ warm leads weekly.</p>
  <div class="service-results">
- <strong>Results:</strong> 50+ qualified leads/week • 23-minute demo generated $200K+ pipeline • 15-25% qualification rate
+ <strong>What You Get:</strong> Pre-qualified leads ready to buy • No more cold calling • Focus only on closing deals
  </div>
  <div class="service-cta">
  <a href="ai-lead-generation.html">Learn More</a>
@@ -834,10 +876,10 @@
 
  <div class="service-card">
  <div class="service-icon">📍</div>
- <h3>Local SEO</h3>
- <p>Dominate "insurance near me" searches with complete Google Business Profile optimization, local citations, and location-based content strategies.</p>
+ <h3>Step 2: Convert (Multi-Channel Presence)</h3>
+ <p>You've earned your reputation. We make sure it reaches every prospect - positioning your expertise across Google, LinkedIn, and email so clients choose you with confidence.</p>
  <div class="service-results">
- <strong>Results:</strong> Top 3 local rankings • 30+ organic leads/week • 400-600% ROI annually
+ <strong>What You Get:</strong> Top Google rankings • Targeted social ads • Automated email sequences
  </div>
  <div class="service-cta">
  <a href="local-seo.html">Learn More</a>
@@ -846,10 +888,10 @@
 
  <div class="service-card">
  <div class="service-icon">🎯</div>
- <h3>Google PPC</h3>
- <p>Capture high-intent prospects searching for insurance quotes with professionally managed Google Ads campaigns and optimized landing pages.</p>
+ <h3>Step 3: Compound (Automation & Scale)</h3>
+ <p>You focus on relationships and closing deals. Our systems handle everything else - scoring, nurturing, and warming up leads so you only talk to qualified, ready-to-buy prospects.</p>
  <div class="service-results">
- <strong>Results:</strong> 25+ leads/week • 18-30% close rate (highest intent) • $45-85 CPC for premium keywords
+ <strong>What You Get:</strong> 80% time savings • 3.2x lead quality • Predictable monthly growth
  </div>
  <div class="service-cta">
  <a href="google-ppc.html">Learn More</a>
@@ -858,10 +900,10 @@
 
  <div class="service-card">
  <div class="service-icon">📱</div>
- <h3>Meta Ads (Facebook/Instagram)</h3>
- <p>Target business owners by industry, company size, and behaviors with precision Facebook and Instagram advertising campaigns.</p>
+ <h3>Google PPC Management</h3>
+ <p>Your prospects are searching for "commercial insurance" right now. We put you at the top of Google when they do, capturing high-intent buyers ready to switch providers.</p>
  <div class="service-results">
- <strong>Results:</strong> 40+ leads/week • $25-65 cost per lead • 8-12% conversion to clients
+ <strong>Why This Works:</strong> 18-30% close rate • Immediate results • Only pay for qualified clicks
  </div>
  <div class="service-cta">
  <a href="meta-ads.html">Learn More</a>
@@ -870,10 +912,10 @@
 
  <div class="service-card">
  <div class="service-icon">📧</div>
- <h3>Cold Email Campaigns</h3>
- <p>Personalized outreach sequences that convert prospects to sales meetings with company-specific research and proven messaging frameworks.</p>
+ <h3>Social Media Advertising</h3>
+ <p>74% of business owners are on LinkedIn and Facebook. We target them by industry, company size, and recent growth signals - delivering your message when they're most receptive.</p>
  <div class="service-results">
- <strong>Results:</strong> 3-5% response rate • 15% response-to-meeting conversion • 25-35% open rates
+ <strong>Why This Works:</strong> Laser-targeted audience • Lower cost than Google • Build brand awareness
  </div>
  <div class="service-cta">
  <a href="cold-email.html">Learn More</a>
@@ -882,10 +924,10 @@
 
  <div class="service-card">
  <div class="service-icon">⚙️</div>
- <h3>Marketing Automation</h3>
- <p>Intelligent workflows that nurture prospects from lead to client with automated follow-ups, lead scoring, and CRM integration.</p>
+ <h3>Email & CRM Automation</h3>
+ <p>Never let another lead go cold. Our system automatically follows up, nurtures relationships, and alerts you when prospects are ready to buy - turning missed opportunities into closed deals.</p>
  <div class="service-results">
- <strong>Results:</strong> 47% larger purchases from nurtured leads • 80% time savings • 35% higher conversion rates
+ <strong>Why This Works:</strong> 47% of deals need 5+ touches • Automated = consistent • Higher lifetime value
  </div>
  <div class="service-cta">
  <a href="marketing-automation.html">Learn More</a>
@@ -899,8 +941,8 @@
  <section class="section why-us-section">
  <div class="container">
  <div class="section-header">
- <h2>Why Top Insurance Agencies Partner with Us</h2>
- <p>Industry expertise, proven methodologies, and measurable outcomes</p>
+ <h2>What Makes Us Different</h2>
+ <p>We understand your frustration because we've solved it for 200+ agencies</p>
  </div>
 
  <div class="why-us-grid">
@@ -908,24 +950,24 @@
  <div class="why-us-icon">
  <i class="fas fa-chart-line"></i>
  </div>
- <h3>Proven Results</h3>
- <p>518% average ROI for client agencies with documented case studies and transparent reporting.</p>
+ <h3>We Get It</h3>
+ <p>We know how frustrating it is to spend thousands on marketing with nothing to show for it. That's why we only work with insurance agencies - we know exactly what works.</p>
  </div>
 
  <div class="why-us-item">
  <div class="why-us-icon">
  <i class="fas fa-shield-alt"></i>
  </div>
- <h3>90-Day Guarantee</h3>
- <p>Generate 300% more qualified leads in 90 days or get your money back. No questions asked.</p>
+ <h3>No Risk to You</h3>
+ <p>If you don't see more business within 90 days, we'll work for free until you do. We succeed only when you succeed.</p>
  </div>
 
  <div class="why-us-item">
  <div class="why-us-icon">
  <i class="fas fa-users"></i>
  </div>
- <h3>Insurance Focus</h3>
- <p>Specialized exclusively in insurance agency marketing with deep industry knowledge and compliance expertise.</p>
+ <h3>Your Success Formula</h3>
+ <p>We've generated over 10,000 qualified leads for agencies like yours. We know the exact formula to transform your agency from struggling to thriving.</p>
  </div>
  </div>
  </div>
@@ -934,9 +976,9 @@
  <!-- CTA Section -->
  <section class="cta-section" id="cta">
  <div class="container">
- <h2>Ready to Transform Your Insurance Agency's Lead Generation?</h2>
+ <h2>Your Next Chapter Starts Here</h2>
  <p style="font-size: 1.1rem; margin: 1rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
- Get your free comprehensive marketing audit and see exactly how to generate 300% more qualified leads in your market using our proven systems.
+ Schedule your free strategy session and discover how to transform your expertise into an automated lead generation system that works 24/7.
  </p>
  
  <div style="margin: 2rem 0;">
@@ -967,6 +1009,25 @@
  </footer>
 
  <script>
+ // Mobile Dropdown Toggle Function
+ function toggleMobileDropdown(dropdownId) {
+ const dropdown = document.getElementById(dropdownId);
+ const toggle = dropdown.previousElementSibling;
+ 
+ if (dropdown.classList.contains('show')) {
+ dropdown.classList.remove('show');
+ toggle.classList.remove('active');
+ } else {
+ // Close other dropdowns
+ document.querySelectorAll('.mobile-dropdown').forEach(d => {
+ d.classList.remove('show');
+ d.previousElementSibling.classList.remove('active');
+ });
+ dropdown.classList.add('show');
+ toggle.classList.add('active');
+ }
+ }
+
  // Clean JavaScript - Page Loading and Menu
  document.addEventListener('DOMContentLoaded', function() {
  // Remove loading overlay immediately
