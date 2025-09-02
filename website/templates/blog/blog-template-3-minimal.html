@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Mistakes Insurance Agencies Make With Google Ads - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --accent: #0066ff;
+            --max-width: 650px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Minimal Header */
+        .header {
+            padding: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .header-nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .header-nav a:hover {
+            color: var(--black);
+        }
+
+        /* Article Header */
+        .article-header {
+            max-width: var(--max-width);
+            margin: 6rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .meta-separator {
+            color: #ddd;
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 3rem 0 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content strong {
+            font-weight: 600;
+        }
+
+        .article-content em {
+            font-style: italic;
+        }
+
+        /* Links */
+        .article-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .article-content a:hover {
+            color: var(--black);
+        }
+
+        /* Blockquote */
+        .article-content blockquote {
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--black);
+            font-style: italic;
+        }
+
+        /* Numbered Sections */
+        .numbered-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .section-number {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--black);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-content {
+            color: var(--gray);
+        }
+
+        /* Simple Image */
+        .article-image {
+            margin: 3rem -2rem;
+            text-align: center;
+        }
+
+        .article-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-caption {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        /* Simple CTA */
+        .simple-cta {
+            margin: 4rem 0;
+            padding: 2rem;
+            border: 2px solid var(--black);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .simple-cta h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .simple-cta p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .simple-cta a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .simple-cta a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Tags */
+        .article-tags {
+            max-width: var(--max-width);
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            background: var(--light-gray);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--gray);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* Author */
+        .article-author {
+            max-width: var(--max-width);
+            margin: 4rem auto;
+            padding: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-bio {
+            color: var(--gray);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        .article-nav {
+            max-width: var(--max-width);
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .nav-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-title {
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover .nav-title {
+            color: var(--accent);
+        }
+
+        .nav-next {
+            text-align: right;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 6rem;
+            padding: 3rem 2rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-newsletter {
+            margin-bottom: 3rem;
+        }
+
+        .footer-newsletter h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-newsletter p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+
+        .newsletter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .meta-separator {
+                display: none;
+            }
+
+            .article-author {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .author-avatar {
+                margin: 0 auto;
+            }
+
+            .article-nav {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .nav-next {
+                text-align: left;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">Broker Lead Engine</a>
+            <nav class="header-nav">
+                <a href="/blog">Blog</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <h1 class="article-title">7 Mistakes Insurance Agencies Make With Google Ads (And How to Fix Them)</h1>
+        <div class="article-meta">
+            <span>By David Park</span>
+            <span class="meta-separator">•</span>
+            <span>Sept 3, 2024</span>
+            <span class="meta-separator">•</span>
+            <span>5 min read</span>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <p>
+            After auditing over 200 Google Ads accounts for insurance agencies, I've seen the same mistakes repeated again and again. These aren't minor optimizations—they're fundamental errors that waste thousands of dollars every month.
+        </p>
+
+        <p>
+            The good news? They're all fixable. And once you fix them, your cost per lead will drop by 40-60% almost immediately.
+        </p>
+
+        <h2>The Problem With Insurance Google Ads</h2>
+
+        <p>
+            Insurance keywords are expensive. We're talking $40-$80 per click for competitive terms. At those prices, you can't afford to make mistakes. Yet most agencies are lighting money on fire with poorly configured campaigns.
+        </p>
+
+        <p>
+            Let's fix that.
+        </p>
+
+        <!-- Numbered Section 1 -->
+        <div class="numbered-section">
+            <div class="section-number">1</div>
+            <h3 class="section-title">Bidding on Broad Match Keywords</h3>
+            <div class="section-content">
+                <p>This is the cardinal sin of Google Ads. Broad match keywords will match to anything Google thinks is "related." I've seen "cyber insurance" trigger ads for "cyber Monday deals."</p>
+                <p><strong>The Fix:</strong> Use phrase match or exact match only. Yes, your volume will decrease, but your relevance will skyrocket.</p>
+            </div>
+        </div>
+
+        <!-- Numbered Section 2 -->
+        <div class="numbered-section">
+            <div class="section-number">2</div>
+            <h3 class="section-title">Ignoring Negative Keywords</h3>
+            <div class="section-content">
+                <p>Without negative keywords, you're paying for searches like "free insurance," "insurance jobs," and "insurance memes" (yes, really).</p>
+                <p><strong>The Fix:</strong> Add at least 200 negative keywords before launching. Update weekly based on search term reports.</p>
+            </div>
+        </div>
+
+        <!-- Numbered Section 3 -->
+        <div class="numbered-section">
+            <div class="section-number">3</div>
+            <h3 class="section-title">Sending Traffic to Your Homepage</h3>
+            <div class="section-content">
+                <p>Your homepage is designed to serve everyone. Your ads should send people to pages designed to convert that specific search.</p>
+                <p><strong>The Fix:</strong> Create dedicated landing pages for each ad group. Match the headline to the ad copy exactly.</p>
+            </div>
+        </div>
+
+        <blockquote>
+            "We reduced our cost per lead by 67% just by creating service-specific landing pages. It was the easiest win we've ever had."
+            <br>— Jennifer Ross, Digital Marketing Director
+        </blockquote>
+
+        <!-- Numbered Section 4 -->
+        <div class="numbered-section">
+            <div class="section-number">4</div>
+            <h3 class="section-title">Not Using Ad Extensions</h3>
+            <div class="section-content">
+                <p>Ad extensions are free real estate. They increase your ad size by 2-3x and improve click-through rates by 30%.</p>
+                <p><strong>The Fix:</strong> Use all relevant extensions: sitelinks, callouts, structured snippets, call extensions, and location extensions.</p>
+            </div>
+        </div>
+
+        <!-- Numbered Section 5 -->
+        <div class="numbered-section">
+            <div class="section-number">5</div>
+            <h3 class="section-title">Competing on Price</h3>
+            <div class="section-content">
+                <p>Insurance isn't a commodity. Stop advertising "cheapest rates" and start advertising value, expertise, and trust.</p>
+                <p><strong>The Fix:</strong> Focus on your unique value proposition. What makes you different? Lead with that.</p>
+            </div>
+        </div>
+
+        <!-- Numbered Section 6 -->
+        <div class="numbered-section">
+            <div class="section-number">6</div>
+            <h3 class="section-title">Ignoring Mobile</h3>
+            <div class="section-content">
+                <p>62% of insurance searches happen on mobile. Yet most agencies have desktop-only strategies.</p>
+                <p><strong>The Fix:</strong> Create mobile-specific ads with click-to-call buttons. Ensure your landing pages load in under 3 seconds.</p>
+            </div>
+        </div>
+
+        <!-- Numbered Section 7 -->
+        <div class="numbered-section">
+            <div class="section-number">7</div>
+            <h3 class="section-title">Set and Forget Mentality</h3>
+            <div class="section-content">
+                <p>Google Ads isn't a Ronco Rotisserie. You can't set it and forget it. The algorithm changes, competitors adjust, and performance drifts.</p>
+                <p><strong>The Fix:</strong> Review campaigns weekly. Test new ads monthly. Audit thoroughly quarterly.</p>
+            </div>
+        </div>
+
+        <h2>The Path Forward</h2>
+
+        <p>
+            Fixing these seven mistakes won't make you a Google Ads expert overnight. But it will stop the bleeding and give you a fighting chance against larger competitors with bigger budgets.
+        </p>
+
+        <p>
+            Remember: In Google Ads, perfection is impossible, but profitability is achievable. Focus on incremental improvements, and compound gains will follow.
+        </p>
+
+        <p>
+            The agencies that win at Google Ads aren't the ones with the biggest budgets—they're the ones that make the fewest mistakes.
+        </p>
+
+        <!-- Simple CTA -->
+        <div class="simple-cta">
+            <h3>Need Help With Your Google Ads?</h3>
+            <p>Get a free audit of your current campaigns and see exactly where you're losing money.</p>
+            <a href="/free-audit">Get Your Free Audit</a>
+        </div>
+    </article>
+
+    <!-- Tags -->
+    <div class="article-tags">
+        <a href="#" class="tag">Google Ads</a>
+        <a href="#" class="tag">PPC</a>
+        <a href="#" class="tag">Insurance Marketing</a>
+        <a href="#" class="tag">Digital Marketing</a>
+    </div>
+
+    <!-- Author -->
+    <div class="article-author">
+        <div class="author-avatar"></div>
+        <div class="author-info">
+            <h4>David Park</h4>
+            <p class="author-bio">
+                David manages over $2M in annual Google Ads spend for insurance agencies. He's certified in Google Ads and has been optimizing campaigns since 2015.
+            </p>
+        </div>
+    </div>
+
+    <!-- Article Navigation -->
+    <nav class="article-nav">
+        <a href="#" class="nav-link nav-prev">
+            <div class="nav-label">Previous</div>
+            <div class="nav-title">Facebook vs Google: Where Should Insurance Agencies Advertise?</div>
+        </a>
+        <a href="#" class="nav-link nav-next">
+            <div class="nav-label">Next</div>
+            <div class="nav-title">The Complete Guide to Insurance Landing Pages</div>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-newsletter">
+                <h3>Weekly Marketing Tips</h3>
+                <p>Join 5,000+ insurance professionals getting actionable insights.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-copyright">
+                © 2024 Broker Lead Engine. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Management - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            --dark-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Hero with Split Screen */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+
+        .hero-left {
+            background: var(--dark-gradient);
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: blur(100px);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            width: fit-content;
+        }
+
+        .hero-badge span {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-ghost {
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--white);
+            text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-right {
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual {
+            width: 80%;
+            height: 80%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+
+        /* Modern Features Section */
+        .features-section {
+            padding: 6rem 2rem;
+            background: #0a0e1a;
+            position: relative;
+        }
+
+        .features-header {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 100px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .features-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover::before {
+            transform: translateX(0);
+        }
+
+        .feature-box:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .feature-desc {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 6rem 2rem;
+            background: var(--dark-gradient);
+        }
+
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comparison-table {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .comparison-row:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .comparison-feature {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .comparison-check {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .comparison-cross {
+            text-align: center;
+            color: #ef4444;
+            font-size: 1.5rem;
+        }
+
+        /* Process Cards */
+        .process-section {
+            padding: 6rem 2rem;
+            background: #0a0e1a;
+        }
+
+        .process-cards {
+            max-width: 1400px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .process-number {
+            position: absolute;
+            top: -20px;
+            left: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Testimonial Slider */
+        .testimonials-section {
+            padding: 6rem 2rem;
+            background: var(--dark-gradient);
+        }
+
+        .testimonial-card {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient);
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .author-title {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+            animation: pulse-bg 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-bg {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-right {
+                min-height: 400px;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 2fr 1fr;
+                gap: 1rem;
+            }
+
+            .comparison-row > *:nth-child(3),
+            .comparison-row > *:nth-child(4),
+            .comparison-header > *:nth-child(3),
+            .comparison-header > *:nth-child(4) {
+                display: none;
+            }
+
+            .process-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Modern Hero -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <div class="pulse-dot"></div>
+                <span>GodTier Methodology</span>
+            </div>
+            <h1 class="hero-title">
+                Google Ads<br>
+                <span class="gradient-text">That Dominate</span>
+            </h1>
+            <p class="hero-description">
+                Stop competing on price. Our GodTier Google Ads methodology positions you as the premium choice for cyber insurance, commanding $40-80 per click with confidence.
+            </p>
+            <div class="hero-cta-group">
+                <a href="/get-started" class="btn-primary">
+                    Start Dominating
+                    <span>→</span>
+                </a>
+                <a href="/case-studies" class="btn-ghost">View Results</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-visual">
+                <!-- Placeholder for animated dashboard or graphic -->
+                <div style="width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; opacity: 0.5;">📊</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value">$84</div>
+                <div class="stat-label">Average CPL</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3.2%</div>
+                <div class="stat-label">Conversion Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">7.8x</div>
+                <div class="stat-label">Average ROAS</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">$5K</div>
+                <div class="stat-label">Min. Ad Spend</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Features -->
+    <section class="features-section">
+        <div class="features-header">
+            <span class="section-badge">Features</span>
+            <h2 class="features-title">Everything You Need to <span class="gradient-text">Win</span></h2>
+            <p style="color: rgba(255,255,255,0.7); font-size: 1.125rem;">Our comprehensive Google Ads management covers every aspect of your campaign</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-name">Precision Targeting</h3>
+                <p class="feature-desc">Laser-focused campaigns that reach decision-makers actively searching for cyber insurance and professional liability coverage.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-name">Advanced Analytics</h3>
+                <p class="feature-desc">Real-time tracking with custom dashboards showing exactly which keywords and ads drive the most valuable leads.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-name">Landing Page Optimization</h3>
+                <p class="feature-desc">High-converting pages designed specifically for insurance leads, with A/B testing to maximize conversion rates.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-name">AI-Powered Bidding</h3>
+                <p class="feature-desc">Smart bidding strategies that automatically adjust to get you the best leads at the lowest cost.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📈</div>
+                <h3 class="feature-name">Continuous Optimization</h3>
+                <p class="feature-desc">Daily monitoring and weekly optimizations to improve quality scores and reduce cost per acquisition.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">💼</div>
+                <h3 class="feature-name">White-Glove Service</h3>
+                <p class="feature-desc">Dedicated account manager, weekly calls, and complete transparency with no contracts or hidden fees.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="comparison-container">
+            <div class="features-header" style="text-align: center;">
+                <span class="section-badge">Comparison</span>
+                <h2 class="features-title">Why We're <span class="gradient-text">Different</span></h2>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div style="font-weight: 700;">Feature</div>
+                    <div style="text-align: center; font-weight: 700; color: var(--accent);">Broker Lead Engine</div>
+                    <div style="text-align: center; font-weight: 700;">Typical Agency</div>
+                    <div style="text-align: center; font-weight: 700;">DIY</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Industry Specialization</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-cross">✗</div>
+                    <div class="comparison-cross">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">GodTier Methodology</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-cross">✗</div>
+                    <div class="comparison-cross">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">90-Day ROI Guarantee</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-cross">✗</div>
+                    <div class="comparison-cross">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Custom Landing Pages</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-cross">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">AI Optimization</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-cross">✗</div>
+                    <div class="comparison-cross">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Weekly Strategy Calls</div>
+                    <div class="comparison-check">✓</div>
+                    <div class="comparison-cross">✗</div>
+                    <div class="comparison-cross">✗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Cards -->
+    <section class="process-section">
+        <div class="features-header" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span class="section-badge">Process</span>
+            <h2 class="features-title">From Setup to <span class="gradient-text">Scale</span></h2>
+        </div>
+
+        <div class="process-cards">
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <h3 style="margin-top: 1.5rem; font-size: 1.5rem; margin-bottom: 1rem;">Audit & Strategy</h3>
+                <p style="color: rgba(255,255,255,0.7);">Complete analysis of your market, competition, and current performance to build a winning strategy.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <h3 style="margin-top: 1.5rem; font-size: 1.5rem; margin-bottom: 1rem;">Campaign Build</h3>
+                <p style="color: rgba(255,255,255,0.7);">Expert setup of campaigns, ad groups, keywords, and compelling ad copy that converts.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <h3 style="margin-top: 1.5rem; font-size: 1.5rem; margin-bottom: 1rem;">Launch & Test</h3>
+                <p style="color: rgba(255,255,255,0.7);">Go live with optimized campaigns and begin A/B testing to find winning combinations.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <h3 style="margin-top: 1.5rem; font-size: 1.5rem; margin-bottom: 1rem;">Optimize & Scale</h3>
+                <p style="color: rgba(255,255,255,0.7);">Continuous improvements based on data to lower costs and scale profitable campaigns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonials-section">
+        <div class="features-header" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span class="section-badge">Success Story</span>
+            <h2 class="features-title">Real <span class="gradient-text">Results</span></h2>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-quote">
+                "Broker Lead Engine transformed our Google Ads from a money pit to our #1 revenue driver. We went from $200 cost per lead to $84 in just 60 days."
+            </p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <div class="author-name">Michael Chen</div>
+                    <div class="author-title">CEO, SecureShield Insurance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2 class="final-cta-title">
+                Ready to <span class="gradient-text">Dominate</span> Google?
+            </h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+                Join the insurance agencies winning with Google Ads
+            </p>
+            <a href="/get-started" class="btn-primary" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+                Claim Your Market →
+            </a>
+        </div>
+    </section>
+</body>
+</html>

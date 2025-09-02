@@ -1,0 +1,34 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "matcher": "cleanup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/cleanup-project.sh",
+            "description": "Clean up unnecessary files when session ends"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "clean|cleanup|tidy",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/cleanup-project.sh",
+            "description": "Run cleanup when user mentions cleaning"
+          }
+        ]
+      }
+    ]
+  },
+  "commands": {
+    "cleanup": {
+      "description": "Clean up unnecessary project files",
+      "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/cleanup-project.sh"
+    }
+  }
+}

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Intake Questionnaire - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #0066cc;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+        
+        h2 {
+            font-size: 20px;
+            color: #0066cc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            min-width: 200px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 20px 0;
+            font-size: 13px;
+            color: #856404;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .required {
+            color: #dc3545;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .section {
+                background: white;
+                border: 1px solid #ddd;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../assets/logo.png" alt="Broker Lead Engine" style="height: 80px; margin-bottom: 20px;">
+            <h1>Client Intake Questionnaire</h1>
+            <p class="subtitle">Cyber Insurance & Professional Liability Marketing Services</p>
+        </div>
+
+        <!-- Section 1: Company Information -->
+        <div class="section">
+            <h2>1. Company Information</h2>
+            
+            <div class="form-group">
+                <label>Agency Name <span class="required">*</span></label>
+                <input type="text" name="agency_name" required>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Primary Contact Name <span class="required">*</span></label>
+                    <input type="text" name="contact_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Title/Position <span class="required">*</span></label>
+                    <input type="text" name="contact_title" required>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Phone <span class="required">*</span></label>
+                    <input type="tel" name="phone" required>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Website</label>
+                    <input type="url" name="website" placeholder="https://">
+                </div>
+                
+                <div class="form-group">
+                    <label>Annual Revenue Range <span class="required">*</span></label>
+                    <select name="revenue_range" required>
+                        <option value="">Select...</option>
+                        <option value="1-2m">$1M - $2M</option>
+                        <option value="2-3m">$2M - $3M</option>
+                        <option value="3-5m">$3M - $5M</option>
+                        <option value="5m+">$5M+</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Number of Employees</label>
+                    <input type="number" name="employees" min="1">
+                </div>
+                
+                <div class="form-group">
+                    <label>Years in Business</label>
+                    <input type="number" name="years_business" min="1">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>States Licensed In <span class="required">*</span></label>
+                <textarea name="states_licensed" placeholder="List all states where you're licensed to sell insurance" required></textarea>
+            </div>
+        </div>
+
+        <!-- Section 2: Current Insurance Focus -->
+        <div class="section">
+            <h2>2. Insurance Products & Specialization</h2>
+            
+            <div class="form-group">
+                <label>Primary Insurance Lines (Check all that apply) <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="insurance_cyber" id="cyber">
+                        <label for="cyber">Cyber Insurance</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="insurance_eo" id="eo">
+                        <label for="eo">Professional Liability/E&O</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="insurance_gl" id="gl">
+                        <label for="gl">General Liability</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="insurance_wc" id="wc">
+                        <label for="wc">Workers Compensation</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="insurance_other" id="other">
+                        <label for="other">Other Commercial Lines</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Target Industries for Cyber Insurance (Be specific)</label>
+                <textarea name="target_industries" placeholder="E.g., Healthcare providers, Financial services, Law firms, Tech companies"></textarea>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Average Policy Premium</label>
+                    <input type="text" name="avg_premium" placeholder="$">
+                </div>
+                
+                <div class="form-group">
+                    <label>Average Commission Rate (%)</label>
+                    <input type="number" name="commission_rate" min="0" max="100" step="0.1">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Current Marketing Status -->
+        <div class="section">
+            <h2>3. Current Marketing Efforts</h2>
+            
+            <div class="form-group">
+                <label>Current Marketing Channels (Check all that apply)</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="channel_google" id="google">
+                        <label for="google">Google Ads</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="channel_facebook" id="facebook">
+                        <label for="facebook">Facebook/Meta Ads</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="channel_linkedin" id="linkedin">
+                        <label for="linkedin">LinkedIn</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="channel_seo" id="seo">
+                        <label for="seo">SEO/Organic</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="channel_email" id="email_marketing">
+                        <label for="email_marketing">Email Marketing</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="channel_referral" id="referral">
+                        <label for="referral">Referral Program</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Current Monthly Marketing Spend</label>
+                    <input type="text" name="current_spend" placeholder="$">
+                </div>
+                
+                <div class="form-group">
+                    <label>Monthly Leads Generated</label>
+                    <input type="number" name="current_leads" min="0">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Biggest Marketing Challenge</label>
+                <textarea name="marketing_challenge" placeholder="What's your #1 frustration with current marketing efforts?"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Current CRM System</label>
+                <input type="text" name="crm_system" placeholder="E.g., Salesforce, HubSpot, Applied Epic">
+            </div>
+        </div>
+
+        <!-- Section 4: Goals & Expectations -->
+        <div class="section">
+            <h2>4. Goals & Expectations</h2>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Target Monthly Leads <span class="required">*</span></label>
+                    <input type="number" name="target_leads" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Target Cost Per Lead</label>
+                    <input type="text" name="target_cpl" placeholder="$">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>6-Month Revenue Goal</label>
+                <input type="text" name="revenue_goal" placeholder="$">
+            </div>
+            
+            <div class="form-group">
+                <label>Success Metrics (How do you measure success?)</label>
+                <textarea name="success_metrics" placeholder="E.g., Number of leads, appointments booked, policies sold, revenue generated"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Why are you looking for a marketing agency now? <span class="required">*</span></label>
+                <textarea name="why_now" required></textarea>
+            </div>
+        </div>
+
+        <!-- Section 5: Budget & Resources -->
+        <div class="section">
+            <h2>5. Budget & Resources</h2>
+            
+            <div class="form-group">
+                <label>Monthly Marketing Budget (Services + Ad Spend) <span class="required">*</span></label>
+                <select name="total_budget" required>
+                    <option value="">Select...</option>
+                    <option value="5-10k">$5,000 - $10,000</option>
+                    <option value="10-15k">$10,000 - $15,000</option>
+                    <option value="15-25k">$15,000 - $25,000</option>
+                    <option value="25k+">$25,000+</option>
+                </select>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label>Proposed Ad Spend Budget</label>
+                    <input type="text" name="ad_spend_budget" placeholder="$">
+                </div>
+                
+                <div class="form-group">
+                    <label>Service Fee Budget</label>
+                    <input type="text" name="service_budget" placeholder="$">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Who handles lead follow-up?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="followup_internal" id="internal">
+                        <label for="internal">Internal Sales Team</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="followup_owner" id="owner">
+                        <label for="owner">Agency Owner</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="followup_automated" id="automated">
+                        <label for="automated">Automated System</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Average Response Time to New Leads</label>
+                <select name="response_time">
+                    <option value="">Select...</option>
+                    <option value="immediate">Within 5 minutes</option>
+                    <option value="1hour">Within 1 hour</option>
+                    <option value="same_day">Same day</option>
+                    <option value="next_day">Next business day</option>
+                    <option value="2days+">2+ days</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section 6: Competition & Positioning -->
+        <div class="section">
+            <h2>6. Competition & Market Position</h2>
+            
+            <div class="form-group">
+                <label>Top 3 Competitors</label>
+                <textarea name="competitors" placeholder="List your main competitors in your market"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Your Unique Value Proposition</label>
+                <textarea name="value_prop" placeholder="What makes you different from competitors?"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Ideal Client Profile</label>
+                <textarea name="ideal_client" placeholder="Describe your perfect insurance client (industry, size, location, needs)"></textarea>
+            </div>
+        </div>
+
+        <!-- Section 7: Technical Access -->
+        <div class="section">
+            <h2>7. Account Access & Technical Setup</h2>
+            
+            <div class="note">
+                <strong>Note:</strong> We'll need access to the following accounts to manage your campaigns. We'll request specific access after contract signing.
+            </div>
+            
+            <div class="form-group">
+                <label>Existing Accounts (Check all that apply)</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="account_google_ads" id="acc_google">
+                        <label for="acc_google">Google Ads Account</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="account_facebook" id="acc_facebook">
+                        <label for="acc_facebook">Facebook Business Manager</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="account_analytics" id="acc_analytics">
+                        <label for="acc_analytics">Google Analytics</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="account_gmb" id="acc_gmb">
+                        <label for="acc_gmb">Google My Business</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="account_none" id="acc_none">
+                        <label for="acc_none">None - Need Setup</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Website Platform</label>
+                <input type="text" name="website_platform" placeholder="E.g., WordPress, Wix, Custom">
+            </div>
+            
+            <div class="form-group">
+                <label>Do you have brand guidelines?</label>
+                <select name="brand_guidelines">
+                    <option value="">Select...</option>
+                    <option value="yes_complete">Yes - Complete brand book</option>
+                    <option value="yes_basic">Yes - Logo and colors only</option>
+                    <option value="no">No - Need help with branding</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section 8: AI Lead Scanner Interest -->
+        <div class="section">
+            <h2>8. AI Lead Scanner Tool (Beta)</h2>
+            
+            <div class="note">
+                <strong>Beta Offer:</strong> Our first 3 clients receive lifetime free access to our AI Lead Scanner ($750/month value per user)
+            </div>
+            
+            <div class="form-group">
+                <label>Interest in AI Lead Scanner?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="ai_interest" id="ai_yes">
+                        <label for="ai_yes">Yes - Very interested in AI tools</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>How many team members would use the AI tool?</label>
+                <input type="number" name="ai_users" min="1" placeholder="Number of users">
+            </div>
+            
+            <div class="form-group">
+                <label>Current lead sourcing methods</label>
+                <textarea name="lead_sources" placeholder="How do you currently find new business prospects?"></textarea>
+            </div>
+        </div>
+
+        <!-- Section 9: Timeline & Decision -->
+        <div class="section">
+            <h2>9. Timeline & Decision Process</h2>
+            
+            <div class="form-group">
+                <label>Desired Start Date <span class="required">*</span></label>
+                <input type="text" name="start_date" placeholder="MM/DD/YYYY" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Decision Makers</label>
+                <textarea name="decision_makers" placeholder="Who needs to approve this decision? (Names and roles)"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Previous Agency Experience?</label>
+                <textarea name="previous_agency" placeholder="Have you worked with marketing agencies before? What was your experience?"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Questions for Us?</label>
+                <textarea name="questions" placeholder="What questions do you have about our services?"></textarea>
+            </div>
+        </div>
+
+        <!-- Section 10: Additional Information -->
+        <div class="section">
+            <h2>10. Additional Information</h2>
+            
+            <div class="form-group">
+                <label>Anything else we should know?</label>
+                <textarea name="additional_info" rows="5" placeholder="Any other information that would help us understand your needs better?"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>How did you hear about Broker Lead Engine?</label>
+                <input type="text" name="referral_source">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Thank you for completing this questionnaire!</strong></p>
+            <p>We'll review your information and prepare a customized proposal for your agency.</p>
+            <p style="margin-top: 20px;">
+                BROKER LEAD ENGINE LLC<br>
+                Cyber Insurance Marketing Specialists<br>
+                Email: info@brokerleadengine.com<br>
+                © 2025 Broker Lead Engine. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
