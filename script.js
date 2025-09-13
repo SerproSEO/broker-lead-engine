@@ -53,7 +53,6 @@ document.addEventListener('keydown', function(event) {
 });
 
 // Enhanced header scroll effect
-let lastScrollY = window.scrollY;
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     const currentScrollY = window.scrollY;
@@ -68,16 +67,7 @@ window.addEventListener('scroll', function() {
             header.style.backdropFilter = 'blur(20px)';
             header.style.borderBottom = '1px solid rgba(59, 130, 246, 0.1)';
         }
-        
-        // Hide/show header on scroll
-        if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
-        }
     }
-    
-    lastScrollY = currentScrollY;
 });
 
 // Intersection Observer for animations
@@ -328,16 +318,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Parallax effect for hero section
+// Subtle scroll effect for hero section
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
-    const parallax = document.querySelector('.hero::before');
-    const speed = 0.5;
-    
-    // Apply subtle parallax to hero background
     const hero = document.querySelector('.hero');
+    
+    // Apply subtle opacity change to hero on scroll
     if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * speed}px)`;
+        const opacity = Math.max(0.3, 1 - (scrolled / window.innerHeight));
+        hero.style.opacity = opacity;
     }
 });
 
