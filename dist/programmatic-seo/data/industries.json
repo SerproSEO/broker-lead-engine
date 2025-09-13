@@ -1,0 +1,114 @@
+{
+  "industries": [
+    {
+      "name": "Healthcare",
+      "slug": "healthcare",
+      "riskLevel": "High",
+      "breachRate": 43,
+      "avgPremium": 12000,
+      "avgLoss": 485000,
+      "regulations": ["HIPAA", "HITECH"],
+      "commonThreats": ["Ransomware", "Data breaches", "PHI exposure"],
+      "marketSize": 3456789
+    },
+    {
+      "name": "Financial Services",
+      "slug": "financial-services",
+      "riskLevel": "High",
+      "breachRate": 38,
+      "avgPremium": 15000,
+      "avgLoss": 620000,
+      "regulations": ["GLBA", "PCI DSS", "SOX"],
+      "commonThreats": ["Wire fraud", "Account takeover", "Data theft"],
+      "marketSize": 4567890
+    },
+    {
+      "name": "Legal",
+      "slug": "legal",
+      "riskLevel": "High",
+      "breachRate": 35,
+      "avgPremium": 9500,
+      "avgLoss": 380000,
+      "regulations": ["Client confidentiality", "ABA guidelines"],
+      "commonThreats": ["Client data exposure", "Wire fraud", "Email compromise"],
+      "marketSize": 2345678
+    },
+    {
+      "name": "Manufacturing",
+      "slug": "manufacturing",
+      "riskLevel": "Medium",
+      "breachRate": 28,
+      "avgPremium": 8500,
+      "avgLoss": 330000,
+      "regulations": ["NIST", "Industry-specific"],
+      "commonThreats": ["IP theft", "Supply chain attacks", "Operational disruption"],
+      "marketSize": 5678901
+    },
+    {
+      "name": "Retail",
+      "slug": "retail",
+      "riskLevel": "High",
+      "breachRate": 41,
+      "avgPremium": 7800,
+      "avgLoss": 295000,
+      "regulations": ["PCI DSS"],
+      "commonThreats": ["POS attacks", "Card skimming", "Customer data theft"],
+      "marketSize": 6789012
+    },
+    {
+      "name": "Technology",
+      "slug": "technology",
+      "riskLevel": "Medium",
+      "breachRate": 32,
+      "avgPremium": 11000,
+      "avgLoss": 425000,
+      "regulations": ["GDPR", "CCPA", "SOC 2"],
+      "commonThreats": ["Software vulnerabilities", "API attacks", "Cloud breaches"],
+      "marketSize": 7890123
+    },
+    {
+      "name": "Real Estate",
+      "slug": "real-estate",
+      "riskLevel": "Medium",
+      "breachRate": 25,
+      "avgPremium": 6500,
+      "avgLoss": 265000,
+      "regulations": ["Wire fraud prevention", "TCPA"],
+      "commonThreats": ["Wire fraud", "Email compromise", "Document theft"],
+      "marketSize": 3456789
+    },
+    {
+      "name": "Construction",
+      "slug": "construction",
+      "riskLevel": "Low",
+      "breachRate": 22,
+      "avgPremium": 5800,
+      "avgLoss": 210000,
+      "regulations": ["Project data security"],
+      "commonThreats": ["Bid theft", "Project data exposure", "Payment fraud"],
+      "marketSize": 4567890
+    },
+    {
+      "name": "Education",
+      "slug": "education",
+      "riskLevel": "High",
+      "breachRate": 39,
+      "avgPremium": 8200,
+      "avgLoss": 315000,
+      "regulations": ["FERPA", "COPPA"],
+      "commonThreats": ["Student data exposure", "Ransomware", "Network breaches"],
+      "marketSize": 2345678
+    },
+    {
+      "name": "Hospitality",
+      "slug": "hospitality",
+      "riskLevel": "Medium",
+      "breachRate": 30,
+      "avgPremium": 7200,
+      "avgLoss": 275000,
+      "regulations": ["PCI DSS", "Guest privacy"],
+      "commonThreats": ["Guest data theft", "POS attacks", "Booking fraud"],
+      "marketSize": 3456789
+    }
+  ]
+}

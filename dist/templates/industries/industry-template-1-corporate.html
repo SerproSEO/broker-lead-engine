@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Insurance Marketing - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Corporate Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--white);
+            padding: 8rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .hero-stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Market Opportunity */
+        .market-section {
+            padding: 6rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .market-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .market-card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .market-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .market-card-text {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .market-card-stat {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .market-card-stat-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+
+        /* Industry Challenges */
+        .challenges-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .challenges-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .challenges-list {
+            list-style: none;
+        }
+
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-item:hover {
+            transform: translateX(10px);
+            background: linear-gradient(90deg, var(--light-gray) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+
+        .challenge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .challenge-text h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .challenge-text p {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .challenges-visual {
+            background: var(--light-gray);
+            border-radius: 16px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        /* Solutions Grid */
+        .solutions-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--white);
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .solution-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .solution-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .solution-text {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* Case Study Preview */
+        .case-study-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .case-study-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            background: var(--light-gray);
+            border-radius: 16px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .case-study-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-company {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-text {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .case-study-results {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .result-item {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .result-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-text {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Corporate Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">Cyber Insurance Specialists</div>
+            <h1 class="hero-title">Dominate the $84 Billion Cyber Insurance Market</h1>
+            <p class="hero-subtitle">Specialized lead generation for cyber insurance agencies ready to capture their share of the fastest-growing insurance segment.</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">$84B</div>
+                    <div class="hero-stat-label">Market Size by 2031</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">26%</div>
+                    <div class="hero-stat-label">Annual Growth Rate</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">75%</div>
+                    <div class="hero-stat-label">Businesses Uninsured</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">$4.45M</div>
+                    <div class="hero-stat-label">Avg Breach Cost</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Opportunity -->
+    <section class="market-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">The Cyber Insurance Gold Rush</h2>
+                <p class="section-subtitle">Why cyber insurance agencies are positioned for explosive growth</p>
+            </div>
+
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="market-card-icon">📈</div>
+                    <h3 class="market-card-title">Unprecedented Demand</h3>
+                    <p class="market-card-text">Ransomware attacks increased 150% last year. Every business is a target, and they know it. The demand for cyber protection has never been higher.</p>
+                    <div class="market-card-stat">2.8M</div>
+                    <div class="market-card-stat-label">Businesses Need Coverage</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-icon">💰</div>
+                    <h3 class="market-card-title">Premium Pricing Power</h3>
+                    <p class="market-card-text">Average cyber insurance premiums are $1,589 annually and rising. With proper coverage often exceeding $10,000 for mid-market companies.</p>
+                    <div class="market-card-stat">$15,000</div>
+                    <div class="market-card-stat-label">Average Deal Size</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-icon">🎯</div>
+                    <h3 class="market-card-title">Low Competition</h3>
+                    <p class="market-card-text">Only 35% of businesses have cyber insurance. The market is wide open for agencies that can effectively reach and educate prospects.</p>
+                    <div class="market-card-stat">65%</div>
+                    <div class="market-card-stat-label">Untapped Market</div>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-card-icon">⚡</div>
+                    <h3 class="market-card-title">Regulatory Tailwinds</h3>
+                    <p class="market-card-text">New compliance requirements are making cyber insurance mandatory for government contractors and healthcare providers.</p>
+                    <div class="market-card-stat">23</div>
+                    <div class="market-card-stat-label">States with Requirements</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Challenges -->
+    <section class="challenges-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Challenges Cyber Insurance Agencies Face</h2>
+                <p class="section-subtitle">The obstacles standing between you and explosive growth</p>
+            </div>
+
+            <div class="challenges-grid">
+                <div class="challenges-content">
+                    <h3>Why Traditional Marketing Fails</h3>
+                    <ul class="challenges-list">
+                        <li class="challenge-item">
+                            <div class="challenge-icon">🚫</div>
+                            <div class="challenge-text">
+                                <h4>Complex Product Education</h4>
+                                <p>Businesses don't understand cyber risks or coverage options</p>
+                            </div>
+                        </li>
+                        <li class="challenge-item">
+                            <div class="challenge-icon">🚫</div>
+                            <div class="challenge-text">
+                                <h4>Long Sales Cycles</h4>
+                                <p>6-12 month decision process with multiple stakeholders</p>
+                            </div>
+                        </li>
+                        <li class="challenge-item">
+                            <div class="challenge-icon">🚫</div>
+                            <div class="challenge-text">
+                                <h4>Price Sensitivity</h4>
+                                <p>Seen as expensive "nice-to-have" instead of essential</p>
+                            </div>
+                        </li>
+                        <li class="challenge-item">
+                            <div class="challenge-icon">🚫</div>
+                            <div class="challenge-text">
+                                <h4>Trust Barriers</h4>
+                                <p>Skepticism about coverage and claim payouts</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="challenges-visual">
+                    <div style="font-size: 8rem; opacity: 0.1;">⚠️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Grid -->
+    <section class="solutions-section">
+        <div class="section-container">
+            <div class="section-header" style="color: var(--white);">
+                <h2 class="section-title" style="color: var(--white);">Our Cyber Insurance Marketing Solution</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Proven strategies that generate qualified cyber insurance leads</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-number">1</div>
+                    <h3 class="solution-title">Risk-Based Targeting</h3>
+                    <p class="solution-text">We identify businesses in high-risk industries and those recently breached, delivering leads already motivated to buy.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">2</div>
+                    <h3 class="solution-title">Education-First Content</h3>
+                    <p class="solution-text">Build trust with content that explains cyber risks in plain English, positioning you as the expert guide.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">3</div>
+                    <h3 class="solution-title">Compliance Messaging</h3>
+                    <p class="solution-text">Target businesses facing regulatory requirements, turning cyber insurance from optional to mandatory.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">4</div>
+                    <h3 class="solution-title">Fear-to-Solution Bridge</h3>
+                    <p class="solution-text">Convert fear of attacks into action with messaging that balances urgency with reassurance.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">5</div>
+                    <h3 class="solution-title">Multi-Touch Nurturing</h3>
+                    <p class="solution-text">Automated sequences that educate prospects over time, building trust before the sales conversation.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">6</div>
+                    <h3 class="solution-title">ROI-Focused Positioning</h3>
+                    <p class="solution-text">Show the true cost of being uninsured versus premium costs, making the decision obvious.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Preview -->
+    <section class="case-study-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Real Results for Cyber Insurance Agencies</h2>
+            </div>
+
+            <div class="case-study-container">
+                <div class="case-study-content">
+                    <div class="case-study-company">SecureShield Insurance - Miami, FL</div>
+                    <h3>From 2 Leads to 47 Leads Per Month</h3>
+                    <p class="case-study-text">
+                        SecureShield was struggling to break into the cyber insurance market. Traditional networking wasn't working, and their Google Ads were burning cash with no results.
+                    </p>
+                    <p class="case-study-text">
+                        In 90 days, we transformed their digital presence, implemented our cyber-specific targeting, and built an education-based funnel that positions them as Miami's cyber insurance experts.
+                    </p>
+                </div>
+                <div class="case-study-results">
+                    <div class="result-item">
+                        <div class="result-number">2,350%</div>
+                        <div class="result-label">Lead Increase</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">$67</div>
+                        <div class="result-label">Cost Per Lead</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">12%</div>
+                        <div class="result-label">Close Rate</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">8.4x</div>
+                        <div class="result-label">ROI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Dominate Cyber Insurance?</h2>
+            <p class="cta-text">Get the leads, systems, and support you need to become the go-to cyber insurance agency in your market.</p>
+            
+            <div class="cta-buttons">
+                <a href="/get-started" class="btn btn-white">
+                    Get Your Growth Plan
+                    <span>→</span>
+                </a>
+                <a href="/case-studies" class="btn btn-outline">
+                    See More Results
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

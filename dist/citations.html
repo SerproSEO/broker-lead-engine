@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citations & References - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light-gray);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Introduction Card */
+        .intro-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .intro-card h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Citation Categories */
+        .citation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .citation-category {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .citation-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .citation-list {
+            list-style: none;
+        }
+
+        .citation-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .citation-item:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-left: 3px solid var(--primary);
+            padding-left: calc(1rem - 3px);
+        }
+
+        .citation-source {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .citation-number {
+            background: var(--primary);
+            color: var(--white);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            min-width: 28px;
+            text-align: center;
+        }
+
+        .citation-title {
+            flex: 1;
+        }
+
+        .citation-details {
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-left: 36px;
+            line-height: 1.6;
+        }
+
+        .citation-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-left: 36px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .citation-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Industry Reports Section */
+        .reports-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .reports-section h2 {
+            font-size: 1.75rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .report-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .report-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+        }
+
+        .report-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .report-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .report-org {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        /* Disclaimer Box */
+        .disclaimer-box {
+            background: rgba(251, 191, 36, 0.05);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .disclaimer-box h3 {
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .disclaimer-box p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .citation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .report-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .citation-category {
+                padding: 1.5rem;
+            }
+
+            .reports-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Citations & References</h1>
+        <p>Supporting data, research, and third-party sources that validate our claims and statistics</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction -->
+        <div class="intro-card">
+            <h2>Our Commitment to Transparency</h2>
+            <p>
+                At Broker Lead Engine, we believe in backing our claims with credible data. This page contains 
+                all citations, references, and sources for the statistics, research findings, and industry data 
+                mentioned throughout our website. We regularly update these references to ensure accuracy and relevance.
+            </p>
+        </div>
+
+        <!-- Citation Categories -->
+        <div class="citation-grid">
+            <!-- Insurance Industry Statistics -->
+            <div class="citation-category">
+                <div class="category-header">
+                    <div class="category-icon">📊</div>
+                    <h3 class="category-title">Insurance Industry Statistics</h3>
+                </div>
+                <ul class="citation-list">
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">1</span>
+                            <span class="citation-title">Cyber Insurance Market Growth</span>
+                        </div>
+                        <div class="citation-details">
+                            Allied Market Research (2024): "Global Cyber Insurance Market Report"
+                            - Market expected to reach $84.62 billion by 2031
+                        </div>
+                        <a href="https://www.alliedmarketresearch.com/cyber-insurance-market" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">2</span>
+                            <span class="citation-title">Insurance Agency Revenue Statistics</span>
+                        </div>
+                        <div class="citation-details">
+                            IBISWorld (2024): "Insurance Agencies & Brokerages Industry Report"
+                            - Average agency revenue and growth trends
+                        </div>
+                        <a href="https://www.ibisworld.com/united-states/market-research-reports/insurance-agencies-brokerages-industry/" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">3</span>
+                            <span class="citation-title">Professional Liability Market Size</span>
+                        </div>
+                        <div class="citation-details">
+                            Grand View Research (2023): "Professional Liability Insurance Market Analysis"
+                            - Market size valued at $52.6 billion in 2023
+                        </div>
+                        <a href="https://www.grandviewresearch.com/industry-analysis/professional-liability-insurance-market" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Digital Marketing Statistics -->
+            <div class="citation-category">
+                <div class="category-header">
+                    <div class="category-icon">📈</div>
+                    <h3 class="category-title">Digital Marketing Research</h3>
+                </div>
+                <ul class="citation-list">
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">4</span>
+                            <span class="citation-title">Facebook Ads ROI Statistics</span>
+                        </div>
+                        <div class="citation-details">
+                            WordStream (2024): "Facebook Ads Benchmarks for Your Industry"
+                            - Average conversion rates and cost per lead data
+                        </div>
+                        <a href="https://www.wordstream.com/blog/ws/facebook-ads-benchmarks" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">5</span>
+                            <span class="citation-title">Google Ads Insurance Industry CPC</span>
+                        </div>
+                        <div class="citation-details">
+                            Google Ads Industry Benchmarks (2024): "Insurance Keyword Costs"
+                            - Average CPC for insurance keywords: $40-$80
+                        </div>
+                        <a href="https://support.google.com/google-ads/answer/2454059" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">6</span>
+                            <span class="citation-title">SEO Impact on Business Growth</span>
+                        </div>
+                        <div class="citation-details">
+                            BrightEdge Research (2023): "Organic Search Statistics"
+                            - 68% of online experiences begin with a search engine
+                        </div>
+                        <a href="https://www.brightedge.com/resources/research-reports" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- AI and Technology -->
+            <div class="citation-category">
+                <div class="category-header">
+                    <div class="category-icon">🤖</div>
+                    <h3 class="category-title">AI & Technology Research</h3>
+                </div>
+                <ul class="citation-list">
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">7</span>
+                            <span class="citation-title">AI in Insurance Industry</span>
+                        </div>
+                        <div class="citation-details">
+                            McKinsey & Company (2024): "AI in Insurance: Hype or Reality?"
+                            - AI adoption rates and impact on efficiency
+                        </div>
+                        <a href="https://www.mckinsey.com/industries/financial-services/our-insights/insurance" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">8</span>
+                            <span class="citation-title">Marketing Automation ROI</span>
+                        </div>
+                        <div class="citation-details">
+                            Nucleus Research (2023): "Marketing Automation ROI Report"
+                            - Companies see 14.5% increase in sales productivity
+                        </div>
+                        <a href="https://nucleusresearch.com/" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">9</span>
+                            <span class="citation-title">Lead Generation Technology Trends</span>
+                        </div>
+                        <div class="citation-details">
+                            HubSpot (2024): "State of Marketing Report"
+                            - Lead generation strategies and technology adoption
+                        </div>
+                        <a href="https://www.hubspot.com/marketing-statistics" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Regulatory and Compliance -->
+            <div class="citation-category">
+                <div class="category-header">
+                    <div class="category-icon">⚖️</div>
+                    <h3 class="category-title">Regulatory Sources</h3>
+                </div>
+                <ul class="citation-list">
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">10</span>
+                            <span class="citation-title">CMS Medicare Marketing Guidelines</span>
+                        </div>
+                        <div class="citation-details">
+                            Centers for Medicare & Medicaid Services (2024): "Medicare Marketing Guidelines"
+                            - TPMO requirements and compliance standards
+                        </div>
+                        <a href="https://www.cms.gov/medicare/enrollment-renewal/medicare-marketing-guidelines" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">11</span>
+                            <span class="citation-title">State Insurance Regulations</span>
+                        </div>
+                        <div class="citation-details">
+                            National Association of Insurance Commissioners (NAIC)
+                            - State-specific insurance marketing regulations
+                        </div>
+                        <a href="https://www.naic.org/" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                    <li class="citation-item">
+                        <div class="citation-source">
+                            <span class="citation-number">12</span>
+                            <span class="citation-title">HIPAA Privacy Rules</span>
+                        </div>
+                        <div class="citation-details">
+                            U.S. Department of Health & Human Services
+                            - Privacy and security rules for protected health information
+                        </div>
+                        <a href="https://www.hhs.gov/hipaa/index.html" class="citation-link" target="_blank">
+                            View Source →
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Industry Reports Section -->
+        <div class="reports-section">
+            <h2>
+                <span>📚</span>
+                Key Industry Reports & Publications
+            </h2>
+            <div class="report-grid">
+                <div class="report-card">
+                    <div class="report-icon">📘</div>
+                    <div class="report-title">2024 Insurance Technology Report</div>
+                    <div class="report-org">Deloitte Insights</div>
+                </div>
+                <div class="report-card">
+                    <div class="report-icon">📗</div>
+                    <div class="report-title">Digital Marketing Benchmarks</div>
+                    <div class="report-org">Google & Meta Research</div>
+                </div>
+                <div class="report-card">
+                    <div class="report-icon">📙</div>
+                    <div class="report-title">State of Cyber Insurance</div>
+                    <div class="report-org">Marsh McLennan</div>
+                </div>
+                <div class="report-card">
+                    <div class="report-icon">📕</div>
+                    <div class="report-title">AI Adoption in Insurance</div>
+                    <div class="report-org">Accenture Research</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer Box -->
+        <div class="disclaimer-box">
+            <h3>⚠️ Important Note</h3>
+            <p>
+                All statistics and data presented on our website are sourced from third-party research organizations, 
+                industry reports, and government agencies. While we strive to maintain accuracy and update our citations 
+                regularly, market conditions and statistics may change. We recommend verifying current data for critical 
+                business decisions. Last updated: September 2024.
+            </p>
+        </div>
+
+        <!-- Back Button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="/" class="back-button">
+                ← Back to Home
+            </a>
+        </div>
+    </div>
+</body>
+</html>

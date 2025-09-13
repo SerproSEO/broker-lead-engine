@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Component - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #60a5fa;
+            --accent: #10b981;
+            --accent-light: #34d399;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --accent-gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light-gray);
+        }
+
+        /* Desktop Navigation */
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .nav-link:hover {
+            color: var(--white);
+        }
+
+        .nav-link.has-dropdown::after {
+            content: '▼';
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover .nav-link.has-dropdown::after {
+            transform: rotate(180deg);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            min-width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+            margin-top: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dropdown-link:hover {
+            background: var(--light-gray);
+            color: var(--primary);
+            padding-left: 1.5rem;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--light-gray);
+            margin: 0.5rem 0;
+        }
+
+        .dropdown-badge {
+            background: var(--accent);
+            color: var(--white);
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: auto;
+        }
+
+        /* CTA Button */
+        .nav-cta {
+            background: var(--accent-gradient);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn.active .hamburger span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        .mobile-menu-btn.active .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active .hamburger span:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--dark);
+            z-index: 999;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-nav-logo {
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .mobile-close-btn {
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .mobile-nav-menu {
+            padding: 1rem;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-link:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--white);
+            padding-left: 1.5rem;
+        }
+
+        .mobile-nav-link.has-dropdown::after {
+            content: '›';
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav-link.expanded::after {
+            transform: rotate(90deg);
+        }
+
+        .mobile-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-dropdown.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown-link:hover {
+            color: var(--accent);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .mobile-nav-cta {
+            margin: 2rem 1rem;
+            display: block;
+            background: var(--accent-gradient);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-cta:hover {
+            transform: scale(1.05);
+        }
+
+        /* Overlay */
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        /* Demo Content */
+        .demo-content {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .demo-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Desktop Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="../../business-core/assets/logo.png" alt="Broker Lead Engine">
+            </a>
+
+            <div class="nav-menu">
+                <!-- Services Dropdown -->
+                <div class="nav-item">
+                    <a href="/services" class="nav-link has-dropdown">Services</a>
+                    <div class="dropdown">
+                        <a href="/services/facebook-ads" class="dropdown-link">Facebook & Instagram Ads</a>
+                        <a href="/services/google-ads" class="dropdown-link">Google Ads Management</a>
+                        <a href="/services/seo" class="dropdown-link">SEO Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/services/ai-lead-scanner" class="dropdown-link">
+                            AI Lead Scanner
+                            <span class="dropdown-badge">Beta</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="nav-item">
+                    <a href="/industries" class="nav-link has-dropdown">Industries</a>
+                    <div class="dropdown">
+                        <a href="/industries/cyber-insurance" class="dropdown-link">Cyber Insurance</a>
+                        <a href="/industries/professional-liability" class="dropdown-link">Professional Liability</a>
+                        <a href="/industries/errors-omissions" class="dropdown-link">Errors & Omissions</a>
+                        <a href="/industries/directors-officers" class="dropdown-link">Directors & Officers</a>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <div class="nav-item">
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="nav-item">
+                    <a href="/resources" class="nav-link has-dropdown">Resources</a>
+                    <div class="dropdown">
+                        <a href="/resources/case-studies" class="dropdown-link">Case Studies</a>
+                        <a href="/resources/roi-calculator" class="dropdown-link">ROI Calculator</a>
+                        <a href="/resources/ai-training" class="dropdown-link">AI Training</a>
+                        <a href="/resources/blog" class="dropdown-link">Blog</a>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="/get-started" class="nav-cta">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-logo">Broker Lead Engine</div>
+            <button class="mobile-close-btn" id="mobileCloseBtn">✕</button>
+        </div>
+
+        <div class="mobile-nav-menu">
+            <!-- Services -->
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-dropdown" data-dropdown="services">
+                    Services
+                </a>
+                <div class="mobile-dropdown" id="services-dropdown">
+                    <a href="/services/facebook-ads" class="mobile-dropdown-link">Facebook & Instagram Ads</a>
+                    <a href="/services/google-ads" class="mobile-dropdown-link">Google Ads Management</a>
+                    <a href="/services/seo" class="mobile-dropdown-link">SEO Services</a>
+                    <a href="/services/ai-lead-scanner" class="mobile-dropdown-link">AI Lead Scanner 🔥</a>
+                </div>
+            </div>
+
+            <!-- Industries -->
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-dropdown" data-dropdown="industries">
+                    Industries
+                </a>
+                <div class="mobile-dropdown" id="industries-dropdown">
+                    <a href="/industries/cyber-insurance" class="mobile-dropdown-link">Cyber Insurance</a>
+                    <a href="/industries/professional-liability" class="mobile-dropdown-link">Professional Liability</a>
+                    <a href="/industries/errors-omissions" class="mobile-dropdown-link">Errors & Omissions</a>
+                    <a href="/industries/directors-officers" class="mobile-dropdown-link">Directors & Officers</a>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mobile-nav-item">
+                <a href="/pricing" class="mobile-nav-link">Pricing</a>
+            </div>
+
+            <!-- Resources -->
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-dropdown" data-dropdown="resources">
+                    Resources
+                </a>
+                <div class="mobile-dropdown" id="resources-dropdown">
+                    <a href="/resources/case-studies" class="mobile-dropdown-link">Case Studies</a>
+                    <a href="/resources/roi-calculator" class="mobile-dropdown-link">ROI Calculator</a>
+                    <a href="/resources/ai-training" class="mobile-dropdown-link">AI Training</a>
+                    <a href="/resources/blog" class="mobile-dropdown-link">Blog</a>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="mobile-nav-item">
+                <a href="/about" class="mobile-nav-link">About</a>
+            </div>
+
+            <!-- Beta Program -->
+            <div class="mobile-nav-item">
+                <a href="/beta-program" class="mobile-nav-link">Beta Program 🎯</a>
+            </div>
+
+            <!-- Contact -->
+            <div class="mobile-nav-item">
+                <a href="/contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+
+        <a href="/get-started" class="mobile-nav-cta">Get Started</a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Demo Content -->
+    <div class="demo-content">
+        <div class="demo-card">
+            <h1>Navigation Component Demo</h1>
+            <p>This is a demonstration of the navigation component with both desktop and mobile versions.</p>
+            <p>Resize your browser to see the responsive behavior, or click the hamburger menu on mobile to see the mobile navigation.</p>
+        </div>
+
+        <div class="demo-card">
+            <h2>Features:</h2>
+            <ul style="color: var(--gray); line-height: 2;">
+                <li>Desktop navigation with dropdown menus</li>
+                <li>Mobile hamburger menu with slide-in panel</li>
+                <li>Smooth animations and transitions</li>
+                <li>Expandable mobile dropdown sections</li>
+                <li>Sticky navigation with backdrop blur</li>
+                <li>Beta badges for new features</li>
+                <li>Prominent CTA buttons</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function openMobileMenu() {
+            mobileNav.classList.add('active');
+            navOverlay.classList.add('active');
+            mobileMenuBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileCloseBtn.addEventListener('click', closeMobileMenu);
+        navOverlay.addEventListener('click', closeMobileMenu);
+
+        // Mobile Dropdown Toggle
+        const mobileDropdownLinks = document.querySelectorAll('.mobile-nav-link.has-dropdown');
+
+        mobileDropdownLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdownId = link.getAttribute('data-dropdown');
+                const dropdown = document.getElementById(`${dropdownId}-dropdown`);
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+                link.classList.toggle('expanded');
+                
+                // Close other dropdowns
+                mobileDropdownLinks.forEach(otherLink => {
+                    if (otherLink !== link) {
+                        otherLink.classList.remove('expanded');
+                        const otherDropdownId = otherLink.getAttribute('data-dropdown');
+                        const otherDropdown = document.getElementById(`${otherDropdownId}-dropdown`);
+                        if (otherDropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Prevent scroll when mobile menu is open
+        let scrollPosition = 0;
+
+        function preventScroll() {
+            scrollPosition = window.pageYOffset;
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.style.width = '100%';
+        }
+
+        function allowScroll() {
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPosition);
+        }
+    </script>
+</body>
+</html>
