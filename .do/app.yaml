@@ -6,4 +6,4 @@ static_sites:
     repo: broker-lead-engine
     branch: main
   build_command: npm run build
-  output_dir: dist
+  output_dir: out
