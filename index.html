@@ -12,12 +12,20 @@
     <header class="header">
         <div class="header-content">
             <a href="#" class="logo">
-                <span>Broker Lead Engine</span>
+                <img src="logo.png" alt="Broker Lead Engine">
             </a>
-            <nav class="nav">
+            
+            <!-- Simple Mobile Menu Button -->
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav" id="navigation">
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="#features" class="nav-link">Services</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#testimonials" class="nav-link">Case Studies</a>
+                <a href="about.html" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#demo" class="cta-button">Get Started</a>
             </nav>
@@ -186,14 +194,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="demo" class="cta-section">
-        <div class="cta-container">
-            <h2 class="cta-title">Ready to Scale Your Agency?</h2>
-            <p class="cta-subtitle">Join the insurance agencies already using our system to generate $500K+ in new revenue</p>
-            <a href="#contact-form" class="cta-button-white" onclick="openContactForm()">Get Your Free Analysis</a>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
