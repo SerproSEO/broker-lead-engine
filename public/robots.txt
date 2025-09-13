@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://brokerleadengine.vercel.app
+
+# Sitemaps
+Sitemap: https://brokerleadengine.vercel.app/sitemap.xml
