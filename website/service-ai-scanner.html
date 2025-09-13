@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Scanner - Broker Lead Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #60a5fa;
+            --accent: #10b981;
+            --accent-light: #34d399;
+            --warning: #f59e0b;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --accent-gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --ai-gradient: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #3b82f6 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--white);
+        }
+        
+        .nav-link:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        
+        .cta-button {
+            background: var(--accent-gradient);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Service Hero Section */
+        .service-hero {
+            padding: 8rem 2rem 4rem;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .ai-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            border-radius: 50%;
+            animation: float-particle 20s infinite linear;
+        }
+        
+        @keyframes float-particle {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 16s; }
+        .particle:nth-child(10) { left: 95%; animation-delay: 18s; }
+        
+        .service-hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-hero-content {
+            animation: fadeInLeft 1s ease;
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .service-badge {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.2);
+            color: #f9a8d4;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+        }
+        
+        .service-hero-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            letter-spacing: -0.02em;
+        }
+
+        .service-hero-title span {
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .service-hero-subtitle {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .service-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--ai-gradient);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .btn-primary::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover::after {
+            transform: translateX(4px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid rgba(236, 72, 153, 0.5);
+            transition: all 0.3s ease;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(236, 72, 153, 0.1);
+            border-color: #f9a8d4;
+            transform: translateY(-3px);
+        }
+        
+        /* Service Visual */
+        .service-visual {
+            position: relative;
+            animation: fadeInRight 1s ease;
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .ai-interface {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            position: relative;
+            border: 1px solid rgba(236, 72, 153, 0.2);
+        }
+        
+        .ai-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .ai-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--ai-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            animation: pulse-ai 2s infinite;
+        }
+        
+        @keyframes pulse-ai {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .ai-status {
+            flex: 1;
+        }
+        
+        .ai-title {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+        
+        .ai-subtitle {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        .ai-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .ai-activity {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .activity-item {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .activity-item:nth-child(1) { animation-delay: 0.1s; }
+        .activity-item:nth-child(2) { animation-delay: 0.2s; }
+        .activity-item:nth-child(3) { animation-delay: 0.3s; }
+        .activity-item:nth-child(4) { animation-delay: 0.4s; }
+        
+        .activity-item:hover {
+            transform: translateX(5px);
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .activity-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--ai-gradient);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-action {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.875rem;
+        }
+        
+        .activity-detail {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+        
+        .activity-result {
+            text-align: right;
+        }
+        
+        .activity-metric {
+            font-weight: 700;
+            color: #ec4899;
+            font-size: 1.125rem;
+        }
+        
+        .activity-label {
+            font-size: 0.625rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
+        }
+        
+        .features-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+
+        .section-title span {
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--ai-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.15);
+            border-color: #ec4899;
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--ai-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-description {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-link {
+            color: #ec4899;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.3s ease;
+        }
+
+        .feature-link:hover {
+            gap: 10px;
+        }
+
+        .feature-link::after {
+            content: '→';
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        
+        .workflow-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .workflow-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--ai-gradient);
+            z-index: 0;
+        }
+        
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .workflow-step {
+            text-align: center;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 4px solid transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            background: linear-gradient(var(--white), var(--white)) padding-box,
+                        var(--ai-gradient) border-box;
+            transition: all 0.3s ease;
+        }
+        
+        .workflow-step:hover .step-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+        }
+        
+        .step-title {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-description {
+            font-size: 0.875rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, var(--light-gray) 0%, var(--white) 100%);
+        }
+        
+        .pricing-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            background: linear-gradient(var(--white), var(--white)) padding-box,
+                        var(--ai-gradient) border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: 'AI-POWERED';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--ai-gradient);
+            color: var(--white);
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .pricing-period {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-feature {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .pricing-feature::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: var(--ai-gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--ai-gradient);
+            color: var(--white);
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border-radius: 100px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+        }
+        
+        .pricing-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.4);
+        }
+        
+        .limited-offer {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(236, 72, 153, 0.1);
+            border-radius: 12px;
+            color: #ec4899;
+            font-weight: 600;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 2rem;
+            background: var(--ai-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button-white {
+            background: var(--white);
+            color: #ec4899;
+            padding: 1.2rem 3rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: var(--dark);
+            color: var(--white);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 3rem 2rem;
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #f9a8d4;
+        }
+        
+        .footer-text {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .service-hero { padding: 6rem 2rem 4rem; }
+            .service-hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .service-stats { grid-template-columns: 1fr; gap: 1rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .workflow-steps { grid-template-columns: 1fr; }
+            .workflow-line { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index-dark-hero-blue-fixed.html" class="logo">
+                <img src="../business-core/assets/logo.png" alt="Broker Lead Engine">
+                <span>Broker Lead Engine</span>
+            </a>
+            <nav class="nav">
+                <a href="index-dark-hero-blue-fixed.html" class="nav-link">Home</a>
+                <a href="service-facebook-ads.html" class="nav-link">Facebook Ads</a>
+                <a href="service-google-ads.html" class="nav-link">Google Ads</a>
+                <a href="service-seo.html" class="nav-link">SEO</a>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="ai-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="service-hero-container">
+            <div class="service-hero-content">
+                <span class="service-badge">🤖 AI AUTOMATION</span>
+                <h1 class="service-hero-title">AI That Turns Leads Into <span>Closed Deals 24/7</span></h1>
+                <p class="service-hero-subtitle">Our proprietary AI Lead Scanner finds, qualifies, nurtures, and books appointments automatically. It's like having 10 sales reps working around the clock.</p>
+                
+                <div class="service-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">Response Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3min</span>
+                        <span class="stat-label">Avg Response Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">47%</span>
+                        <span class="stat-label">Booking Rate</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn-primary">See AI in Action</a>
+                    <a href="#features" class="btn-secondary">How It Works</a>
+                </div>
+            </div>
+            
+            <div class="service-visual">
+                <div class="ai-interface">
+                    <div class="ai-header">
+                        <div class="ai-icon">🤖</div>
+                        <div class="ai-status">
+                            <div class="ai-title">AI Lead Scanner</div>
+                            <div class="ai-subtitle">Processing leads in real-time</div>
+                        </div>
+                        <div class="ai-badge">
+                            <span class="live-dot"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-activity">
+                        <div class="activity-item">
+                            <div class="activity-icon">🔍</div>
+                            <div class="activity-content">
+                                <div class="activity-action">Scanning LinkedIn</div>
+                                <div class="activity-detail">Found 147 matching prospects</div>
+                            </div>
+                            <div class="activity-result">
+                                <div class="activity-metric">147</div>
+                                <div class="activity-label">New Leads</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">✉️</div>
+                            <div class="activity-content">
+                                <div class="activity-action">Sending Personalized Email</div>
+                                <div class="activity-detail">Miami Construction Inc.</div>
+                            </div>
+                            <div class="activity-result">
+                                <div class="activity-metric">Sent</div>
+                                <div class="activity-label">Just Now</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">📅</div>
+                            <div class="activity-content">
+                                <div class="activity-action">Meeting Booked</div>
+                                <div class="activity-detail">Tampa Bay Logistics - Tomorrow 2PM</div>
+                            </div>
+                            <div class="activity-result">
+                                <div class="activity-metric">$45K</div>
+                                <div class="activity-label">Est. Value</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">🎯</div>
+                            <div class="activity-content">
+                                <div class="activity-action">Lead Qualified</div>
+                                <div class="activity-detail">Score: 94/100 - Ready to close</div>
+                            </div>
+                            <div class="activity-result">
+                                <div class="activity-metric">Hot</div>
+                                <div class="activity-label">Priority</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">AI Features That <span>Close More Deals</span></h2>
+                <p class="section-subtitle">Everything you need to automate your sales pipeline</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Smart Lead Discovery</h3>
+                    <p class="feature-description">Automatically finds prospects on LinkedIn, Google Maps, and 50+ directories. Filters by industry, size, and buying signals.</p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Instant Qualification</h3>
+                    <p class="feature-description">AI scores leads based on 47 data points including company size, growth rate, and insurance needs.</p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✉️</div>
+                    <h3 class="feature-title">Personalized Outreach</h3>
+                    <p class="feature-description">Crafts unique messages for each prospect using their company data, recent news, and pain points.</p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">24/7 Conversation AI</h3>
+                    <p class="feature-description">Responds to inquiries instantly, answers questions, handles objections, and books appointments.</p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3 class="feature-title">Smart Scheduling</h3>
+                    <p class="feature-description">Books meetings directly into your calendar, sends reminders, and reduces no-shows by 73%.</p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Pipeline Analytics</h3>
+                    <p class="feature-description">Track every interaction, measure conversion rates, and get AI recommendations to improve results.</p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">How the <span>AI Lead Scanner</span> Works</h2>
+                <p class="section-subtitle">From prospect to appointment in 4 automated steps</p>
+            </div>
+            
+            <div class="workflow-container">
+                <div class="workflow-line"></div>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-icon">🔍</div>
+                        <h3 class="step-title">Discover</h3>
+                        <p class="step-description">AI scans multiple sources to find businesses that match your ideal customer profile</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-icon">🎯</div>
+                        <h3 class="step-title">Qualify</h3>
+                        <p class="step-description">Analyzes company data to score leads and prioritize the hottest prospects</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-icon">💬</div>
+                        <h3 class="step-title">Engage</h3>
+                        <p class="step-description">Sends personalized messages and responds to inquiries within minutes</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-icon">📅</div>
+                        <h3 class="step-title">Convert</h3>
+                        <p class="step-description">Books qualified appointments directly into your calendar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">AI Lead Scanner <span>Pricing</span></h2>
+                <p class="section-subtitle">Automate your entire sales process</p>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3 class="pricing-title">AI Automation Package</h3>
+                    <div class="pricing-price">$1,997<span class="pricing-period">/month</span></div>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li class="pricing-feature">AI Lead Scanner with unlimited scans</li>
+                    <li class="pricing-feature">Up to 10,000 leads per month</li>
+                    <li class="pricing-feature">Personalized email & LinkedIn outreach</li>
+                    <li class="pricing-feature">24/7 conversation AI chatbot</li>
+                    <li class="pricing-feature">Automatic appointment booking</li>
+                    <li class="pricing-feature">CRM integration & pipeline tracking</li>
+                    <li class="pricing-feature">Weekly AI optimization</li>
+                    <li class="pricing-feature">Dedicated success manager</li>
+                </ul>
+                
+                <a href="#contact" class="pricing-cta">Activate Your AI Scanner</a>
+                
+                <div class="limited-offer">
+                    🎯 LIMITED: First 3 clients get lifetime free access - Only 2 spots left!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Automate Your Sales?</h2>
+            <p class="cta-subtitle">See how AI can 10x your lead conversion in just 30 days</p>
+            <a href="#demo" class="cta-button-white">Watch AI Demo Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+            <p class="footer-text">© 2024 Broker Lead Engine. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
