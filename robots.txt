@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://brokerleadengine.com/sitemap.xml
+
+# Allow all crawlers to access the site
+# Professional liability insurance SEO content should be indexed

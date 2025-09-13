@@ -454,3 +454,124 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.log('🚀 Broker Lead Engine - Site loaded successfully!');
+
+// Analytics and tracking setup
+// Google Analytics 4 (replace GA_MEASUREMENT_ID with actual ID)
+function gtag(){dataLayer.push(arguments);}
+window.dataLayer = window.dataLayer || [];
+gtag('js', new Date());
+// gtag('config', 'GA_MEASUREMENT_ID');
+
+// Form analytics tracking
+function trackFormSubmission(formType) {
+    // Track form submissions for conversion analysis
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+            'form_type': formType,
+            'event_category': 'Lead Generation',
+            'event_label': 'Professional Liability SEO'
+        });
+    }
+}
+
+// Phone number click tracking
+function trackPhoneClick() {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_click', {
+            'event_category': 'Lead Generation',
+            'event_label': 'Phone Number Click'
+        });
+    }
+}
+
+// Page load time tracking
+window.addEventListener('load', function() {
+    const loadTime = performance.now();
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_load_time', {
+            'event_category': 'Performance',
+            'event_label': 'Page Load',
+            'value': Math.round(loadTime)
+        });
+    }
+});
+
+// SEO-friendly navigation updates
+function updateActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPage ||
+            (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Call on page load
+document.addEventListener('DOMContentLoaded', updateActiveNav);
+
+// Add event tracking to all contact forms
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForms = document.querySelectorAll('#contactForm');
+    contactForms.forEach(form => {
+        form.addEventListener('submit', function() {
+            trackFormSubmission('professional_liability_seo_contact');
+        });
+    });
+});
+
+// Schema.org structured data for SEO
+const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Broker Lead Engine",
+    "description": "Professional liability insurance SEO specialists. Guaranteed top 3 Google Maps rankings within 90 days.",
+    "url": "https://brokerleadengine.com",
+    "areaServed": {
+        "@type": "State",
+        "name": "New York"
+    },
+    "serviceType": "SEO Services",
+    "provider": {
+        "@type": "Organization",
+        "name": "Broker Lead Engine LLC"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Professional Liability Insurance SEO Services",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Local SEO Domination Package",
+                    "description": "Complete professional liability insurance SEO package with 90-day ranking guarantee"
+                },
+                "price": "2497",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "2497",
+                    "priceCurrency": "USD",
+                    "billingDuration": "P1M"
+                }
+            }
+        ]
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+    }
+};
+
+// Inject schema data
+const script = document.createElement('script');
+script.type = 'application/ld+json';
+script.text = JSON.stringify(schemaData);
+document.head.appendChild(script);

@@ -150,6 +150,48 @@ body {
     transform: translateX(-50%) scaleX(1);
 }
 
+/* Navigation Dropdown */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 10px 0;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    z-index: 1001;
+    margin-top: 10px;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 20px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-link:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-left-color: var(--primary);
+    transform: translateX(5px);
+}
+
 .cta-button {
     background: var(--accent-gradient);
     color: var(--white);
@@ -1685,18 +1727,1973 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .trust-badges {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .feature-card {
         padding: 2rem;
+    }
+}
+
+/* ===== LANDING PAGE STYLES ===== */
+
+/* Service Hero Section */
+.service-hero {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 120px 20px 80px 20px;
+    margin-top: 60px;
+}
+
+.service-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.breadcrumb {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--white);
+}
+
+.service-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.service-title span {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.service-highlights {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    text-align: center;
+}
+
+.highlight-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.highlight-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-cta .btn-primary.large {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.cta-note {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Ranking Mockup */
+.ranking-mockup {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    color: var(--dark);
+}
+
+.mockup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.mockup-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.location {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.ranking-results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.rank-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.rank-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.rank-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.rank-badge {
+    background: var(--accent);
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.rank-badge.available {
+    background: var(--warning);
+}
+
+/* What's Included Section */
+.whats-included {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.included-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.included-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.included-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.included-item p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.included-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.included-item li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: var(--gray);
+}
+
+.included-item li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Keywords Section */
+.target-keywords {
+    padding: 100px 20px;
+    background: var(--white);
+}
+
+.keyword-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.keyword-category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.keyword-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.keyword {
+    background: var(--light-gray);
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: var(--dark);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* Local Hero Section */
+.local-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 120px 20px 80px 20px;
+    margin-top: 60px;
+}
+
+.local-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.local-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.local-title span {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.local-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.local-coverage {
+    margin-bottom: 40px;
+}
+
+.local-coverage h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.coverage-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.area {
+    background: rgba(255,255,255,0.15);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.local-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.local-stat {
+    text-align: center;
+}
+
+.local-stat .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.local-stat .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Local Map */
+.local-map {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    color: var(--dark);
+}
+
+.map-container h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.map-subtitle {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.map-regions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.region {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.region.high-volume {
+    background: #fef3c7;
+    border-left: 4px solid var(--warning);
+}
+
+.region.medium-volume {
+    background: #e0f2fe;
+    border-left: 4px solid var(--primary);
+}
+
+.region.low-volume {
+    background: #f0fdf4;
+    border-left: 4px solid var(--accent);
+}
+
+.region-name {
+    font-weight: 600;
+}
+
+.region-searches {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Industry Hero Section */
+.industry-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: var(--white);
+    padding: 120px 20px 80px 20px;
+    margin-top: 60px;
+}
+
+.industry-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.industry-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.industry-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.industry-title span {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.industry-specialization {
+    margin-bottom: 40px;
+}
+
+.industry-specialization h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.specialization-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.industry-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.industry-stat {
+    text-align: center;
+}
+
+.industry-stat .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.industry-stat .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Industry Showcase */
+.industry-showcase {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    color: var(--dark);
+}
+
+.showcase-container h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.showcase-location {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.result-ranking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.result-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.result-description {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.result-url {
+    color: var(--accent);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.client-badge {
+    background: var(--accent);
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.available-badge {
+    background: var(--warning);
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Results Grid */
+.proven-results {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.result-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.result-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.result-time {
+    background: var(--accent);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.result-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Guarantee Sections */
+.service-guarantee,
+.ny-guarantee,
+.legal-guarantee {
+    padding: 100px 20px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.guarantee-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    padding: 60px 40px;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+}
+
+.guarantee-card h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.guarantee-card > p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.guarantee-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.guarantee-item {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.guarantee-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.guarantee-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.guarantee-item p {
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.guarantee-cta {
+    background: var(--accent);
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.guarantee-cta:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+/* Market Insights */
+.ny-market-insights,
+.legal-market {
+    padding: 100px 20px;
+    background: var(--white);
+}
+
+.insights-grid,
+.market-insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.insight-card {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.insight-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.insight-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.insight-card p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.insight-stat {
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.insight-stat span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Keyword Regions */
+.ny-keywords,
+.legal-keywords {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.keyword-regions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.keyword-region {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.keyword-region h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.keyword-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.keyword-item.high-volume {
+    background: #fef3c7;
+    border-left: 4px solid var(--warning);
+}
+
+.keyword-item.medium-volume {
+    background: #e0f2fe;
+    border-left: 4px solid var(--primary);
+}
+
+.keyword-item.low-volume {
+    background: #f0fdf4;
+    border-left: 4px solid var(--accent);
+}
+
+.volume {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+/* Success Stories */
+.ny-success-stories,
+.legal-success {
+    padding: 100px 20px;
+    background: var(--white);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.story-card {
+    background: var(--light-gray);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+}
+
+.story-header {
+    margin-bottom: 20px;
+}
+
+.story-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.location-name {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.story-type {
+    background: var(--accent);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.story-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.story-content p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.story-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.result-label {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+/* Legal Client Types */
+.legal-clients {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.client-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.client-type {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.client-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.client-type h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.client-type p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.client-searches {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-term {
+    background: var(--light-gray);
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: var(--dark);
+}
+
+/* Legal Success Story Details */
+.success-story {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+    background: var(--light-gray);
+    padding: 60px;
+    border-radius: 30px;
+}
+
+.story-challenge h4,
+.story-solution h4,
+.story-results h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.story-challenge,
+.story-solution,
+.story-results {
+    margin-bottom: 30px;
+}
+
+.story-solution ul {
+    list-style: none;
+    padding: 0;
+}
+
+.story-solution li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.story-solution li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.result-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.metric {
+    text-align: center;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.metric-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.metric-detail {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.story-testimonial {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 4px solid var(--accent);
+    margin-top: 30px;
+}
+
+.story-testimonial blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.story-testimonial cite {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Ranking Progress */
+.story-visual {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ranking-progress {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.ranking-progress h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.progress-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.progress-month {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.month {
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 80px;
+}
+
+.ranking-bar {
+    flex: 1;
+    height: 40px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+.bar-position {
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.bar-position.not-ranked {
+    background: #ef4444;
+    color: var(--white);
+}
+
+.bar-position.improving {
+    background: var(--warning);
+    color: var(--white);
+}
+
+.bar-position.success {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.position-text {
+    font-size: 0.8rem;
+    color: var(--gray);
+    width: 60px;
+    text-align: right;
+}
+
+/* Competition Analysis */
+.ny-competition {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.competition-analysis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.competitor-insights h3,
+.competition-advantage h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.competitor-insights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.competitor-insights li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.competitor-insights li::before {
+    content: '🔍';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.advantage-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.advantage-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* NY Guarantee Details */
+.ny-guarantee-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.guarantee-markets h3,
+.guarantee-proof h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.market-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.market {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.guarantee-proof ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guarantee-proof li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.guarantee-proof li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Legal Guarantee Details */
+.guarantee-coverage {
+    margin-bottom: 30px;
+}
+
+.guarantee-coverage h3,
+.guarantee-confidence h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.guaranteed-keywords {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.guaranteed-keyword {
+    background: rgba(255,255,255,0.1);
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+.guarantee-confidence ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guarantee-confidence li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.guarantee-confidence li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 100px 20px;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-details {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Modal Updates */
+.modal-content h3 {
+    margin-bottom: 15px;
+}
+
+.modal-content > p {
+    color: var(--gray);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.modal-content select {
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%;
+    background: var(--white);
+}
+
+.modal-content select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Container utility */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2,
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-header h2 span,
+.section-title span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-header p,
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Feature Note for Pricing */
+.feature-note {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8rem;
+    margin-top: 8px;
+}
+
+/* Enhanced Button Styles */
+.btn-primary.large {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary.large:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+/* Responsive Design for Landing Pages */
+@media (max-width: 768px) {
+    .service-hero-container,
+    .local-hero-container,
+    .industry-hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .service-title,
+    .local-title,
+    .industry-title {
+        font-size: 2.5rem;
+    }
+
+    .service-highlights,
+    .local-stats,
+    .industry-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .included-grid,
+    .results-grid,
+    .insights-grid,
+    .stories-grid,
+    .client-types {
+        grid-template-columns: 1fr;
+    }
+
+    .competition-analysis,
+    .success-story,
+    .ny-guarantee-details {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .guarantee-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .result-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .guarantee-card {
+        padding: 40px 20px;
+    }
+
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+
+    .keyword-regions {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== CONTACT PAGE STYLES ===== */
+
+/* Contact Hero Section */
+.contact-hero {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 120px 20px 80px 20px;
+    margin-top: 60px;
+}
+
+.contact-hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-title span {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.contact-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.contact-highlight h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-highlight p {
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    color: var(--dark);
+}
+
+.contact-form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.contact-form-container > p {
+    color: var(--gray);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Typeform Integration Containers */
+.typeform-container,
+.calendly-container,
+.emergency-form {
+    min-height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.typeform-placeholder,
+.calendly-placeholder {
+    background: var(--light-gray);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cbd5e1;
+    border-radius: 15px;
+    min-height: 500px;
+}
+
+.typeform-placeholder.small {
+    min-height: 300px;
+}
+
+.placeholder-content {
+    text-align: center;
+    padding: 40px;
+    max-width: 400px;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.placeholder-content h3,
+.placeholder-content h4 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.placeholder-content p {
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.placeholder-details {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.placeholder-details h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.placeholder-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.placeholder-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.placeholder-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Contact Information Grid */
+.contact-info {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.contact-method {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.method-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-method h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.contact-method p {
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-dark);
+}
+
+.method-note {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Contact FAQ */
+.contact-faq {
+    padding: 100px 20px;
+    background: var(--white);
+}
+
+.contact-faq h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-faq > p {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 4px solid var(--primary);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.faq-item p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Service Areas */
+.service-areas {
+    padding: 100px 20px;
+    background: var(--light-gray);
+}
+
+.service-areas h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.service-areas > p {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.area-category {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.area-category h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.area-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.area-item {
+    background: var(--light-gray);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.expansion-note {
+    color: var(--gray);
+    font-style: italic;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Emergency Contact */
+.emergency-contact {
+    padding: 80px 20px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.emergency-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    padding: 60px 40px;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+}
+
+.emergency-card h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.emergency-card p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.emergency-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.emergency-phone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--accent);
+    color: var(--white);
+    padding: 20px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.emergency-phone:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.phone-icon {
+    font-size: 1.5rem;
+}
+
+.emergency-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Contact Final CTA */
+.contact-final-cta {
+    padding: 100px 20px;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-final-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contact-final-cta p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-final-cta .cta-details {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design for Contact Page */
+@media (max-width: 768px) {
+    .contact-hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .contact-highlights {
+        text-align: center;
+    }
+
+    .contact-highlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info-grid,
+    .faq-grid,
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-card {
+        padding: 40px 20px;
+    }
+
+    .emergency-actions {
+        gap: 20px;
+    }
+
+    .emergency-phone {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 25px;
+        font-size: 1rem;
     }
 }
