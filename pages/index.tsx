@@ -1,8 +1,14 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <>
+      <Head>
+        <title>Elite Insurance Lead Generation Platform</title>
+        <meta name="description" content="Professional lead generation services for insurance agencies" />
+      </Head>
+      <div className="min-h-screen">
       {/* Announcement Bar */}
       <div className="bg-gradient-to-r from-emerald-500 to-emerald-400 text-white py-3 px-4 text-center font-semibold text-sm">
         🚀 Limited Time: First 3 clients get lifetime free AI lead scanner
@@ -103,6 +109,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

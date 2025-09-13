@@ -1,8 +1,14 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
+    <>
+      <Head>
+        <title>Complete Growth System - Elite Insurance Lead Generation</title>
+        <meta name="description" content="Complete lead generation system for insurance agencies - Facebook ads, Google ads, SEO, and AI lead scanner" />
+      </Head>
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,6 +213,7 @@ export default function ServicesPage() {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }
