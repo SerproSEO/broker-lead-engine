@@ -70,42 +70,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            
-            // Special animations for different elements
-            if (entry.target.classList.contains('feature-card')) {
-                entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
-                entry.target.classList.add('animate-in');
-            }
-            
-            if (entry.target.classList.contains('stat-card')) {
-                // Animate numbers counting up
-                animateCountUp(entry.target);
-            }
-        }
-    });
-}, observerOptions);
-
-// Apply fade-in effect to elements
-document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.feature-card, .stat-card, .guarantee-section, .cta-section');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(el);
-    });
-});
+// Scroll animations removed per user request
 
 // Number counting animation
 function animateCountUp(element) {
@@ -318,17 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Subtle scroll effect for hero section
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    
-    // Apply subtle opacity change to hero on scroll
-    if (hero && scrolled < window.innerHeight) {
-        const opacity = Math.max(0.3, 1 - (scrolled / window.innerHeight));
-        hero.style.opacity = opacity;
-    }
-});
+// Hero scroll fade effect removed per user request
 
 // Dynamic dashboard stats (simulate real-time updates)
 document.addEventListener('DOMContentLoaded', function() {
