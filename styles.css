@@ -2323,23 +2323,63 @@ body {
 }
 
 /* Results Grid */
-.proven-results {
+.our-approach {
     padding: 100px 20px;
     background: var(--light-gray);
 }
 
-.results-grid {
+.approach-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 60px;
 }
 
-.result-card {
+.approach-card {
     background: var(--white);
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.approach-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.approach-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.approach-card p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.approach-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.approach-card li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.approach-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
 }
 
 .result-header {
@@ -3179,7 +3219,7 @@ body {
     }
 
     .included-grid,
-    .results-grid,
+    .approach-grid,
     .insights-grid,
     .stories-grid,
     .client-types {
@@ -3867,4 +3907,69 @@ body {
     .disclaimer-text {
         font-size: 0.8rem;
     }
+}
+
+/* ===== LEGAL PAGES STYLES ===== */
+
+.legal-page {
+    padding: 120px 20px 80px 20px;
+    margin-top: 60px;
+    background: var(--white);
+}
+
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.legal-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.legal-content ul {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    margin-left: 20px;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-dark);
 }
