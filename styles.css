@@ -242,7 +242,7 @@ body {
 }
 
 .hero-content {
-    animation: fadeInLeft 1s ease;
+    /* Fade animation removed per user request */
 }
 
 @keyframes fadeInLeft {
