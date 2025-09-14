@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO -->
+    <title>{{GUIDE_TITLE}} | Complete Insurance Marketing Guide</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{MAIN_KEYWORD}}, {{SECONDARY_KEYWORDS}}, insurance guide">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://brokerleadengine.com/{{URL_SLUG}}/">
+    <meta property="og:title" content="{{GUIDE_TITLE}} | Insurance Guide">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+
+    <!-- Canonical and other SEO -->
+    <link rel="canonical" href="https://brokerleadengine.com/{{URL_SLUG}}/">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Broker Lead Engine">
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <a href="professional-liability-seo.html" class="nav-link">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="insurance-agent-seo.html" class="dropdown-link">Insurance Agent SEO</a>
+                        <a href="insurance-lead-generation.html" class="dropdown-link">Lead Generation</a>
+                        <a href="professional-liability-marketing.html" class="dropdown-link">Professional Liability</a>
+                        <a href="cyber-insurance-marketing.html" class="dropdown-link">Cyber Insurance</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="#demo" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Hero Section -->
+    <section class="service-hero-new">
+        <div class="service-hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="guides.html">Guides</a> / <span>{{GUIDE_CATEGORY}}</span>
+                </div>
+
+                <div class="hero-badge">
+                    <span class="badge-text">📖 {{GUIDE_CATEGORY}} Guide</span>
+                </div>
+
+                <h1 class="service-hero-title">
+                    {{GUIDE_TITLE}}
+                </h1>
+
+                <p class="service-hero-description">
+                    {{GUIDE_DESCRIPTION}}
+                </p>
+
+                <div class="hero-stats-row">
+                    <div class="hero-stat">
+                        <div class="stat-icon">📖</div>
+                        <div class="stat-content">
+                            <div class="stat-number">{{READ_TIME}}</div>
+                            <div class="stat-label">Min Read</div>
+                        </div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <div class="stat-number">{{SKILL_LEVEL}}</div>
+                            <div class="stat-label">Skill Level</div>
+                        </div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-number">{{IMPL_TIME}}</div>
+                            <div class="stat-label">Implementation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-cta">
+                    <a href="#guide-content" class="btn-primary large">Start the Guide</a>
+                    <p class="cta-note">Step-by-step instructions with examples</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Overview Section -->
+    <section class="whats-included">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Included in This Guide</h2>
+                <p>Everything you need to successfully {{GUIDE_OBJECTIVE}}:</p>
+            </div>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">📋</div>
+                    <h3>What You'll Learn</h3>
+                    <ul>
+                        <li>{{LEARN_1}}</li>
+                        <li>{{LEARN_2}}</li>
+                        <li>{{LEARN_3}}</li>
+                        <li>{{LEARN_4}}</li>
+                        <li>{{LEARN_5}}</li>
+                    </ul>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">🛠️</div>
+                    <h3>Tools & Resources</h3>
+                    <ul>
+                        <li>{{RESOURCE_1}}</li>
+                        <li>{{RESOURCE_2}}</li>
+                        <li>{{RESOURCE_3}}</li>
+                        <li>{{RESOURCE_4}}</li>
+                        <li>{{RESOURCE_5}}</li>
+                    </ul>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">📈</div>
+                    <h3>Expected Results</h3>
+                    <ul>
+                        <li>{{RESULT_1}}</li>
+                        <li>{{RESULT_2}}</li>
+                        <li>{{RESULT_3}}</li>
+                        <li>{{RESULT_4}}</li>
+                        <li>{{RESULT_5}}</li>
+                    </ul>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">⏰</div>
+                    <h3>Timeline</h3>
+                    <ul>
+                        <li>Week 1: {{WEEK_1}}</li>
+                        <li>Week 2: {{WEEK_2}}</li>
+                        <li>Week 3: {{WEEK_3}}</li>
+                        <li>Week 4: {{WEEK_4}}</li>
+                        <li>Ongoing: {{ONGOING}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section class="progress-tracker-section">
+        <div class="container">
+            <div class="progress-tracker">
+                <div class="progress-step active" data-step="1">1</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">2</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">3</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">4</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="5">5</div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="6">6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Guide Content Section -->
+    <section id="guide-content" class="guide-steps-section">
+        <div class="container">
+            <h2>Step-by-Step Guide: {{GUIDE_TITLE}}</h2>
+            <p class="guide-intro">{{GUIDE_INTRO}}</p>
+
+            <div class="guide-timeline">
+                <div class="step-container" id="step-1">
+                    <div class="step-header">
+                        <div class="step-badge">Step 1</div>
+                        <h3>{{STEP_1_TITLE}}</h3>
+                        <div class="step-duration">⏱️ {{STEP_1_TIME}}</div>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-description">{{STEP_1_DESCRIPTION}}</p>
+
+                        <div class="action-checklist">
+                            <h4>✅ Action Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_1_ACTION_1}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_1_ACTION_2}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_1_ACTION_3}}
+                            </label>
+                        </div>
+
+                        <div class="step-tip">
+                            <h5>💡 Pro Tip</h5>
+                            <p>{{STEP_1_TIP}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-container" id="step-2">
+                    <div class="step-header">
+                        <div class="step-badge">Step 2</div>
+                        <h3>{{STEP_2_TITLE}}</h3>
+                        <div class="step-duration">⏱️ {{STEP_2_TIME}}</div>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-description">{{STEP_2_DESCRIPTION}}</p>
+
+                        <div class="action-checklist">
+                            <h4>✅ Action Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_2_ACTION_1}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_2_ACTION_2}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_2_ACTION_3}}
+                            </label>
+                        </div>
+
+                        <div class="step-tip">
+                            <h5>💡 Pro Tip</h5>
+                            <p>{{STEP_2_TIP}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-container" id="step-3">
+                    <div class="step-header">
+                        <div class="step-badge">Step 3</div>
+                        <h3>{{STEP_3_TITLE}}</h3>
+                        <div class="step-duration">⏱️ {{STEP_3_TIME}}</div>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-description">{{STEP_3_DESCRIPTION}}</p>
+
+                        <div class="action-checklist">
+                            <h4>✅ Action Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_3_ACTION_1}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_3_ACTION_2}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_3_ACTION_3}}
+                            </label>
+                        </div>
+
+                        <div class="step-tip">
+                            <h5>💡 Pro Tip</h5>
+                            <p>{{STEP_3_TIP}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-container" id="step-4">
+                    <div class="step-header">
+                        <div class="step-badge">Step 4</div>
+                        <h3>{{STEP_4_TITLE}}</h3>
+                        <div class="step-duration">⏱️ {{STEP_4_TIME}}</div>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-description">{{STEP_4_DESCRIPTION}}</p>
+
+                        <div class="action-checklist">
+                            <h4>✅ Action Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_4_ACTION_1}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_4_ACTION_2}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_4_ACTION_3}}
+                            </label>
+                        </div>
+
+                        <div class="step-tip">
+                            <h5>💡 Pro Tip</h5>
+                            <p>{{STEP_4_TIP}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-container" id="step-5">
+                    <div class="step-header">
+                        <div class="step-badge">Step 5</div>
+                        <h3>{{STEP_5_TITLE}}</h3>
+                        <div class="step-duration">⏱️ {{STEP_5_TIME}}</div>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-description">{{STEP_5_DESCRIPTION}}</p>
+
+                        <div class="action-checklist">
+                            <h4>✅ Action Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_5_ACTION_1}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_5_ACTION_2}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_5_ACTION_3}}
+                            </label>
+                        </div>
+
+                        <div class="step-tip">
+                            <h5>💡 Pro Tip</h5>
+                            <p>{{STEP_5_TIP}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-container" id="step-6">
+                    <div class="step-header">
+                        <div class="step-badge">Step 6</div>
+                        <h3>{{STEP_6_TITLE}}</h3>
+                        <div class="step-duration">⏱️ {{STEP_6_TIME}}</div>
+                    </div>
+                    <div class="step-body">
+                        <p class="step-description">{{STEP_6_DESCRIPTION}}</p>
+
+                        <div class="action-checklist">
+                            <h4>✅ Action Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_6_ACTION_1}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_6_ACTION_2}}
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                {{STEP_6_ACTION_3}}
+                            </label>
+                        </div>
+
+                        <div class="step-tip">
+                            <h5>💡 Pro Tip</h5>
+                            <p>{{STEP_6_TIP}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .progress-tracker-section {
+            background: #f8f9fa;
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e1e5e9;
+        }
+        .progress-tracker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .progress-step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e1e5e9;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .progress-step.active {
+            background: #007cba;
+            color: white;
+        }
+        .progress-step.completed {
+            background: #28a745;
+            color: white;
+        }
+        .progress-line {
+            flex: 1;
+            height: 3px;
+            background: #e1e5e9;
+            margin: 0 10px;
+        }
+        .guide-steps-section {
+            padding: 60px 0;
+        }
+        .guide-intro {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+        .guide-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .step-container {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .step-header {
+            background: linear-gradient(135deg, #007cba 0%, #005a8b 100%);
+            color: white;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .step-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .step-header h3 {
+            flex: 1;
+            margin: 0;
+        }
+        .step-duration {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .step-body {
+            padding: 30px;
+        }
+        .step-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .action-checklist h4 {
+            color: #007cba;
+            margin-bottom: 20px;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .checklist-item input {
+            display: none;
+        }
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #007cba;
+            border-radius: 4px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            position: relative;
+            margin-top: 2px;
+        }
+        .checklist-item input:checked + .checkmark {
+            background: #007cba;
+        }
+        .checklist-item input:checked + .checkmark:after {
+            content: "✓";
+            color: white;
+            position: absolute;
+            left: 3px;
+            top: -2px;
+            font-weight: bold;
+        }
+        .step-tip {
+            background: #e8f4ff;
+            border-left: 4px solid #007cba;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .step-tip h5 {
+            color: #007cba;
+            margin: 0 0 10px 0;
+        }
+        .step-tip p {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+
+    <!-- Tips & Best Practices Section -->
+    <section class="service-guarantee">
+        <div class="container">
+            <div class="guarantee-card">
+                <h2>Pro Tips & Best Practices</h2>
+                <p>Expert advice to maximize your success with {{GUIDE_OBJECTIVE}}:</p>
+
+                <div class="guarantee-details">
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">💡</div>
+                        <h3>{{TIP_1_TITLE}}</h3>
+                        <p>{{TIP_1_DESCRIPTION}}</p>
+                    </div>
+
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">⚡</div>
+                        <h3>{{TIP_2_TITLE}}</h3>
+                        <p>{{TIP_2_DESCRIPTION}}</p>
+                    </div>
+
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">🎯</div>
+                        <h3>{{TIP_3_TITLE}}</h3>
+                        <p>{{TIP_3_DESCRIPTION}}</p>
+                    </div>
+                </div>
+
+                <a href="#demo" class="guarantee-cta">Get Expert Implementation Help</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Guides Section -->
+    <section class="whats-included">
+        <div class="container">
+            <div class="section-header">
+                <h2>Related {{GUIDE_CATEGORY}} Guides</h2>
+                <p>Continue your insurance marketing education with these related guides:</p>
+            </div>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <h3><a href="{{RELATED_1_URL}}">{{RELATED_1_TITLE}}</a></h3>
+                    <p>{{RELATED_1_DESCRIPTION}}</p>
+                    <div class="guide-meta">{{RELATED_1_LEVEL}} • {{RELATED_1_TIME}} min read</div>
+                </div>
+
+                <div class="included-item">
+                    <h3><a href="{{RELATED_2_URL}}">{{RELATED_2_TITLE}}</a></h3>
+                    <p>{{RELATED_2_DESCRIPTION}}</p>
+                    <div class="guide-meta">{{RELATED_2_LEVEL}} • {{RELATED_2_TIME}} min read</div>
+                </div>
+
+                <div class="included-item">
+                    <h3><a href="{{RELATED_3_URL}}">{{RELATED_3_TITLE}}</a></h3>
+                    <p>{{RELATED_3_DESCRIPTION}}</p>
+                    <div class="guide-meta">{{RELATED_3_LEVEL}} • {{RELATED_3_TIME}} min read</div>
+                </div>
+
+                <div class="included-item">
+                    <h3><a href="{{RELATED_4_URL}}">{{RELATED_4_TITLE}}</a></h3>
+                    <p>{{RELATED_4_DESCRIPTION}}</p>
+                    <div class="guide-meta">{{RELATED_4_LEVEL}} • {{RELATED_4_TIME}} min read</div>
+                </div>
+
+                <div class="included-item">
+                    <h3><a href="{{RELATED_5_URL}}">{{RELATED_5_TITLE}}</a></h3>
+                    <p>{{RELATED_5_DESCRIPTION}}</p>
+                    <div class="guide-meta">{{RELATED_5_LEVEL}} • {{RELATED_5_TIME}} min read</div>
+                </div>
+
+                <div class="included-item">
+                    <h3><a href="guides.html">All Insurance Guides</a></h3>
+                    <p>Browse our complete library of insurance marketing guides and tutorials.</p>
+                    <div class="guide-meta">All Levels • Various lengths</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Need Help Implementing This Guide?</h2>
+            <p>Get expert assistance implementing {{GUIDE_OBJECTIVE}} for your insurance agency.</p>
+            <a href="#demo" class="btn-primary large">Get Professional Help</a>
+            <p class="cta-details">Free consultation to discuss your specific implementation needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <h3>Get Help Implementing {{GUIDE_TITLE}}</h3>
+            <p>Get expert guidance and hands-on assistance implementing this guide for your insurance agency.</p>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Business Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="agency" placeholder="Agency/Company Name" required>
+                <select name="implementation" required>
+                    <option value="">Implementation Timeline</option>
+                    <option value="asap">Need to start immediately</option>
+                    <option value="month">Within the next month</option>
+                    <option value="quarter">Within the next quarter</option>
+                    <option value="planning">Just planning for now</option>
+                </select>
+                <select name="help-level" required>
+                    <option value="">Level of Help Needed</option>
+                    <option value="guidance">Just need guidance and advice</option>
+                    <option value="partial">Help with some steps</option>
+                    <option value="full">Full implementation assistance</option>
+                    <option value="done-for-you">Completely done-for-you</option>
+                </select>
+                <textarea name="message" placeholder="Which specific parts of {{GUIDE_TITLE}} do you need help with?" required></textarea>
+                <button type="submit" class="btn btn-primary">Get My Implementation Plan</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p class="disclaimer-text">
+                    <strong>DISCLAIMER:</strong> Results not guaranteed. Past performance does not guarantee future results. Marketing performance depends on numerous factors including market conditions, competition, and execution. Individual results may vary. Broker Lead Engine LLC provides marketing services only and does not provide insurance advice. All statistics are for educational purposes only.
+                </p>
+            </div>
+
+            <p class="footer-text">© 2025 Broker Lead Engine LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

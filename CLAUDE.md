@@ -16,3 +16,4 @@
 
 &nbsp;     description: "Play sound when Claude completes a task"
 
+- memory
