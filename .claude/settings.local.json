@@ -14,7 +14,9 @@
       "Bash(env DATAFORSEO_LOGIN=sam@serproseo.com DATAFORSEO_PASSWORD=Ochoacueva1. npx -y dataforseo-mcp-server)",
       "Bash(rm:*)",
       "Bash(powershell:*)",
-      "WebFetch(domain:www.brokerleadengine.com)"
+      "WebFetch(domain:www.brokerleadengine.com)",
+      "Bash(python:*)",
+      "Bash(npm install:*)"
     ],
     "deny": []
   }
