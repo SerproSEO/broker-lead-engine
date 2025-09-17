@@ -32,7 +32,81 @@
     <meta name="geo.region" content="US">
     <meta name="geo.placename" content="New York">
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="logo.png" as="image">
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADOElEQVR4nO2XS2gTQRjHf5s0bWzTWg+iFCsKXgRB8CF4UQ8ePOhFD4qIB0+Kp4JXwYPgwYOCBy9e9CB4UvDgQRFBQfEgeFDBg+BBwYNQQfEBvmqt2jZN0+z+ZWY3yWYzk2zSQ/vBh5lkZ+b/m+/x/zKGMYxhDGP+l7AdN8cDHBdGqDtO7eSdDy5E5b6Y51GJb4AjqKhDbhhTgNrJG19cCJ9bIRQvABdi1GEbZtiOmyNFHbDjFXC6lIJV6gbLmjdBrH56a+qwHbdEigpsx8txFNa6AczaBmDZCrBtNdiu3gKmswYaT1f/EIftOCfaBo9HNYPtuLHkP+LYjlsjRQW247ZJO6m/AvRXfwBdvgR0+RLQs5eALl8E+v4d0OWLoG8eAAa7fG5rT9i4fVKOl+NtoO04M6ZBfzPHPQJ07gJMPn8OjNoG4KevAZm9AP71K9DVS1Bf3AGqm3t/J0E+i+lVcgftODOaKfZJWEw3YVAM4vN2C6bfHr6A1dveACtWrCCJEpGRBB0GCjok9Ys6CAD/wB64J0ViO86MZEA7bg5vA42XK8CyVcC21gMzegGZ1Ua+eR2ovnYLqLl5F6g5fBrQjWtAHxwFdOkdoIsXgX76CGjpLU7ydtycsrF6fLGBLl4F1NICrE8M+NkCoBBZrQCWrQRmdi6w8+fATC0CZnYfMLPnArNsBdCtmUC3ZAAzeRKYhfuAXTwH2IXzgF21BphVa4BZBWxrI7CttWBZqwHbCixrJdA6YFvrgVW/B2xrNdBdBe++AN6uvsQcKI+VfvKMO8OyFmTvPyNxvpHjzajK5NM5QJu4gJyQ4/8eWpQzKOgQ9KGj82+LXfYBzJL9QAt9BMzSA4BWuQdoxXdAq38E+tMJQKu6A7Syv4FW0wqs/tYbQzfq7N98Bzpj4Apu+JNS3oB1hKDpv4PGGLPksB03ppnyqhpLWz8GKy+vAJsqK0EvL5ZEKy/lB618eaePyItSfAKrW/wjJ0TdqANZLQBmyT5glh4AZulBoBfuAWbJPmBXdAK7qgvYlgZgWx0U7XcBvjdgZ8qpCa3WAS40g0iOD3QI/gJ2XBepEgepJgAAAABJRU5ErkJggg==">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DigitalMarketingService",
+      "name": "Broker Lead Engine",
+      "description": "Professional Liability Insurance SEO Agency specializing in E&O insurance, malpractice coverage, and professional liability marketing.",
+      "url": "https://brokerleadengine.com",
+      "logo": "https://brokerleadengine.com/logo.png",
+      "sameAs": [
+        "https://linkedin.com/company/broker-lead-engine"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "serviceType": "SEO Services",
+      "areaServed": ["New York", "Connecticut", "New Jersey", "Pennsylvania", "Florida", "Nevada", "Arizona"],
+      "offers": {
+        "@type": "Offer",
+        "name": "Local SEO Domination Package",
+        "price": "2497",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "2497",
+          "priceCurrency": "USD",
+          "billingIncrement": "Monthly"
+        },
+        "description": "100% money back guarantee if no results in 6 months. 50% discount after month 3 until results delivered."
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Professional Liability SEO Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Professional Liability SEO",
+              "description": "Specialized SEO for professional liability insurance agencies"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Legal Malpractice SEO",
+              "description": "SEO services targeting law firms and legal malpractice coverage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Medical Malpractice SEO",
+              "description": "SEO services for healthcare professional liability coverage"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header (Fixed at top) -->
@@ -94,65 +168,6 @@
                 </div>
             </div>
             
-            <div class="dashboard-preview">
-                <div class="dashboard-mockup">
-                    <div class="dashboard-header">
-                        <h3 class="dashboard-title">Professional Liability SEO Dashboard</h3>
-                        <div class="dashboard-status">
-                            <span class="status-dot"></span>
-                            <span>Active</span>
-                        </div>
-                    </div>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-value">#2</div>
-                            <div class="stat-label">Google Maps Ranking</div>
-                            <span class="stat-change">Top 3 achieved in 67 days</span>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">127</div>
-                            <div class="stat-label">Monthly Calls</div>
-                            <span class="stat-change">+89% since ranking</span>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">52</div>
-                            <div class="stat-label">Citations Built</div>
-                            <span class="stat-change">100% accurate NAP</span>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">340%</div>
-                            <div class="stat-label">Organic Traffic</div>
-                            <span class="stat-change">+240% in 90 days</span>
-                        </div>
-                    </div>
-                    
-                    <div class="chart-container">
-                        <div class="chart-title">Ranking Progress</div>
-                        <div class="chart-bars">
-                            <div class="chart-bar"></div>
-                            <div class="chart-bar"></div>
-                            <div class="chart-bar"></div>
-                            <div class="chart-bar"></div>
-                            <div class="chart-bar"></div>
-                            <div class="chart-bar"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Floating Cards -->
-                    <div class="floating-card floating-card-1">
-                        <div class="card-icon">📈</div>
-                        <div class="card-title">Results</div>
-                        <div class="card-value">Proven</div>
-                    </div>
-
-                    <div class="floating-card floating-card-2">
-                        <div class="card-icon">⏱️</div>
-                        <div class="card-title">Avg. Time to Rank</div>
-                        <div class="card-value">67 days</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -163,6 +178,61 @@
             <span>🎯 New York Professional Liability Agencies - 3 Spots Available for 100% Money Back Guarantee Program</span>
         </div>
     </div>
+
+    <!-- VSL Section -->
+    <section class="vsl-section">
+        <div class="vsl-container">
+            <div class="vsl-content">
+                <div class="vsl-text">
+                    <h2 class="vsl-title">The Only SEO Agency That <span>Only Works With Professional Liability</span></h2>
+                    <p class="vsl-subtitle">Watch this video to discover why we're so confident in our specialized approach that we offer a 100% money-back guarantee if you don't see results in 6 months.</p>
+
+                    <div class="vsl-benefits">
+                        <div class="vsl-benefit">
+                            <div class="benefit-icon">🎯</div>
+                            <span>Why generic "insurance SEO" doesn't work for professional liability agencies</span>
+                        </div>
+                        <div class="vsl-benefit">
+                            <div class="benefit-icon">📈</div>
+                            <span>Our specialized methodology for $1M-$5M revenue agencies</span>
+                        </div>
+                        <div class="vsl-benefit">
+                            <div class="benefit-icon">💰</div>
+                            <span>Why we're confident enough to guarantee results (or give you 100% back)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vsl-video">
+                    <div class="video-wrapper">
+                        <!-- Placeholder for YouTube video -->
+                        <div class="video-placeholder">
+                            <div class="play-button">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="rgba(59, 130, 246, 0.9)"/>
+                                    <path d="M23 20L40 30L23 40V20Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <p>YouTube Video Placeholder</p>
+                            <small>Replace with your actual YouTube embed</small>
+                        </div>
+                        <!--
+                        Replace the placeholder above with your actual YouTube embed:
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                            title="Professional Liability SEO Explained"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="features">

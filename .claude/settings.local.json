@@ -16,7 +16,9 @@
       "Bash(powershell:*)",
       "WebFetch(domain:www.brokerleadengine.com)",
       "Bash(python:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "mcp__playwright__playwright_console_logs",
+      "mcp__playwright__playwright_close"
     ],
     "deny": []
   }

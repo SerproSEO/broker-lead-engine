@@ -21,11 +21,124 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: var(--white);
     color: var(--dark);
     overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better mobile touch targets */
+@media (max-width: 768px) {
+    .btn-primary, .btn-secondary, .cta-button {
+        min-height: 48px;
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .nav-link, .dropdown-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Improved mobile menu */
+    .nav {
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 20px;
+    }
+
+    /* Better mobile typography */
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    /* Improved mobile spacing */
+    .hero {
+        padding: 6rem 1rem 4rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+}
+
+/* High-DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Modern scroll-snap for better navigation */
+.section {
+    scroll-margin-top: 100px;
+}
+
+/* Enhanced focus indicators for accessibility */
+*:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Modern backdrop blur effect */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced button hover effects */
+.btn-primary, .btn-secondary, .cta-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before, .btn-secondary::before, .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before, .btn-secondary:hover::before, .cta-button:hover::before {
+    left: 100%;
+}
+
+/* Modern card shadows */
+.card, .feature-card, .dashboard-mockup {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover, .feature-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* Announcement Bar */
@@ -79,11 +192,222 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: #0f172a;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
     padding: 1rem 2rem;
     border-bottom: 1px solid rgba(59, 130, 246, 0.1);
     transition: all 0.3s ease;
+}
+
+/* Header scroll effect */
+.header.scrolled {
+    background: rgba(15, 23, 42, 0.98);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* VSL Section */
+.vsl-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.vsl-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vsl-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.vsl-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.vsl-title span {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vsl-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.vsl-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vsl-benefit {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vsl-benefit span {
+    font-weight: 500;
+    color: var(--dark);
+    line-height: 1.4;
+}
+
+.vsl-video {
+    position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.play-button {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.video-placeholder:hover .play-button {
+    transform: scale(1.1);
+}
+
+.video-placeholder p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.video-placeholder small {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+/* VSL Responsive Design */
+@media (max-width: 768px) {
+    .vsl-section {
+        padding: 60px 0;
+    }
+
+    .vsl-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .vsl-title {
+        font-size: 2rem;
+    }
+
+    .video-wrapper {
+        height: 250px;
+    }
+
+    .vsl-benefits {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Animation classes for scroll effects */
+.card, .feature-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.animate-in, .feature-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero elements - no animations for VSL integration */
+.trust-badge, .dashboard-mockup {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation delays - only for feature cards */
+.feature-card:nth-child(1) { transition-delay: 0.1s; }
+.feature-card:nth-child(2) { transition-delay: 0.2s; }
+.feature-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Floating animation for hero elements - REMOVED for VSL */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Removed floating animation from dashboard mockup for VSL integration */
+.dashboard-mockup {
+    /* animation: float 6s ease-in-out infinite; */
+}
+
+/* Pulse animation for CTAs */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.btn-primary:hover {
+    animation: pulse 2s infinite;
 }
 
 .header-content {
@@ -230,14 +554,15 @@ body {
 }
 
 .hero-container {
-    max-width: 1400px;
+    max-width: 800px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     position: relative;
     z-index: 1;
+    padding: 2rem;
 }
 
 .hero-content {
@@ -284,6 +609,7 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 3rem;
+    justify-content: center;
 }
 
 .btn-primary {
@@ -340,6 +666,7 @@ body {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .trust-badge {
@@ -720,7 +1047,7 @@ body {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
+    /* animation: rotate 20s linear infinite; - REMOVED for VSL preparation */
 }
 
 .guarantee-container {
