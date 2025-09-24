@@ -1,0 +1,326 @@
+{
+  "nodes": [
+    {
+      "id": "professional_liability_what",
+      "question": "What is professional liability insurance?",
+      "cluster": "FAQ Content",
+      "search_volume": 1500,
+      "difficulty": 50,
+      "intent": "Informational"
+    },
+    {
+      "id": "professional_liability_marketing_what",
+      "question": "What is professional liability insurance marketing?",
+      "cluster": "Professional Liability Marketing",
+      "search_volume": 15,
+      "difficulty": 20,
+      "intent": "Informational"
+    },
+    {
+      "id": "cyber_insurance_need",
+      "question": "Do I need cyber insurance?",
+      "cluster": "FAQ Content",
+      "search_volume": 300,
+      "difficulty": 35,
+      "intent": "Informational"
+    },
+    {
+      "id": "cyber_insurance_marketing_how",
+      "question": "How to market cyber insurance?",
+      "cluster": "Cyber Insurance Marketing",
+      "search_volume": 25,
+      "difficulty": 22,
+      "intent": "Informational"
+    },
+    {
+      "id": "eo_insurance_cost",
+      "question": "How much does E&O insurance cost?",
+      "cluster": "FAQ Content",
+      "search_volume": 400,
+      "difficulty": 45,
+      "intent": "Informational"
+    },
+    {
+      "id": "insurance_seo_how",
+      "question": "How to do SEO for insurance agents?",
+      "cluster": "Insurance Agent SEO",
+      "search_volume": 120,
+      "difficulty": 40,
+      "intent": "Informational"
+    },
+    {
+      "id": "legal_malpractice_need",
+      "question": "Do lawyers need malpractice insurance?",
+      "cluster": "Legal Malpractice Marketing",
+      "search_volume": 120,
+      "difficulty": 38,
+      "intent": "Informational"
+    },
+    {
+      "id": "medical_malpractice_cost",
+      "question": "How much does medical malpractice insurance cost?",
+      "cluster": "Medical Malpractice Marketing",
+      "search_volume": 400,
+      "difficulty": 48,
+      "intent": "Informational"
+    },
+    {
+      "id": "professional_liability_cover",
+      "question": "What does professional liability insurance cover?",
+      "cluster": "FAQ Content",
+      "search_volume": 600,
+      "difficulty": 48,
+      "intent": "Informational"
+    },
+    {
+      "id": "cyber_insurance_cover",
+      "question": "What does cyber insurance cover?",
+      "cluster": "FAQ Content",
+      "search_volume": 250,
+      "difficulty": 40,
+      "intent": "Informational"
+    },
+    {
+      "id": "professional_liability_vs_general",
+      "question": "Professional liability vs general liability?",
+      "cluster": "Competitive Analysis",
+      "search_volume": 200,
+      "difficulty": 40,
+      "intent": "Informational"
+    },
+    {
+      "id": "insurance_marketing_roi",
+      "question": "How to calculate insurance marketing ROI?",
+      "cluster": "Educational Content",
+      "search_volume": 45,
+      "difficulty": 30,
+      "intent": "Informational"
+    },
+    {
+      "id": "best_crm_insurance",
+      "question": "What is the best CRM for insurance agents?",
+      "cluster": "Tool Comparison",
+      "search_volume": 200,
+      "difficulty": 50,
+      "intent": "Commercial"
+    },
+    {
+      "id": "insurance_seo_vs_ppc",
+      "question": "SEO vs PPC for insurance agents?",
+      "cluster": "Competitive Analysis",
+      "search_volume": 35,
+      "difficulty": 40,
+      "intent": "Informational"
+    },
+    {
+      "id": "cyber_insurance_small_business",
+      "question": "Do small businesses need cyber insurance?",
+      "cluster": "Cyber Insurance Marketing",
+      "search_volume": 180,
+      "difficulty": 30,
+      "intent": "Informational"
+    },
+    {
+      "id": "professional_liability_required",
+      "question": "Is professional liability insurance required?",
+      "cluster": "FAQ Content",
+      "search_volume": 300,
+      "difficulty": 42,
+      "intent": "Informational"
+    },
+    {
+      "id": "healthcare_cyber_insurance",
+      "question": "What is healthcare cyber insurance?",
+      "cluster": "Industry Specific",
+      "search_volume": 80,
+      "difficulty": 35,
+      "intent": "Informational"
+    },
+    {
+      "id": "technology_eo_insurance",
+      "question": "What is technology E&O insurance?",
+      "cluster": "Industry Specific",
+      "search_volume": 35,
+      "difficulty": 30,
+      "intent": "Informational"
+    },
+    {
+      "id": "startup_cyber_insurance",
+      "question": "Do startups need cyber insurance?",
+      "cluster": "Long-tail Opportunities",
+      "search_volume": 30,
+      "difficulty": 28,
+      "intent": "Informational"
+    },
+    {
+      "id": "local_seo_insurance",
+      "question": "How to do local SEO for insurance agents?",
+      "cluster": "Insurance Agent SEO",
+      "search_volume": 80,
+      "difficulty": 35,
+      "intent": "Informational"
+    }
+  ],
+  "edges": [
+    {
+      "source": "professional_liability_what",
+      "target": "professional_liability_marketing_what",
+      "relationship": "leads_to_marketing",
+      "strength": 0.8
+    },
+    {
+      "source": "professional_liability_what",
+      "target": "professional_liability_cover",
+      "relationship": "detailed_explanation",
+      "strength": 0.9
+    },
+    {
+      "source": "cyber_insurance_need",
+      "target": "cyber_insurance_marketing_how",
+      "relationship": "leads_to_marketing",
+      "strength": 0.7
+    },
+    {
+      "source": "cyber_insurance_need",
+      "target": "cyber_insurance_cover",
+      "relationship": "detailed_explanation",
+      "strength": 0.8
+    },
+    {
+      "source": "cyber_insurance_small_business",
+      "target": "cyber_insurance_marketing_how",
+      "relationship": "marketing_opportunity",
+      "strength": 0.9
+    },
+    {
+      "source": "eo_insurance_cost",
+      "target": "professional_liability_marketing_what",
+      "relationship": "pricing_to_marketing",
+      "strength": 0.6
+    },
+    {
+      "source": "insurance_seo_how",
+      "target": "local_seo_insurance",
+      "relationship": "specialization",
+      "strength": 0.8
+    },
+    {
+      "source": "legal_malpractice_need",
+      "target": "professional_liability_what",
+      "relationship": "industry_specific",
+      "strength": 0.7
+    },
+    {
+      "source": "medical_malpractice_cost",
+      "target": "professional_liability_what",
+      "relationship": "industry_specific",
+      "strength": 0.7
+    },
+    {
+      "source": "professional_liability_vs_general",
+      "target": "professional_liability_what",
+      "relationship": "comparison_detail",
+      "strength": 0.8
+    },
+    {
+      "source": "insurance_marketing_roi",
+      "target": "professional_liability_marketing_what",
+      "relationship": "measurement_strategy",
+      "strength": 0.6
+    },
+    {
+      "source": "best_crm_insurance",
+      "target": "insurance_seo_how",
+      "relationship": "tool_implementation",
+      "strength": 0.5
+    },
+    {
+      "source": "insurance_seo_vs_ppc",
+      "target": "insurance_seo_how",
+      "relationship": "strategy_comparison",
+      "strength": 0.7
+    },
+    {
+      "source": "healthcare_cyber_insurance",
+      "target": "cyber_insurance_need",
+      "relationship": "industry_specific",
+      "strength": 0.8
+    },
+    {
+      "source": "technology_eo_insurance",
+      "target": "professional_liability_what",
+      "relationship": "industry_specific",
+      "strength": 0.8
+    },
+    {
+      "source": "startup_cyber_insurance",
+      "target": "cyber_insurance_small_business",
+      "relationship": "niche_specialization",
+      "strength": 0.9
+    }
+  ],
+  "clusters": {
+    "Professional Liability Marketing": {
+      "nodes": ["professional_liability_marketing_what"],
+      "opportunity_score": 95,
+      "content_gap": "massive_opportunity"
+    },
+    "Cyber Insurance Marketing": {
+      "nodes": ["cyber_insurance_marketing_how", "cyber_insurance_small_business"],
+      "opportunity_score": 88,
+      "content_gap": "significant_opportunity"
+    },
+    "FAQ Content": {
+      "nodes": ["professional_liability_what", "cyber_insurance_need", "eo_insurance_cost", "professional_liability_cover", "cyber_insurance_cover", "professional_liability_required"],
+      "opportunity_score": 72,
+      "content_gap": "featured_snippet_opportunities"
+    },
+    "Insurance Agent SEO": {
+      "nodes": ["insurance_seo_how", "local_seo_insurance"],
+      "opportunity_score": 75,
+      "content_gap": "moderate_competition"
+    },
+    "Legal Malpractice Marketing": {
+      "nodes": ["legal_malpractice_need"],
+      "opportunity_score": 85,
+      "content_gap": "niche_opportunity"
+    },
+    "Medical Malpractice Marketing": {
+      "nodes": ["medical_malpractice_cost"],
+      "opportunity_score": 80,
+      "content_gap": "market_hardening_opportunity"
+    },
+    "Industry Specific": {
+      "nodes": ["healthcare_cyber_insurance", "technology_eo_insurance"],
+      "opportunity_score": 82,
+      "content_gap": "vertical_specialization"
+    },
+    "Long-tail Opportunities": {
+      "nodes": ["startup_cyber_insurance"],
+      "opportunity_score": 88,
+      "content_gap": "ultra_niche_opportunity"
+    }
+  },
+  "content_strategies": {
+    "FAQ_schema_opportunities": [
+      "professional_liability_what",
+      "cyber_insurance_need",
+      "eo_insurance_cost",
+      "professional_liability_cover"
+    ],
+    "how_to_schema_opportunities": [
+      "insurance_seo_how",
+      "cyber_insurance_marketing_how",
+      "local_seo_insurance"
+    ],
+    "comparison_schema_opportunities": [
+      "professional_liability_vs_general",
+      "insurance_seo_vs_ppc"
+    ],
+    "voice_search_optimization": [
+      "cyber_insurance_need",
+      "legal_malpractice_need",
+      "startup_cyber_insurance"
+    ]
+  }
+}

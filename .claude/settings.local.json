@@ -18,7 +18,14 @@
       "Bash(python:*)",
       "Bash(npm install:*)",
       "mcp__playwright__playwright_console_logs",
-      "mcp__playwright__playwright_close"
+      "mcp__playwright__playwright_close",
+      "mcp__playwright__playwright_fill",
+      "mcp__playwright__playwright_click",
+      "mcp__playwright__playwright_screenshot",
+      "mcp__playwright__playwright_navigate",
+      "mcp__playwright__playwright_evaluate",
+      "WebSearch",
+      "Bash(tree:*)"
     ],
     "deny": []
   }

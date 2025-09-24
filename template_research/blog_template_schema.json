@@ -1,0 +1,333 @@
+{
+  "name": "blog_template",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Blog Template Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_featured_image",
+      "label": "Show Featured Image",
+      "default": true,
+      "info": "Display the blog post featured image below the header"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_table_of_contents",
+      "label": "Show Table of Contents",
+      "default": true,
+      "info": "Auto-generate table of contents from H2 and H3 headings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author_bio",
+      "label": "Show Author Bio",
+      "default": true,
+      "info": "Display author information and bio after the article"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reading_time",
+      "label": "Show Reading Time",
+      "default": true,
+      "info": "Calculate and display estimated reading time"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_related_posts",
+      "label": "Show Related Posts",
+      "default": true,
+      "info": "Display related articles based on tags"
+    },
+    {
+      "type": "range",
+      "id": "related_posts_count",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": "Number of Related Posts",
+      "default": 3,
+      "info": "How many related posts to display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_sharing",
+      "label": "Show Social Sharing",
+      "default": true,
+      "info": "Display social media sharing buttons"
+    },
+    {
+      "type": "header",
+      "content": "SEO & Metadata"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_breadcrumbs",
+      "label": "Enable Breadcrumbs",
+      "default": true,
+      "info": "Show navigation breadcrumbs for better SEO"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_schema_markup",
+      "label": "Enable Schema Markup",
+      "default": true,
+      "info": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "text",
+      "id": "default_og_image",
+      "label": "Default Open Graph Image",
+      "default": "og-default-blog.jpg",
+      "info": "Fallback image for social media when no featured image is set"
+    },
+    {
+      "type": "header",
+      "content": "Call-to-Action Settings"
+    },
+    {
+      "type": "select",
+      "id": "cta_type",
+      "label": "CTA Type",
+      "options": [
+        {
+          "value": "consultation",
+          "label": "Free Consultation"
+        },
+        {
+          "value": "audit",
+          "label": "SEO Audit"
+        },
+        {
+          "value": "contact",
+          "label": "Contact Us"
+        },
+        {
+          "value": "custom",
+          "label": "Custom CTA"
+        }
+      ],
+      "default": "consultation",
+      "info": "Choose the type of call-to-action to display"
+    },
+    {
+      "type": "text",
+      "id": "cta_headline",
+      "label": "CTA Headline",
+      "default": "Ready to Dominate Professional Liability SEO?",
+      "info": "Main headline for the call-to-action section"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_description",
+      "label": "CTA Description",
+      "default": "Get your free ranking analysis and discover how we can help your insurance agency generate 50+ qualified leads monthly. 100% money back guarantee.",
+      "info": "Description text for the call-to-action"
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "CTA Button Text",
+      "default": "Get Free Analysis",
+      "info": "Text displayed on the CTA button"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_link",
+      "label": "CTA Button Link",
+      "default": "#demo",
+      "info": "URL or anchor link for the CTA button"
+    },
+    {
+      "type": "header",
+      "content": "Design Customization"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#10b981",
+      "info": "Override the default accent color for this template"
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "Content Width",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Narrow (800px)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (1000px)"
+        },
+        {
+          "value": "wide",
+          "label": "Wide (1200px)"
+        }
+      ],
+      "default": "medium",
+      "info": "Maximum width of the blog content area"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_toc",
+      "label": "Sticky Table of Contents",
+      "default": false,
+      "info": "Make the table of contents stick to the side during scroll (desktop only)"
+    },
+    {
+      "type": "header",
+      "content": "Professional Liability Focus"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_insurance_disclaimer",
+      "label": "Show Insurance Disclaimer",
+      "default": true,
+      "info": "Display professional liability insurance disclaimer in footer"
+    },
+    {
+      "type": "text",
+      "id": "target_audience",
+      "label": "Target Audience Note",
+      "default": "$1M-$5M revenue insurance agencies",
+      "info": "Used in schema markup to identify target market"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_guarantee_badge",
+      "label": "Show Guarantee Badge",
+      "default": true,
+      "info": "Display 100% money back guarantee badge in relevant sections"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_cta",
+      "name": "Custom CTA Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "custom_headline",
+          "label": "Custom Headline",
+          "default": "Take Action Now"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_description",
+          "label": "Custom Description",
+          "default": "Ready to see results? Contact us today."
+        },
+        {
+          "type": "text",
+          "id": "custom_button_text",
+          "label": "Custom Button Text",
+          "default": "Get Started"
+        },
+        {
+          "type": "url",
+          "id": "custom_button_link",
+          "label": "Custom Button Link"
+        },
+        {
+          "type": "select",
+          "id": "cta_position",
+          "label": "Position in Article",
+          "options": [
+            {
+              "value": "after_intro",
+              "label": "After Introduction"
+            },
+            {
+              "value": "middle",
+              "label": "Middle of Article"
+            },
+            {
+              "value": "before_conclusion",
+              "label": "Before Conclusion"
+            }
+          ],
+          "default": "middle"
+        }
+      ]
+    },
+    {
+      "type": "faq_section",
+      "name": "FAQ Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "faq_title",
+          "label": "FAQ Section Title",
+          "default": "Frequently Asked Questions"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "faq_item",
+          "name": "FAQ Item",
+          "settings": [
+            {
+              "type": "text",
+              "id": "question",
+              "label": "Question"
+            },
+            {
+              "type": "textarea",
+              "id": "answer",
+              "label": "Answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "testimonial",
+      "name": "Client Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "testimonial_text",
+          "label": "Testimonial Text"
+        },
+        {
+          "type": "text",
+          "id": "client_name",
+          "label": "Client Name"
+        },
+        {
+          "type": "text",
+          "id": "client_company",
+          "label": "Client Company"
+        },
+        {
+          "type": "text",
+          "id": "client_location",
+          "label": "Client Location"
+        },
+        {
+          "type": "image_picker",
+          "id": "client_photo",
+          "label": "Client Photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Professional Liability Blog Post",
+      "settings": {
+        "show_featured_image": true,
+        "show_table_of_contents": true,
+        "show_author_bio": true,
+        "show_related_posts": true,
+        "enable_schema_markup": true,
+        "cta_type": "consultation",
+        "show_guarantee_badge": true
+      }
+    }
+  ]
+}

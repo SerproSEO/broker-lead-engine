@@ -1,0 +1,358 @@
+{
+  "entities": [
+    {
+      "id": "professional_liability_insurance",
+      "name": "Professional Liability Insurance",
+      "schema_type": "Service",
+      "cluster": "Professional Liability Marketing",
+      "related_terms": ["E&O insurance", "errors and omissions", "malpractice insurance", "professional indemnity"],
+      "industry_relevance": "primary",
+      "authority_sources": ["iii.org", "naic.org", "state insurance departments"]
+    },
+    {
+      "id": "cyber_insurance",
+      "name": "Cyber Insurance",
+      "schema_type": "Service",
+      "cluster": "Cyber Insurance Marketing",
+      "related_terms": ["cyber liability", "data breach insurance", "cybersecurity insurance"],
+      "industry_relevance": "high_growth",
+      "authority_sources": ["nist.gov", "cisa.gov", "ftc.gov"]
+    },
+    {
+      "id": "insurance_agency",
+      "name": "Insurance Agency",
+      "schema_type": "Organization",
+      "cluster": "Insurance Agent SEO",
+      "related_terms": ["insurance broker", "insurance agent", "independent agent"],
+      "industry_relevance": "target_audience",
+      "authority_sources": ["iiaba.org", "trustedchoice.com"]
+    },
+    {
+      "id": "legal_malpractice_insurance",
+      "name": "Legal Malpractice Insurance",
+      "schema_type": "Service",
+      "cluster": "Legal Malpractice Marketing",
+      "related_terms": ["attorney liability", "lawyer E&O", "law firm insurance"],
+      "industry_relevance": "vertical_specialization",
+      "authority_sources": ["americanbar.org", "state bar associations"]
+    },
+    {
+      "id": "medical_malpractice_insurance",
+      "name": "Medical Malpractice Insurance",
+      "schema_type": "Service",
+      "cluster": "Medical Malpractice Marketing",
+      "related_terms": ["physician liability", "healthcare professional liability", "doctor insurance"],
+      "industry_relevance": "vertical_specialization",
+      "authority_sources": ["ama-assn.org", "joint commission"]
+    },
+    {
+      "id": "nuclear_verdict",
+      "name": "Nuclear Verdict",
+      "schema_type": "DefinedTerm",
+      "cluster": "Legal Malpractice Marketing",
+      "related_terms": ["large jury award", "mega verdict", "catastrophic judgment"],
+      "industry_relevance": "market_driver",
+      "authority_sources": ["advisen.com", "verdict search"]
+    },
+    {
+      "id": "hipaa_compliance",
+      "name": "HIPAA Compliance",
+      "schema_type": "DefinedTerm",
+      "cluster": "Cyber Insurance Marketing",
+      "related_terms": ["healthcare data protection", "PHI security", "medical privacy"],
+      "industry_relevance": "regulatory_requirement",
+      "authority_sources": ["hhs.gov", "hipaaguide.net"]
+    },
+    {
+      "id": "seo_for_insurance",
+      "name": "SEO for Insurance",
+      "schema_type": "Service",
+      "cluster": "Insurance Agent SEO",
+      "related_terms": ["insurance marketing", "digital marketing", "online visibility"],
+      "industry_relevance": "service_offering",
+      "authority_sources": ["searchengineland.com", "moz.com"]
+    },
+    {
+      "id": "small_business_cyber_risk",
+      "name": "Small Business Cyber Risk",
+      "schema_type": "DefinedTerm",
+      "cluster": "Cyber Insurance Marketing",
+      "related_terms": ["SMB cybersecurity", "data breach risk", "ransomware threat"],
+      "industry_relevance": "target_market_pain",
+      "authority_sources": ["sba.gov", "nist.gov"]
+    },
+    {
+      "id": "professional_services",
+      "name": "Professional Services",
+      "schema_type": "Industry",
+      "cluster": "Professional Liability Marketing",
+      "related_terms": ["consultants", "advisors", "professional practitioners"],
+      "industry_relevance": "target_market",
+      "authority_sources": ["bls.gov", "census.gov"]
+    },
+    {
+      "id": "insurance_marketing_automation",
+      "name": "Insurance Marketing Automation",
+      "schema_type": "Service",
+      "cluster": "Insurance Lead Generation",
+      "related_terms": ["CRM automation", "lead nurturing", "email automation"],
+      "industry_relevance": "emerging_trend",
+      "authority_sources": ["hubspot.com", "salesforce.com"]
+    },
+    {
+      "id": "artificial_intelligence_insurance",
+      "name": "AI in Insurance",
+      "schema_type": "Technology",
+      "cluster": "Insurance Lead Generation",
+      "related_terms": ["machine learning", "predictive analytics", "chatbots"],
+      "industry_relevance": "technology_trend",
+      "authority_sources": ["mckinsey.com", "accenture.com"]
+    },
+    {
+      "id": "telemedicine_liability",
+      "name": "Telemedicine Liability",
+      "schema_type": "DefinedTerm",
+      "cluster": "Medical Malpractice Marketing",
+      "related_terms": ["telehealth risks", "remote care liability", "virtual consultation"],
+      "industry_relevance": "emerging_risk",
+      "authority_sources": ["ama-assn.org", "cms.gov"]
+    },
+    {
+      "id": "technology_errors_omissions",
+      "name": "Technology E&O",
+      "schema_type": "Service",
+      "cluster": "Industry Specific",
+      "related_terms": ["software liability", "IT professional liability", "tech errors"],
+      "industry_relevance": "vertical_specialization",
+      "authority_sources": ["techinsurance.com", "ieee.org"]
+    },
+    {
+      "id": "local_seo",
+      "name": "Local SEO",
+      "schema_type": "Service",
+      "cluster": "Location-Based Targeting",
+      "related_terms": ["Google My Business", "local search", "geographic targeting"],
+      "industry_relevance": "geographic_strategy",
+      "authority_sources": ["google.com", "brightlocal.com"]
+    },
+    {
+      "id": "new_york_insurance_market",
+      "name": "New York Insurance Market",
+      "schema_type": "Place",
+      "cluster": "Location-Based Targeting",
+      "related_terms": ["NY insurance", "Manhattan insurance", "tri-state market"],
+      "industry_relevance": "primary_geographic_target",
+      "authority_sources": ["dfs.ny.gov", "nyc.gov"]
+    },
+    {
+      "id": "connecticut_insurance_market",
+      "name": "Connecticut Insurance Market",
+      "schema_type": "Place",
+      "cluster": "Location-Based Targeting",
+      "related_terms": ["CT insurance", "Hartford insurance", "insurance capital"],
+      "industry_relevance": "expansion_geographic_target",
+      "authority_sources": ["ct.gov", "cid.ct.gov"]
+    },
+    {
+      "id": "law_firm_technology",
+      "name": "Law Firm Technology",
+      "schema_type": "Industry",
+      "cluster": "Legal Malpractice Marketing",
+      "related_terms": ["legal tech", "practice management", "client data"],
+      "industry_relevance": "intersection_opportunity",
+      "authority_sources": ["americanbar.org", "legaltech.org"]
+    },
+    {
+      "id": "healthcare_cybersecurity",
+      "name": "Healthcare Cybersecurity",
+      "schema_type": "Industry",
+      "cluster": "Cyber Insurance Marketing",
+      "related_terms": ["medical data security", "patient privacy", "healthcare IT"],
+      "industry_relevance": "vertical_specialization",
+      "authority_sources": ["hitech.org", "healthit.gov"]
+    },
+    {
+      "id": "startup_insurance_needs",
+      "name": "Startup Insurance Needs",
+      "schema_type": "DefinedTerm",
+      "cluster": "Long-tail Opportunities",
+      "related_terms": ["early stage coverage", "venture-backed insurance", "growth company risks"],
+      "industry_relevance": "niche_opportunity",
+      "authority_sources": ["nvca.org", "sba.gov"]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "professional_liability_insurance",
+      "target": "legal_malpractice_insurance",
+      "relationship": "specialization",
+      "strength": 0.9
+    },
+    {
+      "source": "professional_liability_insurance",
+      "target": "medical_malpractice_insurance",
+      "relationship": "specialization",
+      "strength": 0.9
+    },
+    {
+      "source": "cyber_insurance",
+      "target": "small_business_cyber_risk",
+      "relationship": "addresses",
+      "strength": 0.8
+    },
+    {
+      "source": "cyber_insurance",
+      "target": "hipaa_compliance",
+      "relationship": "supports",
+      "strength": 0.7
+    },
+    {
+      "source": "nuclear_verdict",
+      "target": "legal_malpractice_insurance",
+      "relationship": "drives_demand",
+      "strength": 0.9
+    },
+    {
+      "source": "insurance_agency",
+      "target": "seo_for_insurance",
+      "relationship": "benefits_from",
+      "strength": 0.8
+    },
+    {
+      "source": "artificial_intelligence_insurance",
+      "target": "insurance_marketing_automation",
+      "relationship": "enables",
+      "strength": 0.8
+    },
+    {
+      "source": "telemedicine_liability",
+      "target": "medical_malpractice_insurance",
+      "relationship": "emerging_risk",
+      "strength": 0.7
+    },
+    {
+      "source": "technology_errors_omissions",
+      "target": "professional_liability_insurance",
+      "relationship": "specialization",
+      "strength": 0.8
+    },
+    {
+      "source": "local_seo",
+      "target": "new_york_insurance_market",
+      "relationship": "targets",
+      "strength": 0.8
+    },
+    {
+      "source": "local_seo",
+      "target": "connecticut_insurance_market",
+      "relationship": "targets",
+      "strength": 0.7
+    },
+    {
+      "source": "law_firm_technology",
+      "target": "legal_malpractice_insurance",
+      "relationship": "creates_risks",
+      "strength": 0.6
+    },
+    {
+      "source": "healthcare_cybersecurity",
+      "target": "cyber_insurance",
+      "relationship": "requires",
+      "strength": 0.9
+    },
+    {
+      "source": "startup_insurance_needs",
+      "target": "cyber_insurance",
+      "relationship": "includes",
+      "strength": 0.7
+    },
+    {
+      "source": "startup_insurance_needs",
+      "target": "technology_errors_omissions",
+      "relationship": "includes",
+      "strength": 0.8
+    }
+  ],
+  "schema_mappings": {
+    "Service": [
+      "professional_liability_insurance",
+      "cyber_insurance",
+      "legal_malpractice_insurance",
+      "medical_malpractice_insurance",
+      "seo_for_insurance",
+      "insurance_marketing_automation",
+      "technology_errors_omissions",
+      "local_seo"
+    ],
+    "Organization": [
+      "insurance_agency"
+    ],
+    "DefinedTerm": [
+      "nuclear_verdict",
+      "hipaa_compliance",
+      "small_business_cyber_risk",
+      "telemedicine_liability",
+      "startup_insurance_needs"
+    ],
+    "Industry": [
+      "professional_services",
+      "law_firm_technology",
+      "healthcare_cybersecurity"
+    ],
+    "Technology": [
+      "artificial_intelligence_insurance"
+    ],
+    "Place": [
+      "new_york_insurance_market",
+      "connecticut_insurance_market"
+    ]
+  },
+  "content_opportunities": {
+    "entity_based_content": [
+      {
+        "entity": "nuclear_verdict",
+        "content_type": "DefinedTerm + Article",
+        "opportunity": "Educational content about nuclear verdicts driving legal malpractice demand"
+      },
+      {
+        "entity": "hipaa_compliance",
+        "content_type": "DefinedTerm + HowTo",
+        "opportunity": "HIPAA compliance guide for cyber insurance requirements"
+      },
+      {
+        "entity": "telemedicine_liability",
+        "content_type": "DefinedTerm + Article",
+        "opportunity": "Emerging telemedicine liability risks and insurance needs"
+      },
+      {
+        "entity": "artificial_intelligence_insurance",
+        "content_type": "Technology + Article",
+        "opportunity": "AI applications in insurance marketing and automation"
+      }
+    ],
+    "geographic_entity_content": [
+      {
+        "entity": "new_york_insurance_market",
+        "content_type": "Place + Article",
+        "opportunity": "NY insurance market analysis and local SEO strategies"
+      },
+      {
+        "entity": "connecticut_insurance_market",
+        "content_type": "Place + Article",
+        "opportunity": "CT insurance market expansion opportunities"
+      }
+    ],
+    "industry_intersection_content": [
+      {
+        "entities": ["law_firm_technology", "cyber_insurance"],
+        "content_type": "Industry + Service",
+        "opportunity": "Legal technology cybersecurity risks and insurance needs"
+      },
+      {
+        "entities": ["healthcare_cybersecurity", "hipaa_compliance"],
+        "content_type": "Industry + DefinedTerm",
+        "opportunity": "Healthcare cybersecurity compliance and insurance requirements"
+      }
+    ]
+  }
+}

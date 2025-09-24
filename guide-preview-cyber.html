@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Liability Insurance Marketing Guide Preview</title>
+    <style>
+        .guide-preview {
+            width: 400px;
+            height: 250px;
+            background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #06b6d4 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-preview::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 L60 30 L40 30 Z" fill="white" opacity="0.1"/></svg>') repeat;
+            animation: pulse 15s infinite;
+        }
+
+        .guide-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .guide-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .guide-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-preview">
+        <div class="guide-icon">🔒</div>
+        <div class="guide-title">Cyber Liability Insurance Marketing</div>
+        <div class="guide-subtitle">Complete Data Security Coverage Guide</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+{
+  "nodes": [
+    {
+      "id": "index",
+      "url": "index.html",
+      "title": "Broker Lead Engine - Professional Liability Insurance Marketing",
+      "type": "homepage",
+      "status": "existing"
+    },
+    {
+      "id": "professional-liability-seo",
+      "url": "professional-liability-seo.html",
+      "title": "Professional Liability Insurance SEO Services",
+      "type": "service",
+      "status": "existing"
+    },
+    {
+      "id": "legal-malpractice-seo",
+      "url": "legal-malpractice-insurance-seo.html",
+      "title": "Legal Malpractice Insurance SEO",
+      "type": "service",
+      "status": "existing"
+    },
+    {
+      "id": "ny-professional-liability",
+      "url": "new-york-professional-liability-seo.html",
+      "title": "New York Professional Liability Insurance SEO",
+      "type": "location",
+      "status": "existing"
+    },
+    {
+      "id": "about",
+      "url": "about.html",
+      "title": "About Broker Lead Engine",
+      "type": "about",
+      "status": "existing"
+    },
+    {
+      "id": "contact",
+      "url": "contact.html",
+      "title": "Contact Us",
+      "type": "contact",
+      "status": "existing"
+    },
+    {
+      "id": "professional-liability-marketing-guide",
+      "url": "professional-liability-insurance-marketing-guide/",
+      "title": "Complete Guide to Professional Liability Insurance Marketing",
+      "type": "pillar",
+      "status": "planned"
+    },
+    {
+      "id": "cyber-insurance-marketing-smb",
+      "url": "cyber-insurance-marketing-small-businesses/",
+      "title": "Cyber Insurance Marketing for Small Businesses",
+      "type": "landing",
+      "status": "planned"
+    },
+    {
+      "id": "insurance-agent-seo-guide",
+      "url": "insurance-agent-seo-complete-guide/",
+      "title": "Insurance Agent SEO: Complete 2025 Strategy Guide",
+      "type": "blog",
+      "status": "planned"
+    },
+    {
+      "id": "digital-lead-generation-guide",
+      "url": "insurance-lead-generation-digital-marketing/",
+      "title": "How to Generate Insurance Leads with Digital Marketing",
+      "type": "how-to",
+      "status": "planned"
+    },
+    {
+      "id": "legal-malpractice-marketing",
+      "url": "legal-malpractice-insurance-marketing-strategies/",
+      "title": "Legal Malpractice Insurance Marketing: 2025 Strategies",
+      "type": "blog",
+      "status": "planned"
+    },
+    {
+      "id": "medical-malpractice-marketing",
+      "url": "medical-malpractice-insurance-marketing-solutions/",
+      "title": "Medical Malpractice Insurance Marketing Solutions",
+      "type": "landing",
+      "status": "planned"
+    },
+    {
+      "id": "ct-professional-liability",
+      "url": "connecticut-professional-liability-insurance-marketing/",
+      "title": "Connecticut Professional Liability Insurance Marketing",
+      "type": "location",
+      "status": "planned"
+    },
+    {
+      "id": "nj-insurance-seo",
+      "url": "new-jersey-insurance-agent-seo-services/",
+      "title": "New Jersey Insurance Agent SEO Services",
+      "type": "location",
+      "status": "planned"
+    }
+  ],
+  "edges": [
+    {
+      "source": "index",
+      "target": "professional-liability-marketing-guide",
+      "anchor_text": "Professional Liability Insurance Marketing",
+      "context": "hero section specialization"
+    },
+    {
+      "source": "index",
+      "target": "cyber-insurance-marketing-smb",
+      "anchor_text": "Cyber Insurance Marketing Services",
+      "context": "services overview section"
+    },
+    {
+      "source": "index",
+      "target": "professional-liability-seo",
+      "anchor_text": "Professional Liability SEO Services",
+      "context": "main navigation and services"
+    },
+    {
+      "source": "professional-liability-seo",
+      "target": "professional-liability-marketing-guide",
+      "anchor_text": "Complete Professional Liability Marketing Guide",
+      "context": "related resources section"
+    },
+    {
+      "source": "professional-liability-seo",
+      "target": "legal-malpractice-marketing",
+      "anchor_text": "Legal Malpractice Marketing Strategies",
+      "context": "industry-specific services"
+    },
+    {
+      "source": "professional-liability-seo",
+      "target": "medical-malpractice-marketing",
+      "anchor_text": "Medical Malpractice Marketing Solutions",
+      "context": "healthcare specialization"
+    },
+    {
+      "source": "professional-liability-marketing-guide",
+      "target": "professional-liability-seo",
+      "anchor_text": "Professional Liability SEO Services",
+      "context": "digital marketing channels section"
+    },
+    {
+      "source": "professional-liability-marketing-guide",
+      "target": "legal-malpractice-seo",
+      "anchor_text": "Legal Malpractice Insurance SEO",
+      "context": "legal professionals targeting"
+    },
+    {
+      "source": "cyber-insurance-marketing-smb",
+      "target": "contact",
+      "anchor_text": "Schedule Your Cyber Insurance Consultation",
+      "context": "primary CTA"
+    },
+    {
+      "source": "cyber-insurance-marketing-smb",
+      "target": "professional-liability-seo",
+      "anchor_text": "Professional Liability Insurance Services",
+      "context": "cross-sell opportunity"
+    },
+    {
+      "source": "insurance-agent-seo-guide",
+      "target": "ny-professional-liability",
+      "anchor_text": "New York Professional Liability SEO",
+      "context": "location-specific examples"
+    },
+    {
+      "source": "insurance-agent-seo-guide",
+      "target": "professional-liability-seo",
+      "anchor_text": "Professional Liability SEO Services",
+      "context": "specialized SEO services"
+    },
+    {
+      "source": "digital-lead-generation-guide",
+      "target": "contact",
+      "anchor_text": "Get Your Lead Generation Audit",
+      "context": "primary CTA"
+    },
+    {
+      "source": "digital-lead-generation-guide",
+      "target": "index",
+      "anchor_text": "Insurance Marketing Services",
+      "context": "company overview"
+    },
+    {
+      "source": "legal-malpractice-marketing",
+      "target": "professional-liability-seo",
+      "anchor_text": "Professional Liability SEO",
+      "context": "digital marketing section"
+    },
+    {
+      "source": "legal-malpractice-marketing",
+      "target": "about",
+      "anchor_text": "About Our Legal Insurance Expertise",
+      "context": "credibility building"
+    },
+    {
+      "source": "ny-professional-liability",
+      "target": "ct-professional-liability",
+      "anchor_text": "Connecticut Professional Liability Marketing",
+      "context": "regional expansion section"
+    },
+    {
+      "source": "ny-professional-liability",
+      "target": "nj-insurance-seo",
+      "anchor_text": "New Jersey Insurance SEO Services",
+      "context": "tri-state area services"
+    },
+    {
+      "source": "ct-professional-liability",
+      "target": "ny-professional-liability",
+      "anchor_text": "New York Professional Liability SEO",
+      "context": "regional cross-linking"
+    },
+    {
+      "source": "ct-professional-liability",
+      "target": "contact",
+      "anchor_text": "Get Your Connecticut Market Analysis",
+      "context": "location-specific CTA"
+    },
+    {
+      "source": "nj-insurance-seo",
+      "target": "ny-professional-liability",
+      "anchor_text": "New York Insurance SEO Services",
+      "context": "tri-state area coverage"
+    },
+    {
+      "source": "nj-insurance-seo",
+      "target": "contact",
+      "anchor_text": "Schedule Your New Jersey SEO Consultation",
+      "context": "location-specific CTA"
+    },
+    {
+      "source": "medical-malpractice-marketing",
+      "target": "professional-liability-seo",
+      "anchor_text": "Professional Liability SEO Services",
+      "context": "healthcare specialization"
+    },
+    {
+      "source": "medical-malpractice-marketing",
+      "target": "contact",
+      "anchor_text": "Get Your Healthcare Marketing Demo",
+      "context": "industry-specific CTA"
+    },
+    {
+      "source": "about",
+      "target": "professional-liability-marketing-guide",
+      "anchor_text": "Professional Liability Marketing Expertise",
+      "context": "specialization showcase"
+    },
+    {
+      "source": "about",
+      "target": "cyber-insurance-marketing-smb",
+      "anchor_text": "Small Business Cyber Insurance Focus",
+      "context": "target market emphasis"
+    },
+    {
+      "source": "legal-malpractice-seo",
+      "target": "legal-malpractice-marketing",
+      "anchor_text": "Legal Malpractice Marketing Strategies",
+      "context": "comprehensive legal services"
+    },
+    {
+      "source": "legal-malpractice-seo",
+      "target": "professional-liability-marketing-guide",
+      "anchor_text": "Professional Liability Marketing Guide",
+      "context": "broader professional liability context"
+    }
+  ],
+  "link_metrics": {
+    "total_planned_internal_links": 24,
+    "average_links_per_page": 3.2,
+    "hub_pages": [
+      "professional-liability-seo",
+      "professional-liability-marketing-guide",
+      "contact"
+    ],
+    "authority_flow": {
+      "homepage_to_pillars": 2,
+      "pillars_to_services": 8,
+      "services_to_locations": 6,
+      "cross_location_links": 4,
+      "conversion_focused_links": 8
+    }
+  },
+  "seo_strategy": {
+    "topical_authority": {
+      "professional_liability": {
+        "pillar": "professional-liability-marketing-guide",
+        "supporting_pages": [
+          "professional-liability-seo",
+          "legal-malpractice-marketing",
+          "medical-malpractice-marketing",
+          "legal-malpractice-seo"
+        ]
+      },
+      "geographic_targeting": {
+        "primary": "ny-professional-liability",
+        "expansion": [
+          "ct-professional-liability",
+          "nj-insurance-seo"
+        ]
+      },
+      "service_integration": {
+        "seo_services": [
+          "professional-liability-seo",
+          "legal-malpractice-seo",
+          "ny-professional-liability"
+        ],
+        "marketing_strategy": [
+          "professional-liability-marketing-guide",
+          "cyber-insurance-marketing-smb",
+          "digital-lead-generation-guide"
+        ]
+      }
+    },
+    "conversion_optimization": {
+      "primary_conversion_pages": [
+        "contact",
+        "professional-liability-seo"
+      ],
+      "lead_magnets": [
+        "professional-liability-marketing-guide",
+        "cyber-insurance-marketing-smb",
+        "insurance-agent-seo-guide"
+      ],
+      "cross_sell_opportunities": [
+        "cyber-insurance-marketing-smb -> professional-liability-seo",
+        "legal-malpractice-marketing -> medical-malpractice-marketing"
+      ]
+    }
+  }
+}
